@@ -1,6 +1,6 @@
-# INTRODUÇÃO
+# 1 INTRODUÇÃO
 
-## APRESENTAÇÃO
+## 1.1 APRESENTAÇÃO
 
 Nos últimos anos, estudos têm aplicado _machine learning_ a dados de sensoriamento remoto para apoiar o mapeamento geológico e a estimativa de informações geoquímicas. Na Província Mineral de Carajás, por exemplo, métodos de _machine learning_ foram empregados no mapeamento litológico com dados geofísicos, de relevo e de sensoriamento remoto (Costa et al., 2019: <https://doi.org/10.29396/jgsb.2019.v2.n1.3>). Outro estudo combinou dados Landsat-8 e Sentinel-2 com análises geoquímicas para estimar a concentração de ouro em uma instalação de rejeitos (Zhang et al., 2023: <https://doi.org/10.1016/j.aiig.2023.01.005>). O sensoriamento remoto permite observar grandes áreas, inclusive locais de difícil acesso, e pode ajudar a selecionar pontos para investigação posterior. As previsões obtidas, contudo, precisam ser verificadas com dados geológicos e análises físicas.
 
@@ -10,27 +10,27 @@ O TabPFN é um _foundation model_ para dados tabulares, pré-treinado com conjun
 
 Este trabalho propõe-se a avaliar o desempenho do TabPFN na classificação litológica e na predição da composição mineral a partir de dados espectrais de satélite. A avaliação será realizada com base nos valores observados das amostras e em procedimentos de validação adequados à distribuição espacial dos dados. Busca-se, assim, verificar se o modelo pode apoiar uma triagem inicial de áreas para investigação, sem substituir a coleta e a análise física em campo.
 
-## PROBLEMA DE PESQUISA
+## 1.2 PROBLEMA DE PESQUISA
 
 Em que medida o TabPFN pode classificar litologias e predizer a composição mineral a partir de dados espectrais de satélite, e até que ponto suas previsões podem auxiliar na priorização de áreas para validação física em campo?
 
-## HIPÓTESE DE PESQUISA
+## 1.3 HIPÓTESE DE PESQUISA
 
 A hipótese deste trabalho é que os dados espectrais de satélite contêm informações que permitem ao TabPFN produzir previsões de litologia e composição mineral com capacidade preditiva mensurável em amostras não utilizadas no ajuste do modelo. Considera-se também que essas previsões podem apoiar a priorização de áreas para validação física, desde que sua incerteza e suas limitações sejam consideradas.
 
-## OBJETIVOS
+## 1.4 OBJETIVOS
 
-### Objetivos gerais
+### 1.4.1 Objetivos gerais
 
 Avaliar o desempenho e a aplicabilidade do TabPFN na classificação litológica e na predição da composição mineral a partir de dados espectrais de satélite.
 
-### Objetivos específicos
+### 1.4.2 Objetivos específicos
 
 - Definir e preparar os dados espectrais e geológicos utilizados no estudo, incluindo as variáveis de entrada e os alvos de classificação litológica e predição da composição mineral;
 - Aplicar o TabPFN às tarefas propostas, utilizando dados espectrais de satélite para gerar previsões de litologia e composição mineral;
 - Avaliar as previsões com métricas adequadas e validação que considere a distribuição espacial das amostras, analisando o potencial e as limitações do modelo para priorizar áreas para validação física.
 
-## JUSTIFICATIVA
+## 1.5 JUSTIFICATIVA
 
 O Brasil detém a segunda maior reserva de terras raras do mundo, mas responde por apenas 1% da produção global; além disso, apenas 30% do território brasileiro está mapeado (fonte original: <https://g1.globo.com/jornal-nacional/noticia/2026/07/11/brasil-tem-2a-maior-reserva-de-terras-raras-do-mundo-mas-so-1percent-da-producao-global.ghtml>). Esse cenário tem levado o poder público a atuar diretamente sobre a lacuna: em setembro de 2026, o governo federal sancionou uma política nacional voltada à ampliação da pesquisa, extração e processamento de minerais críticos e estratégicos, prevendo até R$ 7 bilhões em instrumentos de incentivo e um aumento expressivo — de R$ 8 milhões para R$ 300 milhões — no orçamento destinado à investigação do subsolo brasileiro (fonte original: <https://www.jornalhoraextra.com.br/destaques/brasil-cria-politica-para-ampliar-producao-de-minerais-criticos>). Nesse contexto, o desenvolvimento de métodos mais eficientes para a classificação litológica e a predição de composição mineral a partir de dados de sensoriamento remoto se torna especialmente relevante, uma vez que pode contribuir para acelerar o mapeamento geológico do país e subsidiar decisões estratégicas relacionadas à exploração desses recursos.
 

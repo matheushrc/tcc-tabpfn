@@ -16,7 +16,7 @@
 - Preserve o conteúdo e as fontes; não invente informações, resultados experimentais ou referências bibliográficas.
 - Preserve `Template_UFFSTex/` como referência original. Adapte sua cópia em `tcc/latex/`, seguindo os comandos do template.
 - Mantenha os arquivos LaTeX em `tcc/latex/capitulos/`, com nomes como `01-introducao.tex`. Use o mesmo nome-base no Markdown correspondente em `tcc/markdown/`.
-- Deixe a numeração dos títulos para o LaTeX.
+- Mantenha a numeração explícita dos títulos no Markdown. No LaTeX, deixe a numeração a cargo dos comandos de seção do template, sem inserir números manualmente nos títulos.
 - Ao atualizar um capítulo, limite as alterações ao capítulo e aos arquivos compartilhados necessários.
 - Confira a correspondência entre fontes do Markdown, citações LaTeX e entradas bibliográficas.
 - Para preencher ou corrigir referências bibliográficas, abra os links originais usando o MCP do Playwright e confira autoria e data na fonte. Se a página não informar a data, abra também os documentos vinculados, especialmente PDFs, e procure a ficha catalográfica, a folha de rosto e o expediente antes de registrar a referência como sem data.
