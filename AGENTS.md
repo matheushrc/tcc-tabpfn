@@ -19,4 +19,6 @@
 - Deixe a numeração dos títulos para o LaTeX.
 - Ao atualizar um capítulo, limite as alterações ao capítulo e aos arquivos compartilhados necessários.
 - Confira a correspondência entre fontes do Markdown, citações LaTeX e entradas bibliográficas.
+- Para preencher ou corrigir referências bibliográficas, abra os links originais usando o MCP do Playwright e confira autoria e data na fonte. Se a página não informar a data, abra também os documentos vinculados, especialmente PDFs, e procure a ficha catalográfica, a folha de rosto e o expediente antes de registrar a referência como sem data.
+- Distinga a data de publicação das datas de atualização da página e de criação ou modificação do arquivo. Não use estas últimas como data de publicação sem confirmação. Não transfira a data de um documento para a página que o hospeda: ao usar os dados do documento, cite seu título e sua URL original completa e mantenha a correspondência entre Markdown e BibTeX.
 - Ao mover ou renomear arquivos versionados, use `git mv` e preserve seu conteúdo antes de aplicar os ajustes necessários.
