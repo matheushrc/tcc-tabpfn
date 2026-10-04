@@ -4,7 +4,7 @@ O Markdown será a fonte principal do conteúdo do TCC. Quando solicitado, a IA 
 
 A conversão será feita pela IA, sem Pandoc ou outro conversor automático.
 
-## Estrutura proposta
+## Estrutura de destino
 
 ```text
 tcc/
@@ -31,7 +31,7 @@ docs/                  # notas e planejamento da pesquisa
 datasets/              # dados dos experimentos
 ```
 
-Os capítulos podem ser ajustados conforme a estrutura exigida para o TCC I ou TCC II. Essa organização é uma proposta; este documento não move os arquivos existentes.
+A estrutura foi iniciada com a introdução em Markdown e LaTeX. Os demais capítulos da árvore são destinos planejados, ainda sem arquivos: serão criados quando houver conteúdo. A pasta de figuras está preparada, mas ainda não contém imagens do trabalho.
 
 ## Nomes dos arquivos de capítulos
 
@@ -77,7 +77,7 @@ Exemplo de solicitação:
 
 > Atualize `tcc/latex/capitulos/01-introducao.tex` com base em `tcc/markdown/01-introducao.md`, seguindo o template UFFS. Preserve o conteúdo e as fontes, sem acrescentar informações. Atualize somente os arquivos necessários para esse capítulo.
 
-## Regras propostas para o AGENTS.md
+## Regras de trabalho
 
 - O Markdown é a fonte principal do conteúdo do TCC.
 - Criar ou atualizar a versão LaTeX somente quando solicitado.
@@ -112,9 +112,9 @@ Aplicar ao `AGENTS.md` o filtro de descoberta da skill `agents-md-optimizer`: ma
 
 ## Estado inicial e escopo
 
-Atualmente, o template está em `Template_UFFSTex/`, a introdução em `introducao.md` e as notas de pesquisa em `docs/`. A estrutura `tcc/` apresentada neste plano ainda precisa ser criada; o `ARCHITECTURE.md` também precisa ser escrito.
+Antes da execução, o template estava em `Template_UFFSTex/`, a introdução em `introducao.md` e as notas de pesquisa em `docs/`. Após a execução, a introdução está em `tcc/markdown/01-introducao.md`, o projeto LaTeX está em `tcc/latex/` e `ARCHITECTURE.md` descreve a organização atual.
 
-`introducao.md` contém a introdução atual do autor deste projeto e será a origem de `tcc/markdown/01-introducao.md`.
+`introducao.md` foi movido com `git mv` para `tcc/markdown/01-introducao.md`, preservando os parágrafos e fontes. Os ajustes feitos após a movimentação removeram números manuais e corrigiram a hierarquia dos títulos.
 
 `introducao.example.md` contém o exemplo de introdução do TCC de Natanael Henrik Zago, outro aluno orientado pelo mesmo professor. O documento de origem está em `docs/Final_UFFS___TCC_1__Natanael_Henrik_Zago_.pdf`. O exemplo e o PDF servem como referência de estrutura e escrita; não são conteúdo autoral deste TCC e não devem ser incorporados como capítulos do trabalho. Essa identificação foi fornecida pelo autor deste projeto.
 
@@ -133,7 +133,7 @@ Critério de conclusão: origem e destino dos textos definidos, sem perda de con
 
 ### 2. Organizar o conteúdo Markdown
 
-- Criar `tcc/markdown/` e mover a introdução principal para `tcc/markdown/01-introducao.md`, preservando o conteúdo e as URLs.
+- Criar `tcc/markdown/` e mover a introdução principal com `git mv introducao.md tcc/markdown/01-introducao.md`, preservando o conteúdo e as URLs antes dos ajustes de títulos.
 - Remover a numeração manual dos títulos e ajustar a hierarquia: `#` para capítulo, `##` para seção e `###` para subseção.
 - Manter notas em `docs/` e preservar `introducao.example.md` e o PDF de Natanael Henrik Zago como referências, distinguindo-os do texto principal. Não mover o exemplo para `01-introducao.md` nem substituir a introdução atual pelo conteúdo do outro aluno.
 - Criar os demais arquivos somente quando houver conteúdo a organizar ou uma solicitação para iniciar sua escrita; os nomes da árvore representam os destinos planejados.
@@ -197,15 +197,37 @@ Atualizar `ARCHITECTURE.md` quando mudarem as responsabilidades ou relações en
 
 ## Checklist de entrega
 
-- [ ] Introdução migrada e caminhos atualizados.
-- [ ] Numeração e hierarquia dos arquivos e títulos conferidas.
-- [ ] Template original preservado.
-- [ ] Cópia LaTeX preparada, quando solicitada.
-- [ ] Introdução LaTeX escrita, quando solicitada.
+- [x] Introdução migrada e caminhos atualizados.
+- [x] Numeração e hierarquia dos arquivos e títulos conferidas.
+- [x] Template original preservado.
+- [x] Cópia LaTeX preparada, quando solicitada.
+- [x] Introdução LaTeX escrita, quando solicitada.
 - [ ] Fontes, citações e bibliografia conferidas.
-- [ ] `ARCHITECTURE.md` criado e coerente com a estrutura existente.
-- [ ] `AGENTS.md` revisado com regras operacionais concisas.
-- [ ] `README.md` atualizado com orientação de navegação.
+- [x] `ARCHITECTURE.md` criado e coerente com a estrutura existente.
+- [x] `AGENTS.md` revisado com regras operacionais concisas.
+- [x] `README.md` atualizado com orientação de navegação.
 - [ ] Compilação e revisão do PDF verificadas, quando aplicável, com limitações registradas.
 
-Este checklist registra trabalho futuro. A atualização deste plano não executa a migração, a criação do projeto LaTeX ou a escrita dos capítulos.
+O checklist registra o resultado da execução. Itens sem marcação correspondem a verificações ainda pendentes, detalhadas abaixo.
+
+
+## Resultado da execução
+
+A solicitação de executar este plano incluiu a preparação do projeto LaTeX e a escrita da introdução. A movimentação da introdução foi feita com `git mv`; os ajustes de títulos foram aplicados depois. O template original, o exemplo de introdução e o PDF de Natanael Henrik Zago foram preservados. Os demais capítulos ainda não possuem texto principal; `docs/metodologia.md` está vazio.
+
+O `AGENTS.md` foi revisado com o filtro de descoberta: mantém as regras de fontes, decisões de escrita, uso de `tcc.conf` e movimentações com `git mv`. A estrutura e a explicação do fluxo ficam nos documentos de organização.
+
+Os cinco artigos publicados tiveram seus títulos, autores e dados bibliográficos conferidos no Crossref. O preprint foi conferido no arXiv e identificado como preprint na bibliografia. A correspondência entre URLs do Markdown e entradas BibTeX foi verificada. Essa conferência bibliográfica não equivale a uma revisão completa das afirmações científicas do capítulo.
+
+A página do G1 não pôde ser acessada na consulta; a entrada bibliográfica mantém título e ano do arquivo de pesquisa local, sem inventar autoria individual ou data de acesso. A página do PNM 2050 não forneceu ano de publicação confirmado; esse campo permanece ausente. As fontes originais são:
+
+- G1: <https://g1.globo.com/jornal-nacional/noticia/2026/07/11/brasil-tem-2a-maior-reserva-de-terras-raras-do-mundo-mas-so-1percent-da-producao-global.ghtml>.
+- PNM 2050: <https://www.gov.br/mme/pt-br/assuntos/secretarias/geologia-mineracao-e-transformacao-mineral/pnm-2050/sobre-o-pnm-2050>.
+
+O ambiente não possui `pdflatex`, `latexmk` ou `bibtex`. Por isso, compilação, formatação final das referências e revisão visual do PDF permanecem pendentes. O projeto está preparado para revisão no Overleaf com `principal.tex` como arquivo principal. Nenhum comando local de compilação foi documentado como verificado.
+
+As verificações locais confirmaram que o Markdown mudou apenas nos títulos e espaços finais, que o texto LaTeX corresponde ao Markdown após as adaptações de marcação e citações, que todas as dez chaves citadas têm entradas bibliográficas e que as URLs originais foram preservadas. Também foram conferidos os dados básicos transcritos, os caminhos de inclusão, a integridade da cópia da classe e os arquivos do template original. A verificação de espaços do Git passou.
+
+Foi preparado `output/tcc-overleaf.zip`, com os arquivos do projeto LaTeX e as subpastas necessárias. A integridade do ZIP foi conferida; ele é um artefato local ignorado pelo Git. Esse pacote representa a versão parcial atual e deverá ser atualizado após novas revisões do LaTeX.
+
+Título em inglês, palavras-chave, resumo e abstract continuam pendentes para o final do TCC I. Os ambientes de resumo e abstract não foram preenchidos com texto fictício; deverão ser inseridos na versão final. O ano de entrega também continua pendente em `tcc.conf`.

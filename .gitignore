@@ -215,3 +215,17 @@ pip-selfcheck.json
 
 datasets/
 output/
+
+# Arquivos auxiliares de compilação do TCC.
+tcc/latex/*.aux
+tcc/latex/capitulos/*.aux
+tcc/latex/*.bbl
+tcc/latex/*.blg
+tcc/latex/*.toc
+tcc/latex/*.lof
+tcc/latex/*.lot
+tcc/latex/*.out
+tcc/latex/*.fls
+tcc/latex/*.fdb_latexmk
+tcc/latex/*.synctex.gz
+tcc/latex/principal.pdf

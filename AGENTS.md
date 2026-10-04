@@ -10,6 +10,7 @@
 
 ## Escrita do TCC
 
+- Use `tcc.conf` como fonte dos dados básicos; campos vazios são pendências e não devem ser preenchidos por inferência.
 - O Markdown é a fonte principal do conteúdo. Faça alterações de conteúdo nele antes de atualizar a versão LaTeX.
 - Crie ou atualize LaTeX somente quando solicitado, escrevendo-o diretamente a partir do Markdown, sem conversores automáticos.
 - Preserve o conteúdo e as fontes; não invente informações, resultados experimentais ou referências bibliográficas.
@@ -18,3 +19,4 @@
 - Deixe a numeração dos títulos para o LaTeX.
 - Ao atualizar um capítulo, limite as alterações ao capítulo e aos arquivos compartilhados necessários.
 - Confira a correspondência entre fontes do Markdown, citações LaTeX e entradas bibliográficas.
+- Ao mover ou renomear arquivos versionados, use `git mv` e preserve seu conteúdo antes de aplicar os ajustes necessários.
