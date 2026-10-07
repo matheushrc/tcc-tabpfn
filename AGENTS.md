@@ -1,5 +1,9 @@
 # Instruções para agentes
 
+## Conversão de artigos
+
+- Para converter artigos em Markdown, siga o agente definido em `.agents/conversor-artigos.md`.
+
 ## Citações em arquivos Markdown
 
 - Toda citação, fonte ou referência adicionada a um arquivo `.md` deve usar o link original completo da fonte.
