@@ -10,7 +10,7 @@ A conversão será feita pela IA, sem Pandoc ou outro conversor automático.
 tcc/
 ├── markdown/
 │   ├── 01-introducao.md
-│   ├── 02-fundamentacao.md
+│   ├── 02-revisao-bibliografica.md
 │   ├── 03-metodologia.md
 │   ├── 04-resultados.md
 │   └── 05-conclusao.md
@@ -20,7 +20,7 @@ tcc/
     ├── bibliografia.bib
     ├── capitulos/
     │   ├── 01-introducao.tex
-    │   ├── 02-fundamentacao.tex
+    │   ├── 02-revisao-bibliografica.tex
     │   ├── 03-metodologia.tex
     │   ├── 04-resultados.tex
     │   └── 05-conclusao.tex
@@ -35,7 +35,7 @@ A estrutura foi iniciada com a introdução em Markdown e LaTeX. Os demais capí
 
 ## Nomes dos arquivos de capítulos
 
-Manter a pasta `tcc/latex/capitulos/` e nomear os arquivos com a ordem seguida do nome do capítulo: `01-introducao.tex`, `02-fundamentacao.tex` e assim por diante. Não usar nomes genéricos como `capitulo_1.tex`.
+Manter a pasta `tcc/latex/capitulos/` e nomear os arquivos com a ordem seguida do nome do capítulo: `01-introducao.tex`, `02-revisao-bibliografica.tex` e assim por diante. Não usar nomes genéricos como `capitulo_1.tex`.
 
 Usar dois dígitos na ordem, letras minúsculas, nomes sem acentos e hífens para separar palavras. O Markdown correspondente terá o mesmo nome-base, como `tcc/markdown/01-introducao.md`.
 
@@ -43,7 +43,7 @@ O prefixo numérico organiza os arquivos. A numeração exibida no texto continu
 
 ```latex
 \include{capitulos/01-introducao}
-\include{capitulos/02-fundamentacao}
+\include{capitulos/02-revisao-bibliografica}
 \include{capitulos/03-metodologia}
 \include{capitulos/04-resultados}
 \include{capitulos/05-conclusao}
@@ -116,7 +116,7 @@ Antes da execução, o template estava em `Template_UFFSTex/`, a introdução em
 
 `introducao.md` foi movido com `git mv` para `tcc/markdown/01-introducao.md`, preservando os parágrafos e fontes. Os ajustes feitos após a movimentação removeram números manuais e corrigiram a hierarquia dos títulos.
 
-`introducao.example.md` contém o exemplo de introdução do TCC de Natanael Henrik Zago, outro aluno orientado pelo mesmo professor. O documento de origem está em `docs/Final_UFFS___TCC_1__Natanael_Henrik_Zago_.pdf`. O exemplo e o PDF servem como referência de estrutura e escrita; não são conteúdo autoral deste TCC e não devem ser incorporados como capítulos do trabalho. Essa identificação foi fornecida pelo autor deste projeto.
+O TCC de referência de Natanael Henrik Zago foi reunido em `templates/natanael/`. O PDF integral foi preservado e um projeto LaTeX de reprodução foi acrescentado; os fontes originais não estão disponíveis. O exemplo isolado de introdução foi excluído por solicitação do autor. O guia foi movido para `templates/guia-trabalhos-relacionados.md`.
 
 A implementação consiste em organizar os textos, preparar a cópia do template e documentar o fluxo. Não inclui desenvolver os experimentos, preencher resultados ou escrever capítulos sem conteúdo de referência. A criação dos capítulos LaTeX depende de solicitação explícita, conforme o `AGENTS.md`.
 
@@ -124,8 +124,8 @@ A implementação consiste em organizar os textos, preparar a cópia do template
 
 ### 1. Conferir os arquivos e definir a migração
 
-- Ler `introducao.md`, `introducao.example.md`, `tcc.conf`, os documentos relevantes de `docs/` e os arquivos do template.
-- Tratar `introducao.md` como o texto principal atual e `introducao.example.md` como exemplo do TCC de Natanael Henrik Zago, cujo PDF está em `docs/Final_UFFS___TCC_1__Natanael_Henrik_Zago_.pdf`. Não tratar o exemplo ou as notas de pesquisa como capítulos aprovados deste TCC.
+- Ler `introducao.md`, o documento de referência em `templates/natanael/`, `tcc.conf`, os documentos relevantes de `docs/` e os arquivos do template.
+- Tratar `introducao.md` como o texto principal atual e o documento de referência em `templates/natanael/` como exemplo do TCC de Natanael Henrik Zago, cujo PDF está em `templates/natanael/tcc-original.pdf`. Não tratar o exemplo ou as notas de pesquisa como capítulos aprovados deste TCC.
 - Conferir referências locais à introdução antes de movê-la, para atualizar os caminhos afetados.
 - Registrar quais capítulos possuem conteúdo e quais ainda precisam ser escritos.
 
@@ -135,7 +135,7 @@ Critério de conclusão: origem e destino dos textos definidos, sem perda de con
 
 - Criar `tcc/markdown/` e mover a introdução principal com `git mv introducao.md tcc/markdown/01-introducao.md`, preservando o conteúdo e as URLs antes dos ajustes de títulos.
 - Remover a numeração manual dos títulos e ajustar a hierarquia: `#` para capítulo, `##` para seção e `###` para subseção.
-- Manter notas em `docs/` e preservar `introducao.example.md` e o PDF de Natanael Henrik Zago como referências, distinguindo-os do texto principal. Não mover o exemplo para `01-introducao.md` nem substituir a introdução atual pelo conteúdo do outro aluno.
+- Manter notas em `docs/` e preservar o documento de referência em `templates/natanael/` e o PDF de Natanael Henrik Zago como referências, distinguindo-os do texto principal. Não mover o exemplo para `01-introducao.md` nem substituir a introdução atual pelo conteúdo do outro aluno.
 - Criar os demais arquivos somente quando houver conteúdo a organizar ou uma solicitação para iniciar sua escrita; os nomes da árvore representam os destinos planejados.
 - Atualizar referências ao caminho antigo da introdução nos documentos pertinentes.
 
@@ -231,3 +231,7 @@ As verificações locais confirmaram que o Markdown mudou apenas nos títulos e 
 Foi preparado `output/tcc-overleaf.zip`, com os arquivos do projeto LaTeX e as subpastas necessárias. A integridade do ZIP foi conferida; ele é um artefato local ignorado pelo Git. Esse pacote representa a versão parcial atual e deverá ser atualizado após novas revisões do LaTeX.
 
 Título em inglês, palavras-chave, resumo e abstract continuam pendentes para o final do TCC I. Os ambientes de resumo e abstract não foram preenchidos com texto fictício; deverão ser inseridos na versão final. O ano de entrega também continua pendente em `tcc.conf`.
+
+## Atualização da organização — 9 de outubro de 2026
+
+A estrutura segue o sumário do trabalho de Natanael: `02-revisao-bibliografica` para conceitos e `03-trabalhos-relacionados` para os artigos. Os textos de Zhang e Barkov foram preservados no capítulo 3; o capítulo 2 aguarda escrita. As movimentações foram realizadas com `git mv`.

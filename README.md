@@ -6,9 +6,9 @@ O texto principal da introdução está em `tcc/markdown/01-introducao.md`. Faç
 
 Os dados básicos do trabalho ficam em `tcc.conf`, no formato `chave=valor`. O projeto LaTeX está em `tcc/latex/`, com `principal.tex` como documento principal e `bibliografia.bib` para referências. `Template_UFFSTex/` preserva o modelo original.
 
-Para revisar no Overleaf, envie os arquivos de `tcc/latex/`, preservando as subpastas, e selecione `principal.tex` como documento principal. A compilação local ainda não foi verificada porque este ambiente não possui compilador LaTeX. Título em inglês, palavras-chave, resumo e abstract permanecem pendentes para o fim do TCC I; a versão atual contém somente a introdução.
+Para revisar no Overleaf, envie os arquivos de `tcc/latex/`, preservando as subpastas, e selecione `principal.tex` como documento principal. A tentativa de compilação local ficou bloqueada no carregamento do Babel/MiKTeX; o PDF ainda não foi validado. Título em inglês, palavras-chave, resumo e abstract permanecem pendentes para o fim do TCC I; a versão atual contém introdução e trabalhos relacionados; a revisão conceitual está pendente.
 
-Consulte `ARCHITECTURE.md` para a organização das áreas, `AGENTS.md` para as regras de trabalho e `ORGANIZACAO_TCC.md` para o plano e as verificações da reorganização. `introducao.example.md` e o PDF de Natanael Henrik Zago em `docs/` são referências de escrita, separadas do texto autoral.
+Consulte `ARCHITECTURE.md` para a organização das áreas, `AGENTS.md` para as regras de trabalho e `ORGANIZACAO_TCC.md` para o plano e as verificações da reorganização. `templates/natanael/` contém o documento integral de referência e um projeto LaTeX de reprodução por inclusão do PDF; `templates/guia-trabalhos-relacionados.md` contém o guia de escrita.
 
 As seções abaixo registram o histórico de pesquisa e planejamento; decisões atuais de conteúdo devem seguir o Markdown principal.
 

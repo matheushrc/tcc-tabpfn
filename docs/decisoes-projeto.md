@@ -25,6 +25,8 @@ Estados utilizados: **decisão de escopo** (direção adotada, ainda sujeita à 
 | D10 | Desenvolver o tema de análise mineral em três trabalhos: este com foco em TabPFN, outro em CNN e outro em modelos mais básicos. | Organização informada pelo autor | Registrar responsabilidades e contribuições efetivas. Nomes, algoritmos específicos do terceiro trabalho e protocolo compartilhado não foram informados. Não atribuir ao autor resultados ou implementações dos colegas. |
 | D11 | Explorar uma camada de análise de imagens de satélite e uma fusão adicional de suas saídas ou representações com as do ramo tabular, inspirada no TIME. | Possibilidade opcional, condicionada a tempo | O professor considerou a extensão excessiva para o prazo disponível, segundo o autor. Priorizar o estudo principal de TabPFN; considerar a extensão somente após concluídas suas entregas essenciais e se houver tempo, dados e recursos suficientes. Arquitetura, tipo de saída e cooperação com o trabalho de CNN ainda não definidos. |
 
+| D12 | Seguir a organização do TCC de Natanael: Revisão Bibliográfica no capítulo 2 e Trabalhos Relacionados no capítulo 3; reunir referências de escrita em `templates/`. | Decisão de organização | Sumário do PDF local conferido. Textos dos artigos preservados no capítulo 3; fundamentação conceitual pendente. Só o PDF de Natanael está disponível, sem fontes LaTeX originais. |
+
 ## Distinções que devem ser preservadas no texto
 
 - **Geoquímica e mineralogia:** concentrações de elementos ou óxidos não equivalem automaticamente a proporções de minerais. Se as bases permitirem apenas alvos geoquímicos, registrar a limitação e revisar o escopo, os objetivos e, com o autor e os orientadores, o título; não apresentar regressão geoquímica como composição mineralógica medida.
@@ -77,3 +79,5 @@ Para cada ID, registrar o estado final e a evidência correspondente. Se uma pro
 | 2026-10-09 | D09; D01–D02 | Preferência por abrangência mineral/geoquímica ampla, com terras raras como alternativa condicionada. | Instrução do autor e sugestão do coorientador relatada por ele; seleção e viabilidade pendentes. Revisão consolidada em `docs/artigos.md`, sem novos compromissos experimentais. |
 
 | 2026-10-09 | D10–D11; D01, D05, D07 | Registrada a divisão entre três trabalhos e a possibilidade de extensão multimodal, condicionada ao tempo. | Relato do autor, incluindo orientação do professor sobre o prazo; TIME consultado na fonte original. Foco principal permanece TabPFN; extensão não executada e arquitetura pendente. |
+
+| 2026-10-09 | D12 | Corrigidos nomes e numeração dos capítulos conforme o exemplo de Natanael; guia e PDF movidos para `templates/` e exemplo isolado excluído. | Solicitação do autor e sumário do documento local; reprodução LaTeX por inclusão integral do PDF, sem alegar recuperação dos fontes originais. |
