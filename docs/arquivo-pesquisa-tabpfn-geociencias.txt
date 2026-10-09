@@ -1,0 +1,100 @@
+# Pesquisa de artigos sobre TabPFN em litologia, mineralogia e solo
+
+Pesquisa realizada em 9 de outubro de 2026 por busca na web e consulta de páginas com MCP Playwright. Lista de candidatos para leitura; a seleção não constitui decisão de inclusão no TCC nem alteração de seus objetivos.
+
+## Abrangência e critérios
+
+Foram executadas consultas com termos em 25 idiomas ou variedades, mantendo a grafia do modelo como TabPFN. A seleção linguística considera o total de falantes de primeira e segunda língua na [tabela de idiomas por total de falantes, baseada no Ethnologue 2026](https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers). Árabe padrão e egípcio, mandarim e cantonês/Yue aparecem separadamente nessa classificação.
+
+Busca multilíngue não equivale a encontrar publicações em 25 idiomas. O buscador retornou frequentemente os mesmos artigos em inglês, traduções de resumos e materiais genéricos. Foram priorizadas fontes dos autores, periódicos e repositórios acadêmicos; resultados sem confirmação de uso do TabPFN ou sem identificação confiável da fonte original não foram tratados como artigos confirmados.
+
+A triagem usa título, resumo e trechos disponíveis; não substitui a leitura integral da metodologia, dos resultados e dos suplementos. ScienceDirect bloqueou algumas consultas diretas com HTTP 403; nesses casos, os dados abaixo foram conferidos nos conteúdos da página do periódico indexados pelo buscador. As páginas de Scientific Reports e EarthArXiv também foram abertas com Playwright.
+
+## Candidatos prioritários
+
+### 1. Classificação litológica em reservatórios — Luo et al. (2025)
+
+[Enhancing reservoir parameter prediction workflows via advanced core data augmentation](https://www.sciencedirect.com/science/article/pii/S0264817225003228). Marine and Petroleum Geology, 182, 107605; DOI 10.1016/j.marpetgeo.2025.107605.
+
+Aplica aumento de dados de testemunhos e modelos tabulares à classificação litológica e à predição de parâmetros petrofísicos de reservatórios. O resumo destaca a combinação TabDDPM–TabPFN. É o candidato mais diretamente relacionado à tarefa de classificação litológica encontrada nesta pesquisa. Utiliza dados de poços/testemunhos, não imagens Sentinel-2. A leitura integral deve esclarecer os atributos, o tamanho do conjunto, os procedimentos contra vazamento e o ganho atribuível ao modelo versus ao aumento de dados.
+
+### 2. Sentinel-2 e referência de carbono do solo — Chen et al. (2026)
+
+[Integrating transformer-based learning and Sentinel-2 bare soil composites for soil organic carbon mapping in the black soil region of Northeast China](https://www.nature.com/articles/s41598-025-33682-4). Scientific Reports, 16, 3784, publicado em 5 de janeiro de 2026; DOI 10.1038/s41598-025-33682-4. O ano 2025 no DOI não corresponde ao ano de publicação.
+
+Integra composições multitemporais de imagens Sentinel-2 de solo exposto e variáveis ambientais para prever carbono orgânico do solo com TabPFN, CNN e XGBoost. O resumo informa 174 amostras e R² de 0,78, com RMSE de 1,90 g/kg para TabPFN com composição P50. É especialmente próximo da proposta de associar dados orbitais a referências medidas. Seu alvo é carbono orgânico, não classe litológica nem proporções de minerais.
+
+### 3. Classificação de minerais — Peña-Asensio et al. (2024)
+
+[Machine learning applications on lunar meteorite minerals: From classification to mechanical properties prediction — PDF no repositório da UAB](https://ddd.uab.cat/pub/artpub/2024/309173/INTEERNATIONAL_JOURNAL_OF_MINING.pdf). International Journal of Mining Science and Technology, 34, 1283–1292; DOI 10.1016/j.ijmst.2024.08.001.
+
+Usa TabPFN para classificar meteoritos lunares, grupos minerais e minerais a partir de composição em porcentagens atômicas obtida em análises microscópicas. A parte de regressão das propriedades mecânicas utiliza outros modelos; não deve ser atribuída ao TabPFN. É um precedente de classificação mineral com poucos dados, mas não de estimativa orbital da composição de solo terrestre. Resultados altos de classificação precisam ser interpretados no contexto dos três meteoritos estudados e do protocolo de divisão das amostras.
+
+### 4. Espectroscopia MIR e teste externo — Huang et al. (2026)
+
+[Zero-shot inference with Tabular Prior-data Fitted Network (TabPFN) for soil MIR spectral analysis](https://www.sciencedirect.com/science/article/pii/S0016706126002089). Geoderma, 471, 117880; DOI 10.1016/j.geoderma.2026.117880.
+
+Compara TabPFN, PLSR, Cubist e CNN para carbono total, pH e fósforo extraível por Olsen. Usa dados KSSL, teste interno no Texas e externo no leste da Austrália, variando tamanho e semelhança espectral do treinamento. É relevante para o teste de generalização entre regiões proposto no TCC. Trata espectroscopia de amostras e propriedades do solo, não classificação litológica orbital.
+
+### 5. Espectrômetros e solo tropical — Setiawati et al. (2026), preprint
+
+[Lower-cost Vis-NIR spectrometer to estimate key soil properties in humid tropical regions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7288177). Disponibilizado no SSRN em 15 de agosto de 2026; DOI informado na página: 10.2139/ssrn.7288177.
+
+Estuda solos de Lampung, Indonésia, comparando instrumentos de menor custo com ASD FieldSpec4, amostras úmidas e secas e os modelos PLSR, Cubist e TabPFN. A calibração inclui 174 amostras de 58 locais. Os alvos incluem carbono orgânico, textura, pH e cátions trocáveis. Nenhum modelo foi superior em todas as condições. Ajuda a discutir a interação entre instrumento, faixa espectral, condição da amostra e alvo; não demonstra ganho causado por simplesmente misturar sensores. A página SSRN não confirma revisão por pares.
+
+### 6. Acidez e biblioteca integrada — Jouichat e Khiari (2026), preprint
+
+[In-context learning for small-sample soil mid-infrared spectroscopy: evaluating TabPFN across an integrated soil-acidity panel](https://eartharxiv.org/repository/view/15130/). EarthArXiv, versão 1, publicado em 21 de setembro de 2026; DOI 10.31223/X55F73. A página informa explicitamente que não passou por revisão por pares.
+
+Avalia dez propriedades relacionadas à acidez em coortes de 418 solos ácidos da América do Norte e inclui avaliação na OSSL. Compara TabPFN, PLSR, Cubist, CNNs e estratégias de transferência e aprendizado auto-supervisionado. Ajuda a discutir poucos rótulos e bibliotecas maiores, mas não tem litologia ou frações mineralógicas como tarefas centrais.
+
+### 7. Informação espacial — Schmidinger et al. (2026)
+
+[Kriging prior regression: A case for kriging-based spatial features with TabPFN in soil mapping — registro dos autores em Wageningen](https://research.wur.nl/en/publications/kriging-prior-regression-a-case-for-kriging-based-spatial-feature/). Computers and Electronics in Agriculture, 243, 111352, publicado em março de 2026; DOI 10.1016/j.compag.2025.111352. [Preprint disponível no arXiv](https://arxiv.org/abs/2509.09408).
+
+Combina atributos de krigagem com TabPFN em seis datasets LimeSoDa para carbono orgânico, argila e pH. É pertinente à modelagem espacial e ao uso de coordenadas, mas a interpolação local não comprova transferência para países inéditos. A leitura integral deve conferir como os atributos espaciais são produzidos em cada divisão de treinamento e teste.
+
+### 8. Comparação ampla com poucos dados — Barkov et al. (2025, preprint)
+
+[Modern Neural Networks for Small Tabular Datasets: The New Default for Field-Scale Digital Soil Mapping?](https://arxiv.org/abs/2508.09888). Preprint inicial de 13 de agosto de 2025.
+
+Compara redes modernas, incluindo TabPFN, em 31 conjuntos de escala de campo e fazenda, com 30–460 amostras, para carbono ou matéria orgânica, pH e argila. É outro estudo, distinto do artigo sobre grandes bibliotecas já analisado no TCC. Serve para selecionar modelos comparativos e contextualizar a escassez de amostras; não avalia identificação orbital de minerais. Conferir a versão publicada antes de montar sua referência definitiva.
+
+## Resultado da triagem para o escopo atual
+
+Há precedentes de TabPFN em classificação litológica de reservatórios, classificação mineral baseada em composição química e predição de propriedades do solo com espectros de amostras ou Sentinel-2. Nesta busca, não foi confirmado um artigo que reúna simultaneamente TabPFN, Sentinel-2, classificação litológica terrestre e predição de proporções minerais. Isso descreve o limite da pesquisa executada, não prova inexistência nem originalidade absoluta.
+
+Para leitura inicial, priorizar os itens 1, 2, 3 e 4. Os demais ajudam na harmonização, escolha de modelos e avaliação espacial. Manter separadas propriedades geoquímicas, textura, identificação mineral e composição mineralógica quantitativa. A descoberta desses estudos não altera os compromissos D01–D08: eventual inclusão ou revisão do escopo deve ser decidida e registrada após análise.
+
+## Consultas multilíngues executadas
+
+As consultas abaixo foram realizadas no buscador web. O idioma dos termos não impõe filtro de idioma aos resultados; as grafias de termos técnicos são aproximações de busca, não traduções acadêmicas revisadas.
+
+| Idioma ou variedade | Consulta |
+| --- | --- |
+| Inglês | `"TabPFN" lithology mineral soil spectroscopy` |
+| Mandarim | `"TabPFN" 岩性 矿物 土壤 光谱` |
+| Hindi | `"TabPFN" मृदा खनिज शैलविज्ञान स्पेक्ट्रोस्कोपी` |
+| Espanhol | `"TabPFN" litología minerales suelo espectroscopia` |
+| Árabe padrão | `"TabPFN" التربة المعادن تصنيف الصخور التحليل الطيفي` |
+| Francês | `"TabPFN" lithologie minéraux sol spectroscopie` |
+| Bengali | `"TabPFN" মাটি খনিজ শিলা বর্ণালী` |
+| Português | `"TabPFN" litologia minerais solo espectroscopia` |
+| Indonésio | `"TabPFN" litologi mineral tanah spektroskopi` |
+| Urdu | `"TabPFN" مٹی معدنیات چٹان طیف` |
+| Russo | `"TabPFN" литология минералы почва спектроскопия` |
+| Alemão | `"TabPFN" Lithologie Mineralien Boden Spektroskopie` |
+| Japonês | `"TabPFN" 岩相 鉱物 土壌 分光` |
+| Pidgin nigeriano | `"TabPFN" soil mineral rock wetin prediction` |
+| Árabe egípcio | `"TabPFN" تحليل التربة والمعادن ونوع الصخور` |
+| Marata | `"TabPFN" माती खनिज खडक वर्णपट` |
+| Vietnamita | `"TabPFN" thạch học khoáng vật đất quang phổ` |
+| Telugo | `"TabPFN" నేల ఖనిజాలు శిలలు వర్ణపటం` |
+| Suaíli | `"TabPFN" udongo madini miamba spektroskopia` |
+| Hauçá | `"TabPFN" ƙasa maʼadanai duwatsu` |
+| Turco | `"TabPFN" litoloji mineral toprak spektroskopi` |
+| Punjabi ocidental | `"TabPFN" مٹی معدنیات پتھر` |
+| Tagalo | `"TabPFN" lupa mineral bato pagsusuri` |
+| Tâmil | `"TabPFN" மண் கனிமங்கள் பாறை நிறமாலை` |
+| Cantonês/Yue | `"TabPFN" 岩性 礦物 泥土 光譜` |
+

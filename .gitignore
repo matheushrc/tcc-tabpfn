@@ -229,3 +229,6 @@ tcc/latex/*.fls
 tcc/latex/*.fdb_latexmk
 tcc/latex/*.synctex.gz
 tcc/latex/principal.pdf
+
+# Registros temporários de consultas do navegador.
+.playwright-mcp/

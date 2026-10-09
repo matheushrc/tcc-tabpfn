@@ -4,6 +4,18 @@
 
 - Para converter artigos em Markdown, siga o agente definido em `.agents/conversor-artigos.md`.
 
+## Decisões e coerência do projeto
+
+- Sempre que o autor apresentar uma nova decisão, ideia ou mudança de escopo, consulte `docs/decisoes-projeto.md`, `tcc.conf` e os trechos pertinentes da introdução e da metodologia antes de incorporá-la ao trabalho.
+- Compare a proposta com o problema de pesquisa, as hipóteses, os objetivos, os dados de referência e o protocolo de avaliação. Informe de forma breve se ela está alinhada, depende de confirmação ou altera o escopo, explicando a consequência concreta e indicando os IDs afetados no registro.
+- Distinga decisões do autor de sugestões da IA. Não transforme uma sugestão, possibilidade ou pergunta em compromisso assumido. Se a intenção for ambígua e afetar o escopo, esclareça o ponto com o autor; continue as atividades que não dependam dessa definição.
+- Registre decisões e ideias expressas em `docs/decisoes-projeto.md`, usando um ID estável, estado, condições de viabilidade e evidências necessárias. Atualize o histórico com data, IDs afetados, motivo e evidência; preserve decisões anteriores e registre explicitamente sua substituição ou descarte.
+- Uma nova decisão explícita do autor pode revisar o escopo anterior. Não a rejeite apenas por divergir do registro: identifique o que mudou e atualize os compromissos afetados. Não escolha por conta própria uma mudança de título, tarefa ou objetivo para resolver incompatibilidades entre os dados e a proposta.
+- Verifique especialmente a distinção entre composição geoquímica e mineralógica, rótulos independentes e mapas derivados, superfície e subsuperfície, observações e valores interpolados ou previstos. Confira também compatibilidade espacial e temporal, harmonização entre bases e independência dos dados de teste quando esses aspectos forem afetados.
+- Mantenha hipóteses como afirmações a testar e intenções como entregas propostas. Marque uma atividade como realizada somente com evidência identificável; registre resultados negativos, limitações e atividades não executadas sem apresentá-los como sucesso ou omiti-los para manter a proposta original.
+- Ao alterar o conteúdo do TCC, confira sua coerência com o registro e ajuste os arquivos Markdown pertinentes dentro do escopo autorizado. Atualize LaTeX somente quando solicitado, diretamente a partir do Markdown; se houver versões ou capítulos afetados fora do pedido, indique a pendência. Confira as citações e as entradas de `tcc/latex/bibliografia.bib` quando fontes forem adicionadas ou alteradas.
+- Antes de finalizar uma alteração, confira se o texto distingue o que foi proposto, executado e demonstrado. Na revisão final do TCC, confronte cada compromisso registrado com as evidências e ajuste introdução, metodologia e conclusões ao trabalho efetivamente realizado.
+
 ## Citações em arquivos Markdown
 
 - Toda citação, fonte ou referência adicionada a um arquivo `.md` deve usar o link original completo da fonte.
