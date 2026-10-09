@@ -26,6 +26,7 @@ Estados utilizados: **decisão de escopo** (direção adotada, ainda sujeita à 
 | D11 | Explorar uma camada de análise de imagens de satélite e uma fusão adicional de suas saídas ou representações com as do ramo tabular, inspirada no TIME. | Possibilidade opcional, condicionada a tempo | O professor considerou a extensão excessiva para o prazo disponível, segundo o autor. Priorizar o estudo principal de TabPFN; considerar a extensão somente após concluídas suas entregas essenciais e se houver tempo, dados e recursos suficientes. Arquitetura, tipo de saída e cooperação com o trabalho de CNN ainda não definidos. |
 
 | D12 | Seguir a organização do TCC de Natanael: Revisão Bibliográfica no capítulo 2 e Trabalhos Relacionados no capítulo 3; reunir referências de escrita em `templates/`. | Decisão de organização | Sumário do PDF local conferido. Textos dos artigos preservados no capítulo 3; fundamentação conceitual pendente. Só o PDF de Natanael está disponível, sem fontes LaTeX originais. |
+| D13 | Preservar a escrita do autor, manter as subseções de trabalhos relacionados centradas no estudo analisado e reservar a justificativa geral do TabPFN à introdução; obter as oito fontes selecionadas, priorizando HTML e incluindo os extras disponíveis de Kutzke. | Decisão editorial; obtenção realizada | Não altera D01–D09. Fundamentação teórica fora do escopo desta alteração. Conferir as fontes integrais e distinguir tabelas de resultados de dados brutos. PDF mantido somente para Costa, cujo texto completo é oferecido nesse formato. |
 
 ## Distinções que devem ser preservadas no texto
 
@@ -69,6 +70,14 @@ A inspiração é [TIME: TabPFN-Integrated Multimodal Engine for Robust Tabular-
 
 Se D11 for retomada, definir primeiro se serão combinados atributos, representações ou previsões; confirmar correspondência espacial entre imagens e registros e comparar com TabPFN isolado usando o mesmo teste externo de D07. Se previsões supervisionadas forem entradas da fusão, gerá-las sem acesso aos rótulos de teste e sem treinar a segunda etapa sobre previsões obtidas com os próprios rótulos dessas amostras. Registrar a decisão de execução antes de acrescentar a extensão aos objetivos ou apresentar resultados. O ramo visual pode exigir articulação com o colega de CNN, mas essa colaboração não foi assumida.
 
+## Organização editorial e obtenção das fontes
+
+D13 registra a preferência do autor por manter o foco de cada subseção no artigo analisado. A construção “Enquanto [...] este trabalho se propõe [...]” foi preservada na comparação com Barkov; a justificativa baseada no desempenho relatado por Hollmann ficou na introdução. A sugestão da IA de manter essa comparação no encerramento da seção 3.2 segue a estrutura do guia local e não acrescenta compromisso experimental.
+
+Citar estudos diferentes no mesmo parágrafo pode servir à síntese e à comparação, conforme o [guia de revisão de literatura da Purdue OWL](https://owl.purdue.edu/owl/research_and_citation/conducting_research/writing_a_literature_review.html). Essa possibilidade não exige inserir Hollmann na discussão individual de Barkov: aqui, sua função é justificar a escolha do modelo na introdução. A fundamentação teórica permaneceu intacta, conforme instrução explícita do autor.
+
+As oito fontes de `docs/artigos.md` estão reunidas em `fontes/artigos/`: sete em Markdown obtido de HTML e Costa em PDF editorial. Em Kutzke, cinco tabelas completas e suas notas foram incorporadas ao artigo; as exportações CSV e três figuras em tamanho completo estão em `extras/`. Esses CSVs não são os registros brutos de espectroscopia e geoquímica e não satisfazem, por si, as pendências de D02 ou D07. A revisão foi corrigida para distinguir transferência entre crátons comparada com outro modelo de validação com medidas independentes.
+
 ## Conferência final e histórico
 
 Para cada ID, registrar o estado final e a evidência correspondente. Se uma proposta não for executada, manter seu histórico e explicar a mudança; atualizar a introdução, a metodologia e as conclusões para evitar promessas sem correspondência no trabalho realizado. Resultados negativos ou ausência de melhoria também são resultados válidos.
@@ -83,3 +92,5 @@ Para cada ID, registrar o estado final e a evidência correspondente. Se uma pro
 | 2026-10-09 | D12 | Corrigidos nomes e numeração dos capítulos conforme o exemplo de Natanael; guia e PDF movidos para `templates/` e exemplo isolado excluído. | Solicitação do autor e sumário do documento local; reprodução LaTeX por inclusão integral do PDF, sem alegar recuperação dos fontes originais. |
 
 | 2026-10-09 | D12 | Reconstrução editável do TCC de Natanael a partir do PDF, usando cópia da classe UFFS. | Solicitação explícita do autor; seis capítulos, elementos pré-textuais, três figuras, cronograma e bibliografia própria em `templates/natanael/`. Conferências de referências documentadas; não se trata dos fontes originais. |
+
+| 2026-10-09 | D13; D01–D02, D06–D07 | Registrada a preferência editorial, obtidas as oito fontes e os extras de Kutzke; movida a justificativa de Hollmann para a introdução. | Instruções do autor; arquivos em `fontes/artigos/` e alterações em introdução/trabalhos relacionados. Fundamentação teórica preservada. Correção da leitura de Kutzke sem alterar as hipóteses ou declarar dados experimentais recebidos. |

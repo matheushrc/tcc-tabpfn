@@ -6,21 +6,17 @@ archived_at: "2026-10-06"
 format: "Markdown extraído do HTML via MCP Playwright"
 ---
 
-Fonte original: <https://arxiv.org/html/2608.00608v1>.
+Viacheslav Barkov, Jonas Schmidinger, Robin Gebbers, Martin Atzmueller
 
-Cópia para consulta. Texto no idioma original; numeração interna preservada. As figuras apontam para o arXiv e exigem conexão. A conversão de fórmulas e tabelas deve ser conferida na fonte antes de citar.
+- Osnabrück University, Joint Lab Artificial Intelligence and Data Science, Osnabrück, Germany
+- Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB), Department of Agromechatronics, Potsdam, Germany
+- German Research Center for Artificial Intelligence (DFKI), Cooperative and Autonomous Systems (CAS), Osnabrück, Germany
 
-# From field-scale to large-scale spectral libraries: Tabular foundation models in soil spectroscopy
-
-Viacheslav Barkov    Jonas Schmidinger    Robin Gebbers    Martin Atzmueller  organization=Osnabrück University, Joint Lab Artificial Intelligence and Data Science, city=Osnabrück, country=Germany  organization=Leibniz Institute for Agricultural Engineering and Bioeconomy (ATB), Department of Agromechatronics, city=Potsdam, country=Germany  organization=German Research Center for Artificial Intelligence (DFKI), Cooperative and Autonomous Systems (CAS), city=Osnabrück, country=Germany 
-
-###### Abstract
-
+## Abstract
 Visible and near-infrared (vis-NIR) and mid-infrared (MIR) spectroscopy enable rapid, cost-effective prediction of soil properties. Yet, translating high-dimensional, highly collinear spectra into accurate soil property predictions remains challenging, particularly when employing machine learning. We systematically investigated regression models and dimensionality reduction approaches for spectroscopic modeling across 85 regression tasks from open benchmark datasets in pedometrics spanning field-scale digital soil mapping and a global soil spectral library. We compared an in-context learning tabular foundation model (TabPFN), a convolutional neural network (CNN), rule-based regression (Cubist), Random Forest, and partial least squares regression (PLSR) using full spectra as well as features derived from principal component analysis (PCA) and partial least squares (PLS) latent variables. TabPFN consistently delivered the best overall performance across scales, including large spectral library tasks with tens of thousands of soil samples. Notably, TabPFN applied directly to full spectra already surpassed all classical baselines, showing that explicit dimensionality reduction is not strictly required for strong performance. Further improvements were achieved through PLS, which proved to be an effective dimensionality reduction strategy for all models. Combining PLS latent variables with TabPFN yielded the best predictions overall. Our findings provide evidence-based guidance for spectroscopic calibration model selection across operational scales, demonstrating that the long-standing advantages of PLSR and modern tabular foundation models complement each other in chemometrics.
 
-###### keywords
-
-Chemometrics ,Pedometrics ,Digital Soil Mapping ,Machine learning ,Tabular foundation models 
+## Keywords
+Chemometrics ,Pedometrics ,Digital Soil Mapping ,Machine learning ,Tabular foundation models
 
 ## 1 Introduction
 
@@ -60,7 +56,7 @@ The 13 selected datasets encompass a wide range of geological settings, spectrom
 
 #### 2.1.2 Large-scale soil spectral library
 
-![Refer to caption](https://arxiv.org/html/2608.00608v1/figure-map-ossl.png) 
+![Refer to caption](https://arxiv.org/html/2608.00608v1/figure-map-ossl.png)
 
 Figure 3: Spatial distribution of soil samples in the Open Soil Spectral Library (OSSL) employed in this study. The OSSL aggregates harmonized spectral data from multiple national and international soil spectral collections, providing near-global spatial coverage. Base map source: Natural Earth.
 
@@ -248,195 +244,99 @@ Table B1 reports the hyperparameter search spaces for each model and dataset gro
 ## References
 
 - Abdi (2010) H. Abdi  Partial least squares regression and projection on latent structure regression (pls regression).  Wiley interdisciplinary reviews: computational statistics 2 (1), pp. 97–106.  Cited by: §2.2.2.
-
 - Agyeman et al. (2025) P. C. Agyeman, K. John, N. M. Kebonye, V. Khosravi, L. Borůvka, R. Vašát, and C. M. Boateng  Prediction of lead in agricultural soils: An integrated approach using machine learning, terrain attributes and reflectance spectra.  Pedosphere 35 (2), pp. 325–337.  External Links: [Document](https://dx.doi.org/10.1016/j.pedsph.2024.01.002), ISSN 10020160  Cited by: §2.2.3.
-
 - Akiba et al. (2019) T. Akiba, S. Sano, T. Yanase, T. Ohta, and M. Koyama  Optuna: a next-generation hyperparameter optimization framework.  In Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining,  KDD ’19, pp. 2623–2631.  Cited by: §2.2.4.
-
 - Angeletti Da Fonseca et al. (2022) A. Angeletti Da Fonseca, C. Pasquini, D. Cristina Costa, and E. Mercês Barros Soares  Effect of the sample measurement representativeness on soil carbon determination using near-infrared compact spectrophotometers.  Geoderma 409, pp. 115636.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2021.115636), ISSN 00167061  Cited by: §2.2.3.
-
 - Barkov et al. (2026) V. Barkov, J. Schmidinger, R. Gebbers, and M. Atzmueller  Modern neural networks for small tabular datasets: The new default for field-scale Digital Soil Mapping?.  European Journal of Soil Science 77 (2), pp. e70299.  External Links: [Document](https://dx.doi.org/10.1111/ejss.70299)  Cited by: §1, §2.2.3, §2.2.3, §4.1, §4.1, §4.3, §4.
-
 - Barnes et al. (1989) R. J. Barnes, M. S. Dhanoa, and S. J. Lister  Standard Normal Variate Transformation and De-Trending of Near-Infrared Diffuse Reflectance Spectra.  Applied Spectroscopy 43 (5), pp. 772–777.  External Links: [Document](https://dx.doi.org/10.1366/0003702894202201), ISSN 0003-7028  Cited by: §2.2.1.
-
 - Ben-Dor et al. (1999) E. Ben-Dor, J. Irons, G. Epema, et al.  Soil reflectance.  Remote sensing for the earth sciences: Manual of remote sensing 3 (3), pp. 111–188.  Cited by: §1, §1.
-
 - Bergstra et al. (2011) J. Bergstra, R. Bardenet, Y. Bengio, and B. Kégl  Algorithms for hyper-parameter optimization.  In Advances in Neural Information Processing Systems,  Vol. 24.  Cited by: §2.2.4.
-
 - Boulesteix et al. (2017) A. Boulesteix, R. Wilson, and A. Hapfelmeier  Towards evidence-based computational statistics: lessons from clinical research on the role and design of real-data benchmark studies.  BMC Medical Research Methodology 17 (1), pp. 138.  Cited by: §1.
-
 - Breiman (2001) L. Breiman  Random forests.  Machine learning 45 (1), pp. 5–32.  Cited by: §2.2.3.
-
 - Brown et al. (2020) S. Brown, R. Tauler, and B. Walczak  Comprehensive chemometrics: chemical and biochemical data analysis.   Elsevier.  Cited by: §1.
-
 - Carvalho et al. (2022) J. K. Carvalho, J. M. Moura-Bueno, R. Ramon, T. F. Almeida, G. Naibo, A. P. Martins, L. S. Santos, C. Gianello, and T. Tiecher  Combining different pre-processing and multivariate methods for prediction of soil organic matter by near infrared spectroscopy (NIRS) in Southern Brazil.  Geoderma Regional 29, pp. e00530.  External Links: [Document](https://dx.doi.org/10.1016/j.geodrs.2022.e00530), ISSN 23520094  Cited by: §2.2.3.
-
 - Chabrillat et al. (2019) S. Chabrillat, E. Ben-Dor, J. Cierniewski, C. Gomez, T. Schmid, and B. Van Wesemael  Imaging Spectroscopy for Soil Mapping and Monitoring.  Surveys in Geophysics 40 (3), pp. 361–399.  External Links: [Document](https://dx.doi.org/10.1007/s10712-019-09524-0), ISSN 0169-3298, 1573-0956  Cited by: §1.
-
 - Correa et al. (2025) J. Correa, H. Tavakoli, S. Vogel, and R. Gebbers  Overfitting due to data leakage in soil sensor calibration: examples from lab-based and in-situ soil nir spectroscopy.  Computers and Electronics in Agriculture 239, pp. 110920.  External Links: [Document](https://dx.doi.org/10.1016/j.compag.2025.110920), ISSN 0168-1699  Cited by: §1, §1, §1, §2.1.1.
-
 - Croux and Haesbroeck (2000) C. Croux and G. Haesbroeck  Principal component analysis based on robust estimators of the covariance or correlation matrix: influence functions and efficiencies.  Biometrika 87 (3), pp. 603–618.  External Links: [Document](https://dx.doi.org/10.1093/biomet/87.3.603), ISSN 0006-3444  Cited by: §4.4.
-
 - Cui et al. (2026) Z. Cui, B. Hu, S. Chen, Y. Hong, N. Wang, J. Peng, A. M. Mouazen, and Z. Shi  Improving accuracy and transferability of soil total nitrogen estimation model by integrating visible near-infrared spectroscopy and environmental covariates in cotton fields of the Tarim River Basin, China.  Industrial Crops and Products 239, pp. 122488.  External Links: [Document](https://dx.doi.org/10.1016/j.indcrop.2025.122488), ISSN 0926-6690  Cited by: §1.
-
 - Ding et al. (2025) Z. Ding, K. Liu, S. Grunwald, P. Smith, P. Ciais, B. Wang, A. M. Wadoux, C. Ferreira, S. Karunaratne, N. Shurpali, et al.  Advancing soil organic carbon prediction: a comprehensive review of technologies, AI, process-based and hybrid modelling approaches.  Advanced Science, pp. e04152.  Cited by: §2.2.3.
-
 - Dorantes et al. (2022) M. J. Dorantes, B. A. Fuentes, and D. M. Miller  Calibration set optimization and library transfer for soil carbon estimation using soil spectroscopy—A review.  Soil Science Society of America Journal 86 (4), pp. 879–903.  External Links: [Document](https://dx.doi.org/10.1002/saj2.20435), ISSN 0361-5995, 1435-0661  Cited by: §4.4.
-
 - dos Santos et al. (2023) E. P. dos Santos, M. C. Moreira, E. I. Fernandes-Filho, J. A. M. Demattê, U. J. dos Santos, D. D. da Silva, R. R. P. Cruz, J. M. Moura-Bueno, I. C. Santos, and E. V. de Sá Barreto Sampaio  Improving the generalization error and transparency of regression models to estimate soil organic carbon using soil reflectance data.  Ecological Informatics 77, pp. 102240.  External Links: [Document](https://dx.doi.org/10.1016/j.ecoinf.2023.102240), ISSN 1574-9541  Cited by: §1, §2.1.1.
-
 - Erickson et al. (2025) N. Erickson, L. Purucker, A. Tschalzev, D. Holzmüller, P. M. Desai, D. Salinas, and F. Hutter  TabArena: a living benchmark for machine learning on tabular data.  In The Thirty-ninth Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track,  External Links: [Link](https://openreview.net/forum?id=jZqCqpCLdU)  Cited by: §1, §2.2.3, §4.4.
-
 - Eslamifar et al. (2025) M. Eslamifar, H. Tavakoli, E. Thiessen, R. Kock, J. Correa, and E. Hartung  Effective spectral pre-processing methods enhance accuracy of soil property prediction by nir spectroscopy.  Discover Applied Sciences 7 (8), pp. 896.  External Links: [Document](https://dx.doi.org/10.1007/s42452-025-07580-3)  Cited by: §4.4.
-
 - Fan and Lv (2008) J. Fan and J. Lv  Sure independence screening for ultrahigh dimensional feature space.  Journal of the Royal Statistical Society Series B: Statistical Methodology 70 (5), pp. 849–911.  External Links: [Document](https://dx.doi.org/10.1111/j.1467-9868.2008.00674.x), ISSN 1369-7412  Cited by: §4.4.
-
 - Feuer et al. (2024) B. Feuer, R. T. Schirrmeister, V. Cherepanova, C. Hegde, F. Hutter, M. Goldblum, N. Cohen, and C. White  Tunetables: context optimization for scalable prior-data fitted networks.  Advances in Neural Information Processing Systems 37, pp. 83430–83464.  Cited by: §4.3.
-
 - Fohrafellner et al. (2026) J. Fohrafellner, M. Lippl, A. Bajraktarevic, A. Baumgarten, H. Spiegel, R. Körner, and T. Sandén  Austrian nir soil spectral library for soil health assessments.  Earth System Science Data 18 (1), pp. 219–229.  Cited by: §2.1.2.
-
 - Frei (2019) R. W. Frei  Diffuse Reflectance Spectroscopy Environmental Problem Solving.   CRC Press, Boca Raton.  External Links: [Document](https://dx.doi.org/10.1201/9781351071413), ISBN 978-1-351-07141-3  Cited by: §1.
-
 - Gamagedara et al. (2025) Y. Gamagedara, G. Feng, T. Waiser, M. L. Tagert, V. S. Martins, and N. K. Wijewardane  Application of calibration transfer techniques between different mid-infrared spectrometers/modules to improve accuracy in estimating soil properties.  Soil Science Society of America Journal 89 (5), pp. e70147.  External Links: [Document](https://dx.doi.org/10.1002/saj2.70147)  Cited by: §1, §2.1.2.
-
 - Garg et al. (2025) A. Garg, M. Ali, N. Hollmann, L. Purucker, S. Müller, and F. Hutter  Real-tabPFN: improving tabular foundation models via continued pre-training with real-world data.  In 1st ICML Workshop on Foundation Models for Structured Data,  External Links: [Link](https://openreview.net/forum?id=BtEiqKsIMw)  Cited by: §4.4.
-
 - Gebbers (2019) R. Gebbers  Proximal soil surveying and monitoring techniques..  pp. 29–78 (English).  External Links: ISBN 9781786762047  Cited by: §1, §1.
-
 - Grinsztajn et al. (2026) L. Grinsztajn, K. Flöge, O. Key, F. Birkel, P. Jund, B. Roof, M. Manium, S. B. Hoo, M. Bühler, A. Garg, et al.  TabPFN-3: technical report.  arXiv preprint arXiv:2605.13986.  Cited by: §4.4.
-
 - Grinsztajn et al. (2025) L. Grinsztajn, K. Flöge, O. Key, A. Hayler, M. Manium, A. Garg, J. Robertson, S. B. Hoo, F. Birkel, P. Jund, B. Jäger, R. T. Yu, B. Schölkopf, N. Hollmann, and F. Hutter  TabPFN-2.5: a preview.  In EurIPS 2025 Workshop: AI for Tabular Data,  External Links: [Link](https://openreview.net/forum?id=6lv642eq4y)  Cited by: §1, §2.2.3, §4.1.
-
 - Gyawali et al. (2025) A. J. Gyawali, M. Wiseman, J. P. Ackerson, S. Coffman, K. Meissner, and C. L. S. Morgan  Measuring *in Situ* soil carbon stocks: A study using a novel handheld VisNIR probe.  Geoderma 453, pp. 117152.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2024.117152), ISSN 0016-7061  Cited by: §1, §4.2.
-
 - Hateffard et al. (2024) F. Hateffard, L. Steinbuch, and G. B.M. Heuvelink  Evaluating the extrapolation potential of random forest digital soil mapping.  Geoderma 441, pp. 116740.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2023.116740), ISSN 00167061  Cited by: §4.4.
-
 - Herrick et al. (2023) J. E. Herrick, J. M. Maynard, B. T. Bestelmeyer, C. J. Carey, S. W. Salley, K. Shepherd, Z. P. Stewart, S. A. Wills, and F. M. Ziadat  Practical guidance for deciding whether to account for soil variability when managing for land health, agricultural production, and climate resilience.  Journal of Soil and Water Conservation 78 (6), pp. 125A–133A.  External Links: [Document](https://dx.doi.org/10.2489/jswc.2023.0706A)  Cited by: §1.
-
 - Hollmann et al. (2023) N. Hollmann, S. Müller, K. Eggensperger, and F. Hutter  TabPFN: a transformer that solves small tabular classification problems in a second.  In The Eleventh International Conference on Learning Representations,  External Links: [Link](https://openreview.net/forum?id=cp5PvcI6w8_)  Cited by: §1, §2.2.3, §4.1.
-
 - Hollmann et al. (2025) N. Hollmann, S. Müller, L. Purucker, A. Krishnakumar, M. Körfer, S. B. Hoo, R. T. Schirrmeister, and F. Hutter  Accurate predictions on small data with a tabular foundation model.  Nature 637 (8045), pp. 319–326.  Cited by: §1, §2.2.3, §4.3.
-
 - Holzmüller et al. (2024) D. Holzmüller, L. Grinsztajn, and I. Steinwart  Better by default: strong pre-tuned MLPs and boosted trees on tabular data.  In The Thirty-eighth Annual Conference on Neural Information Processing Systems,  External Links: [Link](https://openreview.net/forum?id=3BNPUDvqMt)  Cited by: §4.4.
-
 - Huang et al. (2025) Y. Huang, J. Padarian, B. Minasny, and A. B. McBratney  Using Monte Carlo conformal prediction to evaluate the uncertainty of deep learning soil spectral models.   Soil sensing.  External Links: [Document](https://dx.doi.org/10.5194/egusphere-2024-3703)  Cited by: Appendix B, §1.
-
 - Huang et al. (2026) Y. Huang, J. Padarian, W. Ng, B. Minasny, and A. B. McBratney  Zero-shot inference with tabular prior-data fitted network (tabpfn) for soil mir spectral analysis.  Geoderma 471, pp. 117880.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2026.117880), ISSN 0016-7061  Cited by: §1, §4.1, §4.4, §4.
-
 - Hutengs et al. (2024) C. Hutengs, N. Eisenhauer, M. Schädler, S. Cesarz, A. Lochner, M. Seidel, and M. Vohland  Enhanced VNIR and MIR proximal sensing of soil organic matter and PLFA-derived soil microbial properties through machine learning ensembles and external parameter orthogonalization.  Geoderma 450, pp. 117037.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2024.117037), ISSN 00167061  Cited by: §2.2.3.
-
 - Janik et al. (1998) L. J. Janik, R. H. Merry, and J. O. Skjemstad  Can mid infrared diffuse reflectance analysis replace soil extractions?.  Australian Journal of Experimental Agriculture 38 (7), pp. 681.  External Links: [Document](https://dx.doi.org/10.1071/EA97144), ISSN 0816-1089  Cited by: §1.
-
 - Jenny (1941) H. Jenny  Factors of soil formation, a system of quantitative pedology.  Agronomy Journal 33 (9), pp. 857–858.  External Links: [Document](https://dx.doi.org/10.2134/agronj1941.00021962003300090016x)  Cited by: §1.
-
 - Kühn et al. (2025) S. L. Kühn, S. C. Iden, F. Kästner, and M. Sut-Lohmann  Tracking soil moisture dynamics with Vis-NIR spectroscopy during laboratory bare-soil evaporation.  Geoderma 459, pp. 117368.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2025.117368), ISSN 00167061  Cited by: §2.2.3.
-
 - LeCun et al. (2002) Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner  Gradient-based learning applied to document recognition.  Proceedings of the IEEE 86 (11), pp. 2278–2324.  Cited by: §2.2.3.
-
 - Liu et al. (2017) L. Liu, M. Ji, and M. Buchroithner  Combining Partial Least Squares and the Gradient-Boosting Method for Soil Property Retrieval Using Visible Near-Infrared Shortwave Infrared Spectra.  Remote Sensing 9 (12), pp. 1299.  External Links: [Document](https://dx.doi.org/10.3390/rs9121299), ISSN 2072-4292  Cited by: §1.
-
 - McBratney et al. (2003) A. McBratney, M. Mendonça Santos, and B. Minasny  On digital soil mapping.  Geoderma 117 (1), pp. 3–52.  External Links: [Document](https://dx.doi.org/10.1016/S0016-7061%2803%2900223-4)  Cited by: §1.
-
 - Mészáros et al. (2025) J. Mészáros, Z. Kovács, P. László, S. Vass-Meyndt, S. Koós, B. Pirkó, N. Szűcs-Vásárhelyi, Z. Bakacsi, A. Laborczi, K. Balog, et al.  Vis-nir soil spectral library of the hungarian soil degradation observation system.  Scientific Data 12 (1), pp. 363.  Cited by: §2.1.2.
-
 - Minasny and McBratney (2008) B. Minasny and A. B. McBratney  Regression rules as a tool for predicting soil properties from infrared reflectance spectroscopy.  Chemometrics and Intelligent Laboratory Systems 94 (1), pp. 72–79.  External Links: [Document](https://dx.doi.org/10.1016/j.chemolab.2008.06.003), ISSN 0169-7439  Cited by: §2.2.3.
-
 - Minasny and McBratney (2016) B. Minasny and Alex.B. McBratney  Digital soil mapping: a brief history and some lessons.  Geoderma 264, pp. 301–311.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2015.07.017), ISSN 0016-7061  Cited by: §1.
-
 - Mouazen et al. (2010) A.M. Mouazen, B. Kuang, J. De Baerdemaeker, and H. Ramon  Comparison among principal component, partial least squares and back propagation neural network analyses for accuracy of measurement of selected soil properties with visible and near infrared spectroscopy.  Geoderma 158 (1-2), pp. 23–31.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2010.03.001), ISSN 00167061  Cited by: §1.
-
 - Müller et al. (2023) A. Müller, C. Curino, and R. Ramakrishnan  Mothernet: a foundational hypernetwork for tabular classification.  arXiv e-prints, pp. arXiv–2312.  Cited by: §4.3.
-
 - Müller et al. (2022) S. Müller, N. Hollmann, S. P. Arango, J. Grabocka, and F. Hutter  Transformers can do bayesian inference.  In International Conference on Learning Representations,  External Links: [Link](https://openreview.net/forum?id=KSugKcbNf9)  Cited by: §1, §4.1.
-
 - Nariya et al. (2023) M. K. Nariya, C. E. Mills, P. K. Sorger, and A. Sokolov  Paired evaluation of machine-learning models characterizes effects of confounders and outliers.  Patterns 4 (8), pp. 100791.  External Links: [Document](https://dx.doi.org/10.1016/j.patter.2023.100791), ISSN 26663899  Cited by: §2.2.4.
-
 - Ng et al. (2022) W. Ng, B. Minasny, E. Jones, and A. McBratney  To spike or to localize? Strategies to improve the prediction of local soil properties using regional spectral library.  Geoderma 406, pp. 115501.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2021.115501), ISSN 00167061  Cited by: §4.4.
-
 - Ng et al. (2019) W. Ng, B. Minasny, M. Montazerolghaem, J. Padarian, R. Ferguson, S. Bailey, and A. B. McBratney  Convolutional neural network for simultaneous prediction of several soil properties using visible/near-infrared, mid-infrared, and their combined spectra.  Geoderma 352, pp. 251–267.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2019.06.016), ISSN 0016-7061  Cited by: §1, §2.2.3.
-
 - Nießl et al. (2022) C. Nießl, M. Herrmann, C. Wiedemann, G. Casalicchio, and A. Boulesteix  Over-optimism in benchmark studies and the multiplicity of design and analysis options when interpreting their results.  Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery 12 (2), pp. e1441.  Cited by: §1.
-
 - Nocita et al. (2015) M. Nocita, A. Stevens, B. van Wesemael, M. Aitkenhead, M. Bachmann, B. Barthès, E. Ben Dor, D. J. Brown, M. Clairotte, A. Csorba, P. Dardenne, J. A.M. Demattê, V. Genot, C. Guerrero, M. Knadel, L. Montanarella, C. Noon, L. Ramirez-Lopez, J. Robertson, H. Sakai, J. M. Soriano-Disla, K. D. Shepherd, B. Stenberg, E. K. Towett, R. Vargas, and J. Wetterlind  Chapter four - soil spectroscopy: an alternative to wet chemistry for soil monitoring.   D. L. Sparks (Ed.),  Advances in Agronomy, Vol. 132, pp. 139–159.  External Links: [Document](https://dx.doi.org/10.1016/bs.agron.2015.02.002), ISSN 0065-2113  Cited by: §1, §1.
-
 - Pace et al. (2024) L. Pace, S. Priori, M. Zanini, and V. Cristofori  Soil Mapping of Small Fields with Limited Number of Samples by Coupling EMI and NIR Spectroscopy.  Soil Systems 8 (4).  External Links: [Document](https://dx.doi.org/10.3390/soilsystems8040128), ISSN 2571-8789  Cited by: §1, §4.2.
-
 - Padarian et al. (2019) J. Padarian, B. Minasny, and A. B. McBratney  Using deep learning to predict soil properties from regional spectral data.  Geoderma Regional 16, pp. e00198.  External Links: [Document](https://dx.doi.org/10.1016/j.geodrs.2018.e00198), ISSN 2352-0094  Cited by: §2.2.3.
-
 - Paltseva et al. (2022) A. A. Paltseva, M. Deeb, E. Di Iorio, L. Circelli, Z. Cheng, and C. Colombo  Prediction of bioaccessible lead in urban and suburban soils with Vis-NIR diffuse reflectance spectroscopy.  Science of The Total Environment 809, pp. 151107.  External Links: [Document](https://dx.doi.org/10.1016/j.scitotenv.2021.151107), ISSN 00489697  Cited by: §2.2.3.
-
 - Purucker et al. (2026) L. Purucker, A. Tschalzev, N. Erickson, G. Blayer, D. Holzmüller, A. Arazi, A. Pfefferle, M. Tajjar, G. Varoquaux, and F. Hutter  Beyond iid: how general are tabular foundation models, really?.  External Links: 2606.30410, [Link](https://arxiv.org/abs/2606.30410)  Cited by: §4.4.
-
 - Qu et al. (2025) J. Qu, D. Holzmüller, G. Varoquaux, and M. L. Morvan  TabICL: a tabular foundation model for in-context learning on large data.  In Forty-second International Conference on Machine Learning,  External Links: [Link](https://openreview.net/forum?id=0VvD1PmNzM)  Cited by: §4.1.
-
 - Qu et al. (2026) J. Qu, D. Holzmüller, G. Varoquaux, and M. L. Morvan  TabICLv2: a better, faster, scalable, and open tabular foundation model.  arXiv preprint arXiv:2602.11139.  Cited by: §4.3, §4.4.
-
 - Quinlan et al. (1992) J. R. Quinlan et al.  Learning with continuous classes.  In 5th Australian joint conference on artificial intelligence,  Vol. 92, pp. 343–348.  Cited by: §2.2.3, §4.3.
-
 - Ramirez-Lopez et al. (2013) L. Ramirez-Lopez, T. Behrens, K. Schmidt, R.A. V. Rossel, J.A.M. Demattê, and T. Scholten  Distance and similarity-search metrics for use with soil vis-nir spectra.  Geoderma 199, pp. 43–53.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2012.08.035), ISSN 0016-7061  Cited by: §4.3.
-
 - Reyes and Ließ (2024) J. Reyes and M. Ließ  Spectral Data Processing for Field-Scale Soil Organic Carbon Monitoring.  Sensors 24 (3).  External Links: [Document](https://dx.doi.org/10.3390/s24030849), ISSN 1424-8220  Cited by: §1, §4.2.
-
 - Rodríguez-Albarracín et al. (2024) H. S. Rodríguez-Albarracín, J. A. M. Demattê, N. A. Rosin, M. T. A. Amorim, A. E. D. Contreras, F. D. Andreote, and J. T. F. Rosas  Soil organic carbon sequestration potential explained by mineralogical and microbiological activity using spectral transfer functions.  Science of The Total Environment 947, pp. 174652.  External Links: [Document](https://dx.doi.org/10.1016/j.scitotenv.2024.174652), ISSN 0048-9697  Cited by: §1.
-
 - Rossel and Behrens (2010) R. V. Rossel and T. Behrens  Using data mining to model and interpret soil diffuse reflectance spectra.  Geoderma 158 (1-2), pp. 46–54.  Cited by: §2.2.3.
-
 - Rosset et al. (2005) S. Rosset, C. Perlich, and B. Zadrozny  Ranking-based evaluation of regression models.  In Fifth IEEE International Conference on Data Mining (ICDM’05),  pp. 8 pp.–.  External Links: [Document](https://dx.doi.org/10.1109/ICDM.2005.126), ISSN 2374-8486  Cited by: §2.2.4.
-
 - Rutledge and Jouan-Rimbaud Bouveresse (2013) D.N. Rutledge and D. Jouan-Rimbaud Bouveresse  Independent components analysis with the jade algorithm.  TrAC Trends in Analytical Chemistry 50, pp. 22–32.  External Links: [Document](https://dx.doi.org/10.1016/j.trac.2013.03.013), ISSN 0165-9936  Cited by: §4.4.
-
 - Safanelli et al. (2025) J. L. Safanelli, T. Hengl, L. L. Parente, R. Minarik, D. E. Bloom, K. Todd-Brown, A. Gholizadeh, W. D. S. Mendes, and J. Sanderman  Open Soil Spectral Library (OSSL): Building reproducible soil calibration models through open development and community engagement.  PLOS ONE 20 (1), pp. e0296545.  External Links: [Document](https://dx.doi.org/10.1371/journal.pone.0296545), ISSN 1932-6203  Cited by: §1, §1, §1, §2.1.2, §2.1.2, §2.2.1, §2.2.3, Code and data availability.
-
 - Safanelli et al. (2023) J. L. Safanelli, J. Sanderman, D. Bloom, K. Todd-Brown, L. L. Parente, T. Hengl, S. Adam, F. Albinet, E. Ben-Dor, C. M. Boot, J. H. Bridson, S. Chabrillat, L. Deiss, J. A. M. Demattê, M. Scott Demyan, G. Dercon, S. Doetterl, F. van Egmond, R. Ferguson, L. G. Garrett, M. L. Haddix, S. M. Haefele, M. Heiling, J. Hernandez-Allica, J. Huang, J. D. Jastrow, K. Karyotis, M. B. Machmuller, M. Khesuoe, A. Margenot, R. Matamala, J. R. Miesel, A. M. Mouazen, P. Nagel, S. Patel, M. Qaswar, S. Ramakhanna, C. Resch, J. Robertson, P. Roudier, M. Sabetizade, I. Shabtai, F. Sherif, N. Sinha, J. Six, L. Summerauer, C. L. Thomas, A. Toloza, B. Tomczyk-Wójtowicz, N. L. Tsakiridis, B. van Wesemael, F. Woodings, G. C. Zalidis, and W. R. Żelazny  An interlaboratory comparison of mid-infrared spectra acquisition: Instruments and procedures matter.  Geoderma 440, pp. 116724.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2023.116724), ISSN 0016-7061  Cited by: §2.2.1, §4.4.
-
 - Sanderman et al. (2025) J. Sanderman, C. Partida, J. L. Safanelli, K. Shepherd, Y. Ge, S. M. Mitu, and R. Ferguson  Application of a Handheld Near Infrared Spectrophotometer to Farm-Scale Soil Carbon Monitoring.  European Journal of Soil Science 76 (1), pp. e70053.  External Links: [Document](https://dx.doi.org/10.1111/ejss.70053), ISSN 1351-0754, 1365-2389  Cited by: §2.2.3.
-
 - Schmidinger et al. (2026a) J. Schmidinger, V. Barkov, S. Vogel, M. Atzmueller, and G. B.M. Heuvelink  Kriging prior regression: a case for kriging-based spatial features with tabpfn in soil mapping.  Computers and Electronics in Agriculture 243, pp. 111352.  External Links: [Document](https://dx.doi.org/10.1016/j.compag.2025.111352), ISSN 0168-1699  Cited by: §4.4.
-
 - Schmidinger et al. (2026b) J. Schmidinger, R. Gebbers, M. Gasser, V. Barkov, G. M. Wu, and V. I. Adamchuk  Rejections based on predictive uncertainty enable reliable routine soil spectroscopy.  External Links: 2606.21179, [Link](https://arxiv.org/abs/2606.21179)  Cited by: §4.4.
-
 - Schmidinger et al. (2024) J. Schmidinger, I. Schröter, E. Bönecke, R. Gebbers, J. Ruehlmann, E. Kramer, V. L. Mulder, G. B. M. Heuvelink, and S. Vogel  Effect of training sample size, sampling design and prediction model on soil mapping with proximal sensing data for precision liming.  Precision Agriculture 25 (3), pp. 1529–1555.  External Links: [Document](https://dx.doi.org/10.1007/s11119-024-10122-3), ISSN 1385-2256, 1573-1618  Cited by: §1.
-
 - Schmidinger et al. (2025) J. Schmidinger, S. Vogel, V. Barkov, A. Pham, R. Gebbers, H. Tavakoli, J. Correa, T. R. Tavares, P. Filippi, E. J. Jones, et al.  LimeSoDa: a dataset collection for benchmarking of machine learning regressors in digital soil mapping.  Geoderma 459, pp. 117337.  Cited by: §1, §1, §1, §2.1.1, Code and data availability.
-
 - Serneels et al. (2005) S. Serneels, C. Croux, P. Filzmoser, and P. J. Van Espen  Partial robust m-regression.  Chemometrics and Intelligent Laboratory Systems 79 (1), pp. 55–64.  External Links: [Document](https://dx.doi.org/10.1016/j.chemolab.2005.04.007), ISSN 0169-7439  Cited by: §4.4.
-
 - Söderström et al. (2016) M. Söderström, G. Sohlenius, L. Rodhe, and K. Piikki  Adaptation of regional digital soil mapping for precision agriculture.  Precision Agriculture 17 (5), pp. 588–607.  External Links: [Document](https://dx.doi.org/10.1007/s11119-016-9439-8), ISSN 1385-2256, 1573-1618  Cited by: §1.
-
 - Soriano-Disla et al. (2014) J. M. Soriano-Disla, L. J. Janik, R. A. V. Rossel, L. M. Macdonald, and M. J. McLaughlin  The performance of visible, near-, and mid-infrared reflectance spectroscopy for prediction of soil physical, chemical, and biological properties.  Applied Spectroscopy Reviews 49 (2), pp. 139–186.  External Links: [Document](https://dx.doi.org/10.1080/05704928.2013.811081)  Cited by: §1, §1, §1, §4.2.
-
 - Stoner and Baumgardner (1981) E. R. Stoner and M. Baumgardner  Characteristic variations in reflectance of surface soils.  Soil Science Society of America Journal 45 (6), pp. 1161–1165.  External Links: [Document](https://dx.doi.org/10.2136/sssaj1981.03615995004500060031x)  Cited by: §1.
-
 - Sun et al. (2026) L. Sun, J. L. Safanelli, J. Sanderman, K. Georgiou, C. Brungard, K. Grover, B. G. Hopkins, S. Liu, and P. Bremer  Self-supervised and multi-fidelity learning for extended predictive soil spectroscopy.  Geoderma 468, pp. 117764.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2026.117764), ISSN 00167061  Cited by: §4.4.
-
 - Tavakoli et al. (2023) H. Tavakoli, J. Correa, M. Sabetizade, and S. Vogel  Predicting key soil properties from Vis-NIR spectra by applying dual-wavelength indices transformations and stacking machine learning approaches.  Soil and Tillage Research 229, pp. 105684.  External Links: [Document](https://dx.doi.org/10.1016/j.still.2023.105684), ISSN 01671987  Cited by: §2.2.3.
-
 - Thomas et al. (2024) V. Thomas, J. Ma, R. Hosseinzadeh, K. Golestan, G. Yu, M. Volkovs, and A. Caterini  Retrieval & fine-tuning for in-context tabular models.  In Advances in Neural Information Processing Systems, A. Globerson, L. Mackey, D. Belgrave, A. Fan, U. Paquet, J. Tomczak, and C. Zhang (Eds.),  Vol. 37, pp. 108439–108467.  External Links: [Document](https://dx.doi.org/10.52202/079017-3442)  Cited by: §4.3.
-
 - Tibshirani (1996) R. Tibshirani  Regression shrinkage and selection via the lasso.  Journal of the Royal Statistical Society: Series B (Methodological) 58 (1), pp. 267–288.  External Links: [Document](https://dx.doi.org/10.1111/j.2517-6161.1996.tb02080.x), ISSN 0035-9246  Cited by: §4.4.
-
 - Tong and Pehlevan (2025) W. L. Tong and C. Pehlevan  MLPs learn in-context on regression and classification tasks.  In The Thirteenth International Conference on Learning Representations,  External Links: [Link](https://openreview.net/forum?id=MbX0t1rUlp)  Cited by: §4.3.
-
 - Varma and Simon (2006) S. Varma and R. Simon  Bias in error estimation when using cross-validation for model selection.  BMC bioinformatics 7 (1), pp. 91.  Cited by: §2.2.4.
-
 - Vestergaard et al. (2021) R. Vestergaard, H. B. Vasava, D. Aspinall, S. Chen, A. Gillespie, V. Adamchuk, and A. Biswas  Evaluation of Optimized Preprocessing and Modeling Algorithms for Prediction of Soil Properties Using VIS-NIR Spectroscopy.  Sensors 21 (20).  External Links: [Document](https://dx.doi.org/10.3390/s21206745), ISSN 1424-8220  Cited by: §2.2.1.
-
 - Viscarra Rossel et al. (2006) R. A. Viscarra Rossel, D. J. J. Walvoort, A. B. McBratney, L. J. Janik, and J. O. Skjemstad  Visible, near infrared, mid infrared or combined diffuse reflectance spectroscopy for simultaneous assessment of various soil properties.  Geoderma 131 (1), pp. 59–75.  External Links: [Document](https://dx.doi.org/10.1016/j.geoderma.2005.03.007), ISSN 0016-7061  Cited by: §1, §1, §4.2.
-
 - Viscarra Rossel et al. (2016) R.A. Viscarra Rossel, T. Behrens, E. Ben-Dor, D.J. Brown, J.A.M. Demattê, K.D. Shepherd, Z. Shi, B. Stenberg, A. Stevens, V. Adamchuk, H. Aïchi, B.G. Barthès, H.M. Bartholomeus, A.D. Bayer, M. Bernoux, K. Böttcher, L. Brodský, C.W. Du, A. Chappell, Y. Fouad, V. Genot, C. Gomez, S. Grunwald, A. Gubler, C. Guerrero, C.B. Hedley, M. Knadel, H.J.M. Morrás, M. Nocita, L. Ramirez-Lopez, P. Roudier, E.M. R. Campos, P. Sanborn, V.M. Sellitto, K.A. Sudduth, B.G. Rawlins, C. Walter, L.A. Winowiecki, S.Y. Hong, and W. Ji  A global spectral library to characterize the world’s soil.  Earth-Science Reviews 155, pp. 198–230.  External Links: [Document](https://dx.doi.org/10.1016/j.earscirev.2016.01.012), ISSN 0012-8252  Cited by: §1, §2.1.2.
-
 - Wadoux et al. (2020) A. M. Wadoux, B. Minasny, and A. B. McBratney  Machine learning for digital soil mapping: applications, challenges and suggested solutions.  Earth-Science Reviews 210, pp. 103359.  Cited by: §1, §2.2.3.
-
 - Wang et al. (2022) J. Wang, T. Liu, J. Zhang, H. Yuan, and G. E. Acquah  Spectral variable selection for estimation of soil organic carbon content using mid-infrared spectroscopy.  European Journal of Soil Science 73 (4), pp. e13267.  External Links: [Document](https://dx.doi.org/10.1111/ejss.13267)  Cited by: §1.
-
 - Wang and Wang (2022) L. Wang and R. Wang  Determination of soil ph from vis-nir spectroscopy by extreme learning machine and variable selection: a case study in lime concretion black soil.  Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy 283, pp. 121707.  External Links: [Document](https://dx.doi.org/10.1016/j.saa.2022.121707), ISSN 1386-1425  Cited by: §1.
-
 - Webster (1994) R. Webster  The development of pedometrics.  Geoderma 62 (1), pp. 1–15.  External Links: [Document](https://dx.doi.org/10.1016/0016-7061%2894%2990024-8)  Cited by: §1.
-
 - Wold (1975) H. Wold  Soft modelling by latent variables: the non-linear iterative partial least squares (nipals) approach.  Journal of Applied Probability 12 (S1), pp. 117–142.  External Links: [Document](https://dx.doi.org/10.1017/S0021900200047604)  Cited by: §1.
-
 - Ye et al. (2025) H. Ye, S. Liu, and W. Chao  A closer look at tabPFN v2: understanding its strengths and extending its capabilities.  In The Thirty-ninth Annual Conference on Neural Information Processing Systems,  External Links: [Link](https://openreview.net/forum?id=lQYNmlTwtc)  Cited by: §1, §4.1.
-
 - Young et al. (2008) I.M. Young, J.W. Crawford, N. Nunan, W. Otten, and A. Spiers  Chapter 4 microbial distribution in soils: physics and scaling.  Advances in Agronomy, Vol. 100, pp. 81–121.  External Links: [Document](https://dx.doi.org/10.1016/S0065-2113%2808%2900604-4), ISSN 0065-2113  Cited by: §1.
-
 - Zhao et al. (2024) S. Zhao, S. Ayoubi, S. R. Mousavi, S. A. Mireei, F. Shahpouri, S. Wu, C. Chen, Z. Zhao, and C. Tian  Integrating proximal soil sensing data and environmental variables to enhance the prediction accuracy for soil salinity and sodicity in a region of Xinjiang Province, China.  Journal of Environmental Management 364, pp. 121311.  External Links: [Document](https://dx.doi.org/10.1016/j.jenvman.2024.121311), ISSN 03014797  Cited by: §1.
