@@ -30,4 +30,4 @@ O Markdown é a fonte do conteúdo; revisões originadas no PDF devem ser aplica
 
 O projeto LaTeX foi preparado para revisão no Overleaf com `principal.tex` como documento principal. A compilação e a revisão visual do PDF ainda precisam ser realizadas: este ambiente não dispõe de compilador LaTeX.
 
-O guia de escrita dos artigos está em `templates/guia-trabalhos-relacionados.md`. A organização segue o exemplo de Natanael: capítulo 2 para Revisão Bibliográfica e capítulo 3 para Trabalhos Relacionados. O LaTeX de referência inclui o PDF; não é o fonte editável original.
+O guia de escrita dos artigos está em `templates/guia-trabalhos-relacionados.md`. A organização segue o exemplo de Natanael: capítulo 2 para Revisão Bibliográfica e capítulo 3 para Trabalhos Relacionados. O LaTeX de referência em `templates/natanael/` é uma reconstrução editável do PDF usando cópia da classe UFFS, identificada como transcrição; não é o fonte original.

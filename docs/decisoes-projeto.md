@@ -81,3 +81,5 @@ Para cada ID, registrar o estado final e a evidência correspondente. Se uma pro
 | 2026-10-09 | D10–D11; D01, D05, D07 | Registrada a divisão entre três trabalhos e a possibilidade de extensão multimodal, condicionada ao tempo. | Relato do autor, incluindo orientação do professor sobre o prazo; TIME consultado na fonte original. Foco principal permanece TabPFN; extensão não executada e arquitetura pendente. |
 
 | 2026-10-09 | D12 | Corrigidos nomes e numeração dos capítulos conforme o exemplo de Natanael; guia e PDF movidos para `templates/` e exemplo isolado excluído. | Solicitação do autor e sumário do documento local; reprodução LaTeX por inclusão integral do PDF, sem alegar recuperação dos fontes originais. |
+
+| 2026-10-09 | D12 | Reconstrução editável do TCC de Natanael a partir do PDF, usando cópia da classe UFFS. | Solicitação explícita do autor; seis capítulos, elementos pré-textuais, três figuras, cronograma e bibliografia própria em `templates/natanael/`. Conferências de referências documentadas; não se trata dos fontes originais. |

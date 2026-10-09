@@ -235,3 +235,5 @@ Título em inglês, palavras-chave, resumo e abstract continuam pendentes para o
 ## Atualização da organização — 9 de outubro de 2026
 
 A estrutura segue o sumário do trabalho de Natanael: `02-revisao-bibliografica` para conceitos e `03-trabalhos-relacionados` para os artigos. Os textos de Zhang e Barkov foram preservados no capítulo 3; o capítulo 2 aguarda escrita. As movimentações foram realizadas com `git mv`.
+
+O trabalho de Natanael passou a ter reconstrução editável em LaTeX, transcrita do PDF e baseada em cópia preservada da classe `Template_UFFSTex/UFFStex.cls`. Fontes bibliográficas e diferenças de metadados estão documentadas em `templates/natanael/conferencia-referencias.md`.

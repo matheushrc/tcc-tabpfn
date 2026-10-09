@@ -1,8 +1,47 @@
-% Reprodução integral do PDF fornecido pelo autor do projeto.
-% Não é o código-fonte LaTeX original de Natanael Henrik Zago.
-% Compilar nesta pasta: pdflatex principal.tex
-\documentclass[a4paper]{article}
-\usepackage{pdfpages}
+% Reconstrução editável do PDF de Natanael Henrik Zago (2023).
+% Não é o código-fonte original; ver README.md e conferencia-referencias.md.
+\documentclass[portuguese,twoside]{UFFStex}
+\usepackage{graphicx}
+\usepackage{tgtermes}
+\renewcommand{\familydefault}{\rmdefault}
+\usepackage[hidelinks]{hyperref}
+\usepackage[num]{abntex2cite}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\renewcommand{\listfigurename}{LISTA DE ILUSTRAÇÕES}
+\year=2023
+\author{Natanael Henrik Zago}
+% O PDF não informa um título em inglês; não foi criado por inferência.
+\title{Usando esquema GraphQL para geração de consultas de forma aleatória}{}
+\tipotrabalho{\tci}
+\curso{\cc}
+\orientador{Dr. Samuel da Silva Feitosa}
+\makeatletter
+\renewcommand{\PP@Cam}{Campus de Chapecó}
+\renewcommand{\PP@descricao}{Trabalho de conclusão de curso apresentado como requisito para obtenção do grau de Bacharel em Ciência da Computação da Universidade Federal da Fronteira Sul.}
+\renewcommand{\PP@aprovacao}{Este trabalho de conclusão de curso foi defendido e aprovado pela banca avaliadora em:}
+\makeatother
+\palavraschave{Geração de Código Aleatório, GraphQL, Testes de API}
+              {Random Code Generation, GraphQL, Test API}
+% A classe de 2023 usa o nome do curso na capa e foi preservada sem alterações.
+% O logotipo original é colocado apenas na capa por meio do gancho da página.
+\AddToHookNext{shipout/foreground}{%
+  \put(0,0){\put(315,-120){\includegraphics[width=110pt]{figuras/logo-uffs.png}}}}
 \begin{document}
-\includepdf[pages=-,pagecommand={},fitpaper=true]{tcc-original.pdf}
+\input{pretextuais/ficha-catalografica}
+\folhadeaprovacao{5/9/2023}{Prof. Dr. Andrei De Almeida Sampaio Braga -- UFFS}{Prof. Dr. Braulio Adriano de Mello -- UFFS}{}
+\input{pretextuais/resumo}
+\input{pretextuais/abstract}
+\listoffigures
+\listoftables
+\tableofcontents
+% Ordem de citação do PDF: preserva a correspondência dos números 1--12.
+\nocite{belhadi2022,jin2018,graphql,higginbotham2015,hughes2016,karlsson2020graphql,mista2018,pagrut2018,palka2011,karlsson2020rest,vargas2018,zetterlund2021}
+\include{capitulos/01-introducao}
+\include{capitulos/02-revisao-bibliografica}
+\include{capitulos/03-trabalhos-relacionados}
+\include{capitulos/04-metodologia}
+\include{capitulos/05-cronograma}
+\include{capitulos/06-consideracoes-finais}
+\bibliography{bibliografia}
 \end{document}

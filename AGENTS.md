@@ -34,7 +34,16 @@
 - Mantenha os arquivos LaTeX em `tcc/latex/capitulos/`, com nomes como `01-introducao.tex`. Use o mesmo nome-base no Markdown correspondente em `tcc/markdown/`.
 - Mantenha a numeração explícita dos títulos no Markdown. No LaTeX, deixe a numeração a cargo dos comandos de seção do template, sem inserir números manualmente nos títulos.
 - Ao atualizar um capítulo, limite as alterações ao capítulo e aos arquivos compartilhados necessários.
+- Siga a separação adotada no TCC de Natanael: capítulo 2, **Revisão Bibliográfica**, para conceitos e fundamentação; capítulo 3, **Trabalhos Relacionados**, para análise e comparação dos artigos. Consulte `templates/guia-trabalhos-relacionados.md` ao incorporar estudos; preserve os textos e suas fontes.
+- Reúna exemplos de escrita em `templates/`, distinguindo-os do conteúdo autoral. Consulte `templates/natanael/README.md` antes de usar o trabalho de referência: incluir páginas de um PDF em LaTeX não recupera os fontes editáveis originais. Não apresente uma reprodução como fonte original ou transcrição editável, nem recrie `introducao.example.md`, excluído pelo autor.
+- Mantenha em `tcc/latex/bibliografia.bib` apenas referências efetivamente citadas no TCC. Referências de pesquisas, decisões ou extensões opcionais permanecem nos documentos correspondentes até serem usadas nos capítulos. Ao incorporar ou remover citações, confira chaves ausentes e entradas sem uso.
 - Confira a correspondência entre fontes do Markdown, citações LaTeX e entradas bibliográficas.
 - Para preencher ou corrigir referências bibliográficas, abra os links originais usando o MCP do Playwright e confira autoria e data na fonte. Se a página não informar a data, abra também os documentos vinculados, especialmente PDFs, e procure a ficha catalográfica, a folha de rosto e o expediente antes de registrar a referência como sem data.
 - Distinga a data de publicação das datas de atualização da página e de criação ou modificação do arquivo. Não use estas últimas como data de publicação sem confirmação. Não transfira a data de um documento para a página que o hospeda: ao usar os dados do documento, cite seu título e sua URL original completa e mantenha a correspondência entre Markdown e BibTeX.
 - Ao mover ou renomear arquivos versionados, use `git mv` e preserve seu conteúdo antes de aplicar os ajustes necessários.
+
+## Commits da escrita
+
+- Ao incorporar artigos ao TCC, faça um commit separado por artigo, reunindo Markdown, LaTeX solicitado e ajustes bibliográficos correspondentes. Separe a preparação da estrutura dos capítulos das adições de estudos.
+- Quando o autor pedir para commitar o estado atual antes de iniciar uma tarefa, faça esse commit antes das novas alterações. Exclua do versionamento registros temporários de ferramentas.
+- Use `git commit --amend` quando solicitado para corrigir o último commit; confira seu conteúdo antes da alteração e informe o novo hash. Não trate uma solicitação pontual de amend como autorização permanente para reescrever o histórico.
