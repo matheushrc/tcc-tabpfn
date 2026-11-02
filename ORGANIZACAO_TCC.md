@@ -237,3 +237,9 @@ Título em inglês, palavras-chave, resumo e abstract continuam pendentes para o
 A estrutura segue o sumário do trabalho de Natanael: `02-revisao-bibliografica` para conceitos e `03-trabalhos-relacionados` para os artigos. Os textos de Zhang e Barkov foram preservados no capítulo 3; o capítulo 2 aguarda escrita. As movimentações foram realizadas com `git mv`.
 
 O trabalho de Natanael passou a ter reconstrução editável em LaTeX, transcrita do PDF e baseada em cópia preservada da classe `Template_UFFSTex/UFFStex.cls`. Fontes bibliográficas e diferenças de metadados estão documentadas em `templates/natanael/conferencia-referencias.md`.
+
+## Organização das fontes e roteiros de leitura — 2 de novembro de 2026
+
+Os oito artigos estão em `fontes/artigos/`, com pastas numeradas de `01` a `08` na ordem definida em `fontes/README.md` e reproduzida em `docs/artigos.md`. Cada pasta tem um arquivo `fundamentacao-teorica.md` com perguntas e seções a consultar. Os textos anteriores de Zhang e Barkov foram preservados, e a sequência já escrita das seções 3.1 e 3.2 permanece correspondente entre Markdown e LaTeX. Os demais roteiros não representam subseções redigidas nem conteúdo acadêmico produzido pela IA.
+
+As notícias estão em `fontes/noticias/`. As movimentações usaram `git mv`, e as referências locais, incluindo as seis imagens de Carajás, foram ajustadas. A fundamentação teórica será redigida pelo autor, conforme D15. A reorganização das pastas não muda as chaves ou URLs bibliográficas, nem acrescenta à bibliografia do TCC os estudos citados apenas nos materiais de apoio.

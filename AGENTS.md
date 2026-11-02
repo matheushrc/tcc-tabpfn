@@ -26,6 +26,8 @@
 
 ## Escrita do TCC
 
+- A fundamentação teórica é escrita pelo autor. A IA pode organizar fontes e preparar tópicos, perguntas e roteiros de leitura identificados como sugestões, preservando textos existentes; não deve redigir a fundamentação nem apresentar roteiros como capítulos ou análises concluídos.
+
 - Use `tcc.conf` como fonte dos dados básicos; campos vazios são pendências e não devem ser preenchidos por inferência.
 - O Markdown é a fonte principal do conteúdo. Faça alterações de conteúdo nele antes de atualizar a versão LaTeX.
 - Crie ou atualize LaTeX somente quando solicitado, escrevendo-o diretamente a partir do Markdown, sem conversores automáticos.
