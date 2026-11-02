@@ -5,7 +5,9 @@ archived_at: "2026-10-06"
 format: "Markdown extraído do HTML via MCP Playwright"
 ---
 
-Steven E. Zhang<sup>a, b</sup>, Glen T. Nwaila<sup>b</sup>, Julie E. Bourdeau<sup>a, b</sup>, Yousef Ghorbani<sup>c, d</sup>, Emmanuel John M. Carranza e ## Highlights
+Steven E. Zhang$^{a, b}$, Glen T. Nwaila$^{b}$, Julie E. Bourdeau$^{a, b}$, Yousef Ghorbani$^{c, d}$, Emmanuel John M. Carranza$^{e}$
+
+## Highlights
 
 - Machine learning is used to produce models that generate accurate and high-resolution elemental maps.
 - Various machine learning algorithms produce high-performance models.
