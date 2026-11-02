@@ -1,5 +1,12 @@
 # Instruções para agentes
 
+## MCPs para fontes e PDFs
+
+- Use o MCP do Playwright para abrir fontes originais, conferir versões e navegar no conteúdo autenticado. Capture o estado com `browser_snapshot`, use as referências atuais dos elementos e selecione explicitamente a aba correta com `browser_tabs`. Se houver login ou CAPTCHA, deixe o autor resolvê-lo no navegador e retome a mesma sessão; não solicite nem registre credenciais.
+- Para o GEDWeb da UFFS, pesquise no Pergamum com a base Target GEDWeb, confira o histórico e abra a versão correta. Para salvar o PDF original, inicie `python scripts/receber-pdf-gedweb.py --output <destino.pdf>` e execute `scripts/exportar-pdf-gedweb.playwright.js` pelo MCP Playwright `browser_run_code_unsafe`, com caminho absoluto em `filename`, na aba do visualizador autenticado. O helper recarrega essa aba, obtém o arquivo e a senha enviada pelo próprio leitor e os transfere apenas ao receptor local; este salva sem criptografia e verifica texto e renderização em todas as páginas. Requer PyMuPDF (`fitz`). Não exponha nem versione senhas, credenciais ou URLs temporárias de sessão; cite a página estável de detalhes da norma. Não substitua o PDF original por capturas de tela ou OCR quando a extração direta estiver disponível.
+- Use o MCP do PDFCraft para converter PDFs: `doc_open` com o caminho absoluto, `doc_info` e `text_extract` para conferir páginas e texto; descubra ferramentas adicionais com `tool_search` e execute-as com `tool_call`. `doc_export_office` com destino `.md` exporta Markdown, mas omite imagens: obtenha-as com `doc_export_all_images` e confira diagramas com `page_render` quando necessário. As páginas são numeradas a partir de 1.
+- Use OCR somente se não houver camada textual utilizável; nesse caso, execute `ocr_recognize` antes de exportar e confira o resultado contra o documento visível; o modelo OCR disponível pode não tratar corretamente acentos em português. Preserve o PDF de entrada e registre no Markdown origem, edição, correção e método de extração. Mantenha arquivos temporários fora do versionamento e não trate falhas ou extrações parciais como conversões concluídas.
+
 ## Conversão de artigos
 
 - Para converter artigos em Markdown, siga o agente definido em `.agents/conversor-artigos.md`.
@@ -26,20 +33,16 @@
 
 ## Escrita do TCC
 
-- A fundamentação teórica é escrita pelo autor. A IA pode organizar fontes e preparar tópicos, perguntas e roteiros de leitura identificados como sugestões, preservando textos existentes; não deve redigir a fundamentação nem apresentar roteiros como capítulos ou análises concluídos.
+- Antes de escrever ou revisar, consulte `ABNT.md`, que centraliza as regras de estilo, os limites da intervenção da IA e os critérios de conferência. Registre ali novas regras editoriais explicitamente definidas pelo autor, distinguindo preferências de exigências normativas verificadas.
 
 - Use `tcc.conf` como fonte dos dados básicos; campos vazios são pendências e não devem ser preenchidos por inferência.
 - O Markdown é a fonte principal do conteúdo. Faça alterações de conteúdo nele antes de atualizar a versão LaTeX.
 - Crie ou atualize LaTeX somente quando solicitado, escrevendo-o diretamente a partir do Markdown, sem conversores automáticos.
-- Preserve o conteúdo e as fontes; não invente informações, resultados experimentais ou referências bibliográficas.
 - Preserve `Template_UFFSTex/` como referência original. Adapte sua cópia em `tcc/latex/`, seguindo os comandos do template.
 - Mantenha os arquivos LaTeX em `tcc/latex/capitulos/`, com nomes como `01-introducao.tex`. Use o mesmo nome-base no Markdown correspondente em `tcc/markdown/`.
-- Mantenha a numeração explícita dos títulos no Markdown. No LaTeX, deixe a numeração a cargo dos comandos de seção do template, sem inserir números manualmente nos títulos.
 - Ao atualizar um capítulo, limite as alterações ao capítulo e aos arquivos compartilhados necessários.
-- Siga a separação adotada no TCC de Natanael: capítulo 2, **Revisão Bibliográfica**, para conceitos e fundamentação; capítulo 3, **Trabalhos Relacionados**, para análise e comparação dos artigos. Consulte `templates/guia-trabalhos-relacionados.md` ao incorporar estudos; preserve os textos e suas fontes.
 - Reúna exemplos de escrita em `templates/`, distinguindo-os do conteúdo autoral. Consulte `templates/natanael/README.md` antes de usar o trabalho de referência: incluir páginas de um PDF em LaTeX não recupera os fontes editáveis originais. Não apresente uma reprodução como fonte original ou transcrição editável, nem recrie `introducao.example.md`, excluído pelo autor.
 - Mantenha em `tcc/latex/bibliografia.bib` apenas referências efetivamente citadas no TCC. Referências de pesquisas, decisões ou extensões opcionais permanecem nos documentos correspondentes até serem usadas nos capítulos. Ao incorporar ou remover citações, confira chaves ausentes e entradas sem uso.
-- Confira a correspondência entre fontes do Markdown, citações LaTeX e entradas bibliográficas.
 - Para preencher ou corrigir referências bibliográficas, abra os links originais usando o MCP do Playwright e confira autoria e data na fonte. Se a página não informar a data, abra também os documentos vinculados, especialmente PDFs, e procure a ficha catalográfica, a folha de rosto e o expediente antes de registrar a referência como sem data.
 - Distinga a data de publicação das datas de atualização da página e de criação ou modificação do arquivo. Não use estas últimas como data de publicação sem confirmação. Não transfira a data de um documento para a página que o hospeda: ao usar os dados do documento, cite seu título e sua URL original completa e mantenha a correspondência entre Markdown e BibTeX.
 - Ao mover ou renomear arquivos versionados, use `git mv` e preserve seu conteúdo antes de aplicar os ajustes necessários.
