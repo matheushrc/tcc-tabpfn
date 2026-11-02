@@ -5,7 +5,7 @@ archived_at: "2026-10-09"
 format: "Markdown"
 ---
 
-Eloy Peña-Asensio<sup>a</sup>, Josep M. Trigo-Rodríguez<sup>b, c</sup>, Jordi Sort<sup>d, e</sup>, Jordi Ibáñez-Insa<sup>f</sup>, Albert Rimola<sup>g</sup>
+Eloy Peña-Asensio$^{a}$, Josep M. Trigo-Rodríguez$^{b, c}$, Jordi Sort$^{d, e}$, Jordi Ibáñez-Insa$^{f}$, Albert Rimola$^{g}$
 
 ## Abstract
 
@@ -39,7 +39,7 @@ In [Section 2](https://www.sciencedirect.com/science/article/pii/S20952686240010
 
 ## 2. Meteorites samples
 
-The thin sections of the meteorites analyzed in this study, DHOFAR 1084, JAH 838, and NWA 11444, are part of the Meteorite Collection at the Institute of Space Sciences (CSIC), Spain, and have been duly classified in the Meteoritical Bulletin Database.[<sup>1</sup>](https://www.sciencedirect.com/science/article/pii/S2095268624001010#fn1) The Meteoritical Bulletin Database, coordinated by the Meteoritical Society, is a comprehensive online resource that provides detailed information on all recognized meteorites (>75000), including their classifications, compositions, and discovery locations, serving as an essential tool for researchers in the field of meteoritics. [Fig. 1](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0005) shows false-color enhanced mosaics of the thin sections employed in this work.
+The thin sections of the meteorites analyzed in this study, DHOFAR 1084, JAH 838, and NWA 11444, are part of the Meteorite Collection at the Institute of Space Sciences (CSIC), Spain, and have been duly classified in the Meteoritical Bulletin Database.[$^{1}$](https://www.sciencedirect.com/science/article/pii/S2095268624001010#fn1) The Meteoritical Bulletin Database, coordinated by the Meteoritical Society, is a comprehensive online resource that provides detailed information on all recognized meteorites (>75000), including their classifications, compositions, and discovery locations, serving as an essential tool for researchers in the field of meteoritics. [Fig. 1](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0005) shows false-color enhanced mosaics of the thin sections employed in this work.
 
 ![](https://ars.els-cdn.com/content/image/1-s2.0-S2095268624001010-gr1.jpg)
 
@@ -63,17 +63,17 @@ This section explains the methodologies employed to analyze the mineralogical pr
 
 The thin sections of the samples were analyzed using a Zeiss Scope Axio petrographic [optical microscope](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/optical-microscope) in both reflected and transmitted light modes, employing magnifications of ×50, ×100, and ×250. To systematically identify and catalog various features and components within these sections, high-resolution mosaic images were constructed.
 
-Further analysis was conducted using SEM coupled with energy dispersive X-ray (EDX) analysis at the Catalan Institute of Nanoscience and Nanotechnology (ICN2), Spain, utilizing the FEI Quanta 650 FEG SEM in the low vacuum backscattered electron mode (BSED). Elemental composition was detailed using an Inca 250 SSD Xmax20 EDS detector, which is equipped with Peltier cooling and boasts an active area of 20 mm<sup>2</sup>. This setup facilitated the examination of selected areas at various magnifications, enabling the acquisition of [EDX spectra](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/x-ray-spectra) that offered an in-depth analysis of the mineralogical composition and elemental distribution within the sections. These analyses were instrumental for manually identifying the minerals subjected to indentation. Elemental information for O, Na, Mg, Al, Si, S, Ca, Ti, Cr, and Fe in the meteorites was obtained.
+Further analysis was conducted using SEM coupled with energy dispersive X-ray (EDX) analysis at the Catalan Institute of Nanoscience and Nanotechnology (ICN2), Spain, utilizing the FEI Quanta 650 FEG SEM in the low vacuum backscattered electron mode (BSED). Elemental composition was detailed using an Inca 250 SSD Xmax20 EDS detector, which is equipped with Peltier cooling and boasts an active area of 20 $\mathrm{mm}^{2}$. This setup facilitated the examination of selected areas at various magnifications, enabling the acquisition of [EDX spectra](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/x-ray-spectra) that offered an in-depth analysis of the mineralogical composition and elemental distribution within the sections. These analyses were instrumental for manually identifying the minerals subjected to indentation. Elemental information for O, Na, Mg, Al, Si, S, Ca, Ti, Cr, and Fe in the meteorites was obtained.
 
 ### 3.2. Nanoindentation
 
 The mechanical properties of minerals in this study were determined using the NHT2 Anton Paar nanoindentation instrument, equipped with a Berkovich pyramidal diamond tip, housed at the Autonomous University of Barcelona (UAB), Spain. Nanoindentation involves the application of a controlled force to localized sample areas with the diamond indenter, gradually increasing the force to a set maximum and then decreasing it back to zero, allowing the surface to elastically retract. This process generates load-depth curves, from which data on [deformation mechanisms](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/deformation-mechanism) and elastic recovery are extracted.
 
-For each mineral, a series of 6–12 indentations were executed, applying a maximum force of 25 mN, while maintaining thermal drift below 0.05 nm/s. Corrections for the contact area were made using a calibrated fused silica sample, alongside adjustments for initial indentation depth and instrument compliance, as per [[33]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0165). The hardness (*H)* and the reduced Young’s modulus (*E*<sub>r</sub>) were calculated from the load-displacement curves according to the methodology outlined by Oliver et al. [[34]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0170).
+For each mineral, a series of 6–12 indentations were executed, applying a maximum force of 25 mN, while maintaining thermal drift below 0.05 nm/s. Corrections for the contact area were made using a calibrated fused silica sample, alongside adjustments for initial indentation depth and instrument compliance, as per [[33]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0165). The hardness (*H)* and the reduced Young’s modulus ($E_{r}$) were calculated from the load-displacement curves according to the methodology outlined by Oliver et al. [[34]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0170).
 
-The Young’s modulus quantifies material stiffness, indicating its resistance to deformation under applied force. The *E*<sub>r</sub>, an [elastic property](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/elasticity) assessed in nanoindentation, adjusts Young’s modulus to account for interactions between the sample and indenter tip, combining the material’s and the indenter’s elastic displacements. This is described by the equation $\frac{1}{{E}_{\mathrm{r}}}=\frac{1-{\nu }^{2}}{E}-\frac{1-{\nu }_{i}^{2}}{{E}_{i}}$, where *E* and *ν* are the sample’s Young’s modulus and Poisson’s ratio, respectively; and *E<sub>i</sub>*=1140 GPa and *ν<sub>i</sub>=*0.07 are those of the diamond indenter. Hardness is defined as $H=\frac{{P}_{\mathrm{m}\mathrm{a}\mathrm{x}}}{A}$, with *P*<sub>max</sub> being the maximum load and *A* the contact area.
+The Young’s modulus quantifies material stiffness, indicating its resistance to deformation under applied force. The $E_{r}$, an [elastic property](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/elasticity) assessed in nanoindentation, adjusts Young’s modulus to account for interactions between the sample and indenter tip, combining the material’s and the indenter’s elastic displacements. This is described by the equation $\frac{1}{{E}_{\mathrm{r}}}=\frac{1-{\nu }^{2}}{E}-\frac{1-{\nu }_{i}^{2}}{{E}_{i}}$, where *E* and *ν* are the sample’s Young’s modulus and Poisson’s ratio, respectively; and $E_{i}$=1140 GPa and $\nu_{i}$=0.07 are those of the diamond indenter. Hardness is defined as $H=\frac{{P}_{\mathrm{m}\mathrm{a}\mathrm{x}}}{A}$, with $P_{max}$ being the maximum load and *A* the contact area.
 
-Elastic recovery was gauged by the ratio of elastic to total indentation energies (*W*<sub>e</sub>*/W*<sub>t</sub>), with *W*<sub>e</sub> calculated from the unloading curve’s area to the displacement axis and *W*<sub>t</sub> from the loading curve’s area. Plastic behavior was similarly characterized, using the plasticity index (*W*<sub>p</sub>*/W*<sub>t</sub>), offering insights into the material’s resistance to permanent deformation. [Fig. 2](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0010) provides a visual overview of the nanoindentation process applied.
+Elastic recovery was gauged by the ratio of elastic to total indentation energies ($W_{e}/W_{t}$), with $W_{e}$ calculated from the unloading curve’s area to the displacement axis and $W_{t}$ from the loading curve’s area. Plastic behavior was similarly characterized, using the plasticity index ($W_{p}/W_{t}$), offering insights into the material’s resistance to permanent deformation. [Fig. 2](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0010) provides a visual overview of the nanoindentation process applied.
 
 ![](https://ars.els-cdn.com/content/image/1-s2.0-S2095268624001010-gr2.jpg)
 
@@ -104,240 +104,56 @@ To predict the mechanical properties of lunar meteorites, a selection of regress
 - (5) Random Forest Regressor: A versatile ensemble of decision trees, known for its high accuracy, ability to deal with unbalanced and missing data, and feature importance evaluation.
 - (6) *K*-Neighbors Regressor: A non-parametric method that predicts the value of the dependent variable based on the ‘*k*’ nearest neighbors. This approach is useful for capturing the localized patterns in data.
 
-In the development of the predictive models, the dataset was randomly divided into two subsets: 80% was allocated for training and the remaining 20% was reserved for validation. This partitioning ensures that most of the data is used to train the models, while still holding out a substantial portion for the unbiased evaluation of model performance. For the training phase, we employed a hyper-parameter optimization technique that performs a randomized search over specified parameter values for an estimator, using the coefficient of determination (*R*<sup>2</sup>) as score metric.
+In the development of the predictive models, the dataset was randomly divided into two subsets: 80% was allocated for training and the remaining 20% was reserved for validation. This partitioning ensures that most of the data is used to train the models, while still holding out a substantial portion for the unbiased evaluation of model performance. For the training phase, we employed a hyper-parameter optimization technique that performs a randomized search over specified parameter values for an estimator, using the coefficient of determination ($R^{2}$) as score metric.
 
 The search was configured with a 5-fold stratified cross-validation to ensure that each fold is a good representative of the whole by maintaining approximately the same percentage of samples of each target class as the complete set. This stratification is important for dealing with imbalanced datasets, enhancing the reliability of the validation process by ensuring that each fold reflects the overall distribution of the data.
 
 The objective of using a random search grid scheme is to explore a wide range of hyper-parameters and identify the most effective combinations for predicting each mechanical property under study. By randomly selecting from the predefined hyper-parameter grid and evaluating model performance across different subsets of the training data, the process fosters a robust estimation of model accuracy and generalizability. Ultimately, this approach facilitates the selection of the best hyper-parameters, which are then used to validate the models’ performance on unseen data. [Table 1](https://www.sciencedirect.com/science/article/pii/S2095268624001010#t0005) shows all hyper-parameter with their possible values employed to search for the best fit.
 
-Table 1. Hyper-parameters grids for multiple regression models in search of the best fit. For a detailed explanation of each parameter and function, refer to the [[37]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0185) documentation.[<sup>a</sup>](https://www.sciencedirect.com/science/article/pii/S2095268624001010#tblfn1)
+Table 1. Hyper-parameters grids for multiple regression models in search of the best fit. For a detailed explanation of each parameter and function, refer to the [[37]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0185) documentation.[$^{a}$](https://www.sciencedirect.com/science/article/pii/S2095268624001010#tblfn1)
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Regressor model</th>
-      <th scope="col">Hiper-parameter</th>
-      <th scope="col">Possible values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Linear</td>
-      <td>fit_intercept</td>
-      <td>True, False</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>positive</td>
-      <td>True, False</td>
-    </tr>
-    <tr>
-      <td colspan="3"><br/></td>
-    </tr>
-    <tr>
-      <td>Decision Tree</td>
-      <td>criterion</td>
-      <td>squared_error, friedman_mse, abs_error, poisson</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>splitter</td>
-      <td>best, random</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>max_depth</td>
-      <td>None, 3, 5, 10, 20</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>min_samples_split</td>
-      <td>2–20 (randint)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>min_samples_leaf</td>
-      <td>1–10 (randint)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>max_features</td>
-      <td>None, sqrt, log2, 0.1, 0.325, 0.55, 0.775, 1.0</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>ccp_alpha</td>
-      <td>0.0, 0.01, 0.1</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>min_impurity_decrease</td>
-      <td>0.0, 0.01, 0.1</td>
-    </tr>
-    <tr>
-      <td colspan="3"><br/></td>
-    </tr>
-    <tr>
-      <td>Gradient Boosting</td>
-      <td>loss</td>
-      <td>squared_error, absolute_error, huber, quantile</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>learning_rate</td>
-      <td>1×10<sup>−3</sup>, 1 (loguniform)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>n</em>_estimators</td>
-      <td>50–201</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>subsample</td>
-      <td>0.5–1.5 (linear scale)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>criterion</td>
-      <td>friedman_mse, squared_error</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>min_samples_split</td>
-      <td>2–20 (randint)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>min_samples_leaf</td>
-      <td>1–11</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>max_depth</td>
-      <td>1–11</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>min_impurity_decrease</td>
-      <td>0.0–0.1 (linear scale)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>max_leaf_nodes</td>
-      <td>10–51</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>alpha</td>
-      <td>0.01–0.99 (linear scale)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>ccp_alpha</td>
-      <td>0.0–0.1 (linear scale)</td>
-    </tr>
-    <tr>
-      <td colspan="3"><br/></td>
-    </tr>
-    <tr>
-      <td>AdaBoost</td>
-      <td><em>n</em>_estimators</td>
-      <td>25–200</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>learning_rate</td>
-      <td>1e−3, 1 (loguniform)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>loss</td>
-      <td>linear, square, exponential</td>
-    </tr>
-    <tr>
-      <td colspan="3"><br/></td>
-    </tr>
-    <tr>
-      <td>Random Forest</td>
-      <td><em>n</em>_estimators</td>
-      <td>50–200 (randint)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>max_features</td>
-      <td>auto, sqrt, log2</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>max_depth</td>
-      <td>10–30 (randint values)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>min_samples_split</td>
-      <td>2–20 (randint)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>min_samples_leaf</td>
-      <td>1–10 (randint)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>bootstrap</td>
-      <td>True, False</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>criterion</td>
-      <td>squared_error, friedman_mse, abs_error, poisson</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>max_leaf_nodes</td>
-      <td>10–50 (randint values)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>ccp_alpha</td>
-      <td>0.0–0.1 (linear scale)</td>
-    </tr>
-    <tr>
-      <td colspan="3"><br/></td>
-    </tr>
-    <tr>
-      <td><em>K</em>-Neighbors</td>
-      <td><em>n</em>_neighbors</td>
-      <td>1–30 (randint)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>weights</td>
-      <td>uniform, distance</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>algorithm</td>
-      <td>ball_tree, kd_tree, brute</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>leaf_size</td>
-      <td>10–50 (randint)</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>p</em></td>
-      <td>1, 2, 3</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>metric</td>
-      <td>minkowski, manhattan, euclidean, chebyshev</td>
-    </tr>
-  </tbody>
-</table>
+| Regressor model | Hiper-parameter | Possible values |
+| --- | --- | --- |
+| Linear | fit_intercept | True, False |
+|  | positive | True, False |
+| Decision Tree | criterion | squared_error, friedman_mse, abs_error, poisson |
+|  | splitter | best, random |
+|  | max_depth | None, 3, 5, 10, 20 |
+|  | min_samples_split | 2–20 (randint) |
+|  | min_samples_leaf | 1–10 (randint) |
+|  | max_features | None, sqrt, log2, 0.1, 0.325, 0.55, 0.775, 1.0 |
+|  | ccp_alpha | 0.0, 0.01, 0.1 |
+|  | min_impurity_decrease | 0.0, 0.01, 0.1 |
+| Gradient Boosting | loss | squared_error, absolute_error, huber, quantile |
+|  | learning_rate | 1×$10^{-3}$, 1 (loguniform) |
+|  | *n*_estimators | 50–201 |
+|  | subsample | 0.5–1.5 (linear scale) |
+|  | criterion | friedman_mse, squared_error |
+|  | min_samples_split | 2–20 (randint) |
+|  | min_samples_leaf | 1–11 |
+|  | max_depth | 1–11 |
+|  | min_impurity_decrease | 0.0–0.1 (linear scale) |
+|  | max_leaf_nodes | 10–51 |
+|  | alpha | 0.01–0.99 (linear scale) |
+|  | ccp_alpha | 0.0–0.1 (linear scale) |
+| AdaBoost | *n*_estimators | 25–200 |
+|  | learning_rate | 1e−3, 1 (loguniform) |
+|  | loss | linear, square, exponential |
+| Random Forest | *n*_estimators | 50–200 (randint) |
+|  | max_features | auto, sqrt, log2 |
+|  | max_depth | 10–30 (randint values) |
+|  | min_samples_split | 2–20 (randint) |
+|  | min_samples_leaf | 1–10 (randint) |
+|  | bootstrap | True, False |
+|  | criterion | squared_error, friedman_mse, abs_error, poisson |
+|  | max_leaf_nodes | 10–50 (randint values) |
+|  | ccp_alpha | 0.0–0.1 (linear scale) |
+| *K*-Neighbors | *n*_neighbors | 1–30 (randint) |
+|  | weights | uniform, distance |
+|  | algorithm | ball_tree, kd_tree, brute |
+|  | leaf_size | 10–50 (randint) |
+|  | *p* | 1, 2, 3 |
+|  | metric | minkowski, manhattan, euclidean, chebyshev |
 
 a
 
@@ -362,7 +178,7 @@ Table 2. Number of instances per label.
 |  |  |  |  | Diopside | 4 |
 |  |  |  |  | Ilmenite | 4 |
 
-Before applying ML methodologies to the compositional data and the nanoindentation experiments, we first pay attention to the nanoindentation results to evaluate their consistency. In [Fig. 3](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0015), the average *H* for each type of mineral is plotted against the corresponding *E*<sub>r</sub>. The data points are grouped by the specific type of identified mineral. It is observed that the three types of ‘other silicate’ minerals, which have been indented, display distinct mechanical properties. There appears to be a clear relationship between their atomic compositions and their mechanical properties: An increase in the percentage of the ‘other’ element within these minerals is associated with increases in both hardness and reduced Young’s modulus. We decide to plot the relationship between ${H}^{3}$ and ${E}_{\mathrm{r}}^{2}$, as this ratio is posited to correlate with wear characteristics—a metric reflecting a material’s resistance to [plastic deformation](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/plastic-deformation) under loaded contact, commonly referred to as yield pressure [[38]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0190), [[39]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0195).
+Before applying ML methodologies to the compositional data and the nanoindentation experiments, we first pay attention to the nanoindentation results to evaluate their consistency. In [Fig. 3](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0015), the average *H* for each type of mineral is plotted against the corresponding $E_{r}$. The data points are grouped by the specific type of identified mineral. It is observed that the three types of ‘other silicate’ minerals, which have been indented, display distinct mechanical properties. There appears to be a clear relationship between their atomic compositions and their mechanical properties: An increase in the percentage of the ‘other’ element within these minerals is associated with increases in both hardness and reduced Young’s modulus. We decide to plot the relationship between ${H}^{3}$ and ${E}_{\mathrm{r}}^{2}$, as this ratio is posited to correlate with wear characteristics—a metric reflecting a material’s resistance to [plastic deformation](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/plastic-deformation) under loaded contact, commonly referred to as yield pressure [[38]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0190), [[39]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0195).
 
 ![](https://ars.els-cdn.com/content/image/1-s2.0-S2095268624001010-gr3.jpg)
 
@@ -392,7 +208,7 @@ Mg and Si have the strongest negative loading on PC2. The highest positive loadi
 
 The biplot indicates that the meteorites are spread across the PC1 and PC2 space, each potentially characterized by different elemental abundances. Specific mineral groups, such as carbonates, oxide, and spinel, are clustered together, indicating similarity in their elemental makeup as captured by the PCA. However, spinel is subclustered in two subgroups, each one corresponding to a different meteorite, suggesting differences in the composition. It is notable that the olivines, feldspar, and ‘other silicate’ are quite distinct in this PCA space, which suggests a more heterogeneous elemental composition.
 
-As can be seen in [Table A1](https://www.sciencedirect.com/science/article/pii/S2095268624001010#s0075) and [Fig. 4](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0020), there are distinct variations in the lunar spinel compositions. A solid solution of magnetite (Fe<sub>3</sub>O<sub>4</sub>) and ulvospinel (TiFe<sub>2</sub>O<sub>4</sub>) (titanomagnetite) could be inferred, as well as broader variations of dark spinels, such as magnesioferrite (MgFe<sub>2</sub>O<sub>4</sub>) and magnesiochromite (MgCr<sub>2</sub>O<sub>4</sub>). The presence of both Mg and Cr would deserve further investigation due to its potential implications for understanding lunar mineral formation and the [geological processes](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/geological-process) involved in their surface occurrence. [Fig. 4](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0020) shows well-separated clusters for different spinels. The separation may result from varying Fe/Ti ratios, but the roles of Mg and Cr require further consideration. The significance of [ilmenite](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/ilmenite) and Ti-spinel species in future [lunar exploration](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/lunar-exploration) is of great importance, as lunar ilmenite is a potential source of Ti and He-3 isotopes [[40]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0200). This may open a possibility to better understand the titanium distributions between different minerals in lunar [basalts](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/basalt) after performing similar laboratory analysis for lunar meteorites with identified places of origin on the Moon. Using PCA not only enhances our understanding of the dataset but also enables us to verify the consistency of mineral labeling. Upon confirming the data’s integrity, we can now proceed to apply ML techniques.
+As can be seen in [Table A1](https://www.sciencedirect.com/science/article/pii/S2095268624001010#s0075) and [Fig. 4](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0020), there are distinct variations in the lunar spinel compositions. A solid solution of magnetite ($\mathrm{Fe}_{3}O_{4}$) and ulvospinel ($\mathrm{TiFe}_{2}O_{4}$) (titanomagnetite) could be inferred, as well as broader variations of dark spinels, such as magnesioferrite ($\mathrm{MgFe}_{2}O_{4}$) and magnesiochromite ($\mathrm{MgCr}_{2}O_{4}$). The presence of both Mg and Cr would deserve further investigation due to its potential implications for understanding lunar mineral formation and the [geological processes](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/geological-process) involved in their surface occurrence. [Fig. 4](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0020) shows well-separated clusters for different spinels. The separation may result from varying Fe/Ti ratios, but the roles of Mg and Cr require further consideration. The significance of [ilmenite](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/ilmenite) and Ti-spinel species in future [lunar exploration](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/lunar-exploration) is of great importance, as lunar ilmenite is a potential source of Ti and He-3 isotopes [[40]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0200). This may open a possibility to better understand the titanium distributions between different minerals in lunar [basalts](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/basalt) after performing similar laboratory analysis for lunar meteorites with identified places of origin on the Moon. Using PCA not only enhances our understanding of the dataset but also enables us to verify the consistency of mineral labeling. Upon confirming the data’s integrity, we can now proceed to apply ML techniques.
 
 ### 4.1. TabPFN to classify lunar meteorites and their constituent minerals
 
@@ -418,228 +234,45 @@ The outcomes of the hyperparameter tuning are summarized in [Table 4](https://ww
 
 Table 4. Best hyper-parameters fitted for each model across different mechanical property predictions.
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Regressor model</th>
-      <th scope="col">Target</th>
-      <th scope="col">Best hyper-parameters</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Linear</td>
-      <td><em>H</em></td>
-      <td>positive<em>:</em> False<em>,</em> fit_intercept<em>:</em> True</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>E</em><sub>r</sub></td>
-      <td>positive<em>:</em> False<em>,</em> fit_intercept<em>:</em> True</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>W</em><sub>e</sub><em>/W</em><sub>t</sub></td>
-      <td>positive<em>:</em> False<em>,</em> fit_intercept<em>:</em> True</td>
-    </tr>
-    <tr>
-      <td colspan="3"><br/></td>
-    </tr>
-    <tr>
-      <td>Decision Tree</td>
-      <td><em>H</em></td>
-      <td>ccp_alpha: 0.0<em>,</em> criterion<em>:</em> friedman_mse<em>,</em> max_depth: 20<em>,</em> max_features: None<em>,</em> min_impurity_decrease: 0.01<em>,</em> min_samples_leaf: 1<em>,</em> min_samples_split: 2<em>,</em> splitter: random</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>E</em><sub>r</sub></td>
-      <td>ccp_alpha<em>:</em> 0.01<em>,</em> criterion: squared_error, max_depth: None, max_features: 0.55, min_impurity_decrease: 0.0<em>,</em> min_samples_leaf: 1<em>,</em> min_samples_split: 3, splitter: best</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>W</em><sub>e</sub><em>/W</em><sub>t</sub></td>
-      <td>ccp_alpha<em>:</em> 0.0<em>,</em> criterion: squared_error, max_depth: None, max_features: 1.0<em>,</em> min_impurity_decrease: 0.0<em>,</em> min_samples_leaf: 1<em>,</em> min_samples_split: 5<em>,</em> splitter: best</td>
-    </tr>
-    <tr>
-      <td colspan="3"><br/></td>
-    </tr>
-    <tr>
-      <td>Gradient Boosting</td>
-      <td><em>H</em></td>
-      <td>alpha: 0.01<em>,</em> ccp_alpha: 0.0, criterion: friedman_mse, learning_rate: 0.3335, loss: squared_error, max_depth: 3, max_leaf_nodes<em>: 42,</em> min_impurity_decrease: 0.0, min_samples_leaf: 3, min_samples_split: 8, <em>n</em>_estimators<em>:</em> 117, subsample: 0.7</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>E</em><sub>r</sub></td>
-      <td>alpha: 0.99, ccp_alpha: 0.022, criterion: friedman_mse, learning_rate: 0.3108, loss: huber, max_depth: 6, max_leaf_nodes: 35<em>,</em> min_impurity_decrease: 0.0, min_samples_leaf: 1, min_samples_split: 15, <em>n</em>_estimators: 171, subsample: 1.0</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>W</em><sub>e</sub>/<em>W</em><sub>t</sub></td>
-      <td>alpha: 0.99, ccp_alpha: 0.033, criterion: friedman_mse, learning_rate: 0.1732, loss: absolute_error, max_depth: 3, max_leaf_nodes: 12, min_impurity_decrease: 0.078, min_samples_leaf: 1, min_samples_split: 14, <em>n</em>_estimators: 166, subsample: 0.9</td>
-    </tr>
-    <tr>
-      <td colspan="3"><br/></td>
-    </tr>
-    <tr>
-      <td>AdaBoost</td>
-      <td><em>H</em></td>
-      <td>learning_rate: 0.9887, loss: exponential, <em>n</em>_estimators: 170</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>E</em><sub>r</sub></td>
-      <td>learning_rate: 0.9885, loss: square, <em>n</em>_estimators: 82</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>W</em><sub>e</sub>/<em>W</em><sub>t</sub></td>
-      <td>learning_rate: 0.8910, loss: square, <em>n</em>_estimators: 38</td>
-    </tr>
-    <tr>
-      <td colspan="3"><br/></td>
-    </tr>
-    <tr>
-      <td>Random Forest</td>
-      <td><em>H</em></td>
-      <td>bootstrap: False, ccp_alpha: 0.0, criterion: absolute_error, max_depth: 22, max_features: sqrt<em>,</em> max_leaf_nodes: 25, min_samples_leaf: 1<em>,</em> min_samples_split: 3, <em>n</em>_estimators: 156</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>E</em><sub>r</sub></td>
-      <td>bootstrap: False, ccp_alpha: 0.011, criterion: squared_error, max_depth: 22, max_features: sqrt, max_leaf_nodes: 24, min_samples_leaf: 1, min_samples_split: 4, <em>n</em>_estimators: 125</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>W</em><sub>e</sub><em>/W</em><sub>t</sub></td>
-      <td>bootstrap: False, ccp_alpha: 0.0, criterion: friedman_mse, max_depth: None, max_features: log2, max_leaf_nodes<em>:</em> 31, min_samples_leaf: 1, min_samples_split: 2, <em>n</em>_estimators: 148</td>
-    </tr>
-    <tr>
-      <td colspan="3"><br/></td>
-    </tr>
-    <tr>
-      <td><em>K</em>-Neighbors</td>
-      <td><em>H</em></td>
-      <td>algorithm: brute, leaf_size: 25, metric: manhattan, metric_params: None, <em>n</em>_neighbors: 1, p: 3, weights: distance</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>E</em><sub>r</sub></td>
-      <td>algorithm: brute, leaf_size: 16, metric: manhattan, metric_params: None, <em>n</em>_neighbors: 1, p: 1, weights: distance</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><em>W</em><sub>e</sub><em>/W</em><sub>t</sub></td>
-      <td>algorithm: ball_tree, leaf_size: 44, metric: manhattan, metric_params: None, <em>n</em>_neighbors: 1, p: 3, weights: uniform</td>
-    </tr>
-  </tbody>
-</table>
+| Regressor model | Target | Best hyper-parameters |
+| --- | --- | --- |
+| Linear | *H* | positive: False, fit_intercept: True |
+|  | $E_{r}$ | positive: False, fit_intercept: True |
+|  | $W_{e}/W_{t}$ | positive: False, fit_intercept: True |
+| Decision Tree | *H* | ccp_alpha: 0.0, criterion: friedman_mse, max_depth: 20, max_features: None, min_impurity_decrease: 0.01, min_samples_leaf: 1, min_samples_split: 2, splitter: random |
+|  | $E_{r}$ | ccp_alpha: 0.01, criterion: squared_error, max_depth: None, max_features: 0.55, min_impurity_decrease: 0.0, min_samples_leaf: 1, min_samples_split: 3, splitter: best |
+|  | $W_{e}/W_{t}$ | ccp_alpha: 0.0, criterion: squared_error, max_depth: None, max_features: 1.0, min_impurity_decrease: 0.0, min_samples_leaf: 1, min_samples_split: 5, splitter: best |
+| Gradient Boosting | *H* | alpha: 0.01, ccp_alpha: 0.0, criterion: friedman_mse, learning_rate: 0.3335, loss: squared_error, max_depth: 3, max_leaf_nodes: 42, min_impurity_decrease: 0.0, min_samples_leaf: 3, min_samples_split: 8, *n*_estimators: 117, subsample: 0.7 |
+|  | $E_{r}$ | alpha: 0.99, ccp_alpha: 0.022, criterion: friedman_mse, learning_rate: 0.3108, loss: huber, max_depth: 6, max_leaf_nodes: 35, min_impurity_decrease: 0.0, min_samples_leaf: 1, min_samples_split: 15, *n*_estimators: 171, subsample: 1.0 |
+|  | $W_{e}/W_{t}$ | alpha: 0.99, ccp_alpha: 0.033, criterion: friedman_mse, learning_rate: 0.1732, loss: absolute_error, max_depth: 3, max_leaf_nodes: 12, min_impurity_decrease: 0.078, min_samples_leaf: 1, min_samples_split: 14, *n*_estimators: 166, subsample: 0.9 |
+| AdaBoost | *H* | learning_rate: 0.9887, loss: exponential, *n*_estimators: 170 |
+|  | $E_{r}$ | learning_rate: 0.9885, loss: square, *n*_estimators: 82 |
+|  | $W_{e}/W_{t}$ | learning_rate: 0.8910, loss: square, *n*_estimators: 38 |
+| Random Forest | *H* | bootstrap: False, ccp_alpha: 0.0, criterion: absolute_error, max_depth: 22, max_features: sqrt, max_leaf_nodes: 25, min_samples_leaf: 1, min_samples_split: 3, *n*_estimators: 156 |
+|  | $E_{r}$ | bootstrap: False, ccp_alpha: 0.011, criterion: squared_error, max_depth: 22, max_features: sqrt, max_leaf_nodes: 24, min_samples_leaf: 1, min_samples_split: 4, *n*_estimators: 125 |
+|  | $W_{e}/W_{t}$ | bootstrap: False, ccp_alpha: 0.0, criterion: friedman_mse, max_depth: None, max_features: log2, max_leaf_nodes: 31, min_samples_leaf: 1, min_samples_split: 2, *n*_estimators: 148 |
+| *K*-Neighbors | *H* | algorithm: brute, leaf_size: 25, metric: manhattan, metric_params: None, *n*_neighbors: 1, p: 3, weights: distance |
+|  | $E_{r}$ | algorithm: brute, leaf_size: 16, metric: manhattan, metric_params: None, *n*_neighbors: 1, p: 1, weights: distance |
+|  | $W_{e}/W_{t}$ | algorithm: ball_tree, leaf_size: 44, metric: manhattan, metric_params: None, *n*_neighbors: 1, p: 3, weights: uniform |
 
 Note: For a detailed explanation of each parameter and function, refer to the Scikit-learn documentation.
 
-The best performance for the regression models applied, measured in terms of the *R*<sup>2</sup>, mean absolute error (MAE), and standard deviation absolute error (SDAE), is detailed for each property and model in [Table 5](https://www.sciencedirect.com/science/article/pii/S2095268624001010#t0025)**.** The performance analysis of various models on mechanical properties indicates that the *K*-Neighbors model demonstrates superior predictive accuracy for properties *H* and *E*<sub>r</sub>, with mean absolute errors of 0.05 and 0.62 GPa, respectively. In contrast, while the Decision Tree Model slightly outperforms the *K*-Neighbors Model in predicting *W*<sub>e</sub>*/W*<sub>t</sub>, it exhibits significant limitations in predicting *E*<sub>r</sub>. All models, including Linear, show robust performance in predicting *W*<sub>e</sub>*/W*<sub>t</sub>, suggesting that it is a simpler property to model. The Decision Tree and the Gradient Boosting significantly reduce their performance when predicting *E*<sub>r</sub>.
+The best performance for the regression models applied, measured in terms of the $R^{2}$, mean absolute error (MAE), and standard deviation absolute error (SDAE), is detailed for each property and model in [Table 5](https://www.sciencedirect.com/science/article/pii/S2095268624001010#t0025)**.** The performance analysis of various models on mechanical properties indicates that the *K*-Neighbors model demonstrates superior predictive accuracy for properties *H* and $E_{r}$, with mean absolute errors of 0.05 and 0.62 GPa, respectively. In contrast, while the Decision Tree Model slightly outperforms the *K*-Neighbors Model in predicting $W_{e}/W_{t}$, it exhibits significant limitations in predicting $E_{r}$. All models, including Linear, show robust performance in predicting $W_{e}/W_{t}$, suggesting that it is a simpler property to model. The Decision Tree and the Gradient Boosting significantly reduce their performance when predicting $E_{r}$.
 
 Table 5. Mechanical property prediction results with regression models.
 
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2" scope="col">Regressor</th>
-      <th colspan="3" scope="col"><em>H</em></th>
-      <th colspan="3" scope="col"><em>E</em><sub>r</sub></th>
-      <th colspan="3" scope="col"><em>W</em><sub>e</sub><em>/W</em><sub>t</sub></th>
-    </tr>
-    <tr>
-      <th scope="col"><em>R</em><sup>2</sup></th>
-      <th scope="col">MAE</th>
-      <th scope="col">SDAE</th>
-      <th scope="col"><em>R</em><sup>2</sup></th>
-      <th scope="col">MAE</th>
-      <th scope="col">SDAE</th>
-      <th scope="col"><em>R</em><sup>2</sup></th>
-      <th scope="col">MAE</th>
-      <th scope="col">SDAE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Linear</td>
-      <td>0.562</td>
-      <td>1.044</td>
-      <td>1.197</td>
-      <td>0.630</td>
-      <td>12.9</td>
-      <td>13.507</td>
-      <td>0.909</td>
-      <td>0.025</td>
-      <td>0.022</td>
-    </tr>
-    <tr>
-      <td>Decision Tree</td>
-      <td>0.934</td>
-      <td>0.281</td>
-      <td>0.551</td>
-      <td>0.601</td>
-      <td>6.00</td>
-      <td>18.439</td>
-      <td>0.988</td>
-      <td>0.006</td>
-      <td>0.010</td>
-    </tr>
-    <tr>
-      <td>Gradient Boosting</td>
-      <td>0.943</td>
-      <td>0.404</td>
-      <td>0.403</td>
-      <td>0.738</td>
-      <td>4.92</td>
-      <td>14.924</td>
-      <td>0.951</td>
-      <td>0.016</td>
-      <td>0.019</td>
-    </tr>
-    <tr>
-      <td>AdaBoost</td>
-      <td>0.900</td>
-      <td>0.660</td>
-      <td>0.375</td>
-      <td>0.933</td>
-      <td>6.17</td>
-      <td>5.019</td>
-      <td>0.969</td>
-      <td>0.014</td>
-      <td>0.013</td>
-    </tr>
-    <tr>
-      <td>Random Forest</td>
-      <td>0.972</td>
-      <td>0.301</td>
-      <td>0.268</td>
-      <td>0.938</td>
-      <td>4.30</td>
-      <td>6.321</td>
-      <td>0.976</td>
-      <td>0.011</td>
-      <td>0.013</td>
-    </tr>
-    <tr>
-      <td><em>K</em>-Neighbors</td>
-      <td>0.996</td>
-      <td>0.050</td>
-      <td>0.139</td>
-      <td>0.995</td>
-      <td>0.62</td>
-      <td>2.040</td>
-      <td>0.987</td>
-      <td>0.004</td>
-      <td>0.012</td>
-    </tr>
-  </tbody>
-</table>
+| Regressor | *H* / $R^{2}$ | *H* / MAE | *H* / SDAE | $E_{r}$ / $R^{2}$ | $E_{r}$ / MAE | $E_{r}$ / SDAE | $W_{e}/W_{t}$ / $R^{2}$ | $W_{e}/W_{t}$ / MAE | $W_{e}/W_{t}$ / SDAE |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Linear | 0.562 | 1.044 | 1.197 | 0.630 | 12.9 | 13.507 | 0.909 | 0.025 | 0.022 |
+| Decision Tree | 0.934 | 0.281 | 0.551 | 0.601 | 6.00 | 18.439 | 0.988 | 0.006 | 0.010 |
+| Gradient Boosting | 0.943 | 0.404 | 0.403 | 0.738 | 4.92 | 14.924 | 0.951 | 0.016 | 0.019 |
+| AdaBoost | 0.900 | 0.660 | 0.375 | 0.933 | 6.17 | 5.019 | 0.969 | 0.014 | 0.013 |
+| Random Forest | 0.972 | 0.301 | 0.268 | 0.938 | 4.30 | 6.321 | 0.976 | 0.011 | 0.013 |
+| *K*-Neighbors | 0.996 | 0.050 | 0.139 | 0.995 | 0.62 | 2.040 | 0.987 | 0.004 | 0.012 |
 
-Note: Coefficient of determination (*R*<sup>2</sup>), mean absolute error (MAE) in GPa, and standard deviation absolute error (SDAE) in GPA are given.
+Note: Coefficient of determination ($R^{2}$), mean absolute error (MAE) in GPa, and standard deviation absolute error (SDAE) in GPA are given.
 
-[Fig. 5](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0025) serves as a visual representation of the performances, showcasing the predictive accuracy of the regression models for the 20% of the data reserved for validation. Across the three plots, the dashed diagonal line represents the ideal scenario where the predicted values perfectly match the measured values. It can be easily observed the superior performance of the *K*-Neighbor model. In the *E*<sub>r</sub> plot, there is a visible higher dispersion compared to the other mechanical properties, indicating a broader variability in the predictions.
+[Fig. 5](https://www.sciencedirect.com/science/article/pii/S2095268624001010#f0025) serves as a visual representation of the performances, showcasing the predictive accuracy of the regression models for the 20% of the data reserved for validation. Across the three plots, the dashed diagonal line represents the ideal scenario where the predicted values perfectly match the measured values. It can be easily observed the superior performance of the *K*-Neighbor model. In the $E_{r}$ plot, there is a visible higher dispersion compared to the other mechanical properties, indicating a broader variability in the predictions.
 
 ![](https://ars.els-cdn.com/content/image/1-s2.0-S2095268624001010-gr5.jpg)
 
@@ -649,11 +282,11 @@ Note: Coefficient of determination (*R*<sup>2</sup>), mean absolute error (MAE) 
 
 Fig. 5. Example of comparative accuracy of regression models in predicting mechanical properties.
 
-The most accurate predictions are observed for *W*<sub>e</sub>*/W*<sub>t</sub>, as evidenced by the data points’ tight clustering around the ideal line. This suggests that the *W*<sub>e</sub>*/W*<sub>t</sub> ratio is predicted with greater consistency and less variance, possibly due to the nature of this ratio capturing a more fundamental aspect of the material behavior that is less sensitive to the individual differences among samples or to the prediction model nuances.
+The most accurate predictions are observed for $W_{e}/W_{t}$, as evidenced by the data points’ tight clustering around the ideal line. This suggests that the $W_{e}/W_{t}$ ratio is predicted with greater consistency and less variance, possibly due to the nature of this ratio capturing a more fundamental aspect of the material behavior that is less sensitive to the individual differences among samples or to the prediction model nuances.
 
 These results underscore the potential of employing ML models, especially K-Neighbors regressors, coupled with a broader range of geological and material properties, to predict the mechanical behaviors of lunar meteorites with high precision given a relatively small dataset of atomic compositions.
 
-To further refine the accuracy of mechanical property predictions, it is important to incorporate additional variables that significantly affect a mineral’s mechanical response. Variables such as porosity, crystallographic orientation, and the degree of shock experienced by the sample region are important. These factors can cause substantial differences in mechanical responses, even among minerals with the same elemental composition. For instances Tang et al. [[41]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0205), underscored a significant influence of interphases between minerals and the presence of microcracks in defining the mechanical behavior of rocks. Peña-Asensio et al. [[27]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0135) reveal that terrestrial olivines, under nanoindentation testing, showcase elevated hardness and a greater Young’s modulus relative to their lunar counterparts. Additionally, the alignment of mineral phases along a consistent *H/E*<sub>r</sub> ratio could hint variances in local porosity or density [[42]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0210). Integrating these variables into the predictive models is anticipated to enhance the prediction of meteorite behavior under stress, offering a more comprehensive perspective on the mechanical properties of lunar material.
+To further refine the accuracy of mechanical property predictions, it is important to incorporate additional variables that significantly affect a mineral’s mechanical response. Variables such as porosity, crystallographic orientation, and the degree of shock experienced by the sample region are important. These factors can cause substantial differences in mechanical responses, even among minerals with the same elemental composition. For instances Tang et al. [[41]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0205), underscored a significant influence of interphases between minerals and the presence of microcracks in defining the mechanical behavior of rocks. Peña-Asensio et al. [[27]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0135) reveal that terrestrial olivines, under nanoindentation testing, showcase elevated hardness and a greater Young’s modulus relative to their lunar counterparts. Additionally, the alignment of mineral phases along a consistent $H/E_{r}$ ratio could hint variances in local porosity or density [[42]](https://www.sciencedirect.com/science/article/pii/S2095268624001010#b0210). Integrating these variables into the predictive models is anticipated to enhance the prediction of meteorite behavior under stress, offering a more comprehensive perspective on the mechanical properties of lunar material.
 
 While the investigation of minerals’ mechanical properties at the [microscale](https://www.sciencedirect.com/topics/earth-and-planetary-sciences/microbalance) yields valuable insights, a direct correlation to the macroscopic mechanical behavior of rocks is not straightforward. This difficulty underscores the need for techniques that can extrapolate findings from the mineral local scale to the rock macroscopic scale.
 
