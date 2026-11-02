@@ -31,7 +31,7 @@ Converta somente os artigos e URLs fornecidos pelo usuário. Siga também o `AGE
 - Use URLs originais completas em links e imagens. Resolva links relativos pela URL da página e mantenha os fragmentos das citações que apontem para a fonte original.
 - Preserve o texto das citações internas. No ScienceDirect, a classe `.anchor` também identifica citações: não exclua elementos apenas por essa classe.
 - Preserve fórmulas em LaTeX quando disponível; use MathML quando necessário. No MathJax, obtenha a expressão original em vez de concatenar camadas visuais e textos de acessibilidade.
-- Converta tabelas respeitando as relações entre cabeçalhos e células. Use tabela HTML dentro do Markdown quando células mescladas impedirem uma conversão fiel.
+- Converta tabelas respeitando as relações entre cabeçalhos e células. Não use HTML: para células mescladas, adapte a tabela em Markdown, repetindo cabeçalhos ou usando notas quando necessário, sem perder as relações entre os dados. Consulte `ABNT.md` para as convenções editoriais do projeto.
 - Mantenha figuras disponíveis por suas URLs completas e preserve suas legendas. Não invente imagens ou dados ausentes.
 - Una quebras artificiais dentro de frases, da lista de autores e das palavras-chave. Preserve a separação entre parágrafos e seções.
 - Coloque cada destaque na mesma linha de seu marcador. Remova marcadores vazios e deixe linhas em branco antes de listas e após títulos.
