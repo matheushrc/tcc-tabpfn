@@ -1,0 +1,5 @@
+[mcp_servers.pdfcraft]
+command = 'node'
+args = ['.codex/start-pdfcraft-mcp.cjs']
+startup_timeout_sec = 60
+tool_timeout_sec = 120
