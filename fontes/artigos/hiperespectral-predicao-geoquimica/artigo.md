@@ -40,7 +40,7 @@ In an exploration scenario, mapping of minerals using hyperspectral scans of dri
 
 Improvements in knowledge of geology have developed differently over the decades. While the documenting of geological properties in field studies still plays a major role, the application of new geophysical and spectral investigation methods combined with the implementation of computational and mathematical fundamental knowledge behind geological theories is rapidly increasing (Dramsch, [2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0009)). Machine automation has become an important tool to enhance geological understanding, especially in geophysics. Modern deep learning hardware and methods combined with the availability of big data in geological archives has opened new opportunities for analysing complex datasets (Geng, [2016](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0015); Karpatne *et al*., [2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0018)). Kulesza *et al.* ([2014](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0019)) and Roh *et al.* ([2018](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0027)) highlighted the importance of structuring data for artificial intelligence and labelling. Grade of ore, geophysical well-log properties and sharp fault detection on seismic images are examples of successful labelling in geological applications. Caté *et al.* ([2017](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0007)) used machine-learning algorithms connecting petrophysical properties with gold-bearing intervals to improve the selection of gold intervals for assay sampling. Acosta *et al.* ([2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0001)) integrated hyperspectral and geochemical data via a superpixel-based machine-learning classification that gave a model improvement of 20% in the accuracy of results against an individuals analysis of the datasets on the pixel.
 
-Rodger and Laukamp ([2021](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0026)) developed an approach using hyperspectral data to predict geochemical quantities using a trained workflow consisting of a non-negative matrix function step for data reduction and a random forest regression with an accuracy for predictions of up to 0.96 for *R*<sup>2</sup>. Their method was based on the use of reflectance spectra between 400 and 25 000 nm. In a different approach, Eichstaedt *et al.* ([2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0011)) used airborne spectral data from a specially designed test field with controlled coverage of clay containing target materials to derive quantitative estimations. Fouedjio *et al.* ([2018](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0014)) highlighted the possibilities of geostatistical methods to keep spatial relations between drill holes as part of geological domain definitions coupled with geochemical measurements.
+Rodger and Laukamp ([2021](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0026)) developed an approach using hyperspectral data to predict geochemical quantities using a trained workflow consisting of a non-negative matrix function step for data reduction and a random forest regression with an accuracy for predictions of up to 0.96 for $R^{2}$. Their method was based on the use of reflectance spectra between 400 and 25 000 nm. In a different approach, Eichstaedt *et al.* ([2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0011)) used airborne spectral data from a specially designed test field with controlled coverage of clay containing target materials to derive quantitative estimations. Fouedjio *et al.* ([2018](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0014)) highlighted the possibilities of geostatistical methods to keep spatial relations between drill holes as part of geological domain definitions coupled with geochemical measurements.
 
 The methodological research on convolutional neural networks and the minimum requirements and best setups to achieve learning vary widely and reflect problems in the preparation of suitable datasets (Du *et al.*, [2018](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0010)). The increase in sample numbers is important for increased accuracies of the network predictions. The design, as well as the strategies applied to the conditioning of the datasets, is of major importance for the performance of the neural networks (Bao, [2019](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0005); Neyshabur *et al.*, [2017](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0023)).
 
@@ -52,7 +52,7 @@ Australia has a rich history of research in geological and ore-forming processes
 
 ### Material
 
-To train a specialised neural network, hyperspectral drill-core data collected by means of HyLogger (Schodlok *et al.*, [2016](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0028)) and the mineralogical interpretations derived from the hyperspectral data using matching algorithms, such as The Spectral Assistant (Berman *et al.*, [2017](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0006)), were collected from AuScope and Australian State and Territories. The acquired data were processed with The Spectral Geologist (TSG<sup>®</sup>) software provided by Commonwealth Scientific Industrial Research Organisation (CSIRO). We used pre-interpreted spectral analyses of minerals in the visible and infrared, short-wave infrared and thermal longwave bands (VNIR/SWIR/TIR) (Green, [2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0016); Leybourne *et al.*, [2013](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0021)). Mineral species were used for the development of the neural network. The NVCL and CSIRO studies have shown that the accuracy of The Spectral Assistant (TSA) at the mineral species level is lower than the results at the mineral group level (Laukamp, personal communication). Data were captured as relative abundances in percentage per 1-metre intervals from over 2700 drill holes with depth ranges between 60 and 4400 m. TSA, which is a general unmixing algorithm, was used to identify selected minerals and calculate abundances for SWIR and TIR in 1-metre intervals. These abundances for each spectrum are calculated proportions of the library spectra required to best fit the measured spectrum. In this study, SWIR and TIR responses were matched to mineral libraries using the scalar information of system TSA (sTSAT)-based spectral reflectance measurements (Green, [2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0016); Schodlok *et al.*, [2016](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0028)). The SWIR wavelength only identifies hydrous silicates and carbonates. Since 2017, the TSA interpretation for the TIR, the sTSAT, has been progressively replaced by the joint Constrained Least Squares (jCLST) algorithms, another unmixing classifier (Green, [2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0016)). jCLST interprets the TIR data using the results from the SWIR spectra and scalars focused on selected features in the visible near infrared (VNIR) and TIR wavelengths (Green, [2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0016)). Up to December 2021, a total of 2709 drill holes with 927 206 m sampling were collected for SWIR, and 876 857 m for TIR.
+To train a specialised neural network, hyperspectral drill-core data collected by means of HyLogger (Schodlok *et al.*, [2016](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0028)) and the mineralogical interpretations derived from the hyperspectral data using matching algorithms, such as The Spectral Assistant (Berman *et al.*, [2017](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0006)), were collected from AuScope and Australian State and Territories. The acquired data were processed with The Spectral Geologist (TSG®) software provided by Commonwealth Scientific Industrial Research Organisation (CSIRO). We used pre-interpreted spectral analyses of minerals in the visible and infrared, short-wave infrared and thermal longwave bands (VNIR/SWIR/TIR) (Green, [2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0016); Leybourne *et al.*, [2013](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0021)). Mineral species were used for the development of the neural network. The NVCL and CSIRO studies have shown that the accuracy of The Spectral Assistant (TSA) at the mineral species level is lower than the results at the mineral group level (Laukamp, personal communication). Data were captured as relative abundances in percentage per 1-metre intervals from over 2700 drill holes with depth ranges between 60 and 4400 m. TSA, which is a general unmixing algorithm, was used to identify selected minerals and calculate abundances for SWIR and TIR in 1-metre intervals. These abundances for each spectrum are calculated proportions of the library spectra required to best fit the measured spectrum. In this study, SWIR and TIR responses were matched to mineral libraries using the scalar information of system TSA (sTSAT)-based spectral reflectance measurements (Green, [2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0016); Schodlok *et al.*, [2016](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0028)). The SWIR wavelength only identifies hydrous silicates and carbonates. Since 2017, the TSA interpretation for the TIR, the sTSAT, has been progressively replaced by the joint Constrained Least Squares (jCLST) algorithms, another unmixing classifier (Green, [2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0016)). jCLST interprets the TIR data using the results from the SWIR spectra and scalars focused on selected features in the visible near infrared (VNIR) and TIR wavelengths (Green, [2020](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#CIT0016)). Up to December 2021, a total of 2709 drill holes with 927 206 m sampling were collected for SWIR, and 876 857 m for TIR.
 
 For the development of the neural network, geochemical assays of the elements, gold, silver, copper, iron, uranium, nickel, lead, tin, antimony, arsenic and bismuth were extracted. Of the 70 million geochemical records, 110 000 were matched with 703 250 one-metre intervals of the TIR/SWIR hyperspectral measurements and used for development, training and evaluation of the neural network. In the geochemical samples, same-depth intervals of the hyperspectral 1-metre bins were rounded to the majority covered by the spectral bin. Geochemical samples cover a 2-metre segment of core, so the geochemical record was duplicated for both covered hyperspectral bins.
 
@@ -62,124 +62,27 @@ The geochemical dataset for the neural network was labelled based on threshold l
 
 **Table 1. Overview of accuracies achieved in a two-class learning approach with the neural network based on the 20% test dataset.**
 
-<table>
-  <thead>
-    <tr>
-      <th>Element</th>
-      <th>Threshold equals or above</th>
-      <th>Training samples above threshold</th>
-      <th>Accuracy of prediction based on confusion matrix 20% test dataset percentage correct allocated</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Ag</td>
-      <td>0.5 ppm</td>
-      <td>21 400</td>
-      <td>80.95</td>
-    </tr>
-    <tr>
-      <td rowspan="2">Au</td>
-      <td>0.17 ppm</td>
-      <td>16 245</td>
-      <td>81.86</td>
-    </tr>
-    <tr>
-      <td>0.09 ppm</td>
-      <td>22 619</td>
-      <td>80.02</td>
-    </tr>
-    <tr>
-      <td rowspan="4">Fe</td>
-      <td>36.50 wt%</td>
-      <td>5350</td>
-      <td>94.03</td>
-    </tr>
-    <tr>
-      <td>21.20 wt%</td>
-      <td>10 700</td>
-      <td>92.19</td>
-    </tr>
-    <tr>
-      <td>12.80 wt%</td>
-      <td>16 050</td>
-      <td>91.38</td>
-    </tr>
-    <tr>
-      <td>9.20 wt%</td>
-      <td>21 400</td>
-      <td>88.30</td>
-    </tr>
-    <tr>
-      <td rowspan="3">Cu</td>
-      <td>3890 ppm</td>
-      <td>10 700</td>
-      <td>83.75</td>
-    </tr>
-    <tr>
-      <td>2000 ppm</td>
-      <td>16 050</td>
-      <td>81.13</td>
-    </tr>
-    <tr>
-      <td>1150 ppm</td>
-      <td>21 400</td>
-      <td>79.59</td>
-    </tr>
-    <tr>
-      <td rowspan="3">U</td>
-      <td>10 ppm</td>
-      <td>5350</td>
-      <td>88.93</td>
-    </tr>
-    <tr>
-      <td>4.27 ppm</td>
-      <td>10 700</td>
-      <td>88.83</td>
-    </tr>
-    <tr>
-      <td>0.881 ppm</td>
-      <td>16 050</td>
-      <td>89.27</td>
-    </tr>
-    <tr>
-      <td>Ni</td>
-      <td>22 ppm</td>
-      <td>3300</td>
-      <td>92.60</td>
-    </tr>
-    <tr>
-      <td>Pb</td>
-      <td>5 ppm</td>
-      <td>5350</td>
-      <td>90.28</td>
-    </tr>
-    <tr>
-      <td>Zn</td>
-      <td>68 ppm</td>
-      <td>5350</td>
-      <td>91.57</td>
-    </tr>
-    <tr>
-      <td>Sb</td>
-      <td>0.25 ppm</td>
-      <td>5350</td>
-      <td>93.68</td>
-    </tr>
-    <tr>
-      <td>As</td>
-      <td>6 ppm</td>
-      <td>5350</td>
-      <td>92.62</td>
-    </tr>
-    <tr>
-      <td>Bi</td>
-      <td>0.12 ppm</td>
-      <td>5350</td>
-      <td>94.90</td>
-    </tr>
-  </tbody>
-</table>
+| Element | Threshold equals or above | Training samples above threshold | Accuracy of prediction based on confusion matrix 20% test dataset percentage correct allocated |
+| --- | --- | --- | --- |
+| Ag | 0.5 ppm | 21 400 | 80.95 |
+| Au | 0.17 ppm | 16 245 | 81.86 |
+| Au | 0.09 ppm | 22 619 | 80.02 |
+| Fe | 36.50 wt% | 5350 | 94.03 |
+| Fe | 21.20 wt% | 10 700 | 92.19 |
+| Fe | 12.80 wt% | 16 050 | 91.38 |
+| Fe | 9.20 wt% | 21 400 | 88.30 |
+| Cu | 3890 ppm | 10 700 | 83.75 |
+| Cu | 2000 ppm | 16 050 | 81.13 |
+| Cu | 1150 ppm | 21 400 | 79.59 |
+| U | 10 ppm | 5350 | 88.93 |
+| U | 4.27 ppm | 10 700 | 88.83 |
+| U | 0.881 ppm | 16 050 | 89.27 |
+| Ni | 22 ppm | 3300 | 92.60 |
+| Pb | 5 ppm | 5350 | 90.28 |
+| Zn | 68 ppm | 5350 | 91.57 |
+| Sb | 0.25 ppm | 5350 | 93.68 |
+| As | 6 ppm | 5350 | 92.62 |
+| Bi | 0.12 ppm | 5350 | 94.90 |
 
 The thresholds are defined by the upper percentiles of the geochemical records in the database.
 
@@ -211,7 +114,7 @@ Figure 2.  Dependency of overall accuracies of the neural network results from t
 
 ![Figure 2.  Dependency of overall accuracies of the neural network results from the number of samples included in the learning for iron for a two- and three-class approach and for gold for a three-class approach.](https://www.tandfonline.com/cms/asset/9a84289c-b953-4088-8ce6-11fd5e8b919c/taje_a_2094465_f0002_c.jpg)
 
-Above 30 000 samples for two classes and 18 000 samples for three classes, the accuracy results increase again, even when the lower-grade measurements are included and therefore most likely with fewer dominant correlations between grades and mineral species combinations. It is expected that the increased number of samples allows the neural network to be better trained, even if the mineral species combinations are more diverse. Again, this behaviour has been observed for iron, gold, silver and uranium. The strength of the correlation between sample numbers and overall accuracies has an *R*<sup>2</sup> of 0.96 ([Figure 1](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#S0004-S2001)), modelled best with a second order polynomial equation.
+Above 30 000 samples for two classes and 18 000 samples for three classes, the accuracy results increase again, even when the lower-grade measurements are included and therefore most likely with fewer dominant correlations between grades and mineral species combinations. It is expected that the increased number of samples allows the neural network to be better trained, even if the mineral species combinations are more diverse. Again, this behaviour has been observed for iron, gold, silver and uranium. The strength of the correlation between sample numbers and overall accuracies has an $R^{2}$ of 0.96 ([Figure 1](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465#S0004-S2001)), modelled best with a second order polynomial equation.
 
 The results show the importance of high sample numbers for the selected machine-learning concept and that high grades can be predicted with good accuracies. This allows multiple implementation scenarios for the neural network for the prediction of geochemical assays.
 
@@ -276,164 +179,27 @@ To analyse the potential of the prediction results, a dataset of 2270 complete h
 
 **Table 5. Exploration potential based on the predictions with the special designed neural network analysed on 2270 hyperspectral scanned drill holes.**
 
-<table>
-  <thead>
-    <tr>
-      <th>Element</th>
-      <th>Threshold</th>
-      <th>Holes geochemical measured, but no additional prediction</th>
-      <th>Holes with geochemical measurements and additional predictions</th>
-      <th>Holes with no geochemical measurements but additional predictions</th>
-      <th>Holes with no geochemical record but 10 or more predictions (percentage of increased potential)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Ag</td>
-      <td>0.5 ppm</td>
-      <td>119</td>
-      <td>235</td>
-      <td>991</td>
-      <td>438 (124%)</td>
-    </tr>
-    <tr>
-      <td rowspan="2">Au</td>
-      <td>0.17 ppm</td>
-      <td>224</td>
-      <td>81</td>
-      <td>893</td>
-      <td>317 (104%)</td>
-    </tr>
-    <tr>
-      <td>0.09 ppm</td>
-      <td>178</td>
-      <td>337</td>
-      <td>1214</td>
-      <td>616 (120%)</td>
-    </tr>
-    <tr>
-      <td rowspan="4">Fe</td>
-      <td>36.50 wt%</td>
-      <td>50</td>
-      <td>19</td>
-      <td>277</td>
-      <td>73 (106%)</td>
-    </tr>
-    <tr>
-      <td>21.20 wt%</td>
-      <td>48</td>
-      <td>101</td>
-      <td>520</td>
-      <td>136 (91%)</td>
-    </tr>
-    <tr>
-      <td>12.80 wt%</td>
-      <td>56</td>
-      <td>79</td>
-      <td>631</td>
-      <td>193 (143%)</td>
-    </tr>
-    <tr>
-      <td>9.20 wt%</td>
-      <td>63</td>
-      <td>103</td>
-      <td>713</td>
-      <td>247 (149%)</td>
-    </tr>
-    <tr>
-      <td rowspan="3">Cu</td>
-      <td>3890 ppm</td>
-      <td>124</td>
-      <td>45</td>
-      <td>188</td>
-      <td>22 (13%)</td>
-    </tr>
-    <tr>
-      <td>2000 ppm</td>
-      <td>140</td>
-      <td>75</td>
-      <td>287</td>
-      <td>52 (24%)</td>
-    </tr>
-    <tr>
-      <td>1150 ppm</td>
-      <td>139</td>
-      <td>126</td>
-      <td>464</td>
-      <td>86 (32%)</td>
-    </tr>
-    <tr>
-      <td rowspan="3">U</td>
-      <td>10 ppm</td>
-      <td>98</td>
-      <td>28</td>
-      <td>81</td>
-      <td>17 (13%)</td>
-    </tr>
-    <tr>
-      <td>4.27 ppm</td>
-      <td>47</td>
-      <td>117</td>
-      <td>489</td>
-      <td>80 (49%)</td>
-    </tr>
-    <tr>
-      <td>0.881 ppm</td>
-      <td>25</td>
-      <td>169</td>
-      <td>956</td>
-      <td>235 (121%)</td>
-    </tr>
-    <tr>
-      <td>Ni</td>
-      <td>22 ppm</td>
-      <td>17</td>
-      <td>2</td>
-      <td>781</td>
-      <td>253 (1332%)</td>
-    </tr>
-    <tr>
-      <td>Pb</td>
-      <td>5 ppm</td>
-      <td>107</td>
-      <td>47</td>
-      <td>749</td>
-      <td>209 (136%)</td>
-    </tr>
-    <tr>
-      <td>Zn</td>
-      <td>68 ppm</td>
-      <td>115</td>
-      <td>36</td>
-      <td>502</td>
-      <td>93 (62%)</td>
-    </tr>
-    <tr>
-      <td>Sb</td>
-      <td>0.25 ppm</td>
-      <td>76</td>
-      <td>17</td>
-      <td>704</td>
-      <td>258 (277%)</td>
-    </tr>
-    <tr>
-      <td>As</td>
-      <td>6 ppm</td>
-      <td>17</td>
-      <td>25</td>
-      <td>954</td>
-      <td>269 (640%)</td>
-    </tr>
-    <tr>
-      <td>Bi</td>
-      <td>0.12 ppm</td>
-      <td>14</td>
-      <td>9</td>
-      <td>899</td>
-      <td>380 (1652%)</td>
-    </tr>
-  </tbody>
-</table>
+| Element | Threshold | Holes geochemical measured, but no additional prediction | Holes with geochemical measurements and additional predictions | Holes with no geochemical measurements but additional predictions | Holes with no geochemical record but 10 or more predictions (percentage of increased potential) |
+| --- | --- | --- | --- | --- | --- |
+| Ag | 0.5 ppm | 119 | 235 | 991 | 438 (124%) |
+| Au | 0.17 ppm | 224 | 81 | 893 | 317 (104%) |
+| Au | 0.09 ppm | 178 | 337 | 1214 | 616 (120%) |
+| Fe | 36.50 wt% | 50 | 19 | 277 | 73 (106%) |
+| Fe | 21.20 wt% | 48 | 101 | 520 | 136 (91%) |
+| Fe | 12.80 wt% | 56 | 79 | 631 | 193 (143%) |
+| Fe | 9.20 wt% | 63 | 103 | 713 | 247 (149%) |
+| Cu | 3890 ppm | 124 | 45 | 188 | 22 (13%) |
+| Cu | 2000 ppm | 140 | 75 | 287 | 52 (24%) |
+| Cu | 1150 ppm | 139 | 126 | 464 | 86 (32%) |
+| U | 10 ppm | 98 | 28 | 81 | 17 (13%) |
+| U | 4.27 ppm | 47 | 117 | 489 | 80 (49%) |
+| U | 0.881 ppm | 25 | 169 | 956 | 235 (121%) |
+| Ni | 22 ppm | 17 | 2 | 781 | 253 (1332%) |
+| Pb | 5 ppm | 107 | 47 | 749 | 209 (136%) |
+| Zn | 68 ppm | 115 | 36 | 502 | 93 (62%) |
+| Sb | 0.25 ppm | 76 | 17 | 704 | 258 (277%) |
+| As | 6 ppm | 17 | 25 | 954 | 269 (640%) |
+| Bi | 0.12 ppm | 14 | 9 | 899 | 380 (1652%) |
 
 Shown are the number of drill holes per element and for different threshold with positive classified 1-metre bins. The geochemical measured bins are shown for comparison. The last column shows the increase in holes as a percentage compared with the holes with geochemically measured high grades for the elements.
 
