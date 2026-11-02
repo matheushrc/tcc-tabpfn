@@ -5,7 +5,7 @@ archived_at: "2026-10-09"
 format: "Markdown"
 ---
 
-Xin Luo<sup>a, b</sup>, Xinghua Ci<sup>c</sup>, Jianmeng Sun<sup>a, b</sup>, Chengyu Dan<sup>d</sup>, Peng Chi<sup>a, b</sup>, Ruikang Cui<sup>a, b</sup>
+Xin Luo$^{a, b}$, Xinghua Ci$^{c}$, Jianmeng Sun$^{a, b}$, Chengyu Dan$^{d}$, Peng Chi$^{a, b}$, Ruikang Cui$^{a, b}$
 
 ## Highlights
 
@@ -40,7 +40,7 @@ Core data augmentation; Reservoir parameter prediction; Ensemble machine learnin
 - **ACC** = Accuracy classification score
 - **F1** = F1-score
 - **AUC** = Area Under Curve
-- **R<sup>2</sup>** = Coefficient of determination
+- **$R^{2}$** = Coefficient of determination
 - **CVRMSE** = Coefficient of Variation of Root Mean Square Error
 - **BA** = Balanced Accuracy
 - **AP** = Average Precision score
@@ -68,10 +68,6 @@ Although the Synthetic Minority Over-sampling Technique (SMOTE) has been applied
 
 ![Fig. 1](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-gr1.jpg)
 
--
-
--
-
 Fig. 1. Workflow of enhancing reservoir parameter prediction employing CDA. Geophysicists match the preprocessed core tabular data with logging data based on depth, obtaining the original tabular data labeled with lithology, porosity, and permeability. The original tabular data are processed using retrieval-based and generative-based tabular data augmentation methods to generate synthetic tabular data. The synthetic tabular data are subjected to reliability analysis. The synthetic tabular data are merged with the original tabular data and used for predictive AI training, resulting in inference outcomes for three distinct tasks: lithology classification, porosity prediction, and permeability prediction.
 
 Compared to studies that only use methods like SMOTE and CTGAN to enhance petrophysical experimental data ([Min et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib43); [Zheng et al., 2022](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib73)), our work provides a more comprehensive expansion of research in the CDA field. Additionally, this study is the first to propose a relatively complete reliability analysis approach for CDA, particularly focusing on the feature distribution of synthetic data at different scales. Building on this, our proposed workflow has also been effectively applied to complex sandstone reservoirs (e.g., lithology classification and petrophysical parameter prediction). This research can serve as a reference for future geophysicists facing limited petrophysical experimental data.
@@ -88,7 +84,7 @@ In this study, our objective is to integrate CDA with ML models and PLM to estab
 
 **Reliability Analysis.** Two approaches were employed to validate the reliability of CDA: evaluation based on ML efficiency and analysis of feature distribution patterns across varying data scales.
 
-**Reservoir Parameter Prediction Application**. The combined dataset of synthetic and original data is used for specific tasks, including lithology classification, porosity prediction, and permeability prediction. Traditional methods, MLs, and PLMs are applied to well logs data according to the specific requirements of each application.
+**Reservoir Parameter Prediction Application.** The combined dataset of synthetic and original data is used for specific tasks, including lithology classification, porosity prediction, and permeability prediction. Traditional methods, MLs, and PLMs are applied to well logs data according to the specific requirements of each application.
 
 ### 2.2. Core data augmentation (CDA) method
 
@@ -96,7 +92,7 @@ In this study, core data refer to lithology, porosity, and permeability obtained
 
 #### 2.2.1. Retrieval-based methods
 
-However, for core data, which are typically small sample types, adding noise or feature perturbation can alter the data feature distribution. To enhance the reliability of the generated tabular data, the SMOTE algorithm generates new synthetic samples by randomly selecting a neighbor from the k-nearest neighbors of the minority class samples and performing linear interpolation in the feature space between them ([Chawla et al., 2002](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib10); [Zhao et al., 2021](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib72)). The SMOTE algorithm fills data in the sparse areas of the minority class samples, helping the model learn more reasonable classification boundaries ([Zheng et al., 2022](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib73)). The adjustable K value provides flexibility to the SMOTE algorithm ([Wang et al., 2025](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib61)). SMOTE operates through the following steps: (1) For each sample *x* in the minority class, compute the Euclidean distances to all other minority class samples to identify its *k*-nearest neighbors. (2) Based on the class imbalance ratio, set a sampling proportion to determine the oversampling rate *N*; for each minority sample *x*, randomly select a subset of its *k*-nearest neighbors, denoted as *o*. (3) For each selected neighbor *o*, generate a new synthetic sample *o*<sub><em>new</em></sub> by interpolating between *x* and *o* using Equation [(1)](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fd1), where *rand* (0, 1) is a random weight in the interval [0, 1]. This approach effectively augments the minority class by creating plausible synthetic instances along the feature space, mitigating class imbalance while preserving data distribution characteristics.
+However, for core data, which are typically small sample types, adding noise or feature perturbation can alter the data feature distribution. To enhance the reliability of the generated tabular data, the SMOTE algorithm generates new synthetic samples by randomly selecting a neighbor from the k-nearest neighbors of the minority class samples and performing linear interpolation in the feature space between them ([Chawla et al., 2002](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib10); [Zhao et al., 2021](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib72)). The SMOTE algorithm fills data in the sparse areas of the minority class samples, helping the model learn more reasonable classification boundaries ([Zheng et al., 2022](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib73)). The adjustable K value provides flexibility to the SMOTE algorithm ([Wang et al., 2025](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib61)). SMOTE operates through the following steps: (1) For each sample *x* in the minority class, compute the Euclidean distances to all other minority class samples to identify its *k*-nearest neighbors. (2) Based on the class imbalance ratio, set a sampling proportion to determine the oversampling rate *N*; for each minority sample *x*, randomly select a subset of its *k*-nearest neighbors, denoted as *o*. (3) For each selected neighbor *o*, generate a new synthetic sample $o_{new}$ by interpolating between *x* and *o* using Equation [(1)](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fd1), where *rand* (0, 1) is a random weight in the interval [0, 1]. This approach effectively augments the minority class by creating plausible synthetic instances along the feature space, mitigating class imbalance while preserving data distribution characteristics.
 
 $$
 {o}_{new}=o+rand(0,1)\ast |\tilde{o}-o|
@@ -109,64 +105,60 @@ $$
 
 **Conditional Tabular generative adversarial network (CTGAN).** In response to the complex generation requirements of tabular data, Generation-based methods have shown significant advantages. CTGAN uses the generative adversarial network framework to generate highly realistic and diverse synthetic samples through mode-specific normalization and conditional vector constraints ([Xu et al., 2019](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib65)). CTGAN leverages Generative Adversarial Networks (GANs) to synthesize tabular data by introducing two key modifications: mode-specific normalization for continuous features and conditional vectors for categorical features. Mode-specific normalization is designed to address the issue where non-Gaussian distributions of continuous features make it difficult for the generator to learn the true distribution ([Adiputra and Wanchai, 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib2)). This enables subsequent generators to learn multimodal distribution structures and avoid information loss. To solve the problem that random noise inputs cannot control the generation distribution of discrete features, leading to the neglect of minority categories, CTGAN encodes categorical features into conditional vectors during training. It adopts a sampling strategy based on class frequency distribution to mitigate class imbalance. Additionally, CTGAN has improved the loss function by incorporating conditional cross-entropy into the generator's loss function, ensuring generated samples are controlled by conditional categories ([Habibi et al., 2023](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib20); [Zha et al., 2025](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib70)). Despite its ability to generate diverse samples, CTGAN suffers from training instability, particularly in high-dimensional settings ([Jiang et al., 2025b](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib28); [Min et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib43)).
 
-**Tabular Variational Autoencoder (TVAE)**. To further optimize the quality of generation, TVAE is based on the variational autoencoder architecture. It balances generation diversity and distribution fidelity through the reparameterization technique in the latent variable space. Traditional VAEs exhibit unstable latent spaces and tend to ignore categorical information when generating tabular data. To address latent space instability, TVAE introduces dual encoders to learn both stochastic and deterministic representations of the data, thereby improving output stability. Additionally, to prevent minority samples from being overlooked, TVAE incorporates a label constraint mechanism in the loss function, which forces data from different categories to be separated in the latent space ([Inan et al., 2023](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib25)). During training, TVAE takes input data *X* and uses the dual encoders to represent its fixed latent features. These features are then decoded, and the proximity between the generated data and the original data is calculated. This proximity is measured via the loss function, which in TVAE is enhanced with a unique label constraint compared to traditional VAE models. The loss function converges and updates the decoder's internal parameters, ultimately providing an optimized decoder that outputs *X*<sub><em>gen</em></sub>. In TVAE, both the dual encoders and the decoder are implemented using Multilayer Perceptron (MLP) architectures ([Yadav et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib67)). However, the synthetic samples generated by TVAE are relatively conservative compared to CTGAN.
+**Tabular Variational Autoencoder (TVAE).** To further optimize the quality of generation, TVAE is based on the variational autoencoder architecture. It balances generation diversity and distribution fidelity through the reparameterization technique in the latent variable space. Traditional VAEs exhibit unstable latent spaces and tend to ignore categorical information when generating tabular data. To address latent space instability, TVAE introduces dual encoders to learn both stochastic and deterministic representations of the data, thereby improving output stability. Additionally, to prevent minority samples from being overlooked, TVAE incorporates a label constraint mechanism in the loss function, which forces data from different categories to be separated in the latent space ([Inan et al., 2023](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib25)). During training, TVAE takes input data *X* and uses the dual encoders to represent its fixed latent features. These features are then decoded, and the proximity between the generated data and the original data is calculated. This proximity is measured via the loss function, which in TVAE is enhanced with a unique label constraint compared to traditional VAE models. The loss function converges and updates the decoder's internal parameters, ultimately providing an optimized decoder that outputs $X_{gen}$. In TVAE, both the dual encoders and the decoder are implemented using Multilayer Perceptron (MLP) architectures ([Yadav et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib67)). However, the synthetic samples generated by TVAE are relatively conservative compared to CTGAN.
 
-**Tabular Denoising Diffusion Probabilistic Models (TabDDPM)**. In recent years, TabDDPM, an extension of diffusion models to tabular data, fits the data distribution through a step-by-step denoising process ([Kotelnikov et al., 2023](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib31)). Its progressive generation mechanism can capture fine-grained feature dependencies, significantly enhancing the authenticity of generated high-dimensional sparse tabular data ([Kinakh and Voloshynovskiy, 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib30)). For the tabular generation task, TabDDPM introduces significant improvements over DDPM. Tabular data may contain both numerical (continuous) and categorical (discrete) features.
+**Tabular Denoising Diffusion Probabilistic Models (TabDDPM).** In recent years, TabDDPM, an extension of diffusion models to tabular data, fits the data distribution through a step-by-step denoising process ([Kotelnikov et al., 2023](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib31)). Its progressive generation mechanism can capture fine-grained feature dependencies, significantly enhancing the authenticity of generated high-dimensional sparse tabular data ([Kinakh and Voloshynovskiy, 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib30)). For the tabular generation task, TabDDPM introduces significant improvements over DDPM. Tabular data may contain both numerical (continuous) and categorical (discrete) features.
 
 To address categorical features, TabDDPM proposes a multi-category diffusion approach. For continuous numerical features, TabDDPM employs the same Gaussian diffusion process as DDPM. For discrete features such as lithology categories, TabDDPM adopts multinomial diffusion, specifically implemented by repeatedly applying random flipping to transform the one-hot encoded discrete features into a uniform distribution. Notably, TabDDPM's two diffusion mechanisms operate simultaneously. Traditional generative models require separate preprocessing for continuous/discrete features, making it difficult to capture feature dependencies ([Villaizán-Vallelado et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib57)). TabDDPM's dual-path diffusion mechanism provides a unified approach for handling heterogeneous features, implicitly learning feature interactions through shared neural networks to generate data that better matches the true distribution. Additionally, for tabular data with relatively low information density, TabDDPM uses MLPs instead of Transformer architectures to reduce computational overhead ([Zhang et al., 2023](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib71)). In summary, through its dual-path diffusion mechanism and lightweight conditional generation architecture, TabDDPM successfully applies diffusion models to tabular data generation, solving the challenge of joint modeling of heterogeneous features.
 
-**Generation of Realistic Tabular (**GReaT**).** In addition to these methods, several studies on PLMs within the Generation-based methods have demonstrated significant potential for tabular data generation ([Wu et al., 2025](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib64)). For example, GReaT converts structured tabular data into natural language sequences using a novel text encoding strategy, thereby overcoming the traditional reliance on numerical preprocessing ([Borisov et al., 2023](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib7)). Building on this approach, a random feature permutation mechanism is introduced to dynamically shuffle the order of features during training, thereby eliminating the interference of fixed list orders. Subsequently, fine-tuning is performed using pre-trained large language models (such as GPT-2), leveraging their context understanding capabilities learned from vast amounts of text to capture the complex logical relationships between tabular features ([Li et al., 2024a](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib34)).
+**Generation of Realistic Tabular (GReaT).** In addition to these methods, several studies on PLMs within the Generation-based methods have demonstrated significant potential for tabular data generation ([Wu et al., 2025](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib64)). For example, GReaT converts structured tabular data into natural language sequences using a novel text encoding strategy, thereby overcoming the traditional reliance on numerical preprocessing ([Borisov et al., 2023](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib7)). Building on this approach, a random feature permutation mechanism is introduced to dynamically shuffle the order of features during training, thereby eliminating the interference of fixed list orders. Subsequently, fine-tuning is performed using pre-trained large language models (such as GPT-2), leveraging their context understanding capabilities learned from vast amounts of text to capture the complex logical relationships between tabular features ([Li et al., 2024a](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib34)).
 
 Ultimately, flexible and controllable tabular data synthesis is achieved through an autoregressive generative model. As shown in [Fig. 2](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig2), GReaT can be roughly divided into two stages: fine-tuning and sample generation. In the fine-tuning phase, core data is first converted into sequential text. Then, as indicated in Step 2 of [Fig. 2](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig2), the sequential text undergoes shuffled permutation. The purpose of shuffling is to eliminate positional bias of features, enabling the model to learn conditional dependencies in arbitrary orders ([Kwok et al., 2025](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib33)). In Step 3 of [Fig. 2](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig2), the shuffled sequences are tokenized and fed into a pre-trained large language model (LLM) to achieve fine-tuning. The fine-tuning approach employs autoregressive prediction of the next token, where the loss function between predicted and actual tokens guides the entire fine-tuning process ([Gulati and Roysdon, 2023](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib19)). During sample generation, randomly fragmented text sequences are tokenized and input into the fine-tuned and parameter-frozen LLM (Step 4 in [Fig. 2](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig2)b). After processing by the de-tokenizer, complete synthetic text sequences are generated, which are then deserialized into new tabular synthetic core data ([Jia et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib26)).
 
 ![Fig. 2](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-gr2.jpg)
 
--
-
--
-
 Fig. 2. The workflow of the GReaT and TabPFGen. (LogSumExp is used to construct class-agnostic energy. Softmax converts the results into a probability distribution.)
 
 **Tabular Prior-data Fitted Network Generation (TabPFGen).** TabPFGen contributes by transforming a discriminative model into a generative one ([Jiang et al., 2025a](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib27)). It achieves high-quality tabular data generation using energy functions and Stochastic Gradient Langevin Dynamics (SGLD) sampling ([Welling and Teh, 2011](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib62)), while retaining the efficiency and training-free advantages of TabPFN ([Ma et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib40)). The key steps of TabPFGen can be divided into three parts.
 
-- 1) Energy calculation. First, the original core samples are divided into (*x*<sub><em>train</em></sub>, *y*<sub><em>train</em></sub>) according to the task type. Synthetic data is then generated from the unlabeled raw samples *x*<sub><em>train</em></sub> by adding Gaussian noise, as shown in the following formula:
+1) Energy calculation. First, the original core samples are divided into ($x_{train}$, $y_{train}$) according to the task type. Synthetic data is then generated from the unlabeled raw samples $x_{train}$ by adding Gaussian noise, as shown in the following formula:
 
-$$
-{x}_{synth}^{0}={x}_{train}+\mathcal{N}(0,0.01I)
-\tag{2}
-$$
+   $$
+   {x}_{synth}^{0}={x}_{train}+\mathcal{N}(0,0.01I)
+   \tag{2}
+   $$
 
-ϵ denotes Gaussian distributed noise. Next, the class-conditional energy function is defined as follows:
+   ϵ denotes Gaussian distributed noise. Next, the class-conditional energy function is defined as follows:
 
-$$
-E({x}_{synth}^{0}|{y}_{synth})=-f({x}_{synth}^{0}) [{y}_{synth}]
-\tag{3}
-$$
+   $$
+   E({x}_{synth}^{0}|{y}_{synth})=-f({x}_{synth}^{0}) [{y}_{synth}]
+   \tag{3}
+   $$
 
-In Equation [(3)](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fd3), $f({x}_{synth}^{0})$ is the logits output of TabPFN, and [*y*<sub><em>synth</em></sub>] denotes the index of *y*<sub><em>synth</em></sub> ([Liu and Ye, 2025](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib38)). During iterative updates, the generation process of ${x}_{synth}^{t}$ at the *t*-th step is as follows
+   In Equation [(3)](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fd3), $f({x}_{synth}^{0})$ is the logits output of TabPFN, and [$y_{synth}$] denotes the index of $y_{synth}$ ([Liu and Ye, 2025](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib38)). During iterative updates, the generation process of ${x}_{synth}^{t}$ at the *t*-th step is as follows
 
-$$
-E({x}_{synth}^{t}|{y}_{synth})=-f({x}_{synth}^{t}) [{y}_{synth}]
-\tag{4}
-$$
+   $$
+   E({x}_{synth}^{t}|{y}_{synth})=-f({x}_{synth}^{t}) [{y}_{synth}]
+   \tag{4}
+   $$
 
-During the iterative process, lower energy values indicate that the synthetic data ${x}_{synth}^{t}$ better matches the distribution characteristics of the target label *y*<sub><em>synth</em></sub>.
+   During the iterative process, lower energy values indicate that the synthetic data ${x}_{synth}^{t}$ better matches the distribution characteristics of the target label $y_{synth}$.
 
-- 2) Gradient Computation. The class-conditional energy minimization is governed by a loss function. As illustrated in [Fig. 2](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig2)c, TabPFGen utilizes the cross-entropy (CE) function as its loss metric ([Ye et al., 2025](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib69)). The energy gradients are computed via backpropagation of the CE function, with the detailed implementation procedure described below:
+2) Gradient Computation. The class-conditional energy minimization is governed by a loss function. As illustrated in [Fig. 2](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig2)c, TabPFGen utilizes the cross-entropy (CE) function as its loss metric ([Ye et al., 2025](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib69)). The energy gradients are computed via backpropagation of the CE function, with the detailed implementation procedure described below:
 
-$$
-\nabla x=\frac{\partial E}{\partial {x}_{synth}^{t}}
-\tag{5}
-$$
+   $$
+   \nabla x=\frac{\partial E}{\partial {x}_{synth}^{t}}
+   \tag{5}
+   $$
 
-- 3) SGLD Sampling. The synthetic data sample at the (t+1)-th iteration is obtained through SGLD sampling, with the sampling procedure described by the following equation:
+3) SGLD Sampling. The synthetic data sample at the (t+1)-th iteration is obtained through SGLD sampling, with the sampling procedure described by the following equation:
 
-$$
-{x}_{synth}^{t+1}={x}_{synth}^{t}-\alpha \cdot \nabla x+\sigma \cdot \mathcal{N}(0,I)
-\tag{6}
-$$
+   $$
+   {x}_{synth}^{t+1}={x}_{synth}^{t}-\alpha \cdot \nabla x+\sigma \cdot \mathcal{N}(0,I)
+   \tag{6}
+   $$
 
-σ represents the noise coefficient. $\mathcal{N}$ (0, *I*) indicates Gaussian noise with zero mean and identity covariance matrix *I*. As the energy gradient decreases, the synthetic data is driven toward the target distribution ([Ma et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib40)). The iterative process terminates when *t* = *η*, at which point TabPFGen outputs the final synthetic data ${x}_{synth}^{\eta }$.
+   σ represents the noise coefficient. $\mathcal{N}$ (0, *I*) indicates Gaussian noise with zero mean and identity covariance matrix *I*. As the energy gradient decreases, the synthetic data is driven toward the target distribution ([Ma et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib40)). The iterative process terminates when *t* = *η*, at which point TabPFGen outputs the final synthetic data ${x}_{synth}^{\eta }$.
 
 ### 2.3. Reservoir parameter prediction model
 
@@ -190,13 +182,9 @@ In this study, we employ the TabPFN model to implement classification and regres
 
 ### 3.1. Collection and design of core data sets
 
-**Regional Overview.** The Bohai Bay Basin, a Cenozoic rift basin, has undergone multiple tectonic movements, leading to the formation of several depressions and uplifts ([Wang et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib58)). It is China's largest crude oil production base ([Fig. 3](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig3)a). The X Sag, situated in the western part of the Bohai Bay Basin, lies structurally between the Taihang Mountain Uplift and the Gaoyang Low Uplift ([Chen et al., 2024b](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib12)). Its northern and southern boundaries are delineated by two major transverse faults: the Wuji North Fault and the Heilongkou Fault. The depression spans an area of approximately 4000 km<sup>2</sup> ([Fig. 3](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig3)b).
+**Regional Overview.** The Bohai Bay Basin, a Cenozoic rift basin, has undergone multiple tectonic movements, leading to the formation of several depressions and uplifts ([Wang et al., 2024](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib58)). It is China's largest crude oil production base ([Fig. 3](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig3)a). The X Sag, situated in the western part of the Bohai Bay Basin, lies structurally between the Taihang Mountain Uplift and the Gaoyang Low Uplift ([Chen et al., 2024b](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib12)). Its northern and southern boundaries are delineated by two major transverse faults: the Wuji North Fault and the Heilongkou Fault. The depression spans an area of approximately 4000 $km^{2}$ ([Fig. 3](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig3)b).
 
 ![Fig. 3](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-gr3.jpg)
-
--
-
--
 
 Fig. 3. The location of the Bohai Bay Basin and the X Sag.
 
@@ -212,35 +200,10 @@ In this study, the dataset includes two primary components. First, core data (as
 
 Table 1. Dataset partitioning scheme.
 
-<table>
-  <thead>
-    <tr>
-      <td scope="col"></td>
-      <th scope="col">Task Type</th>
-      <th scope="col">Label Type</th>
-      <th scope="col">Label Name</th>
-      <th scope="col">Label Category</th>
-      <th scope="col">Data Distribution</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Lithology Classification</th>
-      <td>Classification</td>
-      <td>Discrete Text</td>
-      <td>Lithology</td>
-      <td>Fine-grained Sandstone, Siltstone, Mudstone</td>
-      <td rowspan="2">Non-mudstone samples: 143, Mudstone samples: 1172.</td>
-    </tr>
-    <tr>
-      <th scope="row">Petrophysical Parameter Prediction</th>
-      <td>Regression</td>
-      <td>Continuous Numerical</td>
-      <td>Porosity, Permeability</td>
-      <td>NA</td>
-    </tr>
-  </tbody>
-</table>
+|  | Task Type | Label Type | Label Name | Label Category | Data Distribution |
+| --- | --- | --- | --- | --- | --- |
+| Lithology Classification | Classification | Discrete Text | Lithology | Fine-grained Sandstone, Siltstone, Mudstone | Non-mudstone samples: 143, Mudstone samples: 1172. |
+| Petrophysical Parameter Prediction | Regression | Continuous Numerical | Porosity, Permeability | NA | Non-mudstone samples: 143, Mudstone samples: 1172. |
 
 ### 3.2. Preprocessing of core data sets and training of CDA
 
@@ -255,7 +218,7 @@ $$
 
 Table 2. Dataset partitioning with CDA.
 
-| Dataset<sub><em>θ</em></sub> | Train Data<sub><em>θ</em></sub> | Few Data | Test Data |
+| Dataset$_{\theta}$ | Train Data$_{\theta}$ | Few Data | Test Data |
 | --- | --- | --- | --- |
 | [1315,14] | [703,14] | [80,14] | [469,14] |
 
@@ -271,10 +234,6 @@ To conduct the performance assessment of machine learning, we required a benchma
 
 ![Fig. 4](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-gr4.jpg)
 
--
-
--
-
 Fig. 4. Comparison of synthetic data quality indicators with different quantities.
 
 The XGB classification models, constructed using synthetic data generated by Noisy, SMOTE, SMOTETomek, CTGAN, GReaT, TabPFGen, TVAE, DeltaVAE, and TabDDPM, achieve high accuracy on the “Test Data” as illustrated ([Fig. 4](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig4)). Notably, even when the amount of synthetic data significantly exceeds that of the “Few Data”, these tabular data augmentation models maintain their superior performance. Further analysis of [Fig. 4](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig4) reveals that the data quality generated by SMOTE, SMOTETomek, TabPFGen, TVAE, DeltaVAE, and TabDDPM initially increases, then stabilizes after reaching a certain level. This pattern is reasonable. In classification models, small-sample datasets suffer from insufficient samples, which prevents the model from fully demonstrating its performance. As the dataset size increases, the information content becomes richer. However, the representational capacity of these data augmentation algorithms is also constrained by the dataset size. This means that beyond a certain point, generating more synthetic data will not continue to increase the information content—it will instead stabilize. In [Fig. 4](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig4), the CTGAN model's results remain close to the peak throughout. This is likely because the inherent feature differences between mudstone and sandstone are already quite significant. Due to its underlying mechanism, CTGAN generates synthetic data in an outward-expanding manner, which further amplifies the feature gap between mudstone and sandstone. Therefore, the reliability of the CDA model requires more intuitive analysis.
@@ -285,10 +244,6 @@ To intuitively demonstrate the reliability of tabular data augmentation methods,
 
 ![Fig. 5](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-gr5.jpg)
 
--
-
--
-
 Fig. 5. The lithological feature distribution and statistical patterns of small-scale synthetic data generated by different methods.
 
 Among the methods tested, the SMOTE and SMOTETomek algorithms produced synthetic data that closely matched the original data ([Fig. 5](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig5)a–c), highlighting the continued effectiveness of traditional resampling-based algorithms in small-scale data augmentation. The synthetic data generated by TVAE, DeltaVAE, and TabDDPM exhibited completely independent distributions for different lithologies in the SP feature dimension, demonstrating their ability to produce high-quality synthetic data even with limited data. Similarly, TabPFGen, a PLM, achieved a high degree of consistency with the original data, indicating its excellent performance. However, the results from GReaT and CTGAN showed that the SP values of mudstone were higher than those of sandstone, suggesting that the quality of synthetic data generated by these models is not stable in small-scale data generation. Overall, generative methods outperformed traditional resampling-based algorithms and PLM-based data generation techniques in small-scale data augmentation.
@@ -296,10 +251,6 @@ Among the methods tested, the SMOTE and SMOTETomek algorithms produced synthetic
 The limited quantity of core data falls short of the requirements for few-shot learning. In addition to precision, the diversity of synthetic data must also be considered in CDA research. In our study, we generated synthetic datasets matching the original dataset's size using various tabular data augmentation models. We then visualized the data distribution and statistical patterns of the synthetic data in the acoustic (AC) and spontaneous potential (SP) feature dimensions ([Fig. 6](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig6)). Our results indicate that, in large-scale data generation, traditional resampling-based algorithms (Noisy, SMOTE, and SMOTETomek) and Gaussian noise addition methods are significantly less effective than generative data augmentation algorithms and probabilistic language models (PLMs). Specifically, models incorporating probabilistic distribution derivation (TVAE, DeltaVAE, and TabDDPM) exhibit superior data stability compared to GANs ([Fig. 6](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig6)d–g-i). While GReaT and TabPFGen demonstrate good performance in synthetic data generation, they remain less effective than purely generative models ([Fig. 6](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig6)e–f).
 
 ![Fig. 6](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-gr6.jpg)
-
--
-
--
 
 Fig. 6. The data distribution and statistical patterns of large-scale synthetic data generated by different methods.
 
@@ -315,218 +266,27 @@ After processing the dataset, we generated a series of synthetic data of various
 
 Table 3. Performance comparison experiment of lithology classification models. (Dataset scales are unified to 3000 columns. The experimental results are the means of five trials with different random seeds).
 
-<table>
-  <thead>
-    <tr>
-      <td scope="col"></td>
-      <th scope="col">Metric</th>
-      <th scope="col">Original</th>
-      <th scope="col">SMOTE</th>
-      <th scope="col">SMOTETomek</th>
-      <th scope="col">CTGAN</th>
-      <th scope="col">GReaT</th>
-      <th scope="col">TabPFGen</th>
-      <th scope="col">TVAE</th>
-      <th scope="col">DeltaVAE</th>
-      <th scope="col">TabDDPM</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="3">SVM</td>
-      <td>BA</td>
-      <td>0.761</td>
-      <td>0.812</td>
-      <td>0.825</td>
-      <td>0.837</td>
-      <td>0.842</td>
-      <td>0.845</td>
-      <td>0.862</td>
-      <td>0.851</td>
-      <td>0.866</td>
-    </tr>
-    <tr>
-      <td>F1</td>
-      <td>0.775</td>
-      <td>0.832</td>
-      <td>0.839</td>
-      <td>0.842</td>
-      <td>0.858</td>
-      <td>0.852</td>
-      <td>0.871</td>
-      <td>0.864</td>
-      <td>0.879</td>
-    </tr>
-    <tr>
-      <td>AUC</td>
-      <td>0.782</td>
-      <td>0.829</td>
-      <td>0.834</td>
-      <td>0.833</td>
-      <td>0.85</td>
-      <td>0.862</td>
-      <td>0.872</td>
-      <td>0.855</td>
-      <td>0.877</td>
-    </tr>
-    <tr>
-      <td rowspan="3">RF</td>
-      <td>BA</td>
-      <td><strong>0.843</strong></td>
-      <td>0.850</td>
-      <td>0.850</td>
-      <td>0.866</td>
-      <td><strong>0.886</strong></td>
-      <td>0.897</td>
-      <td>0.902</td>
-      <td>0.901</td>
-      <td>0.910</td>
-    </tr>
-    <tr>
-      <td>F1</td>
-      <td><strong>0.854</strong></td>
-      <td>0.865</td>
-      <td>0.871</td>
-      <td>0.893</td>
-      <td><strong>0.906</strong></td>
-      <td>0.933</td>
-      <td>0.934</td>
-      <td>0.927</td>
-      <td>0.936</td>
-    </tr>
-    <tr>
-      <td>AUC</td>
-      <td><strong>0.865</strong></td>
-      <td>0.879</td>
-      <td>0.887</td>
-      <td>0.906</td>
-      <td><strong>0.924</strong></td>
-      <td>0.942</td>
-      <td>0.945</td>
-      <td>0.939</td>
-      <td>0.942</td>
-    </tr>
-    <tr>
-      <td rowspan="3">XGB</td>
-      <td>BA</td>
-      <td>0.802</td>
-      <td>0.820</td>
-      <td>0.851</td>
-      <td>0.875</td>
-      <td>0.873</td>
-      <td>0.898</td>
-      <td>0.899</td>
-      <td>0.910</td>
-      <td>0.923</td>
-    </tr>
-    <tr>
-      <td>F1</td>
-      <td>0.805</td>
-      <td>0.842</td>
-      <td>0.874</td>
-      <td>0.897</td>
-      <td>0.891</td>
-      <td>0.921</td>
-      <td>0.914</td>
-      <td>0.909</td>
-      <td>0.941</td>
-    </tr>
-    <tr>
-      <td>AUC</td>
-      <td>0.826</td>
-      <td>0.861</td>
-      <td>0.879</td>
-      <td>0.908</td>
-      <td>0.912</td>
-      <td>0.942</td>
-      <td>0.942</td>
-      <td>0.932</td>
-      <td>0.948</td>
-    </tr>
-    <tr>
-      <td rowspan="3">LGB</td>
-      <td>BA</td>
-      <td>0.816</td>
-      <td>0.833</td>
-      <td>0.846</td>
-      <td>0.877</td>
-      <td>0.884</td>
-      <td>0.910</td>
-      <td>0.912</td>
-      <td>0.915</td>
-      <td>0.923</td>
-    </tr>
-    <tr>
-      <td>F1</td>
-      <td>0.822</td>
-      <td>0.847</td>
-      <td>0.871</td>
-      <td>0.897</td>
-      <td>0.901</td>
-      <td>0.927</td>
-      <td>0.928</td>
-      <td>0.928</td>
-      <td>0.939</td>
-    </tr>
-    <tr>
-      <td>AUC</td>
-      <td>0.837</td>
-      <td>0.864</td>
-      <td>0.887</td>
-      <td>0.908</td>
-      <td>0.913</td>
-      <td>0.946</td>
-      <td>0.943</td>
-      <td>0.943</td>
-      <td>0.942</td>
-    </tr>
-    <tr>
-      <td rowspan="3">TabPFN</td>
-      <td>BA</td>
-      <td>0.820</td>
-      <td><strong>0.853</strong></td>
-      <td><strong>0.859</strong></td>
-      <td><strong>0.880</strong></td>
-      <td>0.886</td>
-      <td><strong>0.924</strong></td>
-      <td><strong>0.927</strong></td>
-      <td><strong>0.925</strong></td>
-      <td><strong>0.937</strong></td>
-    </tr>
-    <tr>
-      <td>F1</td>
-      <td>0.838</td>
-      <td><strong>0.873</strong></td>
-      <td><strong>0.884</strong></td>
-      <td><strong>0.903</strong></td>
-      <td>0.908</td>
-      <td><strong>0.939</strong></td>
-      <td><strong>0.937</strong></td>
-      <td><strong>0.931</strong></td>
-      <td><strong>0.945</strong></td>
-    </tr>
-    <tr>
-      <td>AUC</td>
-      <td>0.862</td>
-      <td><strong>0.881</strong></td>
-      <td><strong>0.887</strong></td>
-      <td><strong>0.909</strong></td>
-      <td>0.915</td>
-      <td><strong>0.947</strong></td>
-      <td><strong>0.945</strong></td>
-      <td><strong>0.943</strong></td>
-      <td><strong>0.95</strong></td>
-    </tr>
-  </tbody>
-</table>
+|  | Metric | Original | SMOTE | SMOTETomek | CTGAN | GReaT | TabPFGen | TVAE | DeltaVAE | TabDDPM |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| SVM | BA | 0.761 | 0.812 | 0.825 | 0.837 | 0.842 | 0.845 | 0.862 | 0.851 | 0.866 |
+| SVM | F1 | 0.775 | 0.832 | 0.839 | 0.842 | 0.858 | 0.852 | 0.871 | 0.864 | 0.879 |
+| SVM | AUC | 0.782 | 0.829 | 0.834 | 0.833 | 0.85 | 0.862 | 0.872 | 0.855 | 0.877 |
+| RF | BA | **0.843** | 0.850 | 0.850 | 0.866 | **0.886** | 0.897 | 0.902 | 0.901 | 0.910 |
+| RF | F1 | **0.854** | 0.865 | 0.871 | 0.893 | **0.906** | 0.933 | 0.934 | 0.927 | 0.936 |
+| RF | AUC | **0.865** | 0.879 | 0.887 | 0.906 | **0.924** | 0.942 | 0.945 | 0.939 | 0.942 |
+| XGB | BA | 0.802 | 0.820 | 0.851 | 0.875 | 0.873 | 0.898 | 0.899 | 0.910 | 0.923 |
+| XGB | F1 | 0.805 | 0.842 | 0.874 | 0.897 | 0.891 | 0.921 | 0.914 | 0.909 | 0.941 |
+| XGB | AUC | 0.826 | 0.861 | 0.879 | 0.908 | 0.912 | 0.942 | 0.942 | 0.932 | 0.948 |
+| LGB | BA | 0.816 | 0.833 | 0.846 | 0.877 | 0.884 | 0.910 | 0.912 | 0.915 | 0.923 |
+| LGB | F1 | 0.822 | 0.847 | 0.871 | 0.897 | 0.901 | 0.927 | 0.928 | 0.928 | 0.939 |
+| LGB | AUC | 0.837 | 0.864 | 0.887 | 0.908 | 0.913 | 0.946 | 0.943 | 0.943 | 0.942 |
+| TabPFN | BA | 0.820 | **0.853** | **0.859** | **0.880** | 0.886 | **0.924** | **0.927** | **0.925** | **0.937** |
+| TabPFN | F1 | 0.838 | **0.873** | **0.884** | **0.903** | 0.908 | **0.939** | **0.937** | **0.931** | **0.945** |
+| TabPFN | AUC | 0.862 | **0.881** | **0.887** | **0.909** | 0.915 | **0.947** | **0.945** | **0.943** | **0.95** |
 
 As shown in [Table 3](https://www.sciencedirect.com/science/article/pii/S0264817225003228#tbl3), RF, SMOTE-TabPFN, SMOTETomek-TabPFN, CTGAN-TabPFN, GReaT-RF, TabPFGen-TabPFN, TVAE-TabPFN, and TabDDPM-TabPFN each achieved their respective single-column optima. To better demonstrate the application effects, we used well A1's logging data from 1440m to 1680m depth as the test set, applied the aforementioned CDA-ML combinations for inference, and visualized the results ([Fig. 7](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig7)). By referencing the SP logging curve and the lithological profile, the TabDDPM-TabPFN model achieved the most accurate lithology identification compared to other models, as illustrated in [Fig. 7](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig7).
 
 ![Fig. 7](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-gr7.jpg)
-
--
-
--
 
 Fig. 7. Lithology classification results of Well A1 under different model combinations. The lithological profile combined with SP curves is used as the reference standard.
 
@@ -534,321 +294,49 @@ Fig. 7. Lithology classification results of Well A1 under different model combin
 
 **Porosity Prediction.** In this application experiment, porosity serves as a representative example for predicting reservoir parameters. We generated synthetic data of various scales using multiple CDA techniques. These synthetic datasets, along with all collected original data, were used to form the dataset for porosity prediction. We employed mainstream ML algorithms and tabular PLM with regression capabilities to predict continuous porosity curves. It is noteworthy that the dataset with added mudstone samples shows significant differences, specifically manifested as large variance in porosity labels. In such cases, evaluation metrics suitable for imbalanced data regression tasks should be selected. For reservoir parameter prediction, we adopted the Coefficient of Variation of Root Mean Square Error (CVRMSE) metric. This metric eliminates the influence of data scale by dividing RMSE by the mean of observed values, thereby providing a relative error measure. Its core function is to address the comparability of model errors across datasets with different magnitudes ([Palaić et al., 2023](https://www.sciencedirect.com/science/article/pii/S0264817225003228#bib48)). In addition, the correlation coefficient, as a typical evaluation metric for regression tasks, was also adopted.
 
-To evaluate the performance of these models, we conducted comparative experiments on R<sup>2</sup> and CVRMSE for RF, XGB, LGB, and TabPFN across different datasets composed of synthetic data ([Table 4](https://www.sciencedirect.com/science/article/pii/S0264817225003228#tbl4)). The results show that compared to porosity prediction without data augmentation, various combinations of CDA and ML models achieve different levels of accuracy improvement. Among them, the TabDDPM-TabPFN model yields the highest porosity prediction accuracy.
+To evaluate the performance of these models, we conducted comparative experiments on $R^{2}$ and CVRMSE for RF, XGB, LGB, and TabPFN across different datasets composed of synthetic data ([Table 4](https://www.sciencedirect.com/science/article/pii/S0264817225003228#tbl4)). The results show that compared to porosity prediction without data augmentation, various combinations of CDA and ML models achieve different levels of accuracy improvement. Among them, the TabDDPM-TabPFN model yields the highest porosity prediction accuracy.
 
-Table 4. Performance comparison experiment of porosity prediction models. 1) For statistical standards, the synthetic data volume is set to 2000 columns. 2) The results are derived from the averages of five trials with different random seeds. 3) The R<sup>2</sup> and CVRMSE both range from 0 to 1. A higher R<sup>2</sup> value (approaching 1) indicates better prediction accuracy, while a lower CVRMSE value (approaching 0) corresponds to smaller relative errors in the predictive model.
+Table 4. Performance comparison experiment of porosity prediction models. 1) For statistical standards, the synthetic data volume is set to 2000 columns. 2) The results are derived from the averages of five trials with different random seeds. 3) The $R^{2}$ and CVRMSE both range from 0 to 1. A higher $R^{2}$ value (approaching 1) indicates better prediction accuracy, while a lower CVRMSE value (approaching 0) corresponds to smaller relative errors in the predictive model.
 
-<table>
-  <thead>
-    <tr>
-      <td scope="col"></td>
-      <th scope="col">Metric</th>
-      <th scope="col">Original</th>
-      <th scope="col">SMOTE</th>
-      <th scope="col">SMOTETomek</th>
-      <th scope="col">CTGAN</th>
-      <th scope="col">GReaT</th>
-      <th scope="col">TabPFGen</th>
-      <th scope="col">TVAE</th>
-      <th scope="col">DeltaVAE</th>
-      <th scope="col">TabDDPM</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="2">SVM</td>
-      <td>R<sup>2</sup></td>
-      <td>0.827</td>
-      <td>0.83</td>
-      <td>0.832</td>
-      <td>0.839</td>
-      <td>0.852</td>
-      <td>0.895</td>
-      <td>0.867</td>
-      <td>0.872</td>
-      <td>0.903</td>
-    </tr>
-    <tr>
-      <td>CVRMSE</td>
-      <td>0.364</td>
-      <td>0.334</td>
-      <td>0.331</td>
-      <td>0.325</td>
-      <td>0.315</td>
-      <td>0.286</td>
-      <td>0.294</td>
-      <td>0.289</td>
-      <td>0.271</td>
-    </tr>
-    <tr>
-      <td rowspan="2">RF</td>
-      <td>R<sup>2</sup></td>
-      <td>0.882</td>
-      <td>0.893</td>
-      <td>0.894</td>
-      <td>0.896</td>
-      <td>0.909</td>
-      <td>0.925</td>
-      <td>0.936</td>
-      <td>0.932</td>
-      <td>0.949</td>
-    </tr>
-    <tr>
-      <td>CVRMSE</td>
-      <td>0.295</td>
-      <td>0.249</td>
-      <td>0.245</td>
-      <td>0.251</td>
-      <td>0.177</td>
-      <td>0.167</td>
-      <td>0.174</td>
-      <td>0.177</td>
-      <td>0.155</td>
-    </tr>
-    <tr>
-      <td rowspan="2">XGB</td>
-      <td>R<sup>2</sup></td>
-      <td>0.872</td>
-      <td>0.903</td>
-      <td>0.894</td>
-      <td>0.895</td>
-      <td>0.902</td>
-      <td>0.927</td>
-      <td>0.937</td>
-      <td>0.935</td>
-      <td>0.943</td>
-    </tr>
-    <tr>
-      <td>CVRMSE</td>
-      <td>0.284</td>
-      <td>0.258</td>
-      <td>0.252</td>
-      <td>0.261</td>
-      <td>0.196</td>
-      <td>0.164</td>
-      <td>0.172</td>
-      <td>0.188</td>
-      <td>0.171</td>
-    </tr>
-    <tr>
-      <td rowspan="2">LGB</td>
-      <td>R<sup>2</sup></td>
-      <td>0.877</td>
-      <td>0.897</td>
-      <td>0.901</td>
-      <td>0.892</td>
-      <td>0.901</td>
-      <td>0.941</td>
-      <td>0.938</td>
-      <td>0.932</td>
-      <td>0.942</td>
-    </tr>
-    <tr>
-      <td>CVRMSE</td>
-      <td>0.289</td>
-      <td>0.255</td>
-      <td>0.248</td>
-      <td>0.264</td>
-      <td>0.196</td>
-      <td>0.141</td>
-      <td>0.171</td>
-      <td>0.175</td>
-      <td>0.172</td>
-    </tr>
-    <tr>
-      <td rowspan="2">TabPFN</td>
-      <td>R<sup>2</sup></td>
-      <td>0.874</td>
-      <td>0.905</td>
-      <td>0.902</td>
-      <td>0.899</td>
-      <td>0.905</td>
-      <td>0.95</td>
-      <td>0.951</td>
-      <td>0.944</td>
-      <td><strong>0.957</strong></td>
-    </tr>
-    <tr>
-      <td>CVRMSE</td>
-      <td>0.263</td>
-      <td>0.243</td>
-      <td>0.238</td>
-      <td>0.253</td>
-      <td>0.193</td>
-      <td>0.124</td>
-      <td>0.143</td>
-      <td>0.132</td>
-      <td><strong>0.122</strong></td>
-    </tr>
-  </tbody>
-</table>
+|  | Metric | Original | SMOTE | SMOTETomek | CTGAN | GReaT | TabPFGen | TVAE | DeltaVAE | TabDDPM |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| SVM | $R^{2}$ | 0.827 | 0.83 | 0.832 | 0.839 | 0.852 | 0.895 | 0.867 | 0.872 | 0.903 |
+| SVM | CVRMSE | 0.364 | 0.334 | 0.331 | 0.325 | 0.315 | 0.286 | 0.294 | 0.289 | 0.271 |
+| RF | $R^{2}$ | 0.882 | 0.893 | 0.894 | 0.896 | 0.909 | 0.925 | 0.936 | 0.932 | 0.949 |
+| RF | CVRMSE | 0.295 | 0.249 | 0.245 | 0.251 | 0.177 | 0.167 | 0.174 | 0.177 | 0.155 |
+| XGB | $R^{2}$ | 0.872 | 0.903 | 0.894 | 0.895 | 0.902 | 0.927 | 0.937 | 0.935 | 0.943 |
+| XGB | CVRMSE | 0.284 | 0.258 | 0.252 | 0.261 | 0.196 | 0.164 | 0.172 | 0.188 | 0.171 |
+| LGB | $R^{2}$ | 0.877 | 0.897 | 0.901 | 0.892 | 0.901 | 0.941 | 0.938 | 0.932 | 0.942 |
+| LGB | CVRMSE | 0.289 | 0.255 | 0.248 | 0.264 | 0.196 | 0.141 | 0.171 | 0.175 | 0.172 |
+| TabPFN | $R^{2}$ | 0.874 | 0.905 | 0.902 | 0.899 | 0.905 | 0.95 | 0.951 | 0.944 | **0.957** |
+| TabPFN | CVRMSE | 0.263 | 0.243 | 0.238 | 0.253 | 0.193 | 0.124 | 0.143 | 0.132 | **0.122** |
 
 To evaluate the practical application of various data augmentation–reservoir parameter prediction model combinations, this study uses Well A1 as a case study and employs the porosity curve calculated by logging experts as a benchmark. The logging curves from Well A1, excluding outliers, were input into the trained models that included mudstone categories, and the inference results were obtained. These results were partially displayed in the form of a logging profile ([Fig. 8](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig8)). The findings demonstrate that, compared to models without data augmentation, the porosity curves predicted by RF, XGB, LGB, and TabPFN with data augmentation more accurately represent the non-coring sections. After processing the original dataset with data augmentation methods, the TabDDPM–TabPFN combination provided the most accurate porosity curve predictions.
 
 ![Fig. 8](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-gr8.jpg)
 
--
-
--
-
 Fig. 8. Porosity prediction results of Well A1 under different model combinations. The results processed by logging experts (Core-POR) are used as the reference standard.
 
-**Permeability Prediction.** The method for permeability prediction is largely consistent with that for porosity prediction, with the primary difference being in label adjustment. Specifically, the permeability values measured from core samples are used as targets in the dataset. Given the substantial variation in the order of magnitude of permeability in non-mudstone core samples, the permeability labels are transformed into logarithmic form. It is important to note that porosity is excluded from this dataset. This exclusion is due to potential calculation errors in porosity values derived either from logging experts or predicted in Section [4.1](https://www.sciencedirect.com/science/article/pii/S0264817225003228#sec4.1), despite the known strong positive correlation between porosity and permeability. To quantitatively evaluate the accuracy of permeability prediction, we obtained R<sup>2</sup> and CVRMSE results for different CDA-ML combinations ([Table 5](https://www.sciencedirect.com/science/article/pii/S0264817225003228#tbl5)). The results demonstrate that the TabDDPM-TabPFN model achieves the best evaluation performance in permeability prediction.
+**Permeability Prediction.** The method for permeability prediction is largely consistent with that for porosity prediction, with the primary difference being in label adjustment. Specifically, the permeability values measured from core samples are used as targets in the dataset. Given the substantial variation in the order of magnitude of permeability in non-mudstone core samples, the permeability labels are transformed into logarithmic form. It is important to note that porosity is excluded from this dataset. This exclusion is due to potential calculation errors in porosity values derived either from logging experts or predicted in Section [4.1](https://www.sciencedirect.com/science/article/pii/S0264817225003228#sec4.1), despite the known strong positive correlation between porosity and permeability. To quantitatively evaluate the accuracy of permeability prediction, we obtained $R^{2}$ and CVRMSE results for different CDA-ML combinations ([Table 5](https://www.sciencedirect.com/science/article/pii/S0264817225003228#tbl5)). The results demonstrate that the TabDDPM-TabPFN model achieves the best evaluation performance in permeability prediction.
 
-Table 5. Performance comparison experiment of permeability prediction models. 1) For statistical standards, the synthetic data volume is set to 2000 columns. 2) The results are derived from the averages of five trials with different random seeds. 3) The R<sup>2</sup> and CVRMSE both range from 0 to 1. A higher R<sup>2</sup> value (approaching 1) indicates better prediction accuracy, while a lower CVRMSE value (approaching 0) corresponds to smaller relative errors in the predictive model.
+Table 5. Performance comparison experiment of permeability prediction models. 1) For statistical standards, the synthetic data volume is set to 2000 columns. 2) The results are derived from the averages of five trials with different random seeds. 3) The $R^{2}$ and CVRMSE both range from 0 to 1. A higher $R^{2}$ value (approaching 1) indicates better prediction accuracy, while a lower CVRMSE value (approaching 0) corresponds to smaller relative errors in the predictive model.
 
-<table>
-  <thead>
-    <tr>
-      <td scope="col"></td>
-      <th scope="col">Metric</th>
-      <th scope="col">Original</th>
-      <th scope="col">SMOTE</th>
-      <th scope="col">SMOTETomek</th>
-      <th scope="col">CTGAN</th>
-      <th scope="col">GReaT</th>
-      <th scope="col">TabPFGen</th>
-      <th scope="col">TVAE</th>
-      <th scope="col">DeltaVAE</th>
-      <th scope="col">TabDDPM</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="2">SVM</td>
-      <td>R<sup>2</sup></td>
-      <td>0.847</td>
-      <td>0.85</td>
-      <td>0.852</td>
-      <td>0.859</td>
-      <td>0.872</td>
-      <td>0.915</td>
-      <td>0.887</td>
-      <td>0.892</td>
-      <td>0.923</td>
-    </tr>
-    <tr>
-      <td>CVRMSE</td>
-      <td>0.364</td>
-      <td>0.334</td>
-      <td>0.331</td>
-      <td>0.325</td>
-      <td>0.315</td>
-      <td>0.286</td>
-      <td>0.294</td>
-      <td>0.289</td>
-      <td>0.271</td>
-    </tr>
-    <tr>
-      <td rowspan="2">RF</td>
-      <td>R<sup>2</sup></td>
-      <td>0.902</td>
-      <td>0.913</td>
-      <td>0.914</td>
-      <td>0.916</td>
-      <td>0.929</td>
-      <td>0.945</td>
-      <td>0.956</td>
-      <td>0.952</td>
-      <td>0.969</td>
-    </tr>
-    <tr>
-      <td>CVRMSE</td>
-      <td>0.195</td>
-      <td>0.249</td>
-      <td>0.245</td>
-      <td>0.221</td>
-      <td>0.177</td>
-      <td>0.167</td>
-      <td>0.174</td>
-      <td>0.177</td>
-      <td>0.155</td>
-    </tr>
-    <tr>
-      <td rowspan="2">XGB</td>
-      <td>R<sup>2</sup></td>
-      <td>0.892</td>
-      <td>0.923</td>
-      <td>0.914</td>
-      <td>0.915</td>
-      <td>0.922</td>
-      <td>0.947</td>
-      <td>0.957</td>
-      <td>0.955</td>
-      <td>0.963</td>
-    </tr>
-    <tr>
-      <td>CVRMSE</td>
-      <td>0.194</td>
-      <td>0.268</td>
-      <td>0.252</td>
-      <td>0.241</td>
-      <td>0.196</td>
-      <td>0.164</td>
-      <td>0.172</td>
-      <td>0.188</td>
-      <td>0.171</td>
-    </tr>
-    <tr>
-      <td rowspan="2">LGB</td>
-      <td>R<sup>2</sup></td>
-      <td>0.897</td>
-      <td>0.917</td>
-      <td>0.921</td>
-      <td>0.912</td>
-      <td>0.921</td>
-      <td>0.961</td>
-      <td>0.958</td>
-      <td>0.952</td>
-      <td>0.962</td>
-    </tr>
-    <tr>
-      <td>CVRMSE</td>
-      <td>0.199</td>
-      <td>0.255</td>
-      <td>0.248</td>
-      <td>0.244</td>
-      <td>0.196</td>
-      <td>0.141</td>
-      <td>0.171</td>
-      <td>0.175</td>
-      <td>0.172</td>
-    </tr>
-    <tr>
-      <td rowspan="2">TabPFN</td>
-      <td>R<sup>2</sup></td>
-      <td>0.894</td>
-      <td>0.925</td>
-      <td>0.922</td>
-      <td>0.919</td>
-      <td>0.925</td>
-      <td>0.970</td>
-      <td>0.964</td>
-      <td>0.964</td>
-      <td><strong>0.971</strong></td>
-    </tr>
-    <tr>
-      <td>CVRMSE</td>
-      <td>0.213</td>
-      <td>0.243</td>
-      <td>0.238</td>
-      <td>0.223</td>
-      <td>0.193</td>
-      <td>0.124</td>
-      <td>0.143</td>
-      <td>0.132</td>
-      <td><strong>0.120</strong></td>
-    </tr>
-  </tbody>
-</table>
+|  | Metric | Original | SMOTE | SMOTETomek | CTGAN | GReaT | TabPFGen | TVAE | DeltaVAE | TabDDPM |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| SVM | $R^{2}$ | 0.847 | 0.85 | 0.852 | 0.859 | 0.872 | 0.915 | 0.887 | 0.892 | 0.923 |
+| SVM | CVRMSE | 0.364 | 0.334 | 0.331 | 0.325 | 0.315 | 0.286 | 0.294 | 0.289 | 0.271 |
+| RF | $R^{2}$ | 0.902 | 0.913 | 0.914 | 0.916 | 0.929 | 0.945 | 0.956 | 0.952 | 0.969 |
+| RF | CVRMSE | 0.195 | 0.249 | 0.245 | 0.221 | 0.177 | 0.167 | 0.174 | 0.177 | 0.155 |
+| XGB | $R^{2}$ | 0.892 | 0.923 | 0.914 | 0.915 | 0.922 | 0.947 | 0.957 | 0.955 | 0.963 |
+| XGB | CVRMSE | 0.194 | 0.268 | 0.252 | 0.241 | 0.196 | 0.164 | 0.172 | 0.188 | 0.171 |
+| LGB | $R^{2}$ | 0.897 | 0.917 | 0.921 | 0.912 | 0.921 | 0.961 | 0.958 | 0.952 | 0.962 |
+| LGB | CVRMSE | 0.199 | 0.255 | 0.248 | 0.244 | 0.196 | 0.141 | 0.171 | 0.175 | 0.172 |
+| TabPFN | $R^{2}$ | 0.894 | 0.925 | 0.922 | 0.919 | 0.925 | 0.970 | 0.964 | 0.964 | **0.971** |
+| TabPFN | CVRMSE | 0.213 | 0.243 | 0.238 | 0.223 | 0.193 | 0.124 | 0.143 | 0.132 | **0.120** |
 
 Four data augmentation methods—TVAE, TabDDPM, GReaT, and TabPFGen—were selected and combined with RF, XGB, LGB, and TabPFN to form various data augmentation–reservoir parameter prediction model combinations. The application effects of these combinations are illustrated in [Fig. 9](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig9). Compared to the baseline prediction models, the models incorporating data augmentation demonstrate varying degrees of performance improvement. Notably, the TabDDPM and GReaT prediction models exhibit exceptional performance in the depth range of 1640–1670 m. As shown in [Fig. 9](https://www.sciencedirect.com/science/article/pii/S0264817225003228#fig9), the permeability prediction performance of the TabDDPM-TabPFN and GReaT-TabPFN combinations is superior to that of other models.
 
 ![Fig. 9](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-gr9.jpg)
-
--
-
--
 
 Fig. 9. Permeability prediction results of Well A1 under different model combinations. The results processed by logging experts (Core-PERM) are used as the reference standard.
 
@@ -860,7 +348,7 @@ This study primarily investigates CDA as a means to enhance the prediction of re
 
 ## 6. Conclusion
 
-We present a workflow aimed at enhancing reservoir parameter prediction using CDA. This workflow includes data preprocessing, CDA implementation, reliability analysis, and reservoir parameter prediction. The reliability analysis results demonstrate that TVAE, DeltaVAE, and TabDDPM in CDA generate high-quality synthetic outputs for small-scale datasets. For large-scale data generation, pre-trained large language models (GReaT and TabPFGen) exhibit strong latent performance. In terms of application effectiveness, among various CDA-ML model combinations, TabDDPM-TabPFN performs the best. For lithology classification, TabDDPM-TabPFN achieves BA, F1, and AUC scores of 0.937, 0.945, and 0.95 respectively. For porosity prediction, TabDDPM-TabPFN yields R<sup>2</sup> and CVRMSE values of 0.957 and 0.122. For permeability prediction, TabDDPM-TabPFN shows R<sup>2</sup> and CVRMSE values of 0.971 and 0.12. In future research, we aim to explore the applicability of this workflow to more complex reservoirs and integrate CDA with physical models to further enhance the reliability of synthetic datasets.
+We present a workflow aimed at enhancing reservoir parameter prediction using CDA. This workflow includes data preprocessing, CDA implementation, reliability analysis, and reservoir parameter prediction. The reliability analysis results demonstrate that TVAE, DeltaVAE, and TabDDPM in CDA generate high-quality synthetic outputs for small-scale datasets. For large-scale data generation, pre-trained large language models (GReaT and TabPFGen) exhibit strong latent performance. In terms of application effectiveness, among various CDA-ML model combinations, TabDDPM-TabPFN performs the best. For lithology classification, TabDDPM-TabPFN achieves BA, F1, and AUC scores of 0.937, 0.945, and 0.95 respectively. For porosity prediction, TabDDPM-TabPFN yields $R^{2}$ and CVRMSE values of 0.957 and 0.122. For permeability prediction, TabDDPM-TabPFN shows $R^{2}$ and CVRMSE values of 0.971 and 0.12. In future research, we aim to explore the applicability of this workflow to more complex reservoirs and integrate CDA with physical models to further enhance the reliability of synthetic datasets.
 
 ## CRediT authorship contribution statement
 
@@ -890,17 +378,13 @@ We thank reviewers and the editor, Lin Ma, for their contributions in enhancing 
 
 The following is the Supplementary data to this article.
 
-Multimedia component 1.
+[Multimedia component 1.](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-mmc1.xlsx)
 
 ## Appendix A. Well Log Correlation Analysis
 
 To reasonably determine well logs as inputs for various models, sensitivity analysis was conducted on collected core petrophysical data and corresponding depth-based log measurements. The results show that AC, CNL, DEN, CAL, GR, SP, PE, RMG, RT, and AT90 exhibit good correlations with Label, POR and PREM ([Figure. A1](https://www.sciencedirect.com/science/article/pii/S0264817225003228#appsec1)). Therefore, these well logs are all selected as input features for CDA and ML.
 
 ![Fig. A1](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-fx1.jpg)
-
--
-
--
 
 Fig. A1. Pearson Correlation Coefficient Analysis of Well Log Features.
 
@@ -910,17 +394,9 @@ IQR (Interquartile Range) is a statistical method for outlier detection based on
 
 ![Fig. A2](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-fx2.jpg)
 
--
-
--
-
 Fig. A2. Logging Data of Mudstone Section Without Outlier Removal.
 
 ![Fig. A3](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-fx3.jpg)
-
--
-
--
 
 Fig. A3. Logging Data of Mudstone Section After Outlier Removal.
 
@@ -930,11 +406,11 @@ We employed CDA to generate varying amounts of synthetic data, with different CD
 
 ![Fig. A4](https://ars.els-cdn.com/content/image/1-s2.0-S0264817225003228-fx4.jpg)
 
--
-
--
-
 Fig. A4. The running time of CDA and the learning performance of TabDDPM and GReaT.
+
+## Data availability
+
+Data will be made available on request.
 
 ## References
 
