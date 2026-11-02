@@ -17,7 +17,7 @@ Converta somente os artigos e URLs fornecidos pelo usuário. Siga também o `AGE
 
 ## Arquivos e metadados
 
-- Salve em `fontes/artigos/<assunto-curto-em-kebab-case>/artigo.md`, reutilizando a pasta existente quando corresponder à mesma fonte.
+- Salve em `fontes/artigos/<ordem-com-dois-digitos>-<assunto-curto-em-kebab-case>/artigo.md`, reutilizando a pasta existente quando corresponder à mesma fonte. Consulte a sequência em `fontes/README.md` antes de atribuir um novo número.
 - A entrega é Markdown. Guarde downloads intermediários em diretório temporário; não acrescente PDF ou HTML à pasta final sem solicitação.
 - Use front matter YAML com `title`, `source`, `archived_at` e `format`. Preserve exatamente a URL fornecida em `source`; registre a data real da extração em `archived_at`.
 - Acrescente `version` quando a versão estiver explícita na fonte, e `retrieved_from` quando a extração vier de outra URL. Não deduza dados bibliográficos ausentes nem confunda datas de publicação, atualização e extração.

@@ -49,7 +49,7 @@ One of the areas recently surveyed by CPRM is the Cinzento Lineament region (Fig
 
 In this work, we evaluated several supervised MLA in order to build a Predictive Lithological map of the Cinzento Lineament, based on a dataset that includes airborne magnetometric, radiometric and SRTM (Shuttle Radar Topography Mission) data. We built a predictive map with enough equivalence to the geological chart that was developed by combining traditional surveying tools (fieldwork and manual interpretation of remote sensing and airborne geophysical images).
 
-![Figure 1](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/mapeamento-litologico-carajas/figuras/figura-1.png)
+![Figure 1](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/03-mapeamento-litologico-carajas/figuras/figura-1.png)
 
 [Figure 1 - a) Tectonic compartmentalization of the Southern Amazonian craton proposed by Vasquez et al. (2008) highlighting the region of the Cinzento Lineament. b) Lithological Map of Cinzento Lineament (Oliveira et al. 2018).](https://rigeo.sgb.gov.br/bitstreams/5886b568-feeb-4456-955e-bdb7852ea011/download#page=2)
 
@@ -92,13 +92,13 @@ To overcome these issues, we suggest a new approach using a superficial horizont
 
 The radiometric data are dependent on sources up to 30 cm beneath the Earth’s surface, which makes these data highly correlated with geological field data. As the airborne radiometric data were obtained at different periods, they were initially compensated using a linear relationship between the data from an intersection area between adjacent projects. The radiometric data show the contents of Potassium (K), Uranium (eU) and Thorium (eTh), which were added to our database. We did not use ratios among the elements to not overparameterize the final model. Figure 2b displays an RGB ternary image with K (red), eTh (green) and eU (blue). Our database also included a digital elevation model derived from the SRTM (Figure 2c). Despite being very useful in other studies (e.g. Kuhn et al. 2018; Cracknell et al. 2014), our preliminary analysis showed a significant bias in Landsat-8 data (Figure 2d). The preliminary results showed a high correlation between lithological units covered by dense vegetation, due to its homogeneous coverage. Moreover, the lithological units appeared highly controlled in the boundaries between dense vegetation and anthropized areas (e.g. mines, tailings dams, cities). Consequently, the Landsat data were not used in predictive models.
 
-![Figure 2](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/mapeamento-litologico-carajas/figuras/figura-2.png)
+![Figure 2](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/03-mapeamento-litologico-carajas/figuras/figura-2.png)
 
 [Figure 2 - The data used as input in the machine learning algorithms in this study. a) Magnetic Vector Inversion, b) Ternary RGB map (K, eTh and eU), C) Shuttle Radar Topography Mission (SRTM) and d) false color (RGB) of Landsat 8 combining bands 4 (red), 3 (green) and 2 (blue).](https://rigeo.sgb.gov.br/bitstreams/5886b568-feeb-4456-955e-bdb7852ea011/download#page=4)
 
 All data (airborne geophysical and SRTM) were reprojected to the coordinate system SIRGAS 2000 - UTM zone 22 south. Furthermore, we performed downsample to cells with 250 meters in all grids. This pre-processing resulted in 55,305 instances in which each one comprises all input data. Since we performed a supervised classification, it was necessary to take a small representative data do train the model (Hastie et al. 2009). In theory, records of field observation are the best data to compose training data. In practice, in a geological survey, the units are not sampled homogeneously, which can bias the model for the classes (or lithological unit) with the most significant number of samples (Japkowicz and Stephen 2002; Cracknell et al. 2014). Alternatively, it is possible to use random samples extracted from previous geological maps such as training data. Therefore, we followed previous works (Cracknell et al. 2014; Kuhn et al. 2018) and used 100 random samples per lithological unit. Another approach could be to define the number of samples by the area of the lithological unit; however, this procedure can bias the predictive model for classes with a large area (Japkowicz and Stephen 2002). Therefore, our training data resulted in 1400 samples (Figure 3) with their classes extracted randomly from the current geological map (Oliveira et al. 2018), which represents 2.5% of the total sample amount (55,305 samples). This rate is close to those of Cracknell et al. (2014) and Kuhn et al. (2018), which used 2.6% and 1.6% of the total sample amount, respectively.
 
-![Figure 3](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/mapeamento-litologico-carajas/figuras/figura-3.png)
+![Figure 3](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/03-mapeamento-litologico-carajas/figuras/figura-3.png)
 
 [Figure 3 - Location of training points used as input in the Machine Learning Algorithms. The training points database is composed of 100 random samples from each class (or lithological unit) resulting in 1400 samples.](https://rigeo.sgb.gov.br/bitstreams/5886b568-feeb-4456-955e-bdb7852ea011/download#page=5)
 
@@ -147,7 +147,7 @@ The RF also can provide a rank of the input variables concerning the importance 
 | 4 | MVI | 71.8 % |
 | 5 | K | 76.9 % |
 
-![Figure 4](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/mapeamento-litologico-carajas/figuras/figura-4.png)
+![Figure 4](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/03-mapeamento-litologico-carajas/figuras/figura-4.png)
 
 [Figure 4 - Examples of Pythagorean trees from the multiple trees used in this work. Colors show the most likely classes on each node and the size of the rectangle is proportional to the number of samples in each group.](https://rigeo.sgb.gov.br/bitstreams/5886b568-feeb-4456-955e-bdb7852ea011/download#page=6)
 
@@ -159,11 +159,11 @@ Table 5 shows the predicted percentage for each lithological unit and the second
 
 Despite the satisfactory recovery (52.7%), the Predictive map with remote data (Figure 6c) presents a considerable content of high-frequency noise. Cracknell and Reading (2014) proposed that the use of spatial coordinate constraints could significantly reduce this high-frequency content. Therefore, we inserted constrains containing the spatial coordinates of the instances in order to mitigate noise and improve model recovery. Figure 6d shows the Predictive Lithological map with remote data and spatial correlation. This predictive map recovered 78.7% of the geological map, which represents a compatible recovery in comparison with previous works. For example, Yu et al. (2012) obtained a prediction of 62.2% using Support Vector Machines (SVM) and an 11 x 11 majority filter. Kuhn et al. (2018) and Cracknell et al. (2014) through the Random Forest algorithm predicted 76% and 78%, respectively. Table 6 shows a substantial increase in recovery when spatial constraints are inserted. The predicted percentage ranges from 59.6 to 98.1%, while for the predictive map without spatial correlation it varies between 36.9 and 81.1% (Table 5).
 
-![Figure 5](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/mapeamento-litologico-carajas/figuras/figura-5.png)
+![Figure 5](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/03-mapeamento-litologico-carajas/figuras/figura-5.png)
 
 [Figure 5 - An example of class probability (in percentage) for the lithological unit A4γ2gl from the Predictive Lithological map with remote data only.](https://rigeo.sgb.gov.br/bitstreams/5886b568-feeb-4456-955e-bdb7852ea011/download#page=7)
 
-![Figure 6](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/mapeamento-litologico-carajas/figuras/figura-6.png)
+![Figure 6](/home/matheus/Documents/projetos/tcc-tabpfn/fontes/artigos/03-mapeamento-litologico-carajas/figuras/figura-6.png)
 
 [Figure 6 - Comparison between the a) Lithological Map of Cinzento Lineament from Oliveira et al. (2018), b) training points, c) Predictive Lithological Map using remote data only, and d) the Predictive Map with remote data and spatial correlation. The limits of the geological map were superimposed on the predictive map to improve the association.](https://rigeo.sgb.gov.br/bitstreams/5886b568-feeb-4456-955e-bdb7852ea011/download#page=8)
 
