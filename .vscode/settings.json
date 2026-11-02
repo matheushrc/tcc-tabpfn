@@ -1,0 +1,10 @@
+{
+  "cSpell.enabled": true,
+  "cSpell.language": "en,pt-BR",
+  "cSpell.files": [
+    "**/*.md"
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  }
+}
