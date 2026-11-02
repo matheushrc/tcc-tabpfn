@@ -33,7 +33,7 @@ In-context learning (ICL) is a mechanism observed in large language models (LLMs
 
 When applied to real-world datasets, TabPFN still requires training data to guide the predictions, but this data is used only as contextual information rather than for updating model weights. During inference, TabPFN processes both the training data and the test features in a single forward pass, using the provided input–output examples to generate predictions for unseen samples. As a result, TabPFN is computationally efficient and requires no data-specific hyperparameter tuning. Given that soil spectral modelling is typically tabular data, we ask the question whether TabPFN can serve as a generic prediction tool applicable to spectral libraries of varying sizes.
 
-Current studies of TabPFN have primarily focused on low-dimensional datasets, characterised by a low feature-to-sample ratio and relatively small sample sizes. [Barkov et al. (2026)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0015) demonstrated that TabPFN can be applied to soil visible and near infrared (Vis-NIR) and mid-infrared (MIR) data after dimensionality reduction, and TabPFN achieved superior performance than classical machine learning baselines. The authors suggested that TabPFN could serve as a new baseline model for pedometrics and digital soil mapping. Additionally, [Schmidinger et al. (2026)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0165) combined kriging and TabPFN for soil mapping and achieved a 30% improvement in R<sup>2</sup> compared to conventional methods. These studies demonstrated the robustness of TabPFN for predicting small-sized soil data.
+Current studies of TabPFN have primarily focused on low-dimensional datasets, characterised by a low feature-to-sample ratio and relatively small sample sizes. [Barkov et al. (2026)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0015) demonstrated that TabPFN can be applied to soil visible and near infrared (Vis-NIR) and mid-infrared (MIR) data after dimensionality reduction, and TabPFN achieved superior performance than classical machine learning baselines. The authors suggested that TabPFN could serve as a new baseline model for pedometrics and digital soil mapping. Additionally, [Schmidinger et al. (2026)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0165) combined kriging and TabPFN for soil mapping and achieved a 30% improvement in $R^{2}$ compared to conventional methods. These studies demonstrated the robustness of TabPFN for predicting small-sized soil data.
 
 In this study, we conducted a comprehensive evaluation of TabPFN for soil inference using spectral data generated from MIR spectroscopy. Comparing TabPFN with established machine learning methods commonly used in soil spectroscopy can validate its applicability to real-world datasets. Furthermore, it is essential to examine how well TabPFN can generalise from training data to unseen samples, relative to both simple and complex algorithms. Finally, the model’s uncertainty quantification and interpretability should be evaluated for the applied use of machine learning in soil spectral analysis.
 
@@ -43,9 +43,9 @@ Accordingly, the objectives of this study are to (1) evaluate if TabPFN can accu
 
 ### 2.1. Dataset
 
-Soil MIR spectra and physicochemical properties were extracted from the Kellogg Soil Survey Laboratory (KSSL) dataset. To test the performance of TabPFN, three soil properties were selected based on their varying predictability using MIR spectroscopy ([Ng et al., 2022](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110)). The selected soil properties were (1) total carbon (TC), which represents high predictability, (2) pH in a 1:1 soil–water suspension, which represents moderate predictability, and (3) Olsen method extractable phosphorus (Olsen-P), which represents low predictability. In [Ng et al. (2022)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110), TC was predicted with a high R<sup>2</sup> = 0.95, a low root mean square error (RMSE) = 0.38%, and a high ratio of performance to the interquartile range (RPIQ) = 5.64 with MIR spectra and Cubist. In comparison, the prediction of pH (R<sup>2</sup> = 0.85; RMSE = 0.44; RPIQ = 4.55) and Olsen-P (R<sup>2</sup> = 0.37; RMSE = 9.12 mg/kg; RPIQ = 1.43) were poorer compared to TC.
+Soil MIR spectra and physicochemical properties were extracted from the Kellogg Soil Survey Laboratory (KSSL) dataset. To test the performance of TabPFN, three soil properties were selected based on their varying predictability using MIR spectroscopy ([Ng et al., 2022](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110)). The selected soil properties were (1) total carbon (TC), which represents high predictability, (2) pH in a 1:1 soil–water suspension, which represents moderate predictability, and (3) Olsen method extractable phosphorus (Olsen-P), which represents low predictability. In [Ng et al. (2022)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110), TC was predicted with a high $R^{2}$ = 0.95, a low root mean square error (RMSE) = 0.38%, and a high ratio of performance to the interquartile range (RPIQ) = 5.64 with MIR spectra and Cubist. In comparison, the prediction of pH ($R^{2}$ = 0.85; RMSE = 0.44; RPIQ = 4.55) and Olsen-P ($R^{2}$ = 0.37; RMSE = 9.12 mg/kg; RPIQ = 1.43) were poorer compared to TC.
 
-A total of 11,564 samples from the United States (US) were selected with TC, pH, and Olsen-P measurements. The laboratory procedure for the measurement of soil properties and spectra can be found in the work of [Soil Survey Staff (2014)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0185). Soil MIR spectra were trimmed to 3900–700 cm<sup>−1</sup> with 2 cm<sup>−1</sup> resolution, and no further preprocessing was done. As demonstrated in previous studies ([Ng et al., 2019](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0120), [Padarian et al., 2019](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0130), [Huang et al., 2025](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0070)), complex algorithms can handle raw spectra without preprocessing. Hence, these raw spectra were directly used as inputs to the evaluated models.
+A total of 11,564 samples from the United States (US) were selected with TC, pH, and Olsen-P measurements. The laboratory procedure for the measurement of soil properties and spectra can be found in the work of [Soil Survey Staff (2014)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0185). Soil MIR spectra were trimmed to 3900–700 $\mathrm{cm}^{-1}$ with 2 $\mathrm{cm}^{-1}$ resolution, and no further preprocessing was done. As demonstrated in previous studies ([Ng et al., 2019](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0120), [Padarian et al., 2019](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0130), [Huang et al., 2025](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0070)), complex algorithms can handle raw spectra without preprocessing. Hence, these raw spectra were directly used as inputs to the evaluated models.
 
 To observe spectral similarities, principal component analysis (PCA) was used to reduce the dimensionality of spectra ([Fig. 1](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0005)). Soil samples from Texas (N = 620) were first separated to form the internal independent test set in this study for its proper size and distribution in the PCA graph ([Fig. 1](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0005)).
 
@@ -123,158 +123,30 @@ For CNN, a one-dimensional network with six trainable layers was constructed wit
 
 Table 1. Architecture of the convolutional neural network. ReLU stands for rectified linear unit.
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Layer type</th>
-      <th scope="col">Filter size</th>
-      <th scope="col">Filters</th>
-      <th scope="col">Activation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Convolutional</td>
-      <td>5</td>
-      <td>32</td>
-      <td>ReLU</td>
-    </tr>
-    <tr>
-      <td>Max Pooling</td>
-      <td>2</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>MC Dropout (0.2)</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td colspan="4"><br/></td>
-    </tr>
-    <tr>
-      <td>Convolutional</td>
-      <td>5</td>
-      <td>64</td>
-      <td>ReLU</td>
-    </tr>
-    <tr>
-      <td>Max Pooling</td>
-      <td>2</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>MC Dropout (0.2)</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td colspan="4"><br/></td>
-    </tr>
-    <tr>
-      <td>Convolutional</td>
-      <td>5</td>
-      <td>128</td>
-      <td>ReLU</td>
-    </tr>
-    <tr>
-      <td>Max Pooling</td>
-      <td>2</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>MC Dropout (0.2)</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td colspan="4"><br/></td>
-    </tr>
-    <tr>
-      <td>Convolutional</td>
-      <td>5</td>
-      <td>256</td>
-      <td>ReLU</td>
-    </tr>
-    <tr>
-      <td>Max Pooling</td>
-      <td>2</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>MC Dropout (0.2)</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td colspan="4"><br/></td>
-    </tr>
-    <tr>
-      <td>Convolutional</td>
-      <td>5</td>
-      <td>512</td>
-      <td>ReLU</td>
-    </tr>
-    <tr>
-      <td>Max Pooling</td>
-      <td>2</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>MC Dropout (0.2)</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td colspan="4"><br/></td>
-    </tr>
-    <tr>
-      <td>Convolutional</td>
-      <td>5</td>
-      <td>1024</td>
-      <td>ReLU</td>
-    </tr>
-    <tr>
-      <td>Max Pooling</td>
-      <td>2</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>MC Dropout (0.2)</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td colspan="4"><br/></td>
-    </tr>
-    <tr>
-      <td>Flatten</td>
-      <td></td>
-      <td></td>
-      <td>Linear</td>
-    </tr>
-    <tr>
-      <td>Fully-connected</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Layer type | Filter size | Filters | Activation |
+| --- | --- | --- | --- |
+| Convolutional | 5 | 32 | ReLU |
+| Max Pooling | 2 |  |  |
+| MC Dropout (0.2) |  |  |  |
+| Convolutional | 5 | 64 | ReLU |
+| Max Pooling | 2 |  |  |
+| MC Dropout (0.2) |  |  |  |
+| Convolutional | 5 | 128 | ReLU |
+| Max Pooling | 2 |  |  |
+| MC Dropout (0.2) |  |  |  |
+| Convolutional | 5 | 256 | ReLU |
+| Max Pooling | 2 |  |  |
+| MC Dropout (0.2) |  |  |  |
+| Convolutional | 5 | 512 | ReLU |
+| Max Pooling | 2 |  |  |
+| MC Dropout (0.2) |  |  |  |
+| Convolutional | 5 | 1024 | ReLU |
+| Max Pooling | 2 |  |  |
+| MC Dropout (0.2) |  |  |  |
+| Flatten |  |  | Linear |
+| Fully-connected |  |  |  |
 
-PLSR, Cubist, and TabPFN were trained or fitted on seven training sets of varying sizes and tested on internal and external datasets. Due to its data-hungry nature, CNN did not outperform PLSR and Cubist when the training sample size was less than 2000 ([Ng et al., 2020](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0115)). As a result, only the extra-large training set was used for CNN training and evaluation. Coefficients of determination (R<sup>2</sup>, Eq. [(1)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#e0005), root mean squared error (RMSE, Eq. [(2)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#e0010), ratio of performance to the interquartile range (RPIQ, Eq. [(3)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#e0015), and standardised bias (Stb, Eq. [(4)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#e0020)) and Eq. [(5)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#e0025)) were used to evaluate model performance ([Ng et al., 2022](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110)). IQR stands for the interquartile range of the observed values.
+PLSR, Cubist, and TabPFN were trained or fitted on seven training sets of varying sizes and tested on internal and external datasets. Due to its data-hungry nature, CNN did not outperform PLSR and Cubist when the training sample size was less than 2000 ([Ng et al., 2020](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0115)). As a result, only the extra-large training set was used for CNN training and evaluation. Coefficients of determination ($R^{2}$, Eq. [(1)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#e0005), root mean squared error (RMSE, Eq. [(2)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#e0010), ratio of performance to the interquartile range (RPIQ, Eq. [(3)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#e0015), and standardised bias (Stb, Eq. [(4)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#e0020)) and Eq. [(5)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#e0025)) were used to evaluate model performance ([Ng et al., 2022](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110)). IQR stands for the interquartile range of the observed values.
 
 $$
 {R}^{2}=1-\frac{{\sum }_{i=1}^{n}{({y}_{i}-{\hat{y}}_{i})}^{2}}{{\sum }_{i=1}^{n}{({y}_{i}-{\bar{y}}_{i})}^{2}}
@@ -345,494 +217,47 @@ In the present study, SHAP values of TabPFN were calculated with the *interpreta
 
 ### 3.1. Model performance
 
-Among the soil properties tested, TC was the most predictable, followed by pH and Olsen-P ([Table 2](https://www.sciencedirect.com/science/article/pii/S0016706126002089#t0010)). Prediction of TC by Cubist achieved an R<sup>2</sup> of 0.95 for the extra-large training set (RPIQ = 4.41). CNN outperformed PLSR and Cubist in TC predictions, achieving a high R<sup>2</sup> of 0.96 and RPIQ of 4.68. However, the same CNN structure was not optimal for pH prediction and was outrun by Cubist, which predicted pH with good accuracy using the extra-large training set (R<sup>2</sup> = 0.82, RPIQ = 3.02). All the baseline models failed to predict Olsen-P even with the extra-large training set (PLSR R<sup>2</sup> = -0.19, RPIQ = 0.51; Cubist R<sup>2</sup> = -0.04, RPIQ = 0.54; CNN R<sup>2</sup> = 0.08, RPIQ = 0.58). This is because MIR characterised the functional groups of mineral and organic matter of the soils, which is consistent with the results of [Ng et al. (2022)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110) using the same dataset.
+Among the soil properties tested, TC was the most predictable, followed by pH and Olsen-P ([Table 2](https://www.sciencedirect.com/science/article/pii/S0016706126002089#t0010)). Prediction of TC by Cubist achieved an $R^{2}$ of 0.95 for the extra-large training set (RPIQ = 4.41). CNN outperformed PLSR and Cubist in TC predictions, achieving a high $R^{2}$ of 0.96 and RPIQ of 4.68. However, the same CNN structure was not optimal for pH prediction and was outrun by Cubist, which predicted pH with good accuracy using the extra-large training set ($R^{2}$ = 0.82, RPIQ = 3.02). All the baseline models failed to predict Olsen-P even with the extra-large training set (PLSR $R^{2}$ = -0.19, RPIQ = 0.51; Cubist $R^{2}$ = -0.04, RPIQ = 0.54; CNN $R^{2}$ = 0.08, RPIQ = 0.58). This is because MIR characterised the functional groups of mineral and organic matter of the soils, which is consistent with the results of [Ng et al. (2022)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110) using the same dataset.
 
-Table 2. Results of the modelling by partial least squared regression (PLSR), Cubist, convolutional neural network (CNN) and TabPFN. The models were trained on the training set and tested on Texas dataset (N = 620). R<sup>2</sup> stands for coefficient of determination, RMSE stands for root mean square error, RPIQ stands for ratio of performance to the interquartile range, and Stb stands for standardised bias. The extra-large dataset includes all states except Texas.
+Table 2. Results of the modelling by partial least squared regression (PLSR), Cubist, convolutional neural network (CNN) and TabPFN. The models were trained on the training set and tested on Texas dataset (N = 620). $R^{2}$ stands for coefficient of determination, RMSE stands for root mean square error, RPIQ stands for ratio of performance to the interquartile range, and Stb stands for standardised bias. The extra-large dataset includes all states except Texas.
 
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2" scope="col">Property</th>
-      <th rowspan="2" scope="col">Training set</th>
-      <th scope="col">PLSR</th>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <th scope="col">Cubist</th>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <th scope="col">CNN</th>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <th scope="col">TabPFN</th>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <td scope="col"></td>
-    </tr>
-    <tr>
-      <th scope="col">R<sup>2</sup></th>
-      <th scope="col">RMSE</th>
-      <th scope="col">RPIQ</th>
-      <th scope="col">Stb</th>
-      <th scope="col">R<sup>2</sup></th>
-      <th scope="col">RMSE</th>
-      <th scope="col">RPIQ</th>
-      <th scope="col">Stb</th>
-      <th scope="col">R<sup>2</sup></th>
-      <th scope="col">RMSE</th>
-      <th scope="col">RPIQ</th>
-      <th scope="col">Stb</th>
-      <th scope="col">R<sup>2</sup></th>
-      <th scope="col">RMSE</th>
-      <th scope="col">RPIQ</th>
-      <th scope="col">Stb</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>TC (% wt)</td>
-      <td>Small, similar (Iowa N = 46)</td>
-      <td>−5.22</td>
-      <td>5.26</td>
-      <td>0.38</td>
-      <td>−0.60</td>
-      <td>0.52</td>
-      <td>1.45</td>
-      <td>1.38</td>
-      <td>0.15</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.57</td>
-      <td>1.38</td>
-      <td>1.46</td>
-      <td>0.15</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Small, different (Vermont N = 50)</td>
-      <td>−7.72</td>
-      <td>6.22</td>
-      <td>0.32</td>
-      <td>−1.53</td>
-      <td>−0.90</td>
-      <td>2.91</td>
-      <td>0.69</td>
-      <td>−0.31</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>−0.07</td>
-      <td>2.18</td>
-      <td>0.92</td>
-      <td>0.53</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Medium, similar (Montana N = 337)</td>
-      <td>0.51</td>
-      <td>1.48</td>
-      <td>1.36</td>
-      <td>0.06</td>
-      <td>0.86</td>
-      <td>0.78</td>
-      <td>2.57</td>
-      <td>0.04</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.95</td>
-      <td>0.49</td>
-      <td>4.13</td>
-      <td>−0.02</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Medium, different (Florida N = 275)</td>
-      <td>−1.76</td>
-      <td>3.50</td>
-      <td>0.58</td>
-      <td>0.39</td>
-      <td>0.35</td>
-      <td>1.70</td>
-      <td>1.18</td>
-      <td>0.69</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.92</td>
-      <td>0.61</td>
-      <td>3.33</td>
-      <td>0.08</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Large 1 (California + Nevada N = 1119)</td>
-      <td>0.54</td>
-      <td>1.43</td>
-      <td>1.41</td>
-      <td>−0.47</td>
-      <td>0.94</td>
-      <td>0.53</td>
-      <td>3.83</td>
-      <td>−0.02</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.98</td>
-      <td>0.31</td>
-      <td>6.44</td>
-      <td>−0.03</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Large 2 (Nebraska + Kansas N = 1253)</td>
-      <td>0.66</td>
-      <td>1.22</td>
-      <td>1.65</td>
-      <td>−0.09</td>
-      <td>0.93</td>
-      <td>0.54</td>
-      <td>3.70</td>
-      <td>−0.02</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.98</td>
-      <td>0.33</td>
-      <td>6.16</td>
-      <td>−0.05</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Extra-large (N = 10944)</td>
-      <td>0.78</td>
-      <td>0.98</td>
-      <td>2.05</td>
-      <td>−0.10</td>
-      <td>0.95</td>
-      <td>0.46</td>
-      <td>4.41</td>
-      <td>0.03</td>
-      <td>0.96</td>
-      <td>0.43</td>
-      <td>4.68</td>
-      <td>−0.08</td>
-      <td>0.99</td>
-      <td>0.19</td>
-      <td>10.54</td>
-      <td>−0.01</td>
-    </tr>
-    <tr>
-      <td colspan="18"><br/></td>
-    </tr>
-    <tr>
-      <td>pH</td>
-      <td>Small, similar (Iowa N = 46)</td>
-      <td>−2.60</td>
-      <td>1.91</td>
-      <td>0.68</td>
-      <td>−0.81</td>
-      <td>0.43</td>
-      <td>0.76</td>
-      <td>1.70</td>
-      <td>−0.05</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.45</td>
-      <td>0.74</td>
-      <td>1.74</td>
-      <td>0.02</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Small, different (Vermont N = 50)</td>
-      <td>−2.00</td>
-      <td>1.75</td>
-      <td>0.74</td>
-      <td>0.97</td>
-      <td>0.38</td>
-      <td>0.80</td>
-      <td>1.63</td>
-      <td>0.06</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>−0.33</td>
-      <td>1.16</td>
-      <td>1.11</td>
-      <td>−0.57</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Medium, similar (Montana N = 337)</td>
-      <td>0.07</td>
-      <td>0.97</td>
-      <td>1.33</td>
-      <td>0.48</td>
-      <td>0.41</td>
-      <td>0.78</td>
-      <td>1.67</td>
-      <td>0.31</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.63</td>
-      <td>0.61</td>
-      <td>2.11</td>
-      <td>0.11</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Medium, different (Florida N = 275)</td>
-      <td>0.08</td>
-      <td>0.97</td>
-      <td>1.34</td>
-      <td>0.07</td>
-      <td>0.48</td>
-      <td>0.73</td>
-      <td>1.78</td>
-      <td>−0.03</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.59</td>
-      <td>0.65</td>
-      <td>2.01</td>
-      <td>−0.02</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Large 1 (California + Nevada N = 1119)</td>
-      <td>0.55</td>
-      <td>0.68</td>
-      <td>1.92</td>
-      <td>0.06</td>
-      <td>0.75</td>
-      <td>0.50</td>
-      <td>2.59</td>
-      <td>0.04</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.77</td>
-      <td>0.48</td>
-      <td>2.68</td>
-      <td>0.09</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Large 2 (Nebraska + Kansas N = 1253)</td>
-      <td>0.38</td>
-      <td>0.79</td>
-      <td>1.64</td>
-      <td>0.13</td>
-      <td>0.68</td>
-      <td>0.57</td>
-      <td>2.27</td>
-      <td>0.11</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.73</td>
-      <td>0.53</td>
-      <td>2.45</td>
-      <td>−0.02</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Extra-large (N = 10944)</td>
-      <td>0.73</td>
-      <td>0.53</td>
-      <td>2.46</td>
-      <td>0.00</td>
-      <td>0.82</td>
-      <td>0.43</td>
-      <td>3.02</td>
-      <td>0.00</td>
-      <td>0.75</td>
-      <td>0.50</td>
-      <td>2.59</td>
-      <td>−0.02</td>
-      <td>0.82</td>
-      <td>0.43</td>
-      <td>2.99</td>
-      <td>−0.09</td>
-    </tr>
-    <tr>
-      <td colspan="18"><br/></td>
-    </tr>
-    <tr>
-      <td>Olsen-P (mg/kg)</td>
-      <td>Small, similar (Iowa N = 46)</td>
-      <td>−15.72</td>
-      <td>47.91</td>
-      <td>0.14</td>
-      <td>2.67</td>
-      <td>−3.59</td>
-      <td>25.11</td>
-      <td>0.26</td>
-      <td>2.51</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>−3.04</td>
-      <td>23.54</td>
-      <td>0.28</td>
-      <td>2.76</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Small, different (Vermont N = 50)</td>
-      <td>−6.15</td>
-      <td>31.32</td>
-      <td>0.21</td>
-      <td>−3.73</td>
-      <td>−0.14</td>
-      <td>12.50</td>
-      <td>0.52</td>
-      <td>−0.60</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>−0.03</td>
-      <td>11.87</td>
-      <td>0.55</td>
-      <td>0.12</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Medium, similar (Montana N = 337)</td>
-      <td>−0.40</td>
-      <td>13.88</td>
-      <td>0.47</td>
-      <td>0.08</td>
-      <td>−0.19</td>
-      <td>12.78</td>
-      <td>0.51</td>
-      <td>0.31</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.00</td>
-      <td>11.74</td>
-      <td>0.55</td>
-      <td>−0.03</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Medium, different (Florida N = 275)</td>
-      <td>−1.54</td>
-      <td>18.68</td>
-      <td>0.35</td>
-      <td>1.88</td>
-      <td>−0.13</td>
-      <td>12.47</td>
-      <td>0.52</td>
-      <td>0.62</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>−0.18</td>
-      <td>12.71</td>
-      <td>0.51</td>
-      <td>0.98</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Large 1 (California + Nevada N = 1119)</td>
-      <td>−0.67</td>
-      <td>15.14</td>
-      <td>0.43</td>
-      <td>−0.38</td>
-      <td>−0.33</td>
-      <td>13.52</td>
-      <td>0.48</td>
-      <td>0.70</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.00</td>
-      <td>11.74</td>
-      <td>0.55</td>
-      <td>0.32</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Large 2 (Nebraska + Kansas N = 1253)</td>
-      <td>−0.54</td>
-      <td>14.56</td>
-      <td>0.45</td>
-      <td>0.55</td>
-      <td>−11.84</td>
-      <td>41.99</td>
-      <td>0.15</td>
-      <td>2.11</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>−0.97</td>
-      <td>16.46</td>
-      <td>0.39</td>
-      <td>0.96</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Extra-large (N = 10944)</td>
-      <td>−0.19</td>
-      <td>12.77</td>
-      <td>0.51</td>
-      <td>0.22</td>
-      <td>−0.04</td>
-      <td>11.97</td>
-      <td>0.54</td>
-      <td>0.50</td>
-      <td>0.08</td>
-      <td>11.23</td>
-      <td>0.58</td>
-      <td>0.30</td>
-      <td>0.20</td>
-      <td>10.51</td>
-      <td>0.62</td>
-      <td>0.39</td>
-    </tr>
-  </tbody>
-</table>
+| Property | Training set | PLSR / $R^{2}$ | PLSR / RMSE | PLSR / RPIQ | PLSR / Stb | Cubist / $R^{2}$ | Cubist / RMSE | Cubist / RPIQ | Cubist / Stb | CNN / $R^{2}$ | CNN / RMSE | CNN / RPIQ | CNN / Stb | TabPFN / $R^{2}$ | TabPFN / RMSE | TabPFN / RPIQ | TabPFN / Stb |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TC (% wt) | Small, similar (Iowa N = 46) | −5.22 | 5.26 | 0.38 | −0.60 | 0.52 | 1.45 | 1.38 | 0.15 |  |  |  |  | 0.57 | 1.38 | 1.46 | 0.15 |
+|  | Small, different (Vermont N = 50) | −7.72 | 6.22 | 0.32 | −1.53 | −0.90 | 2.91 | 0.69 | −0.31 |  |  |  |  | −0.07 | 2.18 | 0.92 | 0.53 |
+|  | Medium, similar (Montana N = 337) | 0.51 | 1.48 | 1.36 | 0.06 | 0.86 | 0.78 | 2.57 | 0.04 |  |  |  |  | 0.95 | 0.49 | 4.13 | −0.02 |
+|  | Medium, different (Florida N = 275) | −1.76 | 3.50 | 0.58 | 0.39 | 0.35 | 1.70 | 1.18 | 0.69 |  |  |  |  | 0.92 | 0.61 | 3.33 | 0.08 |
+|  | Large 1 (California + Nevada N = 1119) | 0.54 | 1.43 | 1.41 | −0.47 | 0.94 | 0.53 | 3.83 | −0.02 |  |  |  |  | 0.98 | 0.31 | 6.44 | −0.03 |
+|  | Large 2 (Nebraska + Kansas N = 1253) | 0.66 | 1.22 | 1.65 | −0.09 | 0.93 | 0.54 | 3.70 | −0.02 |  |  |  |  | 0.98 | 0.33 | 6.16 | −0.05 |
+|  | Extra-large (N = 10944) | 0.78 | 0.98 | 2.05 | −0.10 | 0.95 | 0.46 | 4.41 | 0.03 | 0.96 | 0.43 | 4.68 | −0.08 | 0.99 | 0.19 | 10.54 | −0.01 |
+| pH | Small, similar (Iowa N = 46) | −2.60 | 1.91 | 0.68 | −0.81 | 0.43 | 0.76 | 1.70 | −0.05 |  |  |  |  | 0.45 | 0.74 | 1.74 | 0.02 |
+|  | Small, different (Vermont N = 50) | −2.00 | 1.75 | 0.74 | 0.97 | 0.38 | 0.80 | 1.63 | 0.06 |  |  |  |  | −0.33 | 1.16 | 1.11 | −0.57 |
+|  | Medium, similar (Montana N = 337) | 0.07 | 0.97 | 1.33 | 0.48 | 0.41 | 0.78 | 1.67 | 0.31 |  |  |  |  | 0.63 | 0.61 | 2.11 | 0.11 |
+|  | Medium, different (Florida N = 275) | 0.08 | 0.97 | 1.34 | 0.07 | 0.48 | 0.73 | 1.78 | −0.03 |  |  |  |  | 0.59 | 0.65 | 2.01 | −0.02 |
+|  | Large 1 (California + Nevada N = 1119) | 0.55 | 0.68 | 1.92 | 0.06 | 0.75 | 0.50 | 2.59 | 0.04 |  |  |  |  | 0.77 | 0.48 | 2.68 | 0.09 |
+|  | Large 2 (Nebraska + Kansas N = 1253) | 0.38 | 0.79 | 1.64 | 0.13 | 0.68 | 0.57 | 2.27 | 0.11 |  |  |  |  | 0.73 | 0.53 | 2.45 | −0.02 |
+|  | Extra-large (N = 10944) | 0.73 | 0.53 | 2.46 | 0.00 | 0.82 | 0.43 | 3.02 | 0.00 | 0.75 | 0.50 | 2.59 | −0.02 | 0.82 | 0.43 | 2.99 | −0.09 |
+| Olsen-P (mg/kg) | Small, similar (Iowa N = 46) | −15.72 | 47.91 | 0.14 | 2.67 | −3.59 | 25.11 | 0.26 | 2.51 |  |  |  |  | −3.04 | 23.54 | 0.28 | 2.76 |
+|  | Small, different (Vermont N = 50) | −6.15 | 31.32 | 0.21 | −3.73 | −0.14 | 12.50 | 0.52 | −0.60 |  |  |  |  | −0.03 | 11.87 | 0.55 | 0.12 |
+|  | Medium, similar (Montana N = 337) | −0.40 | 13.88 | 0.47 | 0.08 | −0.19 | 12.78 | 0.51 | 0.31 |  |  |  |  | 0.00 | 11.74 | 0.55 | −0.03 |
+|  | Medium, different (Florida N = 275) | −1.54 | 18.68 | 0.35 | 1.88 | −0.13 | 12.47 | 0.52 | 0.62 |  |  |  |  | −0.18 | 12.71 | 0.51 | 0.98 |
+|  | Large 1 (California + Nevada N = 1119) | −0.67 | 15.14 | 0.43 | −0.38 | −0.33 | 13.52 | 0.48 | 0.70 |  |  |  |  | 0.00 | 11.74 | 0.55 | 0.32 |
+|  | Large 2 (Nebraska + Kansas N = 1253) | −0.54 | 14.56 | 0.45 | 0.55 | −11.84 | 41.99 | 0.15 | 2.11 |  |  |  |  | −0.97 | 16.46 | 0.39 | 0.96 |
+|  | Extra-large (N = 10944) | −0.19 | 12.77 | 0.51 | 0.22 | −0.04 | 11.97 | 0.54 | 0.50 | 0.08 | 11.23 | 0.58 | 0.30 | 0.20 | 10.51 | 0.62 | 0.39 |
 
 In the baseline models, Cubist outperformed PLSR, indicating nonlinear relationships between soil properties and MIR spectra ([Wang et al., 2024](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0220)). Model performance also increased with training set size, as more samples provided more information to tune the model. CNN hyperparameters were optimised for TC predictions and demonstrated high prediction ability.
 
 During inference on sub-datasets, models trained on samples spectrally similar to the test data (e.g., Iowa and Montana) tend to perform better. For example, the Cubist model trained on Montana and Florida samples provides markedly different results despite their similar sample sizes ([Table 2](https://www.sciencedirect.com/science/article/pii/S0016706126002089#t0010)). This is reasonable, as the degree of generalisation required is different when predicting samples that are spectrally different from the training sets ([Fig. 1](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0005)).
 
-TabPFN generally exceeded the baseline models for all configurations, but also suffered from the lower predictability of Olsen-P. For TC predictions, TabPFN consistently outperformed baseline models, achieving high accuracy (R<sup>2</sup> > 0.9) across all medium, large, and extra-large datasets. For small datasets that are spectrally similar to the test samples (Iowa, N = 46), Cubist and TabPFN provided reasonable predictions (R<sup>2</sup> > 0.5) with TabPFN being better. However, for the small but spectrally distinct dataset (Vermont, N = 50), all models failed to make good predictions. The R<sup>2</sup> for all the Vermont set TC predictions was less than zero, indicating predictions that were worse than simply predicting the mean.
+TabPFN generally exceeded the baseline models for all configurations, but also suffered from the lower predictability of Olsen-P. For TC predictions, TabPFN consistently outperformed baseline models, achieving high accuracy ($R^{2}$ > 0.9) across all medium, large, and extra-large datasets. For small datasets that are spectrally similar to the test samples (Iowa, N = 46), Cubist and TabPFN provided reasonable predictions ($R^{2}$ > 0.5) with TabPFN being better. However, for the small but spectrally distinct dataset (Vermont, N = 50), all models failed to make good predictions. The $R^{2}$ for all the Vermont set TC predictions was less than zero, indicating predictions that were worse than simply predicting the mean.
 
-The most notable difference between TabPFN and Cubist results was the medium-sized Florida dataset. Samples from Florida were spectrally different from the test samples from Texas ([Fig. 1](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0005)d). Both PLSR and Cubist suffered from this limitation and could not generalise well in predictions. Despite the medium sample size of Florida samples, PLSR failed to make predictions while Cubist showed limited performance (PLSR R<sup>2</sup> = -1.76, RPIQ = 0.58; Cubist R<sup>2</sup> = 0.35, RPIQ = 1.18). However, TabPFN could generalise from the training set and predict the test set with high accuracy (R<sup>2</sup> = 0.92, RPIQ = 3.33). This indicated that TabPFN had a better ability to generalise from training samples, with an RMSE decrease of 83% relative to PLSR and 64% relative to Cubist when trained on the Florida dataset for TC prediction.
+The most notable difference between TabPFN and Cubist results was the medium-sized Florida dataset. Samples from Florida were spectrally different from the test samples from Texas ([Fig. 1](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0005)d). Both PLSR and Cubist suffered from this limitation and could not generalise well in predictions. Despite the medium sample size of Florida samples, PLSR failed to make predictions while Cubist showed limited performance (PLSR $R^{2}$ = -1.76, RPIQ = 0.58; Cubist $R^{2}$ = 0.35, RPIQ = 1.18). However, TabPFN could generalise from the training set and predict the test set with high accuracy ($R^{2}$ = 0.92, RPIQ = 3.33). This indicated that TabPFN had a better ability to generalise from training samples, with an RMSE decrease of 83% relative to PLSR and 64% relative to Cubist when trained on the Florida dataset for TC prediction.
 
-Using large datasets, TabPFN outperformed PLSR and Cubist for TC, even though Cubist was already producing good predictions (R<sup>2</sup> = 0.94 and 0.93). The RPIQ for TabPFN trained on large datasets was higher than six (RPIQ = 6.44 and 6.16), which were higher than the best TC prediction in [Ng et al. (2022)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110) using the whole dataset.
+Using large datasets, TabPFN outperformed PLSR and Cubist for TC, even though Cubist was already producing good predictions ($R^{2}$ = 0.94 and 0.93). The RPIQ for TabPFN trained on large datasets was higher than six (RPIQ = 6.44 and 6.16), which were higher than the best TC prediction in [Ng et al. (2022)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110) using the whole dataset.
 
-When training on the extra-large dataset (N = 10,944), TabPFN achieved a highly accurate TC prediction with R<sup>2</sup> = 0.99, RPIQ = 10.54, and Stb = -0.01. The RPIQ of TabPFN was twice that of Cubist and CNN under the same scheme. This indicated that TabPFN could still outperform PLSR, Cubist, and CNN when the sample size reached 10,000. Based on the TC predictions, it was concluded that TabPFN achieved stable superior performance to Cubist, particularly on medium-sized datasets.
+When training on the extra-large dataset (N = 10,944), TabPFN achieved a highly accurate TC prediction with $R^{2}$ = 0.99, RPIQ = 10.54, and Stb = -0.01. The RPIQ of TabPFN was twice that of Cubist and CNN under the same scheme. This indicated that TabPFN could still outperform PLSR, Cubist, and CNN when the sample size reached 10,000. Based on the TC predictions, it was concluded that TabPFN achieved stable superior performance to Cubist, particularly on medium-sized datasets.
 
-The performance of pH predictions was less accurate than that of TC, as there were no direct spectral signatures from soil pH. For small datasets, all models failed to make acceptable predictions (R<sup>2</sup> < 0.5), indicating the limitations of algorithms when the training information was limited. When the sample number increased, TabPFN outperformed Cubist and PLSR in medium datasets. In particular, TabPFN showed marked improvement using the Montana dataset (PLSR R<sup>2</sup> = 0.07, RPIQ = 1.33; Cubist R<sup>2</sup> = 0.41, RPIQ = 1.67; TabPFN R<sup>2</sup> = 0.63, RPIQ = 2.11). TabPFN reached RPIQ > 2 with medium-sized datasets, while PLSR reached that with an extra-large dataset, and Cubist with a large dataset. Cubist and TabPFN achieved similar performance on the extra-large training set (Cubist R<sup>2</sup> = 0.82, RPIQ = 3.02; TabPFN R<sup>2</sup> = 0.82, RPIQ = 2.99) while Cubist exhibited less bias. It was also on a medium-sized dataset that TabPFN outperformed baseline models, achieving increases of more than 20% in R<sup>2</sup> and 10% in RPIQ over Cubist.
+The performance of pH predictions was less accurate than that of TC, as there were no direct spectral signatures from soil pH. For small datasets, all models failed to make acceptable predictions ($R^{2}$ < 0.5), indicating the limitations of algorithms when the training information was limited. When the sample number increased, TabPFN outperformed Cubist and PLSR in medium datasets. In particular, TabPFN showed marked improvement using the Montana dataset (PLSR $R^{2}$ = 0.07, RPIQ = 1.33; Cubist $R^{2}$ = 0.41, RPIQ = 1.67; TabPFN $R^{2}$ = 0.63, RPIQ = 2.11). TabPFN reached RPIQ > 2 with medium-sized datasets, while PLSR reached that with an extra-large dataset, and Cubist with a large dataset. Cubist and TabPFN achieved similar performance on the extra-large training set (Cubist $R^{2}$ = 0.82, RPIQ = 3.02; TabPFN $R^{2}$ = 0.82, RPIQ = 2.99) while Cubist exhibited less bias. It was also on a medium-sized dataset that TabPFN outperformed baseline models, achieving increases of more than 20% in $R^{2}$ and 10% in RPIQ over Cubist.
 
 TabPFN and all the baseline models were unable to make predictions for Olsen-P, with none of the RPIQ values exceeding one. This highlighted the limitations of the algorithms for predicting properties with low predictability. Olsen-P was also poorly predicted by previous literature ([Ng et al., 2022](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0110)). This was due to the complexity of measuring extractable phosphorus, as extractable P lacked a direct spectral signature and showed only a limited relationship with the spectral data. MIR spectroscopy also failed to predict extractable phosphorus measured by other conventional methods ([Janik et al., 2009](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0075), [Ma et al., 2019](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0090)).
 
@@ -848,198 +273,23 @@ External validation was performed using an Australian soil MIR library. Despite 
 
 Fig. 2. Distribution of external samples from Australian soil spectral library in comparison to the Kellogg Soil Survey Laboratory (KSSL) spectral data after dimensionality reduction by principal component analysis.
 
-Validation on the external dataset with TC data showed good prediction results for Cubist, CNN and TabPFN, while PLSR struggled to generalise from the training set ([Table 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#t0015)). All the PLSR predictions were poor, with low or negative R<sup>2</sup>. PLSR model trained on extra-large dataset could not be used to predict the Australian dataset reliably.
+Validation on the external dataset with TC data showed good prediction results for Cubist, CNN and TabPFN, while PLSR struggled to generalise from the training set ([Table 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#t0015)). All the PLSR predictions were poor, with low or negative $R^{2}$. PLSR model trained on extra-large dataset could not be used to predict the Australian dataset reliably.
 
-Table 3. Results of the modelling by partial least squared regression (PLSR), Cubist, convolutional neural network (CNN) and TabPFN. The models were trained on the training set and tested on Australian dataset (N = 387). R<sup>2</sup> stands for coefficient of determination, RMSE stands for root mean square error, RPIQ stands for ratio of performance to the interquartile range, and Stb stands for standardised bias. The extra-large dataset includes all states except Texas.
+Table 3. Results of the modelling by partial least squared regression (PLSR), Cubist, convolutional neural network (CNN) and TabPFN. The models were trained on the training set and tested on Australian dataset (N = 387). $R^{2}$ stands for coefficient of determination, RMSE stands for root mean square error, RPIQ stands for ratio of performance to the interquartile range, and Stb stands for standardised bias. The extra-large dataset includes all states except Texas.
 
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2" scope="col">Property</th>
-      <th rowspan="2" scope="col">Training set</th>
-      <th scope="col">PLSR</th>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <th scope="col">Cubist</th>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <th scope="col">CNN</th>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <th scope="col">TabPFN</th>
-      <td scope="col"></td>
-      <td scope="col"></td>
-      <td scope="col"></td>
-    </tr>
-    <tr>
-      <th scope="col">R<sup>2</sup></th>
-      <th scope="col">RMSE</th>
-      <th scope="col">RPIQ</th>
-      <th scope="col">Stb</th>
-      <th scope="col">R<sup>2</sup></th>
-      <th scope="col">RMSE</th>
-      <th scope="col">RPIQ</th>
-      <th scope="col">Stb</th>
-      <th scope="col">R<sup>2</sup></th>
-      <th scope="col">RMSE</th>
-      <th scope="col">RPIQ</th>
-      <th scope="col">Stb</th>
-      <th scope="col">R<sup>2</sup></th>
-      <th scope="col">RMSE</th>
-      <th scope="col">RPIQ</th>
-      <th scope="col">Stb</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>TC (% wt)</td>
-      <td>Small, similar (Iowa N = 46)</td>
-      <td>−8.85</td>
-      <td>4.31</td>
-      <td>0.27</td>
-      <td>−1.86</td>
-      <td>0.54</td>
-      <td>0.93</td>
-      <td>1.27</td>
-      <td>0.34</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.40</td>
-      <td>1.06</td>
-      <td>1.11</td>
-      <td>0.06</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Small, different (Vermont N = 50)</td>
-      <td>−129.62</td>
-      <td>15.69</td>
-      <td>0.08</td>
-      <td>−12.88</td>
-      <td>0.46</td>
-      <td>1.01</td>
-      <td>1.17</td>
-      <td>−0.12</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.30</td>
-      <td>1.15</td>
-      <td>1.03</td>
-      <td>0.65</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Medium, similar (Montana N = 337)</td>
-      <td>0.13</td>
-      <td>1.28</td>
-      <td>0.92</td>
-      <td>0.09</td>
-      <td>0.69</td>
-      <td>0.77</td>
-      <td>1.54</td>
-      <td>0.41</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.89</td>
-      <td>0.46</td>
-      <td>2.58</td>
-      <td>−0.14</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Medium, different (Florida N = 275)</td>
-      <td>−2.24</td>
-      <td>2.47</td>
-      <td>0.48</td>
-      <td>1.32</td>
-      <td>−0.25</td>
-      <td>1.54</td>
-      <td>0.77</td>
-      <td>1.14</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.72</td>
-      <td>0.72</td>
-      <td>1.64</td>
-      <td>0.49</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Large 1 (California + Nevada N = 1119)</td>
-      <td>−0.11</td>
-      <td>1.44</td>
-      <td>0.82</td>
-      <td>−0.50</td>
-      <td>0.85</td>
-      <td>0.53</td>
-      <td>2.22</td>
-      <td>0.20</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.96</td>
-      <td>0.29</td>
-      <td>4.13</td>
-      <td>−0.12</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Large 2 (Nebraska + Kansas N = 1253)</td>
-      <td>−0.16</td>
-      <td>1.48</td>
-      <td>0.80</td>
-      <td>0.76</td>
-      <td>0.88</td>
-      <td>0.48</td>
-      <td>2.47</td>
-      <td>−0.08</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>0.94</td>
-      <td>0.32</td>
-      <td>3.63</td>
-      <td>−0.12</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Extra-large (N = 10944)</td>
-      <td>−1.26</td>
-      <td>2.07</td>
-      <td>0.57</td>
-      <td>1.43</td>
-      <td>0.91</td>
-      <td>0.41</td>
-      <td>2.91</td>
-      <td>0.05</td>
-      <td>0.92</td>
-      <td>0.39</td>
-      <td>3.02</td>
-      <td>−0.22</td>
-      <td>0.97</td>
-      <td>0.25</td>
-      <td>4.71</td>
-      <td>−0.06</td>
-    </tr>
-  </tbody>
-</table>
+| Property | Training set | PLSR / $R^{2}$ | PLSR / RMSE | PLSR / RPIQ | PLSR / Stb | Cubist / $R^{2}$ | Cubist / RMSE | Cubist / RPIQ | Cubist / Stb | CNN / $R^{2}$ | CNN / RMSE | CNN / RPIQ | CNN / Stb | TabPFN / $R^{2}$ | TabPFN / RMSE | TabPFN / RPIQ | TabPFN / Stb |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TC (% wt) | Small, similar (Iowa N = 46) | −8.85 | 4.31 | 0.27 | −1.86 | 0.54 | 0.93 | 1.27 | 0.34 |  |  |  |  | 0.40 | 1.06 | 1.11 | 0.06 |
+|  | Small, different (Vermont N = 50) | −129.62 | 15.69 | 0.08 | −12.88 | 0.46 | 1.01 | 1.17 | −0.12 |  |  |  |  | 0.30 | 1.15 | 1.03 | 0.65 |
+|  | Medium, similar (Montana N = 337) | 0.13 | 1.28 | 0.92 | 0.09 | 0.69 | 0.77 | 1.54 | 0.41 |  |  |  |  | 0.89 | 0.46 | 2.58 | −0.14 |
+|  | Medium, different (Florida N = 275) | −2.24 | 2.47 | 0.48 | 1.32 | −0.25 | 1.54 | 0.77 | 1.14 |  |  |  |  | 0.72 | 0.72 | 1.64 | 0.49 |
+|  | Large 1 (California + Nevada N = 1119) | −0.11 | 1.44 | 0.82 | −0.50 | 0.85 | 0.53 | 2.22 | 0.20 |  |  |  |  | 0.96 | 0.29 | 4.13 | −0.12 |
+|  | Large 2 (Nebraska + Kansas N = 1253) | −0.16 | 1.48 | 0.80 | 0.76 | 0.88 | 0.48 | 2.47 | −0.08 |  |  |  |  | 0.94 | 0.32 | 3.63 | −0.12 |
+|  | Extra-large (N = 10944) | −1.26 | 2.07 | 0.57 | 1.43 | 0.91 | 0.41 | 2.91 | 0.05 | 0.92 | 0.39 | 3.02 | −0.22 | 0.97 | 0.25 | 4.71 | −0.06 |
 
-On small datasets, Cubist appeared to generalise better than TabPFN and produced acceptable predictions (R<sup>2</sup> = 0.54 and 0.46). TabPFN gave poorer predictions than Cubist (R<sup>2</sup> = 0.40 and 0.30), indicating that conventional models had the advantage over TabPFN when only limited data (N < 50) was used in this study. This can be due to the high dimensionality in the current study ([Barkov et al., 2026](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0015)). However, the advantage of TabPFN became apparent as the training set size increased, with TabPFN outperforming Cubist and PLSR when trained on medium, large, and extra-large datasets.
+On small datasets, Cubist appeared to generalise better than TabPFN and produced acceptable predictions ($R^{2}$ = 0.54 and 0.46). TabPFN gave poorer predictions than Cubist ($R^{2}$ = 0.40 and 0.30), indicating that conventional models had the advantage over TabPFN when only limited data (N < 50) was used in this study. This can be due to the high dimensionality in the current study ([Barkov et al., 2026](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0015)). However, the advantage of TabPFN became apparent as the training set size increased, with TabPFN outperforming Cubist and PLSR when trained on medium, large, and extra-large datasets.
 
-Two medium-sized datasets yielded contrasting results for Cubist: the Montana dataset produced moderate predictions (R<sup>2</sup> = 0.69, RPIQ = 1.54, Stb = 0.41), whereas the Florida dataset had poor predictions (R<sup>2</sup> = -0.25, RPIQ = 0.77, Stb = 1.14). This might also result from differences in generalisability, since the Montana dataset was spectrally similar to the external dataset, whereas the Florida dataset was spectrally distinct ([Fig. 1](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0005)c, d). The prediction of external samples with Cubist model trained on Florida dataset presented a linear relationship between predicted values and observed values ([Fig. 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0015)). However, it was indicated in the residual plot that the predictions deviated from the observed values on higher TC values, and the fitted regression line had the highest intercept among three models ([Fig. 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0015)). In the meantime, TabPFN achieved good performance for both medium training sets (Montana R<sup>2</sup> = 0.89, RPIQ = 2.58, Stb = -0.14; Florida R<sup>2</sup> = 0.72, RPIQ = 1.64, Stb = 0.49), indicating good generalisability with medium-sized data. In the Florida dataset, the predictions also aligned better with the 1:1 line and the residuals were smaller than those of Cubist predictions ([Fig. 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0015)). Nevertheless, TabPFN suffered from spectral differences and exhibited higher bias than the model trained on the Montana dataset ([Table 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#t0015)).
+Two medium-sized datasets yielded contrasting results for Cubist: the Montana dataset produced moderate predictions ($R^{2}$ = 0.69, RPIQ = 1.54, Stb = 0.41), whereas the Florida dataset had poor predictions ($R^{2}$ = -0.25, RPIQ = 0.77, Stb = 1.14). This might also result from differences in generalisability, since the Montana dataset was spectrally similar to the external dataset, whereas the Florida dataset was spectrally distinct ([Fig. 1](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0005)c, d). The prediction of external samples with Cubist model trained on Florida dataset presented a linear relationship between predicted values and observed values ([Fig. 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0015)). However, it was indicated in the residual plot that the predictions deviated from the observed values on higher TC values, and the fitted regression line had the highest intercept among three models ([Fig. 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0015)). In the meantime, TabPFN achieved good performance for both medium training sets (Montana $R^{2}$ = 0.89, RPIQ = 2.58, Stb = -0.14; Florida $R^{2}$ = 0.72, RPIQ = 1.64, Stb = 0.49), indicating good generalisability with medium-sized data. In the Florida dataset, the predictions also aligned better with the 1:1 line and the residuals were smaller than those of Cubist predictions ([Fig. 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0015)). Nevertheless, TabPFN suffered from spectral differences and exhibited higher bias than the model trained on the Montana dataset ([Table 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#t0015)).
 
 ![](https://ars.els-cdn.com/content/image/1-s2.0-S0016706126002089-gr3.jpg)
 
@@ -1049,7 +299,7 @@ Two medium-sized datasets yielded contrasting results for Cubist: the Montana da
 
 Fig. 3. Relationship between the observed and predicted total carbon content (%) of three different models trained on medium but spectrally different dataset (Florida), predicting the external dataset. Residuals were calculated as the difference between predicted and observed values ($\hat{y}-y$).
 
-When predicting TC using large and extra-large datasets, Cubist, CNN and TabPFN all achieved high accuracy (R<sup>2</sup> > 0.85, RPIQ > 2). Both Cubist and CNN provided good generalisability when trained on the extra-large dataset, with TabPFN outperforming Cubist and CNN ([Table 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#t0015)). When plotting the prediction results for the extra-large training set, all predictions showed a linear relationship between observed and predicted values, but TabPFN yielded the closest agreement with the 1:1 line ([Fig. 4](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0020)). TabPFN was able to generalise to the external dataset and predict it accurately.
+When predicting TC using large and extra-large datasets, Cubist, CNN and TabPFN all achieved high accuracy ($R^{2}$ > 0.85, RPIQ > 2). Both Cubist and CNN provided good generalisability when trained on the extra-large dataset, with TabPFN outperforming Cubist and CNN ([Table 3](https://www.sciencedirect.com/science/article/pii/S0016706126002089#t0015)). When plotting the prediction results for the extra-large training set, all predictions showed a linear relationship between observed and predicted values, but TabPFN yielded the closest agreement with the 1:1 line ([Fig. 4](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0020)). TabPFN was able to generalise to the external dataset and predict it accurately.
 
 ![](https://ars.els-cdn.com/content/image/1-s2.0-S0016706126002089-gr4.jpg)
 
@@ -1077,7 +327,7 @@ Based on PICP results, the transfer of uncertainty quantification was markedly g
 
 ### 3.4. SHAP values
 
-SHAP values were calculated for the TabPFN models trained on the extra-large dataset predicting TC, and explanations were generated for 387 Australian samples ([Fig. 6](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0030)). The averaged absolute SHAP values showed distribution across different wavenumbers, with high absolute values around 3000–2500 and 2000–1500 cm<sup>−1</sup>. The wavenumbers in these regions were important because of the spectral signatures of soil organic and inorganic carbon, for example, the 1800 cm<sup>−1</sup> band for calcite and the features of organic matter at 2929–2855 and 1750–1449 cm<sup>−1</sup> ([Janik et al., 1998](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0080), [Tinti et al., 2015](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0195)). The region around 2930 cm<sup>−1</sup> had been identified as important for TC prediction because of the peak for CH absorption ([Reeves, 2012](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0155), [Tinti et al., 2015](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0195)), and this was consistent with the Shapley values in the work of [Wadoux (2023)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0210) predicting soil total organic carbon with MIR. This indicated that the wavenumbers with greater contributions to TC predictions in TabPFN are related to the spectral features of organic and inorganic carbon. TabPFN not only achieved high performance in estimating soil properties from MIR spectra but also produced interpretable predictions.
+SHAP values were calculated for the TabPFN models trained on the extra-large dataset predicting TC, and explanations were generated for 387 Australian samples ([Fig. 6](https://www.sciencedirect.com/science/article/pii/S0016706126002089#f0030)). The averaged absolute SHAP values showed distribution across different wavenumbers, with high absolute values around 3000–2500 and 2000–1500 $\mathrm{cm}^{-1}$. The wavenumbers in these regions were important because of the spectral signatures of soil organic and inorganic carbon, for example, the 1800 $\mathrm{cm}^{-1}$ band for calcite and the features of organic matter at 2929–2855 and 1750–1449 $\mathrm{cm}^{-1}$ ([Janik et al., 1998](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0080), [Tinti et al., 2015](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0195)). The region around 2930 $\mathrm{cm}^{-1}$ had been identified as important for TC prediction because of the peak for CH absorption ([Reeves, 2012](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0155), [Tinti et al., 2015](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0195)), and this was consistent with the Shapley values in the work of [Wadoux (2023)](https://www.sciencedirect.com/science/article/pii/S0016706126002089#b0210) predicting soil total organic carbon with MIR. This indicated that the wavenumbers with greater contributions to TC predictions in TabPFN are related to the spectral features of organic and inorganic carbon. TabPFN not only achieved high performance in estimating soil properties from MIR spectra but also produced interpretable predictions.
 
 ![](https://ars.els-cdn.com/content/image/1-s2.0-S0016706126002089-gr6.jpg)
 
@@ -1103,7 +353,7 @@ Given that TabPFN still performed well with up to 10,000 training samples, it ca
 
 In this study, the Tabular Prior-data Fitted Network (TabPFN) was compared with three conventional algorithms, namely partial least squares regression (PLSR), convolutional neural network (CNN) and Cubist, for predicting total carbon (TC), pH, and Olsen method extracted phosphorus (Olsen-P). Mid-infrared (MIR) spectra from the Kellogg Soil Survey Laboratory (KSSL) database and an external Australian spectral library were used to evaluate the model.
 
-Overall, TabPFN outperformed PLSR, CNN, and Cubist in predicting soil properties, especially when trained on medium-sized datasets. It achieved an average RMSE reduction of 74% relative to PLSR and 39% relative to Cubist for TC prediction, and TabPFN outperformed CNN trained with an extra-large dataset. TabPFN demonstrated strong generalisability when trained on spectrally distinct datasets, achieving R<sup>2</sup> and RPIQ values that were twice those of PLSR and Cubist. However, similar to the baselines, TabPFN showed reduced performance for soil properties with low predictability. TabPFN achieved moderate prediction accuracy for pH and poor performance for Olsen-P. When validated on the external dataset, TabPFN consistently demonstrated higher prediction accuracy than PLSR, Cubist, and CNN on medium, large, and extra-large training sets, further indicating its superior generalisability. The generalisability enabled TabPFN to outperform PLSR and Cubist even when trained on spectrally different, medium-sized datasets.
+Overall, TabPFN outperformed PLSR, CNN, and Cubist in predicting soil properties, especially when trained on medium-sized datasets. It achieved an average RMSE reduction of 74% relative to PLSR and 39% relative to Cubist for TC prediction, and TabPFN outperformed CNN trained with an extra-large dataset. TabPFN demonstrated strong generalisability when trained on spectrally distinct datasets, achieving $R^{2}$ and RPIQ values that were twice those of PLSR and Cubist. However, similar to the baselines, TabPFN showed reduced performance for soil properties with low predictability. TabPFN achieved moderate prediction accuracy for pH and poor performance for Olsen-P. When validated on the external dataset, TabPFN consistently demonstrated higher prediction accuracy than PLSR, Cubist, and CNN on medium, large, and extra-large training sets, further indicating its superior generalisability. The generalisability enabled TabPFN to outperform PLSR and Cubist even when trained on spectrally different, medium-sized datasets.
 
 Uncertainty quantification results indicated that TabPFN can generate prediction intervals with coverage close to the expected levels, although quantile calibration was less reliable. Additionally, SHAP values demonstrated that TabPFN can provide interpretable predictions, and the features contributed to predictions were related to the spectral signatures of soil organic and inorganic carbon.
 
