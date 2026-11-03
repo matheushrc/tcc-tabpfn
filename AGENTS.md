@@ -34,6 +34,7 @@
 ## Escrita do TCC
 
 - Antes de escrever ou revisar, consulte `ABNT.md`, que centraliza as regras de estilo, os limites da intervenção da IA e os critérios de conferência. Registre ali novas regras editoriais explicitamente definidas pelo autor, distinguindo preferências de exigências normativas verificadas.
+- Nos arquivos `fundamentacao-teorica.md` dos artigos, mantenha roteiros, observações e propostas da IA antes de “Anotações do autor”, que deve encerrar o arquivo. Preserve o texto autoral e siga o padrão E07 de `ABNT.md`.
 
 - Use `tcc.conf` como fonte dos dados básicos; campos vazios são pendências e não devem ser preenchidos por inferência.
 - O Markdown é a fonte principal do conteúdo. Faça alterações de conteúdo nele antes de atualizar a versão LaTeX.

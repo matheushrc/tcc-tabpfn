@@ -4,6 +4,8 @@
 
 ## Roteiro de leitura — sugestões da IA
 
+**Organização deste arquivo:** mantenha o roteiro, as observações sobre a revisão e as propostas da IA, quando solicitadas, antes de “Anotações do autor”. Essa última seção fica no fim do arquivo para permitir a continuidade da escrita sem interrupções.
+
 **Foco:** Classificação litológica e aumento de dados.
 
 **Artigo para consulta:** [Enhancing reservoir parameter prediction workflows via advanced core data augmentation](https://www.sciencedirect.com/science/article/pii/S0264817225003228).

@@ -4,6 +4,8 @@
 
 ## Roteiro de leitura — sugestões da IA
 
+**Organização deste arquivo:** mantenha o roteiro, as observações sobre a revisão e as propostas da IA, quando solicitadas, antes de “Anotações do autor”. Essa última seção fica no fim do arquivo para permitir a continuidade da escrita sem interrupções.
+
 **Foco:** Identificação mineral com TabPFN.
 
 **Artigo para consulta:** [Machine learning applications on lunar meteorite minerals: From classification to mechanical properties prediction](https://www.sciencedirect.com/science/article/pii/S2095268624001010).

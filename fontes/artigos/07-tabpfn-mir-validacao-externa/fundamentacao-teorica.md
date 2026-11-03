@@ -4,6 +4,8 @@
 
 ## Roteiro de leitura — sugestões da IA
 
+**Organização deste arquivo:** mantenha o roteiro, as observações sobre a revisão e as propostas da IA, quando solicitadas, antes de “Anotações do autor”. Essa última seção fica no fim do arquivo para permitir a continuidade da escrita sem interrupções.
+
 **Foco:** Validação externa, incerteza e interpretação.
 
 **Artigo para consulta:** [Zero-shot inference with Tabular Prior-data Fitted Network (TabPFN) for soil MIR spectral analysis](https://www.sciencedirect.com/science/article/pii/S0016706126002089).

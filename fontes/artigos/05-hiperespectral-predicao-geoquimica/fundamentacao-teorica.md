@@ -4,6 +4,8 @@
 
 ## Roteiro de leitura — sugestões da IA
 
+**Organização deste arquivo:** mantenha o roteiro, as observações sobre a revisão e as propostas da IA, quando solicitadas, antes de “Anotações do autor”. Essa última seção fica no fim do arquivo para permitir a continuidade da escrita sem interrupções.
+
 **Foco:** Múltiplos alvos e transferência entre domínios.
 
 **Artigo para consulta:** [Potential of hyperspectral-based geochemical predictions with neural networks for strategic and regional exploration improvement](https://doi.org/10.1080/08120099.2022.2094465).
