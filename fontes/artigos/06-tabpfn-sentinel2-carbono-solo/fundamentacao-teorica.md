@@ -4,6 +4,8 @@
 
 ## Roteiro de leitura — sugestões da IA
 
+**Organização deste arquivo:** mantenha o roteiro, as observações sobre a revisão e as propostas da IA, quando solicitadas, antes de “Anotações do autor”. Essa última seção fica no fim do arquivo para permitir a continuidade da escrita sem interrupções.
+
 **Foco:** TabPFN com dados orbitais Sentinel-2.
 
 **Artigo para consulta:** [Integrating transformer-based learning and Sentinel-2 bare soil composites for soil organic carbon mapping in the black soil region of Northeast China](https://www.nature.com/articles/s41598-025-33682-4).

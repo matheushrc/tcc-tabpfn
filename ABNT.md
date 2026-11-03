@@ -16,6 +16,7 @@ A cópia de consulta está em `docs/abnt/nbr-14724-2024-corrigida-2025.pdf`, com
 - **E04 — Uso posterior de siglas:** após a apresentação inicial no texto completo do TCC, usar apenas a sigla nas menções seguintes, sem reiniciar a apresentação a cada seção ou capítulo. Conferir as ocorrências anteriores antes de expandir uma sigla. Essa preferência complementa N01.
 - **E05 — Autoria da fundamentação:** a fundamentação teórica é escrita pelo autor. A IA pode preparar roteiros, perguntas e tópicos identificados como sugestões, além de revisar o texto existente e atender a complementos pontuais solicitados; isso não autoriza redigir novas seções de fundamentação por iniciativa própria.
 - **E06 — Foco dos trabalhos relacionados:** manter cada subseção centrada no estudo analisado. Reservar a justificativa geral da escolha do TabPFN à introdução. Preservar comparações já escritas pelo autor e consultar `templates/guia-trabalhos-relacionados.md` ao incorporar estudos.
+- **E07 — Ordem dos arquivos de apoio:** nos arquivos `fundamentacao-teorica.md`, manter primeiro o roteiro de leitura, depois as observações sobre a revisão e as propostas da IA, quando existirem, e por último “Anotações do autor”. O texto autoral deve ocupar o fim do arquivo, sem comentários ou propostas da IA depois dele. Preservar os textos existentes ao reorganizar; propostas para comparação continuam em blocos com três crases, conforme E03.
 
 ## Convenções do projeto
 
