@@ -4,7 +4,7 @@
 
 ## Roteiro de leitura — sugestões da IA
 
-**Organização deste arquivo:** mantenha o roteiro, as observações sobre a revisão e as propostas da IA, quando solicitadas, antes de “Anotações do autor”. Essa última seção fica no fim do arquivo para permitir a continuidade da escrita sem interrupções.
+**Organização deste arquivo:** mantenha o roteiro, as observações sobre a revisão e as propostas da IA, quando solicitadas, antes de “Anotações do autor”. Essa última seção fica no fim do arquivo para permitir a continuidade da escrita sem interrupções. A proposta da IA é cumulativa: preserve os trechos aprovados e atualize-a até a conclusão indicada pelo autor; ao final, deixe apenas o subtópico numerado, seu título e o texto consolidado, sem o rótulo de versão da IA, crases, anotações do autor ou seções de apoio, após conferir a incorporação do conteúdo aprovado e de suas fontes.
 
 **Foco:** Mapeamento litológico no Brasil.
 
@@ -70,8 +70,8 @@ Para juntar os dados, os autores interpolaram as medições aerogeofísicas em g
 
 ### Anotações do autor
 
-Espaço reservado às suas notas de leitura e ao seu rascunho.
+Os autores propõem o uso de algoritmos de aprendizado de máquina (MLAs) para a criação de novos mapas geológicos em áreas *greenfield* e/ou a melhoria de mapas já criados, utilizando-se de dados de sensoriamento remoto e aerogeofísica, já que a criação desses mapas em áreas tropicais com florestas densas e espessas coberturas supergênicas é desafiadora, pois a exposição das rochas é limitada e o acesso aos afloramentos rochosos pode ser difícil.
 
-Os autores propõem o uso de MLA's para criação de novos "greenfield geological maps (encontrar o termo correto em português)" e ou da melhoria de mapas ja criados, utilizando-se de dados de sensoriamento remoto, ja que a criação desses mapas em areas tropicais com florestas densas e copas de arvores supergênicas (me parece errada essa tradução) é desafiadora pois a exposição das rocha é "muito pouca (não gosto dessa escrita)" e o acesso aos afloramentos rochosos "podem ser difíceis (também não gosto dessa parte)"
+Os dados aerogeofísicos que utilizaram para o treinamento do modelo vieram de três projetos contratados pelo Serviço Geológico do Brasil (SGB), sendo eles: Oeste de Carajás, Rio Maria e Tucuruí, nos quais coletaram dados aeromagnéticos, que registram variações no campo magnético da Terra e são muito utilizados em mapeamentos geológicos pelas diferenças de suscetibilidade magnética entre as rochas. Esses mesmos projetos também forneceram dados aerorradiométricos de potássio (K), urânio equivalente (eU) e tório equivalente (eTh). Para os dados magnéticos, os autores utilizaram uma fatia horizontal do modelo de inversão do vetor de magnetização (MVI), a 100 m de profundidade. Também utilizaram um modelo digital de elevação derivado da missão SRTM, mas o artigo não informa de onde ele foi obtido.
 
-Os dados aerogeofísicos que utilizaram para o treinamento do modelo vieram de tres projetos "contracted (não sei traduzir isso)" pelo Serviço Geológico do Brasil (SGB) sendo eles: Oeste de Carajás, Rio Maria e Tucuruí onde coletaram dados aeromagnéticos, variações no campo magnético da terra, que são muito utilizados em mapeamentos geológicos por possuírem uma boa variação na suscetibilidade magnética em rochas. (complete aqui os outros dados utilizados no artigo, fica muito estranho porque não explicam da onde eles sairam, tipo ta dentro do SGB? e tambem explica estranho de onde saiu o SRTM), (explicar em seguida como eles juntaram os dados porque é muito tecnico para mim)
+Para juntar os dados, os autores interpolaram as medições aerogeofísicas em grades de 125 m, estimando valores entre os locais medidos, e ajustaram os dados radiométricos nas áreas de sobreposição dos projetos para reduzir diferenças entre os levantamentos. Depois, colocaram todas as grades no mesmo sistema de coordenadas, SIRGAS 2000 / UTM zona 22 Sul, e em células de 250 m. Assim, cada localização passou a reunir os valores dos diferentes dados em uma mesma linha da base.
