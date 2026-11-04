@@ -1,62 +1,9 @@
-# Leitura orientada — Barkov et al.
+# 3.2 TabPFN em bibliotecas espectrais de solo
 
-## Roteiro de leitura — sugestões da IA
+[Barkov et al. (2026)](https://arxiv.org/html/2608.00608v1) avaliaram o TabPFN na predição de propriedades do solo a partir de espectros no visível e infravermelho próximo (vis-NIR) e no infravermelho médio (MIR). Foram utilizadas duas coleções: LimeSoDa, com 13 conjuntos com 32 a 460 amostras cada e 39 tarefas de regressão, e Open Soil Spectral Library (OSSL), com 46 tarefas e conjuntos de 14.166 a 82.573 amostras. Os alvos incluíram carbono, pH, argila e carbonatos, determinados por análises laboratoriais.
 
-**Organização deste arquivo:** mantenha o roteiro, as observações sobre a revisão e as propostas da IA, quando solicitadas, antes de “Anotações do autor”. Essa última seção fica no fim do arquivo para permitir a continuidade da escrita sem interrupções. A proposta da IA é cumulativa: preserve os trechos aprovados e atualize-a até a conclusão indicada pelo autor; ao final, deixe apenas o subtópico numerado, seu título e o texto consolidado, sem o rótulo de versão da IA, crases, anotações do autor ou seções de apoio, após conferir a incorporação do conteúdo aprovado e de suas fontes.
+Os autores compararam o TabPFN 2.5 com regressão linear, regressão por mínimos quadrados parciais (PLSR), Random Forest, Cubist e redes neurais convolucionais. Também avaliaram a redução de dimensionalidade por análise de componentes principais (PCA) e mínimos quadrados parciais (PLS), utilizando validação cruzada aninhada com cinco partições externas aleatórias e a raiz do erro quadrático médio (RMSE). O TabPFN combinado com variáveis latentes de PLS apresentou o melhor desempenho agregado nas duas coleções. Na OSSL, obteve o menor RMSE em 45,7% das tarefas.
 
-**Foco:** TabPFN e bibliotecas espectrais.
+As principais limitações foram o custo de inferência e a avaliação com partições aleatórias de amostras provenientes da mesma população, que não demonstra generalização para novas regiões ou instrumentos. A OSSL reúne dados harmonizados de diferentes laboratórios, mas o estudo não testa se a diversidade de sensores, isoladamente, melhora a predição.
 
-**Artigo para consulta:** [From field-scale to large-scale spectral libraries: Tabular foundation models in soil spectroscopy](https://arxiv.org/html/2608.00608v1).
-
-Este roteiro orienta a leitura e as anotações. A redação da fundamentação teórica e da análise acadêmica será feita pelo autor; os itens abaixo não constituem texto pronto para o TCC.
-
-### Conceitos para você estudar antes de escrever o capítulo 2
-
-- [ ] Espectroscopia vis-NIR e MIR e diferenças para observação orbital.
-- [ ] Colinearidade, PCA, PLS e normalização dos espectros.
-- [ ] Modelos tabulares pré-treinados e validação cruzada aninhada.
-
-### Seções para ler e perguntas para suas anotações
-
-| Seção ou elemento do artigo | O que procurar e registrar |
-| --- | --- |
-| 1 Introduction | Quais dificuldades da espectroscopia justificam a comparação de modelos e representações? |
-| 2.1.1 Field-scale spectroscopy data; 2.1.2 Large-scale soil spectral library | Como LimeSoDa e OSSL diferem em escala, propriedades-alvo, instrumentos e harmonização? |
-| 2.2.1; 2.2.2; 2.2.3 | Como são feitos o pré-processamento e a redução de dimensionalidade, e quais configurações de modelos são comparadas? |
-| 2.2.4 Experimental setup | Quais etapas usam dados de treinamento, validação e teste, e como as tarefas são comparadas? |
-| 3 Results; 4.1; 4.2; 4.3 | O que os rankings e os tempos medem, e quais números podem ser comparados diretamente? |
-| 4.4; 5 Conclusions; Appendix A; Appendix B | Que limitações, condições de uso e perguntas de generalização permanecem? |
-
-### Perguntas para você preparar a análise do estudo no capítulo 3
-
-- [ ] O experimento demonstra ganho por misturar sensores ou compara tarefas e coleções?
-- [ ] O teste vem da mesma população de treinamento ou de regiões e instrumentos externos?
-- [ ] Que distinções você precisa explicar ao passar de espectros de amostras para bandas de satélite?
-
-### Antes de redigir
-
-- [ ] Anotar as páginas, seções, tabelas ou figuras que sustentam cada informação que você pretende usar.
-- [ ] Separar o que os autores propõem, executam e demonstram; registrar também os limites da avaliação.
-- [ ] Identificar conceitos que exigem consultar as referências originais, preservando suas URLs completas.
-- [ ] Redigir com suas palavras, citando as fontes; discutir como o estudo se aproxima e se diferencia das tarefas do seu TCC.
-
-
-### Anotações do autor
-
-#### 3 TRABALHOS RELACIONADOS
-
-##### 3.2 FROM FIELD-SCALE TO LARGE-SCALE SPECTRAL LIBRARIES: TABULAR FOUNDATION MODELS IN SOIL SPECTROSCOPY
-
-[Barkov et al. (2026)](https://arxiv.org/html/2608.00608v1) investigaram modelos de regressão para estimar propriedades do solo a partir de espectros no visível e infravermelho próximo (vis-NIR) e no infravermelho médio (MIR). O objetivo foi avaliar o desempenho do TabPFN em diferentes escalas de dados e verificar se a redução de dimensionalidade poderia melhorar as previsões diante da grande quantidade de variáveis espectrais e da elevada correlação entre elas.
-
-Os autores utilizaram duas coleções de dados, avaliadas separadamente. Da LimeSoDa, selecionaram 13 conjuntos com dados de espectroscopia, contendo entre 32 e 460 amostras de solo cada, e mantiveram apenas as variáveis espectrais quando havia informações de outros sensores. Cada conjunto foi utilizado para prever três propriedades determinadas por análises laboratoriais: carbono orgânico ou matéria orgânica, pH e teor de argila, totalizando 39 tarefas de regressão. Da Open Soil Spectral Library (OSSL), que reúne dados espectrais harmonizados de diferentes coleções, selecionaram as tarefas com pelo menos 10 mil observações da propriedade-alvo. Essa seleção resultou em 46 tarefas, sendo 30 com espectros MIR e 16 com vis-NIR, com conjuntos de 14.166 a 82.573 amostras. Os alvos incluíram propriedades como carbono, nitrogênio, pH, frações granulométricas e teor de carbonatos. Em ambas as coleções, os espectros constituíram as variáveis de entrada e as propriedades medidas nas amostras foram os valores de referência para a avaliação.
-
-Foram comparados seis modelos: regressão linear, regressão por mínimos quadrados parciais (PLSR), Random Forest, Cubist, rede neural convolucional (CNN) e TabPFN, na versão 2.5. Também foi avaliado um ensemble de CNNs. Os autores combinaram modelos com espectros completos ou com variáveis obtidas por análise de componentes principais (PCA) e mínimos quadrados parciais (PLS), formando 14 configurações. Os espectros passaram por normalização e padronização, e a avaliação utilizou validação cruzada aninhada, com cinco partições externas aleatórias. Na etapa interna, empregaram validação cruzada em cinco partes para a LimeSoDa e uma divisão de validação com 20% dos dados de treinamento para a OSSL. A raiz do erro quadrático médio (RMSE) foi utilizada para avaliar as previsões e ordenar as configurações em cada tarefa, permitindo comparar posições médias e medianas entre propriedades com escalas e unidades distintas.
-
-O TabPFN apresentou o melhor desempenho global nas duas coleções, e sua combinação com variáveis latentes de PLS ocupou a primeira posição no ranking agregado de cada uma. Na OSSL, essa combinação obteve o menor RMSE em 45,7% das tarefas e permaneceu a até 1% do menor erro em 71,7% delas. Esses percentuais descrevem a comparação entre configurações nas tarefas avaliadas, e não uma medida de acurácia. O Cubist combinado com PLS foi a alternativa clássica mais competitiva. Como limitações, os autores destacam o custo de inferência do TabPFN, que chegou a 24,1 minutos nas maiores tarefas e foi reduzido para até 9,6 minutos com PLS, e o uso de amostras de treinamento e teste provenientes da mesma população. Portanto, o estudo não demonstra que essa vantagem se mantém na aplicação a regiões, instrumentos ou condições de aquisição diferentes dos representados nos dados avaliados.
-
-O estudo se relaciona com este TCC por avaliar o TabPFN na predição de propriedades a partir de dados espectrais organizados em formato tabular. Entretanto, seu foco é a regressão de propriedades do solo, sem avaliar classificação litológica. Embora os alvos incluam atributos relacionados à composição, como teor de argila e carbonatos, essas tarefas não equivalem à identificação de classes de rocha ou à predição das proporções de diferentes minerais. Este trabalho pretende investigar classificação litológica e predição da composição mineral a partir de dados espectrais de satélite, conforme a disponibilidade de rótulos e medidas de referência adequados a cada tarefa.
-
-[Barkov et al. (2026)](https://arxiv.org/html/2608.00608v1) destacam que a agregação de dados de laboratórios com métodos e instrumentos distintos introduz variabilidade adicional, tratada na OSSL por procedimentos de harmonização. A diversidade dos conjuntos amplia a abrangência da avaliação dos modelos, mas o estudo não testa se a mistura de sensores, por si só, melhora a predição. Essa distinção é relevante para este TCC, que propõe integrar e harmonizar conjuntos de dados geológicos e geoquímicos de diferentes regiões do mundo. Pretende-se associar coordenadas, classes litológicas e medidas laboratoriais compatíveis aos valores de reflectância das imagens Sentinel-2, considerando a correspondência espacial e temporal entre as amostras e a superfície observada pelo satélite.
-
-O projeto pretende investigar a hipótese de que a integração de dados harmonizados de diferentes regiões pode ampliar a representatividade do treinamento e melhorar a generalização do TabPFN. Para isso, propõe avaliar o modelo em regiões que não participaram do ajuste, comparando o uso de dados de uma região com o de múltiplas regiões. Também se pretende disponibilizar os conjuntos derivados no Kaggle, conforme as condições de redistribuição das fontes, preservando sua procedência e os critérios de compatibilidade. Essa proposta se distingue da avaliação com partições aleatórias realizada por Barkov et al. e aborda a transferência entre regiões, que os autores apontam como uma questão ainda aberta. O eventual ganho de desempenho constitui uma hipótese do TCC, a ser verificada experimentalmente.
+Enquanto Barkov et al. (2026) fazem uma análise comparativa de seis modelos de aprendizado de máquina, este trabalho se propõe a avaliar o desempenho do TabPFN na classificação litológica e na predição da composição mineral a partir de dados espectrais de satélite. O trabalho também se propõe a montar um conjunto de dados próprio, pela integração e harmonização de bases existentes de diferentes regiões, conforme a disponibilidade de referências adequadas. O possível ganho de generalização será avaliado em regiões reservadas para teste.
