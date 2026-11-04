@@ -22,7 +22,7 @@ Compara modelos e representações espectrais em 85 tarefas de regressão com Li
 
 [Predictive lithological mapping through machine learning methods: a case study in the Cinzento Lineament, Carajás Province, Brazil](https://jgsb.sgb.gov.br/index.php/journal/article/view/63). *Journal of the Geological Survey of Brazil*, 2(1), 26–36. DOI: 10.29396/jgsb.2019.v2.n1.3. BibTeX: `costa2019`.
 
-Aplica Random Forest a dados remotos e geofísicos, comparando mapas litológicos com e sem coordenadas, com 1.400 amostras de treinamento. É o precedente brasileiro mais diretamente ligado à classificação proposta. Orienta a comparação com um modelo convencional e a análise da localização. **Limite:** não usa TabPFN nem prevê composição mineral. Coordenadas exigem avaliação que diferencie reconhecimento local de transferência para outra região.
+Aplica Random Forest a dados remotos e geofísicos, comparando mapas litológicos com e sem coordenadas, com 1.400 amostras de treinamento. É o precedente brasileiro mais diretamente ligado à classificação proposta. Orienta a comparação com um modelo convencional e a análise da localização. **Limite:** não usa TabPFN nem prevê composição química. Coordenadas exigem avaliação que diferencie reconhecimento local de transferência para outra região.
 
 ### 4. Peña-Asensio et al. (2024) — identificação mineral
 
@@ -40,7 +40,7 @@ Relaciona atributos e abundâncias minerais derivados de varreduras hiperespectr
 
 [Integrating transformer-based learning and Sentinel-2 bare soil composites for soil organic carbon mapping in the black soil region of Northeast China](https://www.nature.com/articles/s41598-025-33682-4). *Scientific Reports*, 16, 3784; publicado em 5 de janeiro de 2026. DOI: 10.1038/s41598-025-33682-4. BibTeX: `chen2026`.
 
-Integra composições multitemporais de solo exposto e variáveis ambientais com 174 amostras. TabPFN com composição P50 apresenta R² de 0,78 e RMSE de 1,90 g/kg para carbono orgânico, superando CNN e XGBoost no estudo. Orienta extração orbital e controle da superfície. **Limite:** carbono orgânico não é composição mineralógica. A reamostragem local não substitui teste em regiões externas nem garante resultado para litologia ou terras raras.
+Integra composições multitemporais de solo exposto e variáveis ambientais com 174 amostras. TabPFN com composição P50 apresenta R² de 0,78 e RMSE de 1,90 g/kg para carbono orgânico, superando CNN e XGBoost no estudo. Orienta extração orbital e controle da superfície. **Limite:** carbono orgânico do solo não equivale aos teores de elementos ou óxidos previstos neste TCC. A reamostragem local não substitui teste em regiões externas nem garante resultado para litologia ou terras raras.
 
 ### 7. Huang et al. (2026) — teste externo
 
@@ -58,7 +58,7 @@ Estuda aumento de dados de testemunhos para classificação litológica e predi�
 
 Costa e Luo sustentam a tarefa litológica; Peña-Asensio fornece identificação mineral. Zhang e Chen sustentam integração orbital com referências; Barkov e Huang orientam bibliotecas e generalização; Kutzke amplia os alvos geoquímicos. As diferenças entre entradas e tarefas impedem comparar seus resultados como um único benchmark.
 
-Nesta busca, não foi confirmado um estudo que reúna TabPFN, Sentinel-2, classificação litológica terrestre e previsão quantitativa de proporções minerais com teste entre regiões. Isso delimita a evidência encontrada, sem provar inexistência ou originalidade absoluta. A contribuição depende dos rótulos efetivamente disponíveis e das avaliações executadas.
+Nesta busca, não foi confirmado um estudo que reúna TabPFN, Sentinel-2, classificação litológica terrestre e previsão quantitativa de proporções minerais com teste entre regiões. Isso delimita a evidência encontrada, sem provar inexistência ou originalidade absoluta. A contribuição depende dos rótulos efetivamente disponíveis e das avaliações executadas. Essa busca foi feita quando o alvo estava redigido como proporções minerais; o alvo do TCC é a composição química (D01, esclarecido em 4 de novembro de 2026), e a busca não foi repetida para esse alvo.
 
 Terras raras constituem alternativa condicionada em D09, não foco exclusivo adotado. Estes estudos não validam especificamente sua previsão orbital. Teores elementares, identidade mineral e frações mineralógicas permanecem tarefas distintas.
 
