@@ -31,6 +31,8 @@ A cópia de consulta está em `docs/abnt/nbr-14724-2024-corrigida-2025.pdf`, com
 
 - **P05 — Marcadores de destaque em Markdown:** usar `_texto_` para itálico (`MD049`, `style: underscore`) e `**texto**` para negrito (`MD050`, `style: asterisk`).
 
+- **P06 — Propagar textos finalizados:** quando o autor finalizar explicitamente um capítulo ou seção escrita em Markdown, incorporar o texto consolidado ao capítulo correspondente em `tcc/markdown/` e escrever ou atualizar seu par em `tcc/latex/capitulos/`, diretamente do Markdown, sem conversores automáticos. Essa indicação de conclusão autoriza a atualização dos dois formatos, sem exigir um pedido separado de LaTeX. Preservar o texto aprovado e suas fontes; adequar apenas a marcação, as citações, as siglas conforme as ocorrências anteriores e a numeração ao contexto do capítulo. Atualizar uma seção existente, evitando duplicação; conferir bibliografia e inclusões necessárias em `principal.tex`. A retirada das seções de apoio segue E08. Revisões de rascunhos não acionam essa propagação; nos demais casos, atualizar LaTeX somente quando solicitado. Verificar compilação quando disponível e informar separadamente qualquer impedimento ou pendência de revisão visual. Esta é uma convenção do autor, não uma exigência normativa.
+
 ## Como usar na revisão
 
 - Conferir cada regra aplicável contra o texto solicitado, lendo o texto completo quando a verificação exigir contexto, como em E04.
