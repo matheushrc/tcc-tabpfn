@@ -32,11 +32,11 @@ Converta somente os artigos e URLs fornecidos pelo usuário. Siga também o `AGE
 
 - Preserve o idioma original, autores, texto, numeração das seções, citações, tabelas, legendas, fórmulas, apêndices e referências disponíveis. Não traduza, resuma ou reformule sem pedido.
 - Exclua menus, cookies, navegação entre artigos, recomendações, métricas e controles da página que não pertençam ao texto.
-- Use URLs originais completas em links e imagens. Resolva links relativos pela URL da página e mantenha os fragmentos das citações que apontem para a fonte original.
+- Use URLs originais completas nos links; as imagens são a exceção, com caminho relativo para `assets/`. Resolva links relativos pela URL da página e mantenha os fragmentos das citações que apontem para a fonte original.
 - Preserve o texto das citações internas. No ScienceDirect, a classe `.anchor` também identifica citações: não exclua elementos apenas por essa classe.
 - Preserve fórmulas em LaTeX quando disponível; use MathML quando necessário. No MathJax, obtenha a expressão original em vez de concatenar camadas visuais e textos de acessibilidade.
 - Converta tabelas respeitando as relações entre cabeçalhos e células. Não use HTML: para células mescladas, adapte a tabela em Markdown, repetindo cabeçalhos ou usando notas quando necessário, sem perder as relações entre os dados. Consulte `ABNT.md` para as convenções editoriais do projeto.
-- Mantenha figuras disponíveis por suas URLs completas e preserve suas legendas. Não invente imagens ou dados ausentes.
+- Baixe todas as figuras para `assets/` dentro da pasta do artigo, como `figura-<número>.<extensão>` (`figura-a1` para apêndices), preferindo a maior resolução disponível. Referencie-as como `[![Fig. 1](assets/figura-1.jpg)](<URL original da imagem>)`, seguida de linha em branco e da legenda preservada. As chamadas de figura no texto e nas legendas também apontam para o arquivo local, como `[Fig. 1](assets/figura-1.jpg)a`. Baixe também o material suplementar para `assets/` (`material-suplementar-<n>.<extensão>`), extraia suas figuras como `figura-s<n>` quando forem citadas no texto e registre a origem dos arquivos não exibidos no Markdown em `assets/README.md`. Não invente imagens ou dados ausentes.
 - Una quebras artificiais dentro de frases, da lista de autores e das palavras-chave. Preserve a separação entre parágrafos e seções.
 - Coloque cada destaque na mesma linha de seu marcador. Remova marcadores vazios e deixe linhas em branco antes de listas e após títulos.
 - Organize cada referência bibliográfica em um item contínuo, preservando seus dados e links. Separe links adjacentes com espaço.
