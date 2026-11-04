@@ -38,7 +38,7 @@ Sugestão da IA, ainda não adotada como protocolo:
 5. Separar treino e teste por áreas e grupos espaciais, evitando pixels próximos ou do mesmo polígono nos dois conjuntos. Conferir que as classes avaliadas estejam representadas no treinamento. Comparar inicialmente atributos espectrais; avaliar relevo ou outros atributos em experimentos separados, se autorizados.
 6. Interpretar a avaliação contra o mapa como concordância com referência cartográfica. A comprovação geológica independente exige observações de campo ou outras referências independentes. Milhões de pixels com o mesmo rótulo de mapa não representam milhões de amostras geológicas independentes.
 
-## Composição mineral e bibliotecas espectrais
+## Bibliotecas espectrais e dados mineralógicos
 
 O arquivo `usgs_min.hdr` descreve 481 espectros em 420 comprimentos de onda, aproximadamente de 0,395 a 2,56 micrômetros; o README identifica medições de laboratório e referencia a biblioteca USGS de 1993. A biblioteca JPL tem 430 espectros distribuídos em três granulometrias. A IGCP tem 139 espectros nos cinco instrumentos, com 30 nomes de amostras distintos após normalização de caixa; o README descreve a repetição de materiais em instrumentos diferentes. Esses números não são contagens de localidades brasileiras.
 
@@ -53,7 +53,7 @@ Treinar com espectros de laboratório reamostrados não equivale a treinar com o
 - As 2.313 geometrias da camada geológica passaram na verificação de validade geométrica com Shapely. Isso não verifica a exatidão geológica, sobreposições entre polígonos ou qualidade da cartografia.
 - Os 27 binários espectrais têm tamanhos compatíveis com seus cabeçalhos; não foram encontrados valores não finitos. Há valores negativos em parte das bibliotecas de solo/vegetação, valores acima de um em parte da IGCP/USGS e comprimentos de onda não estritamente crescentes na biblioteca de neve: conferir os casos antes de normalizar ou interpolar, sem cortar valores automaticamente.
 - O raster tem 67.749.052 células de valor zero entre 140.034.610 células, sem valor de ausência declarado. É preciso distinguir fundo de elevação válida antes de calcular atributos ou estatísticas por área; a interpretação do fundo não foi confirmada.
-- Para composição mineral quantitativa, solicitar referências com identificação da amostra, coordenadas, data, material/profundidade, método analítico e proporções minerais. Teores de elementos/óxidos permitem outra tarefa e não equivalem automaticamente a essas proporções.
+- Para a composição química (alvo de D01, esclarecido em 4 de novembro de 2026), solicitar referências com identificação da amostra, coordenadas, data, material/profundidade, método analítico e teores de elementos ou óxidos. Proporções minerais não são alvo do trabalho.
 - Confirmar licença de uso e redistribuição antes de atender à intenção de publicação de D08.
 
 Inspeção executada: inventário, leitura de todos os esquemas e registros vetoriais, cabeçalhos e binários espectrais, metadados e valores do raster. Não houve extração de imagens orbitais, ajuste de modelos, validação preditiva ou confirmação de campo. Dependências usadas na inspeção foram executadas em ambiente temporário, sem alterar as dependências do projeto.
