@@ -6,11 +6,11 @@ Este repositório reúne a pesquisa e a escrita do TCC de Matheus Henrique Rodri
 
 O conteúdo principal está em `tcc/markdown/`. Os capítulos escritos são `01-introducao.md` e `03-trabalhos-relacionados.md`. `02-revisao-bibliografica.md` reserva a fundamentação conceitual, ainda pendente.
 
-O projeto de apresentação está em `tcc/latex/`, com `principal.tex` como ponto de entrada, `capitulos/` para os capítulos, `bibliografia.bib` para referências e `figuras/` para imagens. A IA escreve o LaTeX a partir do Markdown somente quando solicitado. Os nomes-base dos capítulos correspondem entre os dois formatos, com ordem numérica antes do nome, como `01-introducao`.
+O projeto de apresentação está em `tcc/latex/`, com `principal.tex` como ponto de entrada, `capitulos/` para os capítulos, `bibliografia.bib` para referências e `figuras/` para imagens. A IA escreve o LaTeX diretamente a partir do Markdown quando solicitado ou quando o autor finalizar explicitamente um capítulo ou seção, conforme P06 de `ABNT.md`. Nesse último caso, incorpora também o texto final ao capítulo Markdown correspondente. Os nomes-base dos capítulos correspondem entre os dois formatos, com ordem numérica antes do nome, como `01-introducao`.
 
 O Markdown é a fonte do conteúdo; revisões originadas no PDF devem ser aplicadas nele antes de atualizar o LaTeX. A numeração exibida no trabalho é responsabilidade do LaTeX. Não há conversor automático nem sincronização automática entre os formatos.
 
-`tcc.conf` centraliza os dados básicos em texto `chave=valor`. Os dados são transcritos para o projeto LaTeX sob solicitação; campos vazios representam pendências. O projeto atual é uma versão parcial de TCC I: título em inglês, palavras-chave, resumo e abstract serão definidos ao final dessa etapa.
+`tcc.conf` centraliza os dados básicos em texto `chave=valor`. Os dados são transcritos para o projeto LaTeX ao atualizar os pares autorizados; campos vazios representam pendências. O projeto atual é uma versão parcial de TCC I: título em inglês, palavras-chave, resumo e abstract serão definidos ao final dessa etapa.
 
 ## Template e referências de escrita
 

@@ -2,7 +2,7 @@
 
 ## Escrita do TCC
 
-O texto principal da introdução está em `tcc/markdown/01-introducao.md`. Faça as revisões de conteúdo no Markdown e solicite à IA a atualização de `tcc/latex/capitulos/01-introducao.tex` quando necessário, seguindo o template da faculdade.
+O texto principal da introdução está em `tcc/markdown/01-introducao.md`. Faça as revisões de conteúdo no Markdown. Ao finalizar explicitamente um capítulo ou seção, a IA deve incorporar o texto ao capítulo Markdown e atualizar seu par LaTeX em `tcc/latex/capitulos/`, seguindo o template da faculdade. Durante a elaboração, atualizações de LaTeX dependem de solicitação.
 
 Os dados básicos do trabalho ficam em `tcc.conf`, no formato `chave=valor`. O projeto LaTeX está em `tcc/latex/`, com `principal.tex` como documento principal e `bibliografia.bib` para referências. `Template_UFFSTex/` preserva o modelo original.
 

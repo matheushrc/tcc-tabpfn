@@ -22,7 +22,7 @@
 - Uma nova decisão explícita do autor pode revisar o escopo anterior. Não a rejeite apenas por divergir do registro: identifique o que mudou e atualize os compromissos afetados. Não escolha por conta própria uma mudança de título, tarefa ou objetivo para resolver incompatibilidades entre os dados e a proposta.
 - Verifique especialmente a distinção entre composição geoquímica e mineralógica, rótulos independentes e mapas derivados, superfície e subsuperfície, observações e valores interpolados ou previstos. Confira também compatibilidade espacial e temporal, harmonização entre bases e independência dos dados de teste quando esses aspectos forem afetados.
 - Mantenha hipóteses como afirmações a testar e intenções como entregas propostas. Marque uma atividade como realizada somente com evidência identificável; registre resultados negativos, limitações e atividades não executadas sem apresentá-los como sucesso ou omiti-los para manter a proposta original.
-- Ao alterar o conteúdo do TCC, confira sua coerência com o registro e ajuste os arquivos Markdown pertinentes dentro do escopo autorizado. Atualize LaTeX somente quando solicitado, diretamente a partir do Markdown; se houver versões ou capítulos afetados fora do pedido, indique a pendência. Confira as citações e as entradas de `tcc/latex/bibliografia.bib` quando fontes forem adicionadas ou alteradas.
+- Ao alterar o conteúdo do TCC, confira sua coerência com o registro e ajuste os arquivos Markdown pertinentes dentro do escopo autorizado. Atualize LaTeX quando solicitado ou quando o autor finalizar explicitamente um capítulo ou seção, conforme P06 de `ABNT.md`; escreva diretamente a partir do Markdown. Para alterações ainda em elaboração, indique os pares pendentes fora do pedido. Confira as citações e as entradas de `tcc/latex/bibliografia.bib` quando fontes forem adicionadas ou alteradas.
 - Antes de finalizar uma alteração, confira se o texto distingue o que foi proposto, executado e demonstrado. Na revisão final do TCC, confronte cada compromisso registrado com as evidências e ajuste introdução, metodologia e conclusões ao trabalho efetivamente realizado.
 
 ## Citações em arquivos Markdown
@@ -40,7 +40,7 @@
 
 - Use `tcc.conf` como fonte dos dados básicos; campos vazios são pendências e não devem ser preenchidos por inferência.
 - O Markdown é a fonte principal do conteúdo. Faça alterações de conteúdo nele antes de atualizar a versão LaTeX.
-- Crie ou atualize LaTeX somente quando solicitado, escrevendo-o diretamente a partir do Markdown, sem conversores automáticos.
+- Ao autor finalizar explicitamente um capítulo ou seção em Markdown, incorpore o texto aprovado ao capítulo correspondente em `tcc/markdown/` e atualize seu par em `tcc/latex/capitulos/`, diretamente do Markdown e sem conversores automáticos. A finalização já autoriza essa propagação, sem nova confirmação; confira título, numeração, citações, bibliografia e inclusões necessárias, atualizando seções existentes sem duplicá-las. Siga P06 de `ABNT.md`. Fora desse caso, crie ou atualize LaTeX apenas quando solicitado.
 - Preserve `Template_UFFSTex/` como referência original. Adapte sua cópia em `tcc/latex/`, seguindo os comandos do template.
 - Mantenha os arquivos LaTeX em `tcc/latex/capitulos/`, com nomes como `01-introducao.tex`. Use o mesmo nome-base no Markdown correspondente em `tcc/markdown/`.
 - Ao atualizar um capítulo, limite as alterações ao capítulo e aos arquivos compartilhados necessários.
