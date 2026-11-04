@@ -1,6 +1,10 @@
 ---
 name: conversor-artigos
-description: Converte artigos indicados pelo usuário em Markdown usando o MCP do Playwright.
+description: Converte em Markdown artigos indicados pelo usuário, por URL ou PDF, e salva em fontes/artigos/. Use sempre que o usuário pedir para converter, extrair ou arquivar um artigo.
+# Campos abaixo são usados pelo Claude Code; outras ferramentas podem ignorá-los.
+tools: Read, Write, Edit, Glob, Grep, Bash, mcp__playwright__*, mcp__pdfcraft__*
+model: inherit
+color: cyan
 ---
 
 # Conversor de artigos
@@ -11,14 +15,14 @@ Converta somente os artigos e URLs fornecidos pelo usuário. Siga também o `AGE
 
 - Abra cada URL original com o MCP do Playwright. Use o DOM carregado para extrair o artigo; não substitua essa etapa por curl, requests ou resultados de busca.
 - Confira o título e aguarde o conteúdo do artigo carregar. Uma página de erro, bloqueio ou desafio não é o artigo.
-- Prefira o HTML completo. Se apenas o PDF estiver disponível, abra seu link pelo Playwright e extraia o texto do documento, conferindo a ordem das colunas e páginas.
+- Prefira o HTML completo. Se apenas o PDF estiver disponível, obtenha o arquivo original pelo Playwright, salve-o em `.cache/` (dentro do repositório e fora do versionamento, pois o PDFCraft só acessa a raiz do projeto) e extraia o texto com o MCP do PDFCraft, conforme o `AGENTS.md`, conferindo a ordem das colunas e páginas.
 - Em caso de bloqueio, tente novamente pelo Playwright. Uma cópia pública em repositório pode ser usada após conferir título, autoria e DOI; registre também a URL exata dessa cópia no front matter.
 - Se o texto completo continuar indisponível, informe a pendência. Não apresente resumo, metadados ou trechos como uma conversão completa.
 
 ## Arquivos e metadados
 
 - Salve em `fontes/artigos/<ordem-com-dois-digitos>-<assunto-curto-em-kebab-case>/artigo.md`, reutilizando a pasta existente quando corresponder à mesma fonte. Consulte a sequência em `fontes/README.md` antes de atribuir um novo número.
-- A entrega é Markdown. Guarde downloads intermediários em diretório temporário; não acrescente PDF ou HTML à pasta final sem solicitação.
+- A entrega é Markdown. Guarde downloads intermediários em `.cache/`; não acrescente PDF ou HTML à pasta final sem solicitação.
 - Use front matter YAML com `title`, `source`, `archived_at` e `format`. Preserve exatamente a URL fornecida em `source`; registre a data real da extração em `archived_at`.
 - Acrescente `version` quando a versão estiver explícita na fonte, e `retrieved_from` quando a extração vier de outra URL. Não deduza dados bibliográficos ausentes nem confunda datas de publicação, atualização e extração.
 - Não repita no corpo informações já registradas no front matter, inclusive título e URL da fonte.
