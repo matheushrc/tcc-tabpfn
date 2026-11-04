@@ -39,7 +39,7 @@ O trecho abaixo é um modelo a preencher com informações verificadas no artigo
 
 > Enquanto o estudo utiliza [modelo] para prever [alvo], este trabalho pretende avaliar o TabPFN para classificação litológica e predição da composição mineral a partir de dados espectrais de satélite.
 
-Descrever o que este TCC pretende investigar, sem antecipar resultados ou afirmar que a abordagem será superior às anteriores.
+Descrever o que este TCC pretende investigar, sem antecipar resultados ou afirmar que a abordagem será superior às anteriores. Conferir o escopo em `docs/decisoes-projeto.md`, especialmente a distinção entre dados espectrais de satélite e outras modalidades de sensoriamento remoto; indicar concretamente os dados que cada estudo utiliza.
 
 ## 1.5 Cuidados com as fontes
 

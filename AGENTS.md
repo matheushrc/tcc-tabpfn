@@ -13,6 +13,8 @@
 
 ## Decisões e coerência do projeto
 
+- Para resolver divergências, siga a decisão explícita mais recente do autor e atualize `docs/decisoes-projeto.md`; use esse registro para o escopo vigente, `tcc.conf` para os dados básicos e `ABNT.md` para as regras editoriais. Notas exploratórias, históricos, artigos e exemplos não definem compromissos do TCC. No registro, diferencie os estados atuais das entradas do histórico que já foram substituídas.
+- Ao comparar artigos com o TCC, preserve a distinção entre dados espectrais de satélite e outras modalidades de sensoriamento remoto, conforme a seção “Distinções que devem ser preservadas no texto” do registro. Não transfira os dados ou métodos de um artigo para a proposta do autor.
 - Sempre que o autor apresentar uma nova decisão, ideia ou mudança de escopo, consulte `docs/decisoes-projeto.md`, `tcc.conf` e os trechos pertinentes da introdução e da metodologia antes de incorporá-la ao trabalho.
 - Compare a proposta com o problema de pesquisa, as hipóteses, os objetivos, os dados de referência e o protocolo de avaliação. Informe de forma breve se ela está alinhada, depende de confirmação ou altera o escopo, explicando a consequência concreta e indicando os IDs afetados no registro.
 - Distinga decisões do autor de sugestões da IA. Não transforme uma sugestão, possibilidade ou pergunta em compromisso assumido. Se a intenção for ambígua e afetar o escopo, esclareça o ponto com o autor; continue as atividades que não dependam dessa definição.
@@ -34,8 +36,7 @@
 ## Escrita do TCC
 
 - Antes de escrever ou revisar, consulte `ABNT.md`, que centraliza as regras de estilo, os limites da intervenção da IA e os critérios de conferência. Registre ali novas regras editoriais explicitamente definidas pelo autor, distinguindo preferências de exigências normativas verificadas.
-- Durante a elaboração dos arquivos `fundamentacao-teorica.md` dos artigos, mantenha roteiros, observações e propostas da IA antes de “Anotações do autor”, que deve encerrar o arquivo. Preserve o texto autoral e siga o padrão E07 de `ABNT.md`.
-- Mantenha a proposta da IA cumulativa: não a apague nem esvazie após a aprovação de trechos. Preserve o que foi aprovado e atualize a mesma proposta durante a escrita; apenas quando o autor declarar o texto concluído, deixe o arquivo somente com o subtópico numerado, o título e o texto consolidado, sem versão da IA, crases, anotações do autor ou seções de apoio. Antes dessa limpeza, confira a incorporação do conteúdo aprovado e de suas fontes. Siga E08 de `ABNT.md`.
+- Para tradução técnica, siga E09 de `ABNT.md`: pesquise múltiplas fontes independentes e registre as evidências fora do texto proposto. Para os arquivos `fundamentacao-teorica.md`, siga E07–E08: anotações do autor no fim e proposta da IA cumulativa até a conclusão explícita pelo autor.
 
 - Use `tcc.conf` como fonte dos dados básicos; campos vazios são pendências e não devem ser preenchidos por inferência.
 - O Markdown é a fonte principal do conteúdo. Faça alterações de conteúdo nele antes de atualizar a versão LaTeX.
