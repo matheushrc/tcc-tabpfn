@@ -33,7 +33,7 @@ Este roteiro orienta a leitura e as anotações. A redação da fundamentação 
 
 - [ ] Que procedimentos são pertinentes à preparação orbital do seu TCC e ainda precisariam ser definidos?
 - [ ] A avaliação testa transferência para uma região ausente do ajuste?
-- [ ] Por que carbono orgânico e composição mineralógica precisam ser tratados como alvos diferentes?
+- [ ] Por que carbono orgânico do solo e teores de elementos ou óxidos precisam ser tratados como alvos diferentes?
 
 ### Antes de redigir
 

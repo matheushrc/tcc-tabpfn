@@ -31,13 +31,13 @@ Destacar como os dados foram usados para identificar litologias, minerais ou est
 
 ### 1.3.2 Artigos sobre TabPFN
 
-Destacar a tarefa avaliada, o tamanho e as características do conjunto de dados, os modelos comparados, o procedimento de validação e os resultados. Explicar em que medida a aplicação estudada se aproxima da classificação litológica ou da predição da composição mineral propostas neste TCC.
+Destacar a tarefa avaliada, o tamanho e as características do conjunto de dados, os modelos comparados, o procedimento de validação e os resultados. Explicar em que medida a aplicação estudada se aproxima da classificação litológica ou da predição da composição química propostas neste TCC.
 
 ## 1.4 Modelo de comparação com o TCC
 
 O trecho abaixo é um modelo a preencher com informações verificadas no artigo:
 
-> Enquanto o estudo utiliza [modelo] para prever [alvo], este trabalho pretende avaliar o TabPFN para classificação litológica e predição da composição mineral a partir de dados espectrais de satélite.
+> Enquanto o estudo utiliza [modelo] para prever [alvo], este trabalho pretende avaliar o TabPFN para classificação litológica e predição da composição química a partir de dados espectrais de satélite.
 
 Descrever o que este TCC pretende investigar, sem antecipar resultados ou afirmar que a abordagem será superior às anteriores. Conferir o escopo em `docs/decisoes-projeto.md`, especialmente a distinção entre dados espectrais de satélite e outras modalidades de sensoriamento remoto; indicar concretamente os dados que cada estudo utiliza.
 

@@ -1,6 +1,6 @@
 # Organização do projeto
 
-Este repositório reúne a pesquisa e a escrita do TCC de Matheus Henrique Rodrigues da Costa sobre avaliação do TabPFN para classificação litológica e predição da composição mineral a partir de dados espectrais de satélite.
+Este repositório reúne a pesquisa e a escrita do TCC de Matheus Henrique Rodrigues da Costa sobre avaliação do TabPFN para classificação litológica e predição da composição química a partir de dados espectrais de satélite.
 
 ## Texto e apresentação
 

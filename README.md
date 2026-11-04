@@ -12,6 +12,6 @@ Consulte `ARCHITECTURE.md` para a organização das áreas, `AGENTS.md` para as 
 
 ## Escopo vigente
 
-O trabalho pretende avaliar o TabPFN para classificação litológica e predição da composição mineral a partir de dados espectrais de satélite, associados a referências geológicas e laboratoriais compatíveis. A viabilidade dos alvos e o protocolo experimental ainda dependem das verificações registradas em `docs/decisoes-projeto.md` (D01–D07).
+O trabalho pretende avaliar o TabPFN para classificação litológica e predição da composição química a partir de dados espectrais de satélite, associados a referências geológicas e laboratoriais compatíveis. A viabilidade dos alvos e o protocolo experimental ainda dependem das verificações registradas em `docs/decisoes-projeto.md` (D01–D07).
 
 As decisões e pendências ficam nesse registro; `tcc.conf` define os dados básicos e `ABNT.md` reúne as regras editoriais. Notas de pesquisa, artigos e exemplos não substituem essas definições. As ideias do autor para explorar em 2027 estão preservadas em `docs/historico-planejamento.md`. Permanecem possibilidades em aberto, sem constituir compromissos do escopo atual.
