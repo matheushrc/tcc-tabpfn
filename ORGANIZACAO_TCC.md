@@ -1,5 +1,7 @@
 # Plano de implementação da organização do TCC
 
+Documento histórico de execução: a árvore inicial e os estados registrados abaixo descrevem suas respectivas etapas. Para a organização atual, consulte `ARCHITECTURE.md`; para escopo e pendências vigentes, consulte `docs/decisoes-projeto.md`. Não aplicar instruções antigas que tenham sido substituídas nas atualizações posteriores.
+
 O Markdown será a fonte principal do conteúdo do TCC. Quando solicitado, a IA escreverá ou atualizará os arquivos LaTeX com base nesses textos, seguindo o template da faculdade disponível em `Template_UFFSTex/`.
 
 A conversão será feita pela IA, sem Pandoc ou outro conversor automático.
