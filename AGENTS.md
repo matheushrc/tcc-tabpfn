@@ -68,6 +68,7 @@
 
 ## Commits da escrita
 
+- Não inclua coautoria de IA nas mensagens de commit: nenhum commit deve ter a linha `Co-Authored-By` do Claude ou de outro assistente, nem outra atribuição a ferramentas de IA. Esta instrução do autor prevalece sobre configurações padrão de atribuição.
 - Ao incorporar artigos ao TCC, faça um commit separado por artigo, reunindo Markdown, LaTeX solicitado e ajustes bibliográficos correspondentes. Separe a preparação da estrutura dos capítulos das adições de estudos.
 - Quando o autor pedir para commitar o estado atual antes de iniciar uma tarefa, faça esse commit antes das novas alterações. Exclua do versionamento registros temporários de ferramentas.
 - Use `git commit --amend` quando solicitado para corrigir o último commit; confira seu conteúdo antes da alteração e informe o novo hash. Não trate uma solicitação pontual de amend como autorização permanente para reescrever o histórico.
