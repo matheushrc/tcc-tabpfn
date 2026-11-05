@@ -13,7 +13,7 @@ Estes são os dois helpers do fluxo final, testado com a NBR 14724:2024, versão
 2. No terminal, a partir da raiz do projeto, inicie o receptor. É necessário ter PyMuPDF (`fitz`) no ambiente Python:
 
    ```sh
-   python scripts/receber-pdf-gedweb.py --output docs/abnt/nbr-14724-2024-corrigida-2025.pdf
+   python scripts/receber-pdf-gedweb.py --output docs/abnt/nbr-14724-2024.pdf
    ```
 
 3. Em até 60 segundos, execute `browser_run_code_unsafe` do MCP Playwright passando:

@@ -5,12 +5,21 @@
 - **Edição:** quarta, de 16.12.2024; versão corrigida em 01.04.2025, incorporando a Errata 1.
 - **Fonte:** [registro da NBR 14724 no Target GEDWeb](https://www.gedweb.com.br/aplicacao/usuario/asp/detalhe_nbr.asp?nbr=21434), acessado pelo [catálogo da UFFS](https://consulta.uffs.edu.br/).
 - **Obtenção:** 02.11.2026, na sessão institucional autenticada pelo autor. O histórico do GEDWeb indica a edição em vigor e a correção de abril de 2025.
-- **PDF:** `nbr-14724-2024-corrigida-2025.pdf`, 16 páginas físicas, incluindo elementos preliminares; a numeração do conteúdo normativo vai de 1 a 12.
-- **Markdown:** `nbr-14724-2024-corrigida-2025.md`, texto extraído pelo MCP do PDFCraft, sem OCR. Sumário, hierarquia do esquema, tabelas de exemplos e equações foram adaptados para Markdown e matemática LaTeX; o gráfico foi extraído pelo PDFCraft para `figuras/`.
+- **PDF:** `nbr-14724-2024.pdf`, 16 páginas físicas, incluindo elementos preliminares; a numeração do conteúdo normativo vai de 1 a 12.
+- **Markdown:** `nbr-14724-2024.md`, texto extraído pelo MCP do PDFCraft, sem OCR. Sumário, hierarquia do esquema, tabelas de exemplos e equações foram adaptados para Markdown e matemática LaTeX; o gráfico foi extraído pelo PDFCraft para `figuras/`.
 - **Integridade:** o PDF foi obtido diretamente do leitor, aberto com a senha que a própria sessão forneceu e salvo sem criptografia, preservando as marcas institucionais, fontes, texto e elementos gráficos. Texto e renderização das 16 páginas foram comparados com o original autenticado e são idênticos. Não é uma reconstrução por imagens.
 - **SHA-256 do PDF salvo:** `55e324185a33c9ccfdef522979ff2a74fb689cedcfb4c978d06e5981d33f7663`.
 
 O PDF é a referência para conferir a transcrição e a disposição visual dos exemplos. As regras editoriais adotadas pelo projeto ficam em `ABNT.md`, na raiz; guardar uma norma aqui não significa que todos os requisitos já foram conferidos no TCC.
+
+## NBR 10520 — Citações em documentos
+
+- **Edição:** segunda, de 19.07.2023.
+- **Obtenção:** arquivo para impressão fornecido pelo autor em 04.11.2026, com carimbo de impressão de uso exclusivo da UFFS. A página da norma no Target GEDWeb não foi consultada nesta obtenção; a edição foi conferida na capa do PDF.
+- **PDF:** `nbr-10520-2023.pdf`, 23 páginas físicas; o conteúdo normativo vai de 1 a 19. O arquivo foi mantido como recebido, apenas renomeado.
+- **Proteção:** o PDF tem senha de proprietário. Ele abre e permite leitura, extração de texto e renderização, mas o PDFCraft não remove a proteção sem essa senha, e ela não foi contornada. Para obter uma cópia sem criptografia, repita a obtenção pelo GEDWeb descrita abaixo.
+- **Markdown:** `nbr-10520-2023.md`, texto extraído pelo MCP do PDFCraft, sem OCR, com estrutura e expoentes conferidos no PDF.
+- **SHA-256 do PDF:** `e6b36b944a9131f374336132d2969ba5158886d04257f10119daf82aeb43552e`.
 
 ## Repetir a obtenção
 
