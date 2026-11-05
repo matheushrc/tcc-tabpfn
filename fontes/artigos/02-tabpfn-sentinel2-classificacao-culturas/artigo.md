@@ -1,6 +1,14 @@
 ---
 title: "Mapping of Crop Planting Structures Under Limited Training Samples Using TabPFN and Sentinel-2 Time Series Data"
 source: "https://www.mdpi.com/2072-4292/18/11/1857"
+authors: "Ke Yang; Yanyan Huang; Xin Lu"
+journal: "Remote Sensing"
+volume: "18"
+issue: "11"
+article_number: "1857"
+published: "2026-06-05"
+doi: "10.3390/rs18111857"
+metadata_checked_at: "2026-11-04"
 archived_at: "2026-11-04"
 format: "Markdown extraído do HTML via MCP Playwright"
 ---

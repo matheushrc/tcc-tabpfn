@@ -20,7 +20,7 @@ Classifica culturas agrícolas em 10 m com atributos de séries temporais Sentin
 
 ### 3. Kutzke, Eichstaedt e Kahnt (2022) — diversos alvos geoquímicos
 
-[Potential of hyperspectral-based geochemical predictions with neural networks for strategic and regional exploration improvement](https://doi.org/10.1080/08120099.2022.2094465). *Australian Journal of Earth Sciences*, 69(8), 1197–1206. DOI: 10.1080/08120099.2022.2094465. BibTeX: `kutzke2022`.
+[Potential of hyperspectral-based geochemical predictions with neural networks for strategic and regional exploration improvement](https://doi.org/10.1080/08120099.2022.2094465). *Australian Journal of Earth Sciences*, 69(8), 1197–1206; publicado online em 13 de julho de 2022. DOI: 10.1080/08120099.2022.2094465. BibTeX: `kutzke2022`.
 
 Relaciona atributos e abundâncias minerais derivados de varreduras hiperespectrais de testemunhos a referências geoquímicas, prevendo classes de teor definidas por limiares. Além da divisão aleatória 60/20/20, aplica um modelo treinado em Gawler ao cráton Yilgarn. **Limite:** essa transferência é comparada com previsões do modelo australiano geral, sem análises geoquímicas independentes de Yilgarn; semelhança entre previsões não equivale a acurácia externa. Não utiliza TabPFN ou satélite e não prevê proporções minerais. Sustenta investigar múltiplos alvos, sem garantir viabilidade para todos.
 
@@ -44,7 +44,7 @@ Compara modelos e representações espectrais em 85 tarefas de regressão com Li
 
 ### 7. Huang et al. (2026) — teste externo
 
-[Zero-shot inference with Tabular Prior-data Fitted Network (TabPFN) for soil MIR spectral analysis](https://www.sciencedirect.com/science/article/pii/S0016706126002089). *Geoderma*, 471, 117880. DOI: 10.1016/j.geoderma.2026.117880. BibTeX: `huang2026`.
+[Zero-shot inference with Tabular Prior-data Fitted Network (TabPFN) for soil MIR spectral analysis](https://www.sciencedirect.com/science/article/pii/S0016706126002089). *Geoderma*, 471, 117880; julho de 2026, publicado online em 29 de maio de 2026. DOI: 10.1016/j.geoderma.2026.117880. BibTeX: `huang2026`.
 
 Compara TabPFN, PLSR, Cubist e CNN para carbono total, pH e fósforo extraível por Olsen. Utiliza treinamento KSSL e testes no Texas (620 amostras) e leste da Austrália (387), variando tamanho e semelhança espectral do treinamento. É especialmente relevante para D06–D07 pelo teste externo. **Limite:** MIR de amostras e propriedades do solo não demonstram transferência orbital ou mineralógica. A declaração de disponibilidade orienta solicitar acesso aos dados ao KSSL.
 

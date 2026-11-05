@@ -1,6 +1,13 @@
 ---
 title: "Zero-shot inference with Tabular Prior-data Fitted Network (TabPFN) for soil MIR spectral analysis"
 source: "https://www.sciencedirect.com/science/article/pii/S0016706126002089"
+authors: "Yin-Chung Huang; José Padarian; Wartini Ng; Budiman Minasny; Alex B. McBratney"
+journal: "Geoderma"
+volume: "471"
+article_number: "117880"
+published: "2026-07 (online em 2026-05-29)"
+doi: "10.1016/j.geoderma.2026.117880"
+metadata_checked_at: "2026-11-04"
 archived_at: "2026-10-09"
 format: "Markdown"
 ---
