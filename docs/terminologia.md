@@ -1,6 +1,6 @@
 # Terminologia e observações de fonte
 
-Registros de pesquisa de tradução (E09 de `ABNT.md`) e de divergências nas fontes, preservados dos arquivos `fundamentacao-teorica.md` quando as seções foram finalizadas pelo autor em 4 de novembro de 2026. As notas sobre siglas foram aplicadas na incorporação ao capítulo 3.
+Registros de pesquisa de tradução (E09 de `ABNT.md`) e de divergências nas fontes, preservados dos arquivos `trabalhos-relacionados.md` quando as seções foram finalizadas pelo autor em 4 de novembro de 2026. As notas sobre siglas foram aplicadas na incorporação ao capítulo 3.
 
 ## Yang, Huang e Lu (2026) — seção 3.2
 
