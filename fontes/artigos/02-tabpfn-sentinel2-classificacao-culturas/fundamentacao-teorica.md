@@ -1,6 +1,6 @@
 # Leitura orientada — Yang, Huang e Lu
 
-**Situação:** leitura e redação pelo autor pendentes.
+**Situação:** proposta de texto da IA redigida; revisão pelo autor pendente.
 
 ## Roteiro de leitura — sugestões da IA
 
@@ -67,6 +67,30 @@ Os tópicos seguem a estrutura de `templates/guia-trabalhos-relacionados.md` (se
 - [ ] Separar o que os autores propõem, executam e demonstram; registrar também os limites da avaliação.
 - [ ] Identificar conceitos que exigem consultar as referências originais, preservando suas URLs completas.
 - [ ] Redigir com suas palavras, citando as fontes; discutir como o estudo se aproxima e se diferencia das tarefas do seu TCC.
+
+### Proposta de texto — versão da IA
+
+Texto redigido integralmente pela IA a pedido do autor em 4 de novembro de 2026, a partir do `artigo.md`. Números, autoria e data conferidos pela IA na página original com o MCP do Playwright em 4 de novembro de 2026; falta a revisão de redação pelo autor.
+
+```markdown
+## 3.2 TabPFN na classificação de culturas com Sentinel-2
+
+[Yang, Huang e Lu (2026)](https://www.mdpi.com/2072-4292/18/11/1857) avaliaram o TabPFN no mapeamento de culturas agrícolas em Yuxi, na China, uma região montanhosa com campos fragmentados, cobertura frequente de nuvens e dificuldade de obter amostras de treinamento.
+
+Os autores utilizaram imagens Sentinel-2 de março a outubro de 2025, combinadas em quatro composições bimestrais. Cada pixel passou a ser uma linha da tabela, com 68 atributos: bandas espectrais de cada período, estatísticas de quatro índices de vegetação, atributos de textura e as coordenadas de longitude e latitude. As 2.857 amostras pertencem a oito classes, cinco de culturas agrícolas e três de áreas não cultivadas, e foram rotuladas por levantamento de campo, por interpretação de imagens aéreas e de alta resolução e pela comparação das curvas temporais de um índice de vegetação com curvas de referência. Desse total, 1.999 amostras foram usadas no treinamento e 858 na validação.
+
+O método _recursive feature elimination_ (RFE), que remove iterativamente os atributos menos importantes para o modelo, reduziu o conjunto para 44 atributos, e o TabPFN foi comparado com Random Forest, Extreme Gradient Boosting (XGBoost) e CatBoost nos mesmos dados. O TabPFN obteve acurácia global de 96,27%, contra 92,42% do XGBoost, 91,61% do CatBoost e 89,28% do Random Forest. Ao reduzir o treinamento para 10% das amostras, em 20 repetições, a acurácia média do TabPFN caiu para 82,89%, enquanto a dos demais modelos ficou entre 71,90% e 76,50%.
+
+Os autores também testaram a influência da proximidade espacial e das coordenadas. Na validação com _buffers_, que exclui da avaliação as amostras situadas a menos de 50, 100 e 300 m de alguma amostra de treinamento, a acurácia global permaneceu entre 95,77% e 96,21%. Sem as coordenadas, ela caiu para 93,82%. Os autores reconhecem que as coordenadas podem reduzir a transferência do modelo para outras regiões e que o estudo, limitado a um ano e a uma área, não demonstra essa transferência.
+
+O estudo se relaciona com este TCC por utilizar o TabPFN para classificar dados espectrais do Sentinel-2 organizados em uma tabela por pixel e por compará-lo com modelos convencionais em diferentes tamanhos de treinamento. A diferença está no alvo: as classes são culturas agrícolas, e a vegetação, alvo dos autores, dificulta a observação das rochas na classificação litológica. Além disso, os _buffers_ foram aplicados dentro da mesma área, o que não equivale a testar o modelo em uma região não usada no ajuste. Este trabalho se propõe a avaliar o desempenho do TabPFN na classificação litológica e na predição da composição química a partir de dados espectrais de satélite, integrando e harmonizando bases de diferentes regiões e avaliando o modelo em regiões reservadas para teste.
+```
+
+**Terminologia (E09), pesquisada em 4 de novembro de 2026:**
+
+- **Acurácia global (_overall accuracy_):** as duas formas aparecem na literatura brasileira de sensoriamento remoto: “exatidão global” em [Revista Brasileira de Cartografia](https://seer.ufu.br/index.php/revistabrasileiracartografia/article/view/44559), [Embrapa/SBSR](https://www.alice.cnptia.embrapa.br/alice/handle/doc/1175408) e [Revista Árvore](https://www.redalyc.org/pdf/488/48828111.pdf); “acurácia global” em [Geo UERJ](https://next.sciencegate.app/document/10.11137/2020_2_381_391) e em [trabalho da UFSC](https://repositorio.ufsc.br/handle/123456789/257001). Não há consenso; mantida “acurácia global” por coerência com “acurácia” na seção 3.1.
+- **RFE (_recursive feature elimination_):** não foram encontradas fontes acadêmicas em português que usem “eliminação recursiva de atributos” ou “de características”; só há o equivalente em espanhol (“eliminación recursiva de características”). Mantido o termo original, explicado na primeira ocorrência. Isso não prova que a tradução inexista.
+- **_Buffers_ de validação espacial:** as fontes encontradas usam o termo em inglês, como a [documentação do spatialsample](https://spatialsample.tidymodels.org/dev/articles/buffering.html) e o [pacote blockCV](https://cran.r-project.org/web/packages/blockCV/index.html); não foi encontrada fonte acadêmica em português com “zona de exclusão” nesse sentido. Mantido _buffers_, explicado na primeira ocorrência.
 
 ### Anotações do autor
 
