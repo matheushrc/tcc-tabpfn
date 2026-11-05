@@ -1,6 +1,6 @@
 # Ordem de escrita do trabalho
 
-Sequência de escrita indicada pelo professor. A ordem das etapas difere da ordem dos capítulos no documento final: os Trabalhos Relacionados devem ser escritos antes da Fundamentação Teórica.
+Sequência de escrita indicada pelo professor. A ordem das etapas difere da ordem dos capítulos no documento final: os Trabalhos Relacionados devem ser escritos antes da Revisão Bibliográfica.
 
 ## 1. Introdução — capítulo 1
 
@@ -17,7 +17,7 @@ Selecionar e discutir entre 6 e 8 artigos, contemplando:
 - Formas de identificar minerais a partir de imagens de satélite.
 - Uso do modelo TabPFN.
 
-## 3. Fundamentação Teórica — capítulo 2
+## 3. Revisão Bibliográfica — capítulo 2
 
 Descrever os tópicos importantes para a compreensão do trabalho.
 
