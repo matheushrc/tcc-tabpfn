@@ -1,4 +1,4 @@
-# 3.3 Mapeamento litológico no Lineamento Cinzento, Carajás
+# 3.1 Mapeamento litológico no Lineamento Cinzento, Carajás
 
 [Costa, Tavares e Oliveira (2019)](https://rigeo.sgb.gov.br/bitstreams/5886b568-feeb-4456-955e-bdb7852ea011/download) propõem o uso de algoritmos de aprendizado de máquina (MLAs) para a criação de novos mapas geológicos em áreas _greenfield_ e/ou a melhoria de mapas já criados, utilizando-se de dados de sensoriamento remoto e aerogeofísica, já que a criação desses mapas em áreas tropicais com florestas densas e espessas coberturas supergênicas é desafiadora, pois a exposição das rochas é limitada e o acesso aos afloramentos rochosos pode ser difícil.
 
