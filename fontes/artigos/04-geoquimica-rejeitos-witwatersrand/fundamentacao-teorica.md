@@ -1,4 +1,4 @@
-# 3.1 Integração de dados orbitais e geoquímicos em rejeitos de mineração
+# 3.4 Integração de dados orbitais e geoquímicos em rejeitos de mineração
 
 [Zhang et al. (2023)](https://www.sciencedirect.com/science/article/pii/S2666544123000059) desenvolveram um método para estimar a concentração de ouro ainda presente no depósito de rejeitos de uma mina de ouro em Witwatersrand, na África do Sul.
 

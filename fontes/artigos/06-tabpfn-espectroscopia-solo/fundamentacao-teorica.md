@@ -1,4 +1,4 @@
-# 3.2 TabPFN em bibliotecas espectrais de solo
+# 3.6 TabPFN em bibliotecas espectrais de solo
 
 [Barkov et al. (2026)](https://arxiv.org/html/2608.00608v1) avaliaram o TabPFN na predição de propriedades do solo a partir de espectros no visível e infravermelho próximo (vis-NIR) e no infravermelho médio (MIR). Foram utilizadas duas coleções: LimeSoDa, com 13 conjuntos com 32 a 460 amostras cada e 39 tarefas de regressão, e Open Soil Spectral Library (OSSL), com 46 tarefas e conjuntos de 14.166 a 82.573 amostras. Os alvos incluíram carbono, pH, argila e carbonatos, determinados por análises laboratoriais.
 

@@ -20,7 +20,7 @@ O Markdown é a fonte do conteúdo; revisões originadas no PDF devem ser aplica
 
 ## Pesquisa e experimentos
 
-`docs/` reúne leituras, ideias, avaliação da introdução e planejamento. `reports/` contém levantamentos de conjuntos de dados. `fontes/artigos/` guarda os oito estudos em pastas numeradas na sequência de preparação indicada em `fontes/README.md`; cada pasta possui `artigo.md` e `fundamentacao-teorica.md`, com roteiro de leitura. `fontes/noticias/` guarda fontes jornalísticas. Esses materiais apoiam a escrita, mas não são capítulos finais. A fundamentação será escrita pelo autor; os roteiros da IA contêm somente tópicos e perguntas, e os dois textos de análise já existentes foram preservados.
+`docs/` reúne leituras, ideias, avaliação da introdução e planejamento. `reports/` contém levantamentos de conjuntos de dados. `fontes/artigos/` guarda os sete estudos selecionados em pastas numeradas na sequência de preparação indicada em `fontes/README.md`; cada pasta possui `artigo.md` e `fundamentacao-teorica.md`, com roteiro de leitura; `fontes/artigos-descartados/` preserva, sem numeração, os estudos removidos da seleção. `fontes/noticias/` guarda fontes jornalísticas. Esses materiais apoiam a escrita, mas não são capítulos finais. A fundamentação será escrita pelo autor; os roteiros da IA contêm somente tópicos e perguntas, e os dois textos de análise já existentes foram preservados.
 
 `datasets/` contém dados locais e está ignorado pelo Git. `mineshafts.ipynb` contém exploração inicial dos dados. `main.py` ainda é o exemplo inicial do projeto; não há pipeline completo de treinamento ou extração de imagens implementado. O ambiente Python é descrito por `pyproject.toml`, `.python-version` e `uv.lock`.
 
