@@ -27,6 +27,7 @@
 
 ## Citações em arquivos Markdown
 
+- Nos arquivos `.md` do repositório, use aspas retas (`"`), e não aspas curvas (`“` e `”`). Essa convenção não se aplica ao LaTeX, que usa sua própria marcação de aspas, nem às transcrições de fontes, como os `artigo.md`, que preservam o original.
 - Toda citação, fonte ou referência adicionada a um arquivo `.md` deve usar o link original completo da fonte.
 - Preserve exatamente a URL consultada; não use encurtadores, links relativos, IDs internos ou referências sem destino.
 - Prefira a forma `[título](https://dominio.exemplo/fonte-original)` com a URL da fonte real; quando a URL precisar ficar visível, use `<https://dominio.exemplo/fonte-original>`.
