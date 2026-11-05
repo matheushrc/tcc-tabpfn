@@ -29,11 +29,25 @@ A ordem foi definida em 4 de novembro de 2026 pelo autor, a partir de proposta d
 | Ordem | Estudo | Bloco | Situação da análise | Motivo da posição e limites a preservar |
 | --- | --- | --- | --- | --- |
 | 01 | Costa et al. | Classificação litológica | Texto da seção 3.1 finalizado e incorporado | Precedente brasileiro de mapeamento litológico com Random Forest; introduz a discussão sobre coordenadas e concordância com mapas de referência. |
-| 02 | Yang et al. | Classificação litológica | Roteiro criado; análise pelo autor pendente | TabPFN com atributos Sentinel-2 por pixel, comparado com RF, XGBoost e CatBoost, com poucas amostras, zonas de exclusão espacial e ablação das coordenadas, retomando a questão de Costa; as classes são culturas agrícolas e não há teste em outra região. |
-| 03 | Kutzke et al. | Composição química | Roteiro criado; análise pelo autor pendente | Múltiplos alvos geoquímicos a partir de espectros de testemunhos; a transferência entre crátons é comparada com outro modelo, não com análises independentes. |
+| 02 | Yang et al. | Classificação litológica | Proposta de texto redigida integralmente pela IA; revisão pelo autor pendente | TabPFN com atributos Sentinel-2 por pixel, comparado com RF, XGBoost e CatBoost, com poucas amostras, zonas de exclusão espacial e ablação das coordenadas, retomando a questão de Costa; as classes são culturas agrícolas e não há teste em outra região. |
+| 03 | Kutzke et al. | Composição química | Proposta de texto redigida integralmente pela IA; revisão pelo autor pendente | Múltiplos alvos geoquímicos a partir de espectros de testemunhos; a transferência entre crátons é comparada com outro modelo, não com análises independentes. |
 | 04 | Zhang et al. | Composição química | Texto da seção 3.4 finalizado e incorporado | Passagem para dados de satélite com alvo geoquímico; o modelo geoestatístico não fornece novas observações laboratoriais independentes. |
-| 05 | Chen et al. | Composição química | Roteiro criado; análise pelo autor pendente | TabPFN com Sentinel-2 e controle de solo exposto, o mais próximo do sensor proposto; o alvo é carbono orgânico. |
+| 05 | Chen et al. | Composição química | Proposta de texto redigida integralmente pela IA; revisão pelo autor pendente | TabPFN com Sentinel-2 e controle de solo exposto, o mais próximo do sensor proposto; o alvo é carbono orgânico. |
 | 06 | Barkov et al. | Harmonização e generalização | Texto da seção 3.6 finalizado e incorporado | TabPFN em bibliotecas espectrais de diferentes escalas e instrumentos; limites das partições aleatórias. |
-| 07 | Huang et al. | Harmonização e generalização | Roteiro criado; análise pelo autor pendente | Teste em região externa com espectros MIR, fechando o capítulo na questão da generalização; não demonstra transferência orbital para os alvos deste TCC. |
+| 07 | Huang et al. | Harmonização e generalização | Proposta de texto redigida integralmente pela IA; revisão pelo autor pendente | Teste em região externa com espectros MIR, fechando o capítulo na questão da generalização; não demonstra transferência orbital para os alvos deste TCC. |
 
-Os títulos e as URLs originais dos sete estudos estão na tabela acima. Essa sequência organiza a leitura e a redação pelo autor, mantendo a separação entre conceitos no capítulo 2 e comparação de estudos no capítulo 3. Os roteiros não acrescentam parágrafos acadêmicos aos capítulos. As referências usadas apenas neles não entram em `tcc/latex/bibliografia.bib` enquanto não forem efetivamente citadas no TCC.
+## Autoria das análises
+
+As análises de Costa et al. (3.1), Zhang et al. (3.4) e Barkov et al. (3.6) foram escritas manualmente pelo autor, com revisão pontual da IA, e já estão incorporadas ao capítulo 3. As de Yang et al. (3.2), Kutzke et al. (3.3), Chen et al. (3.5) e Huang et al. (3.7) foram redigidas integralmente pela IA, a pedido do autor, em 4 de novembro de 2026, a partir do `artigo.md` de cada pasta e seguindo o padrão das três seções manuais. No mesmo dia, a IA conferiu números, autoria e data de cada proposta na página original, com o MCP do Playwright: todos os valores conferiram; o ano de Huang et al. (Geoderma, jul. 2026) e de Chen et al. (Scientific Reports, v. 16, publicado em 5 jan. 2026) foi confirmado, e a divergência entre estanho, citado no texto de Kutzke et al., e zinco, presente nas tabelas, é do próprio artigo. Essas quatro propostas ficam no bloco “Proposta de texto — versão da IA” do respectivo `fundamentacao-teorica.md`, antes de “Anotações do autor”, e ainda não integram `tcc/markdown/` nem `tcc/latex/`; só serão incorporadas quando o autor revisá-las e finalizá-las, conforme E08 e P06 de `ABNT.md`.
+
+| Pasta | Estudo | Autoria do texto |
+| --- | --- | --- |
+| 01 | Costa et al. | Autor |
+| 02 | Yang et al. | IA (integral), revisão do autor pendente |
+| 03 | Kutzke et al. | IA (integral), revisão do autor pendente |
+| 04 | Zhang et al. | Autor |
+| 05 | Chen et al. | IA (integral), revisão do autor pendente |
+| 06 | Barkov et al. | Autor |
+| 07 | Huang et al. | IA (integral), revisão do autor pendente |
+
+Os títulos e as URLs originais dos sete estudos estão na tabela acima. Essa sequência organiza a leitura e a redação pelo autor, mantendo a separação entre conceitos no capítulo 2 e comparação de estudos no capítulo 3. Os roteiros e as propostas da IA não acrescentam parágrafos acadêmicos aos capítulos antes da finalização pelo autor. As referências usadas apenas neles não entram em `tcc/latex/bibliografia.bib` enquanto não forem efetivamente citadas no TCC.
