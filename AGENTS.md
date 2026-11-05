@@ -51,6 +51,21 @@
 - Distinga a data de publicação das datas de atualização da página e de criação ou modificação do arquivo. Não use estas últimas como data de publicação sem confirmação. Não transfira a data de um documento para a página que o hospeda: ao usar os dados do documento, cite seu título e sua URL original completa e mantenha a correspondência entre Markdown e BibTeX.
 - Ao mover ou renomear arquivos versionados, use `git mv` e preserve seu conteúdo antes de aplicar os ajustes necessários.
 
+## Compilação do LaTeX
+
+- Compile com a imagem Docker `texlive/texlive:latest`, que inclui o `abntex2cite` usado em `principal.tex`. A imagem `pandoc/latex` não traz esse pacote e não compila o TCC sem instalações adicionais.
+- Execute na raiz do repositório:
+
+  ```sh
+  docker run --rm -v "$PWD/tcc/latex:/w" -w /w texlive/texlive:latest \
+    latexmk -pdf -outdir=/w/build -interaction=nonstopmode principal.tex
+  ```
+
+  O `latexmk` executa `pdflatex` e `bibtex` quantas vezes forem necessárias. O PDF e os arquivos auxiliares ficam em `tcc/latex/build/`, fora do versionamento; não versione PDF nem arquivos auxiliares.
+- O Docker Desktop desta máquina só monta pastas compartilhadas com o host: caminhos em `/tmp`, inclusive o diretório temporário da sessão, são recusados. Para testar sem tocar em `tcc/latex/`, copie a pasta para `.cache/latex-build/`, também fora do versionamento, e monte essa cópia.
+- Depois de compilar, confira erros e citações com `grep -E '^!|undefined' tcc/latex/build/principal.log` e os avisos do BibTeX em `tcc/latex/build/principal.blg`. Informe separadamente avisos de diagramação (`Overfull` e `Underfull`) e pendências de revisão visual do PDF.
+- Se houver erros ou avisos, abra o PDF gerado com o MCP do PDFCraft para ver o que está acontecendo antes de propor correções: `doc_open` com o caminho absoluto de `tcc/latex/build/principal.pdf`, `doc_info` para conferir o número de páginas e `page_render` nas páginas afetadas, localizadas pelo número entre colchetes no `.log` ou por `text_find`. Descreva o problema observado na página, como texto além da margem ou conteúdo cortado, e feche o documento com `doc_close` ao terminar. Se a compilação falhar sem gerar PDF, informe o erro do `.log`. Ao concluir uma compilação antes registrada como pendente, atualize o histórico em `docs/decisoes-projeto.md`.
+
 ## Commits da escrita
 
 - Ao incorporar artigos ao TCC, faça um commit separado por artigo, reunindo Markdown, LaTeX solicitado e ajustes bibliográficos correspondentes. Separe a preparação da estrutura dos capítulos das adições de estudos.
