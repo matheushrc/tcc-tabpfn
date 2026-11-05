@@ -37,7 +37,7 @@
 ## Escrita do TCC
 
 - Antes de escrever ou revisar, consulte `ABNT.md`, que centraliza as regras de estilo, os limites da intervenção da IA e os critérios de conferência. Registre ali novas regras editoriais explicitamente definidas pelo autor, distinguindo preferências de exigências normativas verificadas.
-- Para tradução técnica, siga E09 de `ABNT.md`: pesquise múltiplas fontes independentes e registre as evidências fora do texto proposto. Para os arquivos `fundamentacao-teorica.md`, siga E07–E08: anotações do autor no fim e proposta da IA cumulativa até a conclusão explícita pelo autor.
+- Para tradução técnica, siga E09 de `ABNT.md`: pesquise múltiplas fontes independentes e registre as evidências fora do texto proposto. Para os arquivos `trabalhos-relacionados.md`, siga E07–E08: anotações do autor no fim e proposta da IA cumulativa até a conclusão explícita pelo autor.
 
 - Use `tcc.conf` como fonte dos dados básicos; campos vazios são pendências e não devem ser preenchidos por inferência.
 - O Markdown é a fonte principal do conteúdo. Faça alterações de conteúdo nele antes de atualizar a versão LaTeX.
