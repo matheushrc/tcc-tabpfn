@@ -1,6 +1,6 @@
 # Leitura orientada — Huang et al.
 
-**Situação:** leitura e redação pelo autor pendentes.
+**Situação:** proposta de texto da IA redigida; revisão pelo autor pendente.
 
 ## Roteiro de leitura — sugestões da IA
 
@@ -64,6 +64,22 @@ Os tópicos seguem a estrutura de `templates/guia-trabalhos-relacionados.md` (se
 - [ ] Separar o que os autores propõem, executam e demonstram; registrar também os limites da avaliação.
 - [ ] Identificar conceitos que exigem consultar as referências originais, preservando suas URLs completas.
 - [ ] Redigir com suas palavras, citando as fontes; discutir como o estudo se aproxima e se diferencia das tarefas do seu TCC.
+
+### Proposta de texto — versão da IA
+
+Texto redigido integralmente pela IA a pedido do autor em 4 de novembro de 2026, a partir do `artigo.md`. Números, autoria e data conferidos pela IA na página original com o MCP do Playwright em 4 de novembro de 2026; falta a revisão de redação pelo autor.
+
+```markdown
+## 3.7 TabPFN em espectros MIR de solo com validação externa
+
+[Huang et al. (2026)](https://www.sciencedirect.com/science/article/pii/S0016706126002089) investigaram se o TabPFN pode ser utilizado como ferramenta genérica de predição em bibliotecas espectrais de solo de diferentes tamanhos. Os autores utilizaram espectros MIR de 11.564 amostras dos Estados Unidos para prever carbono total, pH e fósforo extraível pelo método Olsen, propriedades de previsibilidade alta, média e baixa a partir desses espectros. As 620 amostras do Texas formaram o teste interno, e 387 amostras do leste da Austrália, medidas em outro laboratório, foram utilizadas como teste externo, apenas para o carbono total.
+
+O TabPFN foi aplicado com as configurações padrão, recebendo os exemplos de treinamento como contexto, sem alteração dos parâmetros do modelo pré-treinado. Os autores o compararam com PLSR, Cubist e CNN, utilizando sete conjuntos de treinamento, de 46 a 10.944 amostras, definidos pelo tamanho e pela semelhança espectral com o Texas, observada por PCA. O desempenho foi medido principalmente pelo R² e pelo RMSE, e os intervalos de predição do TabPFN também foram avaliados.
+
+Na predição do carbono total, o TabPFN reduziu o RMSE, em média, em 74% em relação ao PLSR e em 39% em relação ao Cubist. Com o conjunto da Flórida, de tamanho médio e espectralmente distinto do Texas, obteve R² de 0,92 no teste interno, contra 0,35 do Cubist. Na validação externa, com o maior conjunto de treinamento, alcançou R² de 0,97, contra 0,91 do Cubist e 0,92 da CNN; com os conjuntos pequenos, porém, o Cubist foi superior. Nenhum modelo previu adequadamente o fósforo. Os autores reconhecem que os espectros australianos eram semelhantes aos norte-americanos, exigindo uma generalização apenas moderada, e que o pré-treinamento não dispensa dados de treinamento representativos.
+
+O estudo se relaciona com este TCC por avaliar o TabPFN em dados espectrais e medir o desempenho em uma região que não participou do treinamento, o que não ocorre nas partições aleatórias de Barkov et al. (2026). A diferença está nos dados e nas tarefas: os autores utilizaram espectros MIR medidos em laboratório para prever propriedades do solo, enquanto este trabalho se propõe a avaliar o desempenho do TabPFN na classificação litológica e na predição da composição química a partir de dados espectrais de satélite. Por isso, os resultados não demonstram a transferência do modelo para essas tarefas. Como este trabalho também se propõe a integrar e harmonizar bases de diferentes regiões, a influência do tamanho e da semelhança espectral observada pelos autores reforça a necessidade de avaliar o possível ganho de generalização em regiões reservadas para teste.
+```
 
 ### Anotações do autor
 

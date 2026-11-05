@@ -1,6 +1,6 @@
 # Leitura orientada — Chen et al.
 
-**Situação:** leitura e redação pelo autor pendentes.
+**Situação:** proposta de texto da IA redigida; revisão pelo autor pendente.
 
 ## Roteiro de leitura — sugestões da IA
 
@@ -66,6 +66,26 @@ Os tópicos seguem a estrutura de `templates/guia-trabalhos-relacionados.md` (se
 - [ ] Separar o que os autores propõem, executam e demonstram; registrar também os limites da avaliação.
 - [ ] Identificar conceitos que exigem consultar as referências originais, preservando suas URLs completas.
 - [ ] Redigir com suas palavras, citando as fontes; discutir como o estudo se aproxima e se diferencia das tarefas do seu TCC.
+
+### Proposta de texto — versão da IA
+
+Texto redigido integralmente pela IA a pedido do autor em 4 de novembro de 2026, a partir do `artigo.md`. Números, autoria e data conferidos pela IA na página original com o MCP do Playwright em 4 de novembro de 2026; falta a revisão de redação pelo autor.
+
+```markdown
+## 3.5 TabPFN e composições de solo exposto do Sentinel-2
+
+[Chen et al. (2026)](https://www.nature.com/articles/s41598-025-33682-4) avaliaram o TabPFN no mapeamento do carbono orgânico do solo em áreas agrícolas da região de solos negros do nordeste da China. Os autores apontam duas dificuldades: separar a reflectância do solo exposto dos efeitos da vegetação, dos resíduos de culturas e da umidade, e depender de modelos que exigem muitos dados, enquanto os levantamentos de solo costumam ter poucas amostras.
+
+Foram coletadas 174 amostras superficiais de solo, de 0 a 20 cm de profundidade, e o carbono orgânico foi determinado em laboratório. Os atributos vieram de imagens Sentinel-2 de abril e maio de 2021 a 2023, antes do plantio, quando o solo fica exposto. Os autores selecionaram os pixels com índice de vegetação por diferença normalizada (NDVI) entre 0,1 e 0,4 e compararam duas composições multitemporais: o percentil 50 (P50), equivalente à mediana, e o percentil 90 (P90), que busca o solo mais seco. Além das bandas e de índices espectrais, foram usadas variáveis climáticas e topográficas de outras fontes.
+
+O TabPFN foi comparado a uma CNN e ao XGBoost em 100 iterações de _bootstrap_, com validação nas amostras não sorteadas, utilizando o R² e a raiz do erro quadrático médio (RMSE). Com a composição P50, o TabPFN obteve R² médio de 0,78 e RMSE de 1,90 g/kg, superior à CNN (R² de 0,74) e ao XGBoost (R² de 0,72). Com a composição P90, todos os modelos tiveram desempenho um pouco menor.
+
+Os autores reconhecem que a extensão da área e o número de amostras limitam a transferência do modelo para outras regiões e que o NDVI não separa o solo exposto dos resíduos de culturas. A avaliação reamostrou amostras de uma mesma região, sem teste em uma região externa.
+
+O estudo se relaciona com este TCC por aplicar o TabPFN a dados espectrais do Sentinel-2 com poucas amostras e por controlar a condição da superfície observada, o que reforça a necessidade de considerar a cobertura vegetal na seleção das áreas e das amostras deste trabalho. A diferença está no alvo e nos dados: o carbono orgânico é uma propriedade do solo, e não um teor de elemento ou óxido, e os autores combinam os dados espectrais com variáveis climáticas e topográficas. Este trabalho se propõe a avaliar o desempenho do TabPFN na classificação litológica e na predição da composição química a partir de dados espectrais de satélite, integrando e harmonizando bases de diferentes regiões e avaliando o desempenho em regiões reservadas para teste.
+```
+
+**Sigla RMSE (E04):** esta proposta apresenta a sigla como “raiz do erro quadrático médio (RMSE)”, porque a 3.5 vem antes da 3.6 no capítulo. Hoje a sigla é apresentada na 3.6 (Barkov), já incorporada a `tcc/markdown/` e ao LaTeX. Ao incorporar a 3.5, trocar na 3.6 “a raiz do erro quadrático médio (RMSE)” por “o RMSE” no `fundamentacao-teorica.md` da pasta 06, em `tcc/markdown/03-trabalhos-relacionados.md` e em `tcc/latex/capitulos/03-trabalhos-relacionados.tex`. Antes disso, a troca deixaria a sigla sem apresentação no capítulo. Na mesma ocasião, se a 3.3 (Kutzke) já estiver incorporada, trocar também “redes neurais convolucionais” por “CNN” na 3.6, pois a sigla é apresentada na 3.3.
 
 ### Anotações do autor
 
