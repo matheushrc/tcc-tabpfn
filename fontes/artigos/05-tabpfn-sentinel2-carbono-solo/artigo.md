@@ -1,6 +1,13 @@
 ---
 title: "Integrating transformer-based learning and Sentinel-2 bare soil composites for soil organic carbon mapping in the black soil region of Northeast China"
 source: "https://www.nature.com/articles/s41598-025-33682-4"
+authors: "Na Chen; Zhikang Wei; Xuancheng Jin; Nan Lin; Fan Yang; Ling Zhao; Song Wu"
+journal: "Scientific Reports"
+volume: "16"
+article_number: "3784"
+published: "2026-01-05"
+doi: "10.1038/s41598-025-33682-4"
+metadata_checked_at: "2026-11-04"
 archived_at: "2026-10-09"
 format: "Markdown"
 ---

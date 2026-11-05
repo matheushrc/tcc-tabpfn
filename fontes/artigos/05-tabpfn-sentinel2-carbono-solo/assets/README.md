@@ -1,4 +1,4 @@
-# Materiais locais de Chen et al. (2025)
+# Materiais locais de Chen et al. (2026)
 
 Obtidos em 4 de novembro de 2026 na [página do artigo](https://www.nature.com/articles/s41598-025-33682-4), aberta com o MCP do Playwright, para leitura de `artigo.md` sem conexão.
 
