@@ -21,6 +21,15 @@ O PDF é a referência para conferir a transcrição e a disposição visual dos
 - **Markdown:** `nbr-10520-2023.md`, texto extraído pelo MCP do PDFCraft, sem OCR, com estrutura e expoentes conferidos no PDF.
 - **SHA-256 do PDF:** `e6b36b944a9131f374336132d2969ba5158886d04257f10119daf82aeb43552e`.
 
+## NBR 6023 — Referências
+
+- **Edição:** terceira, de 21.05.2025.
+- **Obtenção:** arquivo para impressão fornecido pelo autor em 05.11.2026, com carimbo de impressão de uso exclusivo da UFFS. A página da norma no Target GEDWeb não foi consultada nesta obtenção; a edição foi conferida na capa do PDF.
+- **PDF:** `nbr-6023-2025.pdf`, 74 páginas físicas; o conteúdo normativo vai de 1 a 68. O arquivo foi mantido como recebido, apenas renomeado.
+- **Proteção:** o PDF tem senha de proprietário, como o da NBR 10520; permite leitura, extração de texto e impressão, e a proteção não foi contornada.
+- **Markdown:** `nbr-6023-2025.md`. A exportação do PDFCraft fragmentava o texto e perdia a ênfase dos exemplos; por isso o texto foi extraído da camada textual com PyMuPDF, guardando a fonte de cada trecho, sem OCR. Seções, sumário e os 293 EXEMPLOS conferidos contra o PDF; ênfase conferida no PDF renderizado pelo PDFCraft. Pontuação isolada em negrito ou itálico ficou sem ênfase, e espaços dentro de algumas URLs foram mantidos como no original.
+- **SHA-256 do PDF:** `1614e8cb1d82e7d60ebb8ef0df6682f069724f2954723eed3e3c259785f7b115`.
+
 ## Repetir a obtenção
 
 1. Abra a versão desejada pelo MCP do Playwright, usando o acesso autorizado da UFFS e verificando o histórico da norma. Selecione a aba do visualizador.
