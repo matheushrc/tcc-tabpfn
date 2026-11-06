@@ -90,7 +90,7 @@
 ------------------------------------------------------------]
 
 \def\PP@english{english}
-\def\PP@brazil{brazil}
+\def\PP@brazil{brazilian}
 \let\PP@language\PP@brazil
 \def\PP@erro{\ClassError{Opção '\CurrentOption' não permitida para este formato!}}
 \DeclareOption{letterpaper}{\PP@erro}
@@ -113,7 +113,7 @@
 
 \RequirePackage[T1]{fontenc}[2005/09/27]
 \RequirePackage[utf8]{inputenc}[2008/03/30]
-\RequirePackage[english,brazil]{babel}[2008/07/06]
+\RequirePackage[english,brazilian]{babel}[2008/07/06]
 \RequirePackage[a4paper]{geometry}[2010/09/12]
 \RequirePackage{textcomp}[2005/09/27]
 \RequirePackage{helvet}[2005/04/12]
@@ -957,7 +957,7 @@
 % #1: palavras-chave
 %----------------------------------------------------------------------------------
 \newenvironment{resumo}%
-    {\begin{hyphenrules}{brazil}%
+    {\begin{hyphenrules}{brazilian}%
      \begin{PP@abstract}{Resumo}{Palavras-Chave}{\@titlept}{\PP@palavraschave}}%
      {\global\let\@titlept\@empty
      \end{PP@abstract}%
