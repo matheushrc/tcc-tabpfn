@@ -30,6 +30,14 @@ O PDF é a referência para conferir a transcrição e a disposição visual dos
 - **Markdown:** `nbr-6023-2025.md`. A exportação do PDFCraft fragmentava o texto e perdia a ênfase dos exemplos; por isso o texto foi extraído da camada textual com PyMuPDF, guardando a fonte de cada trecho, sem OCR. Seções, sumário e os 293 EXEMPLOS conferidos contra o PDF; ênfase conferida no PDF renderizado pelo PDFCraft. Pontuação isolada em negrito ou itálico ficou sem ênfase, e espaços dentro de algumas URLs foram mantidos como no original.
 - **SHA-256 do PDF:** `1614e8cb1d82e7d60ebb8ef0df6682f069724f2954723eed3e3c259785f7b115`.
 
+## NBR 6024, NBR 6027 e NBR 6028
+
+- **Edições em vigor:** NBR 6024, segunda edição, 01.02.2012; NBR 6027, segunda edição, 11.12.2012; NBR 6028, segunda edição, 18.05.2021, conferidas nas páginas de detalhe do GEDWeb ([6024](https://www.gedweb.com.br/aplicacao/usuario/asp/detalhe_nbr.asp?nbr=5265), [6027](https://www.gedweb.com.br/aplicacao/usuario/asp/detalhe_nbr.asp?nbr=5274), [6028](https://www.gedweb.com.br/aplicacao/usuario/asp/detalhe_nbr.asp?nbr=5277)).
+- **Obtenção:** 06.11.2026, pelo botão "Imprimir" do visualizador do GEDWeb, com a opção de imprimir o documento todo, na sessão institucional autenticada pelo autor. Os arquivos são os "Arquivos para impressão" gerados pelo próprio GEDWeb, com carimbo de uso exclusivo da UFFS e senha de proprietário (leitura, cópia e impressão permitidas); a proteção não foi alterada.
+- **PDFs:** `nbr-6024-2012.pdf` (8 páginas), `nbr-6027-2012.pdf` (7 páginas) e `nbr-6028-2021.pdf` (7 páginas).
+- **Markdown:** não transcritas; as regras aplicáveis ao TCC estão resumidas em `ABNT.md` (N02 a N05).
+- **SHA-256:** 6024 `6fcb011cd4923432dcde84a054d33139058299e81bb5c73f704776282ed1b071`; 6027 `aee26f018ea52210d2171a94b1e89ab92a830645ffa1370c1bb540bb950d1482`; 6028 `08bd40ece362beaad3909335d58ecd93f2c1a3469205d36d13867eb4d9eeeba8`.
+
 ## Repetir a obtenção
 
 1. Abra a versão desejada pelo MCP do Playwright, usando o acesso autorizado da UFFS e verificando o histórico da norma. Selecione a aba do visualizador.

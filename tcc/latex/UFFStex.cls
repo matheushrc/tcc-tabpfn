@@ -1082,7 +1082,7 @@
 \def\chaptermark##1{%
   \markboth {\texorpdfstring{\MakeUppercase{%
     \ifnum \c@secnumdepth >\m@ne
-        \@chapapp\ \thechapter. \ %
+        \@chapapp\ \thechapter\ %
     \fi
     ##1}}{}}{}}%
 \def\sectionmark##1{%
@@ -1192,7 +1192,7 @@
   {\parindent\z@ \raggedright
     \normalfont
     \interlinepenalty\@M
-    \leavevmode\hbox to 4em{\large\bfseries\thechapter.\ }%
+    \leavevmode\hbox to 4em{\large\bfseries\thechapter\ }%
 %    \large\bfseries\expandafter\uppercase\expandafter{#1}\par\nointerlineskip\nobreak%
     % Aqui
     \large\bfseries\MakeTextUppercase{#1}\par\nointerlineskip\nobreak
