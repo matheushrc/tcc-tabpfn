@@ -232,3 +232,9 @@ tcc/latex/build/
 
 # Registros temporários de consultas do navegador.
 .playwright-mcp/
+
+# Cópias locais das fontes da revisão bibliográfica (direitos autorais de terceiros)
+fontes/revisao-bibliografica/pdfs/
+fontes/revisao-bibliografica/paginas/
+fontes/revisao-bibliografica/manifesto.json
+fontes/revisao-bibliografica/README.md
