@@ -1,6 +1,6 @@
 # Fontes para consulta
 
-Esta pasta reúne os sete estudos selecionados em `docs/artigos.md`. Os sete possuem `artigo.md`: seis foram extraídos do HTML original com o MCP do Playwright em 6 ou 9 de outubro de 2026 ou, no caso de Yang et al., em 4 de novembro de 2026; Costa et al. foram convertidos do PDF local com o MCP do PDFCraft em 2 de novembro de 2026. A data de extração não é a data de publicação. O PDF de Costa et al. foi preservado; os demais PDFs redundantes foram removidos conforme a preferência do autor pelo HTML.
+Esta pasta reúne os documentos da revisão bibliográfica e os sete estudos selecionados em `docs/artigos.md`. Os sete possuem `artigo.md`: seis foram extraídos do HTML original com o MCP do Playwright em 6 ou 9 de outubro de 2026 ou, no caso de Yang et al., em 4 de novembro de 2026; Costa et al. foram convertidos do PDF local com o MCP do PDFCraft em 2 de novembro de 2026. A data de extração não é a data de publicação. O PDF de Costa et al. foi preservado; os demais PDFs redundantes foram removidos conforme a preferência do autor pelo HTML.
 
 | Pasta em `artigos/` | Fonte original | Formato |
 | --- | --- | --- |
@@ -17,6 +17,12 @@ Os títulos ficam no front matter; o corpo preserva autores, texto, citações, 
 Em Kutzke, os botões de tabelas e figuras foram abertos pelo Playwright. Os cinco CSVs são exportações das tabelas publicadas, e não uma cópia dos registros brutos de espectroscopia e geoquímica. A procedência dos arquivos está documentada em `03-hiperespectral-predicao-geoquimica/assets/README.md`. Os textos de análise já redigidos foram preservados. Cada pasta possui um arquivo `trabalhos-relacionados.md` com roteiro de leitura identificado como sugestão da IA, para apoiar a escrita pelo autor.
 
 Os artigos usam prefixos numéricos e nomes curtos relacionados ao assunto. As notícias estão em `fontes/noticias/`; documentos institucionais e legislação podem ser guardados em `fontes/documentos-institucionais/` e `fontes/legislacao/` quando forem adicionados.
+
+## Revisão bibliográfica
+
+A pasta `fontes/revisao-bibliografica/` reúne a proposta do capítulo 2 em `proposta.md`, o índice das fontes em `README.md`, o inventário técnico em `manifesto.json`, os PDFs em `pdfs/` e as páginas web em `paginas/`.
+
+As 41 fontes citadas no texto proposto foram arquivadas em 5 de novembro de 2026: 63 PDFs e 7 HTMLs. O relatório de Taggart é distribuído em partes, preservadas em `pdfs/taggart2002/`; Clark possui o HTML do autor e uma reprodução desse conteúdo em PDF. Edições, manuscritos, origem dos downloads e limites das cópias estão descritos no índice da pasta. Estes documentos apoiam o capítulo 2 e não alteram a seleção dos sete estudos do capítulo 3. A proposta ainda aguarda revisão e finalização pelo autor.
 
 ## Artigos removidos da seleção
 
