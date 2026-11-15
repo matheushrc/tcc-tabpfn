@@ -1,4 +1,4 @@
-# 3.2 TabPFN na classificação de culturas com Sentinel-2
+# 3.1 TabPFN na classificação de culturas com Sentinel-2
 
 [Yang, Huang e Lu (2026)](https://www.mdpi.com/2072-4292/18/11/1857) avaliaram o TabPFN no mapeamento de culturas agrícolas em Yuxi, na China, uma região montanhosa com campos fragmentados, cobertura frequente de nuvens e dificuldade de obter amostras de treinamento.
 
@@ -8,4 +8,4 @@ O método _recursive feature elimination_ (RFE), que remove iterativamente os at
 
 Os autores também testaram a influência da proximidade espacial e das coordenadas. Na validação com _buffers_, que exclui da avaliação as amostras situadas a menos de 50, 100 e 300 m de alguma amostra de treinamento, a acurácia global permaneceu entre 95,77% e 96,21%. Sem as coordenadas, ela caiu para 93,82%. Os autores reconhecem que as coordenadas podem reduzir a transferência do modelo para outras regiões e que o estudo, limitado a um ano e a uma área, não demonstra essa transferência.
 
-Assim como este trabalho, o estudo aplica o TabPFN a dados espectrais do Sentinel-2 organizados por pixel e o compara com modelos convencionais. Diferentemente dele, que classifica culturas agrícolas e testa o modelo na mesma área, este trabalho classificará litologias, predirá a composição química e testará o modelo em regiões não usadas no ajuste.
+Assim como este trabalho, o estudo aplica o TabPFN a dados espectrais do Sentinel-2 organizados por pixel e o compara com modelos convencionais. Diferentemente dele, que classifica culturas agrícolas e testa o modelo na mesma área, este trabalho preverá ocorrências minerais, predirá a composição química e testará o modelo em regiões não usadas no ajuste.

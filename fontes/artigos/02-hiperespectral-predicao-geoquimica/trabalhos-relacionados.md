@@ -1,4 +1,4 @@
-# 3.3 Predição geoquímica a partir de testemunhos de sondagem
+# 3.2 Predição geoquímica a partir de testemunhos de sondagem
 
 [Kutzke, Eichstaedt e Kahnt (2022)](https://doi.org/10.1080/08120099.2022.2094465) avaliaram o uso de uma rede neural convolucional (CNN) para prever teores de elementos químicos em testemunhos de sondagem a partir de espectros hiperespectrais medidos nesses testemunhos. A motivação é que as análises geoquímicas são caras e cobrem apenas trechos escolhidos pelos geólogos, enquanto o escaneamento hiperespectral cobre o testemunho inteiro.
 

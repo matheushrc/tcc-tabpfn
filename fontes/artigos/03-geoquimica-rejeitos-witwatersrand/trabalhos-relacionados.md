@@ -1,4 +1,4 @@
-# 3.4 Integração de dados orbitais e geoquímicos em rejeitos de mineração
+# 3.3 Integração de dados orbitais e geoquímicos em rejeitos de mineração
 
 [Zhang et al. (2023)](https://www.sciencedirect.com/science/article/pii/S2666544123000059) desenvolveram um método para estimar a concentração de ouro ainda presente no depósito de rejeitos de uma mina de ouro em Witwatersrand, na África do Sul.
 
@@ -6,4 +6,4 @@ Os autores analisaram imagens dos satélites Landsat-8 e Sentinel-2 e utilizaram
 
 Entre os algoritmos avaliados, AdaBoost apresentou os melhores resultados, com R² de 0,917 e erro percentual absoluto médio de 2,7%. Os modelos permitiram gerar mapas de concentração de ouro com resolução espacial de 10 metros. Os autores destacam que a confiabilidade das previsões depende da semelhança entre os materiais presentes na área de aplicação e aqueles representados nos dados de treinamento.
 
-Assim como este trabalho, o estudo associa dados espectrais de satélite a análises geoquímicas para predizer teores. Diferentemente dele, que comparou algoritmos para estimar ouro em uma única instalação de rejeitos, este trabalho avaliará o TabPFN na classificação litológica e na predição de diversos elementos e óxidos em diferentes regiões.
+Assim como este trabalho, o estudo associa dados espectrais de satélite a análises geoquímicas para predizer teores. Diferentemente dele, que comparou algoritmos para estimar ouro em uma única instalação de rejeitos, este trabalho avaliará o TabPFN na previsão de ocorrências minerais e na predição de diversos elementos e óxidos em diferentes regiões.

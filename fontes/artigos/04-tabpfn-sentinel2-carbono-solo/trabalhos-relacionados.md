@@ -1,4 +1,4 @@
-# 3.5 TabPFN e composições de solo exposto do Sentinel-2
+# 3.4 TabPFN e composições de solo exposto do Sentinel-2
 
 [Chen et al. (2026)](https://www.nature.com/articles/s41598-025-33682-4) avaliaram o TabPFN no mapeamento do carbono orgânico do solo em áreas agrícolas da região de solos negros do nordeste da China. Os autores apontam duas dificuldades: separar a reflectância do solo exposto dos efeitos da vegetação, dos resíduos de culturas e da umidade, e depender de modelos que exigem muitos dados, enquanto os levantamentos de solo costumam ter poucas amostras.
 
@@ -8,4 +8,4 @@ O TabPFN foi comparado a uma CNN e ao XGBoost em 100 iterações de _bootstrap_,
 
 Os autores reconhecem que a extensão da área e o número de amostras limitam a transferência do modelo para outras regiões e que o NDVI não separa o solo exposto dos resíduos de culturas. A avaliação reamostrou amostras de uma mesma região, sem teste em uma região externa.
 
-Assim como este trabalho, o estudo aplica o TabPFN a dados do Sentinel-2 e controla a cobertura vegetal da superfície observada. Diferentemente dele, que prevê carbono orgânico do solo com apoio de variáveis climáticas e topográficas, este trabalho predirá teores de elementos e óxidos e classificará litologias a partir dos dados espectrais.
+Assim como este trabalho, o estudo aplica o TabPFN a dados do Sentinel-2 e controla a cobertura vegetal da superfície observada. Diferentemente dele, que prevê carbono orgânico do solo com apoio de variáveis climáticas e topográficas, este trabalho predirá teores de elementos e óxidos e ocorrências minerais a partir dos dados espectrais.
