@@ -238,3 +238,6 @@ fontes/revisao-bibliografica/pdfs/
 fontes/revisao-bibliografica/paginas/
 fontes/revisao-bibliografica/manifesto.json
 fontes/revisao-bibliografica/README.md
+
+# Worktrees locais (fluxo superpowers)
+.worktrees/
