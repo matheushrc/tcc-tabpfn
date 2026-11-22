@@ -132,7 +132,7 @@ Os códigos X, Y e Z também aparecem na base; seu significado não foi confirma
 
 ### Volume conferido
 
-Contagens obtidas no serviço em 4 de novembro de 2026. O retângulo usado (lon −51,1 a −39,8; lat −22,95 a −14,2) envolve Minas Gerais e inclui partes de estados vizinhos.
+Contagens obtidas no serviço em 4 de novembro de 2026, quando o recorte era MG; as contagens nacionais usadas em D24 estão em `docs/dados/dataset-brasil.md`. O retângulo usado (lon −51,1 a −39,8; lat −22,95 a −14,2) envolve Minas Gerais e inclui partes de estados vizinhos.
 
 | Tabela | Brasil | Retângulo de MG | O que mede |
 | --- | --- | --- | --- |
@@ -146,9 +146,9 @@ O projeto do Quadrilátero Ferrífero tem 1.136 amostras de mineralometria. Outr
 
 ### Ressalvas para o TCC
 
-1. **Não é solo da área de mineração.** A mineralometria vem de sedimento de rio concentrado e representa a bacia a montante do ponto, não o pixel onde foi coletado. A associação natural com o Sentinel-2 seria por bacia de drenagem, e não ponto a pixel; a camada `Drenagem` do dataset do coorientador pode apoiar essa delimitação.
-2. **O solo tem química elementar.** Permite prever teores de elementos (Fe, Al, Mn…), que correspondem ao alvo de composição química do TCC (D01). É a tabela mais diretamente útil desta base, por ser de amostra pontual.
-3. **Relação com as áreas de mineração.** As áreas de processos minerários da ANM (SIGMINE, já presente no dataset do coorientador) são requeridas pelas empresas. Não foi encontrada base pública com as análises apresentadas nesses processos. A base do SGB é o levantamento público oficial de apoio à prospecção, mas não foi verificado se é usada formalmente para delimitar áreas da ANM.
+1. **Não é solo da área de mineração.** A mineralometria vem de sedimento de rio concentrado e representa a bacia a montante do ponto, não o pixel onde foi coletado. A associação natural com o Sentinel-2 seria por bacia de drenagem, e não ponto a pixel; a drenagem da BCIM do IBGE (`datasets/brasil/Drenagem/`, ver `docs/dados/dataset-brasil.md`) pode apoiar essa delimitação.
+2. **O solo tem química elementar.** Permite prever teores de elementos (Fe, Al, Mn…), que correspondem ao alvo de composição química de D01 (permanência em D24); na proposta vigente, a geoquímica do SGB entra como atributo (D24). É a tabela mais diretamente útil desta base, por ser de amostra pontual.
+3. **Relação com as áreas de mineração.** As áreas de processos minerários da ANM (SIGMINE, baixado em escala nacional; ver `docs/dados/dataset-brasil.md`) são requeridas pelas empresas. Não foi encontrada base pública com as análises apresentadas nesses processos. A base do SGB é o levantamento público oficial de apoio à prospecção, mas não foi verificado se é usada formalmente para delimitar áreas da ANM.
 4. **Datas.** A base é atualizada continuamente, mas cada amostra tem a data da sua análise (por exemplo, 2009 no Quadrilátero Ferrífero).
 
 ### Outras fontes encontradas

@@ -28,7 +28,8 @@ altere o índice ou o histórico do git, mesmo que o prompt peça: o controlador
 - Questione o esboço recebido em vez de confirmá-lo; aponte o que ele deixa de fora ou erra.
 - Quando faltar evidência, não chute: devolva a pergunta ao autor.
 - Não leia `.env`, `.git/` nem `.claude/worktrees/`, e não leia nem copie credenciais.
-- Aponte drift: docs vivos que contradizem `docs/decisoes-projeto.md` ou uns aos outros, com
+- Aponte drift: docs vivos que contradizem `docs/decisoes-projeto.md` ou uns aos outros. O
+  histórico (`docs/decisoes-historico.md`) registra o passado e não é drift. Cite
   `arquivo:linha` dos dois lados (`uv run python scripts/docs_sumario.py --estados` ajuda).
 - Não altere nada. Devolva o relatório como texto na resposta (tabela de classificação, duplicações
   e misturas, esboço revisado e perguntas ao autor); quem grava o arquivo é o controlador.

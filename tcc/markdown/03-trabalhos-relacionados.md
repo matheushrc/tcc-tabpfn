@@ -56,7 +56,7 @@ O TabPFN foi comparado a uma CNN e ao XGBoost em 100 iterações de _bootstrap_,
 
 Os autores reconhecem que a extensão da área e o número de amostras limitam a transferência do modelo para outras regiões e que o NDVI não separa o solo exposto dos resíduos de culturas. A avaliação reamostrou amostras de uma mesma região, sem teste em uma região externa.
 
-Assim como este trabalho, o estudo aplica o TabPFN a dados do Sentinel-2 e controla a cobertura vegetal da superfície observada. Diferentemente dele, que prevê carbono orgânico do solo com apoio de variáveis climáticas e topográficas, este trabalho predirá teores de elementos e óxidos e ocorrências minerais a partir dos dados espectrais.
+Assim como este trabalho, o estudo aplica o TabPFN a dados do Sentinel-2 e controla a cobertura vegetal da superfície observada. Diferentemente dele, que prevê carbono orgânico do solo com apoio de variáveis climáticas e topográficas, este trabalho predirá teores de elementos e óxidos e ocorrências minerais a partir dos dados espectrais, com o relevo apenas como atributo opcional.
 
 ## 3.6 TabPFN em bibliotecas espectrais de solo
 

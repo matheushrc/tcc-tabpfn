@@ -28,5 +28,8 @@ histórico do git, mesmo que o prompt peça: o controlador commita.
   docs vivos e confira o fato contra `docs/decisoes-projeto.md`; rode também
   `uv run python scripts/docs_sumario.py --estados` e aponte estados fora do registro.
 - Reprove decisão sem distinção entre autor e IA ou sem data absoluta (`AGENTS.md`).
+- Registro: reprove mudança na tabela de `docs/decisoes-projeto.md` sem linha nova em
+  `docs/decisoes-historico.md` no mesmo diff; linha da tabela com colchete de substituição,
+  estado descartado ou texto anterior; ID reaproveitado; e entrada antiga do histórico editada.
 - Aponte qualquer credencial, token ou URL temporária de sessão no diff.
 - Não edite nada. Devolva "aprovado" ou a lista de achados.

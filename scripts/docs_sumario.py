@@ -21,6 +21,7 @@ from pathlib import Path
 
 SUMARIO = "docs/SUMARIO.md"
 REGISTRO = "docs/decisoes-projeto.md"
+HISTORICO = "docs/decisoes-historico.md"
 SEM_TITULO = "(sem título)"
 
 # Não entram no sumário: transcrições, exemplos e LaTeX.
@@ -238,7 +239,7 @@ def _verificar(raiz: Path) -> int:
 def _estados(raiz: Path) -> int:
     """Lista palavras de estado fora do registro; só informa, não falha."""
     arquivos = _arquivos_versionados(raiz)
-    for caminho in (d for d in _docs(arquivos) if not _fora_do_escopo(d) and d != REGISTRO):
+    for caminho in (d for d in _docs(arquivos) if not _fora_do_escopo(d) and d not in (REGISTRO, HISTORICO)):
         cerca = False
         for numero, linha in enumerate(_linhas(_ler(raiz, caminho)), start=1):
             if _CERCA.match(linha):
