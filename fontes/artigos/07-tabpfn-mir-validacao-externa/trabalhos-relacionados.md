@@ -1,4 +1,4 @@
-# 3.6 TabPFN em espectros MIR de solo com validação externa
+# 3.7 TabPFN em espectros MIR de solo com validação externa
 
 [Huang et al. (2026)](https://www.sciencedirect.com/science/article/pii/S0016706126002089) investigaram se o TabPFN pode ser utilizado como ferramenta genérica de predição em bibliotecas espectrais de solo de diferentes tamanhos. Os autores utilizaram espectros MIR de 11.564 amostras dos Estados Unidos para prever carbono total, pH e fósforo extraível pelo método Olsen, propriedades de previsibilidade alta, média e baixa a partir desses espectros. As 620 amostras do Texas formaram o teste interno, e 387 amostras do leste da Austrália, medidas em outro laboratório, foram utilizadas como teste externo, apenas para o carbono total.
 

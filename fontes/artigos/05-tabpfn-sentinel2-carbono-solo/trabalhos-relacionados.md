@@ -1,4 +1,4 @@
-# 3.4 TabPFN e composições de solo exposto do Sentinel-2
+# 3.5 TabPFN e composições de solo exposto do Sentinel-2
 
 [Chen et al. (2026)](https://www.nature.com/articles/s41598-025-33682-4) avaliaram o TabPFN no mapeamento do carbono orgânico do solo em áreas agrícolas da região de solos negros do nordeste da China. Os autores apontam duas dificuldades: separar a reflectância do solo exposto dos efeitos da vegetação, dos resíduos de culturas e da umidade, e depender de modelos que exigem muitos dados, enquanto os levantamentos de solo costumam ter poucas amostras.
 

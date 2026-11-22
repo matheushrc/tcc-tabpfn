@@ -1,4 +1,4 @@
-# 3.1 TabPFN na classificação de culturas com Sentinel-2
+# 3.2 TabPFN na classificação de culturas com Sentinel-2
 
 [Yang, Huang e Lu (2026)](https://www.mdpi.com/2072-4292/18/11/1857) avaliaram o TabPFN no mapeamento de culturas agrícolas em Yuxi, na China, uma região montanhosa com campos fragmentados, cobertura frequente de nuvens e dificuldade de obter amostras de treinamento.
 
