@@ -14,37 +14,37 @@ Esta pasta reúne os documentos da revisão bibliográfica e os sete estudos sel
 
 Os títulos ficam no front matter; o corpo preserva autores, texto, citações, figuras, tabelas e referências. Os links usam URLs completas. As figuras de cada artigo ficam na pasta `assets/` do próprio artigo, nomeadas `figura-<número>.<extensão>` (por exemplo, `figura-1.jpg` e `figura-a1.svg` para figuras de apêndice); no Markdown, cada imagem usa o caminho relativo `assets/` e aponta para a URL original da imagem, na maior resolução disponível. As chamadas de figura no texto, como `[Fig. 1](assets/figura-1.jpg)`, também apontam para esses arquivos locais. As tabelas usam Markdown, com repetição das células mescladas nas linhas ou colunas correspondentes e combinação dos níveis de cabeçalho. Os arquivos Markdown dos artigos não usam tags HTML; índices e expoentes usam matemática LaTeX, e as citações mantêm links em Markdown. As fórmulas usam LaTeX, sem MathML dentro dos delimitadores matemáticos. Autores, siglas, listas e referências têm formatação contínua, e controles de navegação foram removidos. Confira os elementos na fonte original antes de transcrever dados para o TCC.
 
-Em Kutzke, os botões de tabelas e figuras foram abertos pelo Playwright. Os cinco CSVs são exportações das tabelas publicadas, e não uma cópia dos registros brutos de espectroscopia e geoquímica. A procedência dos arquivos está documentada em `04-hiperespectral-predicao-geoquimica/assets/README.md`. Os textos de análise já redigidos foram preservados. Cada pasta possui um arquivo `trabalhos-relacionados.md` com roteiro de leitura identificado como sugestão da IA, para apoiar a escrita pelo autor.
+Em Kutzke, os botões de tabelas e figuras foram abertos pelo Playwright. Os cinco CSVs são exportações das tabelas publicadas, e não uma cópia dos registros brutos de espectroscopia e geoquímica. A procedência dos arquivos está documentada em `03-hiperespectral-predicao-geoquimica/assets/README.md`. Os textos de análise já redigidos foram preservados. Cada pasta possui um arquivo `trabalhos-relacionados.md` com roteiro de leitura identificado como sugestão da IA, para apoiar a escrita pelo autor.
 
 Os artigos usam prefixos numéricos e nomes curtos relacionados ao assunto. As notícias estão em `fontes/noticias/`; documentos institucionais e legislação podem ser guardados em `fontes/documentos-institucionais/` e `fontes/legislacao/` quando forem adicionados.
 
 ## Revisão bibliográfica
 
-A pasta `fontes/revisao-bibliografica/` reúne a proposta do capítulo 2 em `proposta.md`, o índice das fontes em `README.md`, o inventário técnico em `manifesto.json`, os PDFs em `pdfs/` e as páginas web em `paginas/`.
+A pasta `fontes/revisao-bibliografica/` guarda, fora do git, as cópias locais das fontes do capítulo 2: o índice em `README.md`, o inventário técnico em `manifesto.json`, os PDFs em `pdfs/` e as páginas web em `paginas/`. Só `manifesto-links-originais.json` pode ser versionado. A proposta do capítulo, já incorporada a `tcc/markdown/02-revisao-bibliografica.md`, foi arquivada em `docs/arquivo/proposta-revisao-bibliografica.md`.
 
-As 41 fontes citadas no texto proposto foram arquivadas em 5 de novembro de 2026: 63 PDFs e 7 HTMLs. O relatório de Taggart é distribuído em partes, preservadas em `pdfs/taggart2002/`; Clark possui o HTML do autor e uma reprodução desse conteúdo em PDF. Edições, manuscritos, origem dos downloads e limites das cópias estão descritos no índice da pasta. Estes documentos apoiam o capítulo 2 e não alteram a seleção dos sete estudos do capítulo 3. A proposta ainda aguarda revisão e finalização pelo autor.
+As 41 fontes da proposta foram arquivadas em 5 de novembro de 2026: 63 PDFs e 7 HTMLs. O relatório de Taggart é distribuído em partes, preservadas em `pdfs/taggart2002/`; Clark possui o HTML do autor e uma reprodução desse conteúdo em PDF. Edições, manuscritos, origem dos downloads e limites das cópias estão descritos no índice da pasta.
 
 ## Artigos removidos da seleção
 
-Em 4 de novembro de 2026, o autor removeu Peña-Asensio et al. (2024) e Luo et al. (2025) da seleção e incluiu Yang et al. (2026); os motivos estão em `docs/artigos.md`. As conversões foram preservadas, sem numeração, em `artigos-descartados/tabpfn-minerais-meteoritos/` e `artigos-descartados/tabpfn-litologia-reservatorios/`, e não integram o capítulo 3.
+As conversões dos estudos removidos ficam, sem numeração, em `artigos-descartados/` e não integram o capítulo 3. Os motivos de cada remoção estão em `docs/artigos.md`.
 
 ## Ordem de preparação das análises
 
-A ordem foi definida em 4 de novembro de 2026 pelo autor, a partir de proposta da IA, para acompanhar o título e o problema de pesquisa: previsão de ocorrências (classificação), composição química e, por fim, harmonização e generalização entre regiões. Em cada bloco, os estudos vão do mais distante ao mais próximo da proposta do TCC. A pasta `NN` corresponde à subseção `3.N` de `tcc/markdown/03-trabalhos-relacionados.md`; as subseções ainda não redigidas ficam como lacunas na numeração do Markdown até sua incorporação, e o LaTeX numera automaticamente as seções presentes. Os arquivos `trabalhos-relacionados.md` das análises já redigidas preservam esses textos; apesar do nome, pertencem a Trabalhos Relacionados. A fundamentação conceitual de `tcc/markdown/02-revisao-bibliografica.md` continua pendente. A ordem não representa compromisso de implementar os métodos dos artigos.
+Os motivos da posição e os limites de cada estudo estão em `docs/artigos.md`. A ordem foi definida em 4 de novembro de 2026 pelo autor, a partir de proposta da IA, para acompanhar o título e o problema de pesquisa: previsão de ocorrências (classificação), composição química e, por fim, harmonização e generalização entre regiões. Em cada bloco, os estudos vão do mais distante ao mais próximo da proposta do TCC. A pasta `NN` corresponde à subseção `3.N` de `tcc/markdown/03-trabalhos-relacionados.md`; as subseções ainda não redigidas ficam como lacunas na numeração do Markdown até sua incorporação, e o LaTeX numera automaticamente as seções presentes. Os arquivos `trabalhos-relacionados.md` das análises já redigidas preservam esses textos; apesar do nome, pertencem a Trabalhos Relacionados. A ordem não representa compromisso de implementar os métodos dos artigos.
 
-| Ordem | Estudo | Bloco | Situação da análise | Motivo da posição e limites a preservar |
-| --- | --- | --- | --- | --- |
-| 01 | Franca-Rocha et al. | Classificação | Texto da seção 3.1 redigido pela IA, finalizado pelo autor e incorporado | Sentinel-2 L2A por pixel com _Random Forest_ para prospectividade de ferro na Bahia, conferida com processos da ANM; rótulos derivados de duas minas e do SAM, teste aleatório e uma única substância. |
-| 02 | Yang et al. | Classificação | Texto da seção 3.2 redigido pela IA, finalizado pelo autor e incorporado | TabPFN com atributos Sentinel-2 por pixel, comparado com RF, XGBoost e CatBoost, com poucas amostras, zonas de exclusão espacial e ablação das coordenadas; as classes são culturas agrícolas e não há teste em outra região. |
-| 03 | Kutzke et al. | Composição química | Texto da seção 3.3 redigido pela IA, finalizado pelo autor e incorporado | Múltiplos alvos geoquímicos a partir de espectros de testemunhos; a transferência entre crátons é comparada com outro modelo, não com análises independentes. |
-| 04 | Zhang et al. | Composição química | Texto da seção 3.4 finalizado e incorporado | Passagem para dados de satélite com alvo geoquímico; o modelo geoestatístico não fornece novas observações laboratoriais independentes. |
-| 05 | Chen et al. | Composição química | Texto da seção 3.5 redigido pela IA, finalizado pelo autor e incorporado | TabPFN com Sentinel-2 e controle de solo exposto, o mais próximo do sensor proposto; o alvo é carbono orgânico. |
-| 06 | Barkov et al. | Harmonização e generalização | Texto da seção 3.6 finalizado e incorporado | TabPFN em bibliotecas espectrais de diferentes escalas e instrumentos; limites das partições aleatórias. |
-| 07 | Huang et al. | Harmonização e generalização | Texto da seção 3.7 redigido pela IA, finalizado pelo autor e incorporado | Teste em região externa com espectros MIR, fechando o capítulo na questão da generalização; não demonstra transferência orbital para os alvos deste TCC. |
+| Ordem | Estudo | Bloco | Situação da análise |
+| --- | --- | --- | --- |
+| 01 | Franca-Rocha et al. | Classificação | Texto da seção 3.1 redigido pela IA, finalizado pelo autor e incorporado |
+| 02 | Yang et al. | Classificação | Texto da seção 3.2 redigido pela IA, finalizado pelo autor e incorporado |
+| 03 | Kutzke et al. | Composição química | Texto da seção 3.3 redigido pela IA, finalizado pelo autor e incorporado |
+| 04 | Zhang et al. | Composição química | Texto da seção 3.4 finalizado e incorporado |
+| 05 | Chen et al. | Composição química | Texto da seção 3.5 redigido pela IA, finalizado pelo autor e incorporado |
+| 06 | Barkov et al. | Harmonização e generalização | Texto da seção 3.6 finalizado e incorporado |
+| 07 | Huang et al. | Harmonização e generalização | Texto da seção 3.7 redigido pela IA, finalizado pelo autor e incorporado |
 
 ## Autoria das análises
 
-As análises de Zhang et al. (3.4) e Barkov et al. (3.6) foram escritas manualmente pelo autor, com revisão pontual da IA, e já estão incorporadas ao capítulo 3. As de Yang et al. (3.2), Kutzke et al. (3.3), Chen et al. (3.5) e Huang et al. (3.7) foram redigidas integralmente pela IA, a pedido do autor, em 4 de novembro de 2026, a partir do `artigo.md` de cada pasta e seguindo o padrão das seções manuais. No mesmo dia, a IA conferiu números, autoria e data de cada proposta na página original, com o MCP do Playwright: todos os valores conferiram; o ano de Huang et al. (Geoderma, jul. 2026) e de Chen et al. (Scientific Reports, v. 16, publicado em 5 jan. 2026) foi confirmado, e a divergência entre estanho, citado no texto de Kutzke et al., e zinco, presente nas tabelas, é do próprio artigo. Em 4 de novembro de 2026, o autor finalizou as quatro propostas, que foram incorporadas a `tcc/markdown/` e a `tcc/latex/` conforme E08 e P06 de `ABNT.md`. Os registros de terminologia e a divergência de fonte em Kutzke et al. foram preservados em `docs/terminologia.md`.
+As análises de Zhang et al. e Barkov et al. foram escritas pelo autor; as demais foram redigidas pela IA a pedido do autor e finalizadas por ele (E08 e P06 de `ABNT.md`). Registros de terminologia em `docs/terminologia.md`.
 
 | Pasta | Estudo | Autoria do texto |
 | --- | --- | --- |
@@ -55,7 +55,5 @@ As análises de Zhang et al. (3.4) e Barkov et al. (3.6) foram escritas manualme
 | 05 | Chen et al. | IA (integral), finalizado pelo autor |
 | 06 | Barkov et al. | Autor |
 | 07 | Huang et al. | IA (integral), finalizado pelo autor |
-
-O estudo de Costa et al. (2019), de classificação litológica, foi movido para `artigos-descartados/mapeamento-litologico-carajas/` quando a litologia deixou de ser tarefa do TCC (D24). Em 22 de novembro de 2026, o autor incluiu Franca-Rocha et al. (2025) em seu lugar, na posição 01.
 
 Os títulos e as URLs originais dos sete estudos estão na tabela acima. Essa sequência organiza a leitura e a redação pelo autor, mantendo a separação entre conceitos no capítulo 2 e comparação de estudos no capítulo 3. Os textos só entram nos capítulos após a finalização pelo autor. As referências usadas apenas neles não entram em `tcc/latex/bibliografia.bib` enquanto não forem efetivamente citadas no TCC.

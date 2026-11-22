@@ -9,10 +9,11 @@
 
 ## Conversão de artigos
 
-- Para converter artigos em Markdown, siga o agente definido em `.agents/conversor-artigos.md`.
+- Para converter artigos em Markdown, siga o agente definido em `.claude/agents/conversor-artigos.md`.
 
 ## Decisões e coerência do projeto
 
+- Ao documentar, siga `docs/PADRAO-DOCS.md`: ache o doc dono na tabela do padrão ou em `docs/SUMARIO.md` e edite-o; não crie `.md` novo quando um dono já cobre o assunto. Confira drift: procure com `git grep` o valor ou o caminho antigo nos docs vivos e corrija o que o fato novo desmente. Ao terminar, regenere o sumário com `uv run python scripts/docs_sumario.py`.
 - Para resolver divergências, siga a decisão explícita mais recente do autor e atualize `docs/decisoes-projeto.md`; use esse registro para o escopo vigente, `tcc.conf` para os dados básicos e `ABNT.md` para as regras editoriais. Notas exploratórias, históricos, artigos e exemplos não definem compromissos do TCC. No registro, diferencie os estados atuais das entradas do histórico que já foram substituídas.
 - Ao comparar artigos com o TCC, preserve a distinção entre dados espectrais de satélite e outras modalidades de sensoriamento remoto, conforme a seção “Distinções que devem ser preservadas no texto” do registro. Não transfira os dados ou métodos de um artigo para a proposta do autor.
 - Sempre que o autor apresentar uma nova decisão, ideia ou mudança de escopo, consulte `docs/decisoes-projeto.md`, `tcc.conf` e os trechos pertinentes da introdução e da metodologia antes de incorporá-la ao trabalho.

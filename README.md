@@ -1,17 +1,19 @@
 # tcc-tabpfn
 
-## Escrita do TCC
+Pesquisa e escrita do TCC sobre o TabPFN com dados espectrais de satélite. O escopo vigente, as decisões e as pendências estão em `docs/decisoes-projeto.md`; os dados básicos, em `tcc.conf`. Este arquivo só aponta onde cada coisa está e não registra estados (pendente, finalizado, compilado).
 
-O texto principal da introdução está em `tcc/markdown/01-introducao.md`. Faça as revisões de conteúdo no Markdown. Ao finalizar explicitamente um capítulo ou seção, a IA deve incorporar o texto ao capítulo Markdown e atualizar seu par LaTeX em `tcc/latex/capitulos/`, seguindo o template da faculdade. Durante a elaboração, atualizações de LaTeX dependem de solicitação.
+## Mapa do repositório
 
-Os dados básicos do trabalho ficam em `tcc.conf`, no formato `chave=valor`. O projeto LaTeX está em `tcc/latex/`, com `principal.tex` como documento principal e `bibliografia.bib` para referências. `Template_UFFSTex/` preserva o modelo original.
+| Pasta ou arquivo | Conteúdo |
+| --- | --- |
+| `tcc/markdown/` | Capítulos em Markdown, que são a fonte do conteúdo. |
+| `tcc/latex/` | Projeto LaTeX: `principal.tex`, `capitulos/` com os mesmos nomes-base do Markdown, `bibliografia.bib` e a classe `UFFStex.cls`. |
+| `Template_UFFSTex/` | Template original da faculdade; deve ser preservado. |
+| `templates/` | Exemplos de escrita, como o TCC de referência em `templates/natanael/`; não integram os capítulos. |
+| `fontes/` | Material de apoio à escrita: artigos convertidos (`artigos/`, um por pasta, e `artigos-descartados/`), metodologia, normas ABNT (`normas/`), notícias e PDFs da revisão bibliográfica (locais). Índice em `fontes/README.md`. |
+| `docs/` | Documentação do projeto. Índice gerado em `docs/SUMARIO.md`; regras de escrita em `docs/PADRAO-DOCS.md`. |
+| `datasets/` | Dados locais, fora do git; cada pasta tem seu `README.md`. |
+| `scripts/` | Scripts auxiliares (`scripts/README.md`). |
+| `AGENTS.md`, `ABNT.md` | Regras de trabalho da IA e regras editoriais. |
 
-Para revisar no Overleaf, envie os arquivos de `tcc/latex/`, preservando as subpastas, e selecione `principal.tex` como documento principal. A tentativa de compilação local ficou bloqueada no carregamento do Babel/MiKTeX; o PDF ainda não foi validado. Título em inglês, palavras-chave, resumo e abstract permanecem pendentes para o fim do TCC I; a versão atual contém introdução e trabalhos relacionados; a revisão conceitual está pendente.
-
-Consulte `ARCHITECTURE.md` para a organização das áreas, `AGENTS.md` para as regras de trabalho e `ORGANIZACAO_TCC.md` para o plano e as verificações da reorganização. `templates/natanael/` contém o documento integral de referência e uma reconstrução LaTeX editável a partir do PDF; `templates/guia-trabalhos-relacionados.md` contém o guia de escrita.
-
-## Escopo vigente
-
-O trabalho pretende avaliar o TabPFN para classificação litológica e predição da composição química a partir de dados espectrais de satélite, associados a referências geológicas e laboratoriais compatíveis. A viabilidade dos alvos e o protocolo experimental ainda dependem das verificações registradas em `docs/decisoes-projeto.md` (D01–D07).
-
-As decisões e pendências ficam nesse registro; `tcc.conf` define os dados básicos e `ABNT.md` reúne as regras editoriais. Notas de pesquisa, artigos e exemplos não substituem essas definições. As ideias do autor para explorar em 2027 estão preservadas em `docs/historico-planejamento.md`. Permanecem possibilidades em aberto, sem constituir compromissos do escopo atual.
+O fluxo de escrita (`fontes/` → `tcc/markdown/` → `tcc/latex/capitulos/`) e a compilação com Docker estão descritos em `AGENTS.md`.
