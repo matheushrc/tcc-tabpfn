@@ -1,6 +1,6 @@
 # Estudos do capítulo 3
 
-Dono dos motivos da seleção e dos limites de cada estudo de Trabalhos Relacionados. A pasta, o estado da análise e a autoria de cada texto estão em `fontes/README.md`; as decisões sobre a seleção e os motivos das remoções, em D17, D18 e D24 de `docs/decisoes-projeto.md` e no histórico do registro; os estudos removidos ficam em `fontes/artigos-descartados/`. O orientador pediu de 6 a 8 trabalhos relacionados.
+Dono dos motivos da seleção e dos limites de cada estudo de Trabalhos Relacionados. A pasta, o estado da análise e a autoria de cada texto estão em `fontes/README.md`; as decisões sobre a seleção e os motivos das remoções, em D17, D18 e D24 de `docs/decisoes-projeto.md` e em `docs/decisoes-historico.md`; os estudos removidos ficam em `fontes/artigos-descartados/`. O orientador pediu de 6 a 8 trabalhos relacionados.
 
 A ordem segue as pastas `fontes/artigos/01`–`07` e as subseções 3.1–3.7: previsão de ocorrências por classificação (1–2), composição química (3–5) e harmonização e generalização entre regiões (6–7). Em cada bloco, os estudos vão do mais distante ao mais próximo da proposta.
 

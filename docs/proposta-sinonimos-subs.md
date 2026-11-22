@@ -4,16 +4,16 @@
 
 ## Resumo
 
-- O TabPFN-3.5 aceita até 160 classes, 1 milhão de amostras e 20 mil atributos; o relatório técnico recomenda até 6 mil. O limite de classes foi lido na configuração gravada nos pesos, porque a documentação não o informa.
+- O TabPFN-3.5 aceita até 160 classes (limites do modelo em D20 de `docs/decisoes-projeto.md`). O número foi lido na configuração gravada nos pesos, porque a documentação não o informa.
 - O agrupamento por elemento resulta em 35 classes, que reúnem 100.447 dos 270.994 processos ativos da ANM. As maiores são ouro (42.757), ferro (13.955), cobre (9.857), manganês (5.555), estanho (5.263), lítio (4.423), silício (3.583), terras raras (3.138), alumínio (2.679) e titânio (2.367).
 - O fuzzy matching por caracteres ajudou pouco. Com corte de 0,85, juntava rochas a elementos: "ARENITO" a arsênio, "CALCÁRIO MAGNESIANO" a magnésio. Com corte de 0,90, agrupou só "MINÉRIO DE ARSÊNICO". Os sinônimos se resolvem pelo prefixo e pela tabela de minerais; o fuzzy serve para listar casos a conferir.
-- Pendentes para o autor: quais nomes formam o silício; os nomes ambíguos; os metais alcalinos e alcalinoterrosos de uso industrial; o tratamento das classes raras.
+- Questões abertas desta proposta (estado em D24): quais nomes formam o silício; os nomes ambíguos; os metais alcalinos e alcalinoterrosos de uso industrial; o tratamento das classes raras.
 
 ## Limite de classes do TabPFN-3.5
 
 O relatório técnico do TabPFN-3.5 ([Prior Labs, 2026](https://arxiv.org/abs/2609.17895)), o [README do pacote](https://github.com/PriorLabs/TabPFN) e o [cartão do modelo](https://huggingface.co/Prior-Labs/tabpfn_3_5) não informam um número máximo de classes. O README cita apenas a extensão `many_class` para problemas que "exceed TabPFN's built-in class limit", sem dar o número.
 
-O número está na configuração gravada no próprio arquivo de pesos. Foi lido no cabeçalho dos arquivos `tabpfn-v3.5-20260909.safetensors` e `tabpfn-v3.5-20260909_multiclass.safetensors`, baixados só até o fim do cabeçalho, sem os pesos, do [repositório do modelo](https://huggingface.co/Prior-Labs/tabpfn_3_5). Os dois arquivos trazem `MAX_NUMBER_OF_CLASSES = 160`, `max_num_classes = 160`, `MAX_NUMBER_OF_SAMPLES = 1000000` e `MAX_NUMBER_OF_FEATURES = 20000`.
+O número está na configuração gravada no próprio arquivo de pesos. Foi lido no cabeçalho dos arquivos `tabpfn-v3.5-20260909.safetensors` e `tabpfn-v3.5-20260909_multiclass.safetensors`, baixados só até o fim do cabeçalho, sem os pesos, do [repositório do modelo](https://huggingface.co/Prior-Labs/tabpfn_3_5). Os dois arquivos trazem `MAX_NUMBER_OF_CLASSES = 160` e `max_num_classes = 160`; os demais limites gravados estão em D20.
 
 No [código do pacote](https://github.com/PriorLabs/TabPFN), versão 10.2.0, a partir do commit `e1a3550` de 20/11/2026, o classificador recusa conjuntos com mais classes que esse valor (`validate_num_classes` em `src/tabpfn/validation.py`). O valor padrão de 10 em `inference_config.py` vale apenas para os modelos v2 e v2.5; a partir da v3, a configuração vem do checkpoint.
 

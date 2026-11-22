@@ -19,12 +19,13 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
 
 ## docs/PADRAO-DOCS.md — Padrão dos docs
 
-- `1-73` Padrão dos docs
-  - `5-27` Dono de cada assunto
-  - `29-34` Antes de documentar
-  - `36-49` Drift
-  - `51-56` Estrutura de um arquivo
-  - `58-73` Sumário
+- `1-84` Padrão dos docs
+  - `5-28` Dono de cada assunto
+  - `30-35` Antes de documentar
+  - `37-45` Decisões
+  - `47-60` Drift
+  - `62-67` Estrutura de um arquivo
+  - `69-84` Sumário
 
 ## docs/artigos.md — Estudos do capítulo 3
 
@@ -87,18 +88,22 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
     - `147-152` Ressalvas para o TCC
     - `154-159` Outras fontes encontradas
 
+## docs/decisoes-historico.md — Histórico das decisões do TCC
+
+- `1-81` Histórico das decisões do TCC
+
 ## docs/decisoes-projeto.md — Registro de decisões, ideias e pendências do TCC
 
-- `1-214` Registro de decisões, ideias e pendências do TCC
-  - `5-9` Finalidade e uso
-  - `11-42` Escopo registrado
-  - `44-54` Distinções que devem ser preservadas no texto
-  - `56-60` Fundamentação e limites dos artigos discutidos
-  - `62-69` Pendências antes de fechar a metodologia
-  - `71-77` Abrangência mineral e alternativa de terras raras
-  - `79-87` Organização dos trabalhos e extensão multimodal opcional
-  - `89-95` Organização editorial e obtenção das fontes
-  - `97-214` Conferência final e histórico
+- `1-96` Registro de decisões, ideias e pendências do TCC
+  - `5-11` Finalidade e uso
+  - `13-39` Escopo registrado
+  - `41-51` Distinções que devem ser preservadas no texto
+  - `53-57` Fundamentação e limites dos artigos discutidos
+  - `59-66` Pendências antes de fechar a metodologia
+  - `68-74` Abrangência mineral e alternativa de terras raras
+  - `76-84` Organização dos trabalhos e extensão multimodal opcional
+  - `86-92` Organização editorial e obtenção das fontes
+  - `94-96` Conferência final
 
 ## docs/proposta-sinonimos-subs.md — Proposta de agrupamento das substâncias (D24)
 
