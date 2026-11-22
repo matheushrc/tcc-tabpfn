@@ -1,6 +1,6 @@
 # 4 METODOLOGIA
 
-Este trabalho parte da revisão bibliográfica e da análise dos trabalhos relacionados, que orientaram a escolha dos dados, dos rótulos, dos modelos de comparação e das métricas de avaliação. A classificação litológica e a predição da composição química serão aplicadas a elementos e regiões delimitados, priorizando os elementos de terras raras, e o recorte final será definido conforme a disponibilidade de referências adequadas e os resultados das avaliações preliminares. As etapas previstas são:
+Este trabalho parte da revisão bibliográfica e da análise dos trabalhos relacionados, que orientaram a escolha dos dados, dos rótulos, dos modelos de comparação e das métricas de avaliação. A previsão de ocorrências minerais e a predição da composição química serão aplicadas a minérios, elementos e regiões delimitados, priorizando os elementos de terras raras, e o recorte final será definido conforme a disponibilidade de referências adequadas e os resultados das avaliações preliminares. As etapas previstas são:
 
 a) identificação dos conjuntos de dados e dos rótulos utilizados nos trabalhos relacionados;
 
@@ -14,7 +14,7 @@ e) disponibilização dos conjuntos derivados no Kaggle.
 
 ## 4.1 IDENTIFICAÇÃO DOS CONJUNTOS DE DADOS E DOS RÓTULOS
 
-Serão identificados os conjuntos de dados utilizados pelos autores dos trabalhos relacionados, com seus atributos (cabeçalhos) e rótulos: classes litológicas, no caso da classificação, e teores de elementos ou óxidos medidos em laboratório, no caso da regressão. Também serão registradas a procedência dos rótulos, o material amostrado e o método analítico, para distinguir referências de campo ou de laboratório de rótulos extraídos de mapas existentes. Essa estrutura servirá de modelo para organizar os dados brasileiros.
+Serão identificados os conjuntos de dados utilizados pelos autores dos trabalhos relacionados, com seus atributos (cabeçalhos) e rótulos: presença ou ausência do minério selecionado, no caso da classificação, e teores de elementos ou óxidos medidos em laboratório, no caso da regressão. Também serão registradas a procedência dos rótulos, o material amostrado e o método analítico, para distinguir referências de campo ou de laboratório de rótulos administrativos, como os processos minerários da ANM, em que um requerimento não comprova a ocorrência do minério. Como fontes de ocorrência, serão priorizados os processos em fase de lavra ou licenciamento e as ocorrências minerais registradas pelo Serviço Geológico do Brasil (SGB), conforme a disponibilidade. Essa estrutura servirá de modelo para organizar os dados brasileiros.
 
 ## 4.2 CONSTRUÇÃO DO CONJUNTO DE DADOS BRASILEIRO
 
@@ -24,7 +24,7 @@ Com o conjunto montado, será realizado um estudo de ablação de atributos (_fe
 
 ## 4.3 MODELOS
 
-O TabPFN, na versão 3.5, será aplicado à classificação litológica e à predição da composição química, recebendo os exemplos de treinamento como contexto, sem que seus parâmetros sejam treinados novamente. Como o modelo de regressão prevê uma variável por vez, será ajustado um modelo para cada elemento ou óxido.
+O TabPFN, na versão 3.5, será aplicado à previsão de ocorrências minerais e à predição da composição química, recebendo os exemplos de treinamento como contexto, sem que seus parâmetros sejam treinados novamente. Como o modelo de regressão prevê uma variável por vez, será ajustado um modelo para cada elemento ou óxido.
 
 Para comparação, serão treinados nos mesmos dados modelos utilizados nos trabalhos relacionados, como _Random Forest_ ([Breiman, 2001](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)), XGBoost, SVM, kNN e PLSR, que representam diferentes famílias de algoritmos. A seleção final dependerá da compatibilidade de cada modelo com os dados construídos.
 
@@ -34,7 +34,7 @@ Para avaliar a capacidade de generalização, os dados serão divididos consider
 
 Para avaliar se a integração de dados de diferentes regiões melhora a generalização, os modelos serão treinados com dados de uma única região e com dados de múltiplas regiões, e testados na mesma região externa. Os resultados serão registrados mesmo que não haja ganho de desempenho.
 
-Na classificação litológica, serão utilizadas a acurácia global e o F1 macro, apresentados na seção 2.6. O F1 macro será calculado como a média aritmética dos F1 de cada classe, conforme [Opitz e Burst (2021)](https://arxiv.org/abs/1911.03347), atribuindo o mesmo peso a classes com diferentes quantidades de amostras ([Sokolova; Lapalme, 2009](https://www.sciencedirect.com/science/article/pii/S0306457309000259)). Na predição da composição química, serão utilizados o RMSE ([Chai; Draxler, 2014](https://gmd.copernicus.org/articles/7/1247/2014/)), o MAE ([Willmott; Matsuura, 2005](https://www.int-res.com/abstracts/cr/v30/n1/p79-82/)) e o R² ([Chicco; Warrens; Jurman, 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC8279135/)).
+Na previsão de ocorrências minerais, serão utilizadas a acurácia global e o F1 macro, apresentados na seção 2.6. O F1 macro será calculado como a média aritmética dos F1 de cada classe, conforme [Opitz e Burst (2021)](https://arxiv.org/abs/1911.03347), atribuindo o mesmo peso a classes com diferentes quantidades de amostras ([Sokolova; Lapalme, 2009](https://www.sciencedirect.com/science/article/pii/S0306457309000259)). Na predição da composição química, serão utilizados o RMSE ([Chai; Draxler, 2014](https://gmd.copernicus.org/articles/7/1247/2014/)), o MAE ([Willmott; Matsuura, 2005](https://www.int-res.com/abstracts/cr/v30/n1/p79-82/)) e o R² ([Chicco; Warrens; Jurman, 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC8279135/)).
 
 ## 4.5 DISPONIBILIZAÇÃO DOS DADOS
 
