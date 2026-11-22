@@ -2,7 +2,7 @@
 \chapter{REVISÃO BIBLIOGRÁFICA}
 \label{chap:revisao-bibliografica}
 
-Este capítulo apresenta os conceitos usados nos capítulos seguintes: o sensoriamento remoto e o comportamento espectral dos materiais, as características do Sentinel-2, a distinção entre litologia e composição química, o aprendizado de máquina supervisionado em dados tabulares, o funcionamento do TabPFN e as formas de avaliar modelos preditivos com dados espaciais.
+Este capítulo apresenta os conceitos usados nos capítulos seguintes: o sensoriamento remoto e o comportamento espectral dos materiais, as características do Sentinel-2, a distinção entre minério e composição química, o aprendizado de máquina supervisionado em dados tabulares, o funcionamento do TabPFN e as formas de avaliar modelos preditivos com dados espaciais.
 
 \section{SENSORIAMENTO REMOTO E COMPORTAMENTO ESPECTRAL}
 
@@ -20,9 +20,9 @@ As imagens são distribuídas em níveis de processamento. O nível 1C fornece a
 
 van der Meer, van der Werff e van Ruitenbeek \cite{vandermeer2014} avaliaram o potencial do Sentinel-2 para a geologia com dados simulados a partir de um sensor hiperespectral aerotransportado. As razões entre bandas permitiram mapear óxidos de ferro e minerais com ferro ferroso, com resultados semelhantes aos do \textit{Advanced Spaceborne Thermal Emission and Reflection Radiometer} (ASTER). Por outro lado, as razões usadas com o ASTER para carbonatos, micas e argilominerais não têm equivalente no Sentinel-2, porque três bandas do infravermelho de ondas curtas do ASTER estão contidas em uma única banda do Sentinel-2, que também não possui bandas no infravermelho termal.
 
-\section{LITOLOGIA E COMPOSIÇÃO QUÍMICA}
+\section{MINÉRIO E COMPOSIÇÃO QUÍMICA}
 
-O termo litologia designa o estudo e a descrição de uma rocha e é frequentemente usado para nomear a própria rocha \cite{winge2018a}. Na classificação litológica, cada amostra recebe uma classe que indica o tipo de rocha, definida por observação de campo, por análise de laboratório ou por um mapa geológico.
+Minério é o mineral ou a rocha de interesse econômico, ou a rocha que contém minerais de interesse econômico, suscetíveis de serem extraídos e processados economicamente \cite{winge2018a}. Uma ocorrência de minério só constitui uma jazida quando sua quantidade, seu teor e suas características, junto com condições de infraestrutura e localização, permitem a exploração econômica \cite{winge2018c}. Na previsão de ocorrências minerais, cada amostra recebe uma classe que indica a presença ou a ausência de um minério, definida por registros de ocorrência, como descrições de campo e áreas em lavra; prever uma ocorrência não equivale a identificar uma jazida.
 
 A geoquímica estuda a composição química dos constituintes do planeta \cite{winge2018b}. Os dados geoquímicos são organizados em óxidos de elementos maiores, elementos-traço e isótopos, obtidos por técnicas como a fluorescência de raios X e a espectrometria de massa com plasma indutivamente acoplado \cite{rollinson2021}.
 
@@ -30,7 +30,7 @@ A composição química, expressa pelos teores de elementos ou óxidos, difere d
 
 \section{APRENDIZADO DE MÁQUINA SUPERVISIONADO EM DADOS TABULARES}
 
-No aprendizado supervisionado, o modelo aprende a fazer predições a partir de dados em que os rótulos, isto é, os valores da variável resposta, são observados \cite{izbicki2020}. Quando a resposta é quantitativa, o problema é de regressão; quando é qualitativa, de classificação. Neste trabalho, a classe litológica corresponde a uma tarefa de classificação, e o teor de um elemento ou óxido, a uma tarefa de regressão. Os dados são tabulares: cada linha é uma amostra, e as colunas são atributos, como a reflectância em cada banda.
+No aprendizado supervisionado, o modelo aprende a fazer predições a partir de dados em que os rótulos, isto é, os valores da variável resposta, são observados \cite{izbicki2020}. Quando a resposta é quantitativa, o problema é de regressão; quando é qualitativa, de classificação. Neste trabalho, a ocorrência de minério corresponde a uma tarefa de classificação, e o teor de um elemento ou óxido, a uma tarefa de regressão. Os dados são tabulares: cada linha é uma amostra, e as colunas são atributos, como a reflectância em cada banda.
 
 O desempenho no conjunto usado para ajustar o modelo é uma estimativa otimista do erro em novos dados, por isso parte dos dados é reservada para teste \cite{izbicki2020,james2013}. Quando o modelo apresenta erro pequeno no treinamento e grande no teste, ocorre o \textit{overfitting}: o modelo se ajusta à amostra específica, mas generaliza mal \cite{james2013}.
 

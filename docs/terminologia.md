@@ -22,7 +22,7 @@ Registros de pesquisa de tradução (E09 de `ABNT.md`) e de divergências nas fo
 
 ## Capítulo 2 — Revisão Bibliográfica
 
-Registros preservados de `fontes/revisao-bibliografica/proposta.md` quando o autor finalizou o capítulo, em 6 de novembro de 2026 (E08). Os links de download das cópias locais não constam deste registro.
+Registros preservados de `fontes/revisao-bibliografica/proposta.md` (hoje `docs/arquivo/proposta-revisao-bibliografica.md`) quando o autor finalizou o capítulo, em 6 de novembro de 2026 (E08). Os links de download das cópias locais não constam deste registro.
 
 ### Observações sobre a proposta
 
@@ -48,7 +48,7 @@ Registros preservados de `fontes/revisao-bibliografica/proposta.md` quando o aut
 
 **Siglas (E04).** Como o capítulo 2 precede o 3, passam a ser apresentadas aqui: ESA, MSI, ASTER, XGBoost, RMSE, MAE e R². Na finalização, retirar do capítulo 3 as expansões de XGBoost (3.2), R² (3.4) e RMSE (3.5), mantendo só a sigla.
 
-**Data das páginas da SentiWiki.** As páginas não informam data de publicação. Conforme a ABNT NBR 6023:2025 (`docs/abnt/nbr-6023-2025.pdf`, página da norma no GEDWeb não consultada), item 8.6.1.1, sem o ano de publicação usa-se o ano de copirraite precedido de "c"; por isso, as citações usam c2026, o ano do aviso "Copyright © 2026 European Space Agency" no rodapé das duas páginas. Evidências da pesquisa de 5 de novembro de 2026, com Playwright:
+**Data das páginas da SentiWiki.** As páginas não informam data de publicação. Conforme a ABNT NBR 6023:2025 (`fontes/normas/nbr-6023-2025.pdf`, página da norma no GEDWeb não consultada), item 8.6.1.1, sem o ano de publicação usa-se o ano de copirraite precedido de "c"; por isso, as citações usam c2026, o ano do aviso "Copyright © 2026 European Space Agency" no rodapé das duas páginas. Evidências da pesquisa de 5 de novembro de 2026, com Playwright:
 
 - [S2 Mission](https://sentiwiki.copernicus.eu/web/s2-mission) e [S2 Processing](https://sentiwiki.copernicus.eu/web/s2-processing) só trazem a última modificação, no metadado `page-last-modified` e no [sitemap](https://sentiwiki.copernicus.eu/sitemap.xml): 11 de agosto de 2026 e 5 de outubro de 2026. É data de atualização, não de publicação, mas confirma que as versões consultadas são de 2026.
 - A API do Confluence que hospeda o site, que daria a data de criação, recusa acesso público (HTTP 403).

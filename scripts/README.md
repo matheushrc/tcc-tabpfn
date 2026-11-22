@@ -1,4 +1,6 @@
-# Exportação do PDF original do GEDWeb
+# Scripts
+
+Dono da descrição dos scripts do repositório. A maior parte deste documento trata da exportação do PDF original do GEDWeb.
 
 Estes são os dois helpers do fluxo final, testado com a NBR 14724:2024, versão corrigida de 2025, pelo acesso institucional autorizado da UFFS. O resultado preserva texto, fontes, imagens, vetores e marcas institucionais; não usa OCR nem reconstrói páginas a partir de capturas de tela.
 
@@ -6,6 +8,8 @@ Estes são os dois helpers do fluxo final, testado com a NBR 14724:2024, versão
 
 - `exportar-pdf-gedweb.playwright.js`: função executada pelo MCP do Playwright na aba autenticada do visualizador.
 - `receber-pdf-gedweb.py`: receptor HTTP temporário em `127.0.0.1:37660`; abre o PDF com a senha recebida e salva uma cópia sem criptografia, validando todas as páginas.
+- `docs_sumario.py`: gera `docs/SUMARIO.md`, confere se está em dia (`--check`) e lista palavras de estado fora do registro de decisões (`--estados`); regras em `docs/PADRAO-DOCS.md`. Uso: `uv run python scripts/docs_sumario.py`.
+- `agrupar_substancias.py`: agrupa por elemento os nomes da coluna `SUBS` da ANM e das substâncias do SGB; proposta e uso em `docs/proposta-sinonimos-subs.md`.
 
 ## Execução
 
@@ -13,7 +17,7 @@ Estes são os dois helpers do fluxo final, testado com a NBR 14724:2024, versão
 2. No terminal, a partir da raiz do projeto, inicie o receptor. É necessário ter PyMuPDF (`fitz`) no ambiente Python:
 
    ```sh
-   python scripts/receber-pdf-gedweb.py --output docs/abnt/nbr-14724-2024.pdf
+   python scripts/receber-pdf-gedweb.py --output fontes/normas/nbr-14724-2024.pdf
    ```
 
 3. Em até 60 segundos, execute `browser_run_code_unsafe` do MCP Playwright passando:

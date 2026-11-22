@@ -239,5 +239,8 @@ fontes/revisao-bibliografica/paginas/
 fontes/revisao-bibliografica/manifesto.json
 fontes/revisao-bibliografica/README.md
 
-# Worktrees locais (fluxo superpowers)
-.worktrees/
+# Worktrees locais (padrão do Claude Code)
+.claude/worktrees/
+
+# Normas ABNT obtidas pelo GEDWeb (direitos autorais da ABNT; uso local)
+fontes/normas/*.pdf

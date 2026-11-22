@@ -1,22 +1,22 @@
-# Revisão bibliográfica — sete estudos prioritários
+# Estudos do capítulo 3
 
-Atualizada em 4 de novembro de 2026; a seleção de 9 de outubro de 2026 reunia oito estudos (ver “Revisão da seleção em 4 de novembro de 2026”). Consolida a lista anterior e a pesquisa multilíngue de TabPFN. A seleção prioriza aderência e complementaridade com D01–D07: litologia, composição química, integração orbital, harmonização e generalização regional. Não implica implementar todos os métodos citados.
+Dono dos motivos da seleção e dos limites de cada estudo de Trabalhos Relacionados. A pasta, o estado da análise e a autoria de cada texto estão em `fontes/README.md`; as decisões sobre a seleção e os motivos das remoções, em D17, D18 e D24 de `docs/decisoes-projeto.md` e no histórico do registro; os estudos removidos ficam em `fontes/artigos-descartados/`. O orientador pediu de 6 a 8 trabalhos relacionados.
+
+A ordem segue as pastas `fontes/artigos/01`–`07` e as subseções 3.1–3.7: previsão de ocorrências por classificação (1–2), composição química (3–5) e harmonização e generalização entre regiões (6–7). Em cada bloco, os estudos vão do mais distante ao mais próximo da proposta.
 
 ## Estudos selecionados
 
-A ordem acompanha as pastas numeradas de `fontes/artigos/` e as subseções do capítulo 3, definidas em 4 de novembro de 2026: classificação litológica (1–2), composição química (3–5) e harmonização e generalização entre regiões (6–7), seguindo o título e o problema de pesquisa. Em cada bloco, os estudos vão do mais distante ao mais próximo da proposta. A numeração não indica que todas as análises já estejam redigidas; o estado de cada uma está em `fontes/README.md`.
+### 1. Franca-Rocha et al. (2025) — prospectividade de ferro com Sentinel-2
 
-### 1. Costa, Tavares e Oliveira (2019) — litologia no Brasil
+[Identifying High-Potential Zones for Iron Mineralization in Bahia, Brazil, Using a Spectral Angle Mapper–Random Forest Integrated Framework](https://www.mdpi.com/2075-163X/15/11/1119). *Minerals*, 15(11), 1119; publicado em 27 de outubro de 2025. DOI: 10.3390/min15111119. BibTeX: `francarocha2025`.
 
-[Predictive lithological mapping through machine learning methods: a case study in the Cinzento Lineament, Carajás Province, Brazil](https://jgsb.sgb.gov.br/index.php/journal/article/view/63). *Journal of the Geological Survey of Brazil*, 2(1), 26–36. DOI: 10.29396/jgsb.2019.v2.n1.3. BibTeX: `costa2019`.
-
-Aplica Random Forest a dados remotos e geofísicos, comparando mapas litológicos com e sem coordenadas, com 1.400 amostras de treinamento. É o precedente brasileiro mais diretamente ligado à classificação proposta. Orienta a comparação com um modelo convencional e a análise da localização. **Limite:** não usa TabPFN nem prevê composição química. Coordenadas exigem avaliação que diferencie reconhecimento local de transferência para outra região.
+Classifica cada pixel de um mosaico Sentinel-2 L2A da Bahia com _Random Forest_, a partir de amostras reclassificadas pelo _Spectral Angle Mapper_, e confronta o mapa com os processos da ANM e as ocorrências do SGB. É o precedente brasileiro mais próximo: reflectância Sentinel-2 por pixel e processos minerários como referência. **Limite:** uma única substância (ferro), amostras derivadas de duas minas e teste sorteado na mesma área, sem separação espacial.
 
 ### 2. Yang, Huang e Lu (2026) — classificação com TabPFN e Sentinel-2
 
 [Mapping of Crop Planting Structures Under Limited Training Samples Using TabPFN and Sentinel-2 Time Series Data](https://www.mdpi.com/2072-4292/18/11/1857). *Remote Sensing*, 18(11), 1857; publicado em 5 de junho de 2026. DOI: 10.3390/rs18111857.
 
-Classifica culturas agrícolas em 10 m com atributos de séries temporais Sentinel-2 (bandas, índices de vegetação, textura e coordenadas), selecionados por eliminação recursiva, e compara TabPFN com Random Forest, XGBoost e CatBoost na mesma divisão. Com 1.999 amostras de treinamento e 858 de validação, o TabPFN alcança acurácia global de 96,27% e F1 macro de 0,956; em subamostragens repetidas, mantém acurácia média de 90,60% com 30% do treinamento e 82,89% com 10%. A divisão principal 7:3 é aleatória estratificada, mas os autores acrescentam validação com zonas de exclusão de 50, 100 e 300 m em torno das amostras de treinamento (acurácia entre 0,958 e 0,962) e uma ablação das coordenadas, cuja remoção reduz a acurácia de 0,963 para 0,938. É o precedente mais próximo do protocolo de classificação proposto: atributos orbitais por pixel em formato tabular, comparação com modelos convencionais, robustez com poucas amostras e controle do uso de coordenadas, questão também presente em Costa. **Limite:** as classes são culturas, observadas sobretudo pela vegetação, e não litologias; não há teste em outra região ou ano, e os próprios autores indicam que as coordenadas podem reduzir a transferência e que a aplicabilidade a outros anos, regiões e sistemas ainda precisa ser testada.
+Classifica culturas agrícolas em 10 m com atributos de séries temporais Sentinel-2 (bandas, índices de vegetação, textura e coordenadas), selecionados por eliminação recursiva, e compara TabPFN com Random Forest, XGBoost e CatBoost na mesma divisão. Com 1.999 amostras de treinamento e 858 de validação, o TabPFN alcança acurácia global de 96,27% e F1 macro de 0,956; em subamostragens repetidas, mantém acurácia média de 90,60% com 30% do treinamento e 82,89% com 10%. A divisão principal 7:3 é aleatória estratificada, mas os autores acrescentam validação com zonas de exclusão de 50, 100 e 300 m em torno das amostras de treinamento (acurácia entre 0,958 e 0,962) e uma ablação das coordenadas, cuja remoção reduz a acurácia de 0,963 para 0,938. É o precedente mais próximo do protocolo de classificação proposto: atributos orbitais por pixel em formato tabular, comparação com modelos convencionais, robustez com poucas amostras e controle do uso de coordenadas. **Limite:** as classes são culturas, observadas sobretudo pela vegetação, e não substâncias minerais; não há teste em outra região ou ano, e os próprios autores indicam que as coordenadas podem reduzir a transferência e que a aplicabilidade a outros anos, regiões e sistemas ainda precisa ser testada.
 
 ### 3. Kutzke, Eichstaedt e Kahnt (2022) — diversos alvos geoquímicos
 
@@ -34,7 +34,7 @@ Relaciona atributos orbitais a um modelo geoestatístico derivado de análises d
 
 [Integrating transformer-based learning and Sentinel-2 bare soil composites for soil organic carbon mapping in the black soil region of Northeast China](https://www.nature.com/articles/s41598-025-33682-4). *Scientific Reports*, 16, 3784; publicado em 5 de janeiro de 2026. DOI: 10.1038/s41598-025-33682-4. BibTeX: `chen2026`.
 
-Integra composições multitemporais de solo exposto e variáveis ambientais com 174 amostras. TabPFN com composição P50 apresenta R² de 0,78 e RMSE de 1,90 g/kg para carbono orgânico, superando CNN e XGBoost no estudo. Orienta extração orbital e controle da superfície. **Limite:** carbono orgânico do solo não equivale aos teores de elementos ou óxidos previstos neste TCC. A reamostragem local não substitui teste em regiões externas nem garante resultado para litologia ou terras raras.
+Integra composições multitemporais de solo exposto e variáveis ambientais com 174 amostras. TabPFN com composição P50 apresenta R² de 0,78 e RMSE de 1,90 g/kg para carbono orgânico, superando CNN e XGBoost no estudo. Orienta extração orbital e controle da superfície. **Limite:** carbono orgânico do solo não equivale aos teores de elementos ou óxidos previstos neste TCC. A reamostragem local não substitui teste em regiões externas nem garante resultado para substâncias minerais.
 
 ### 6. Barkov et al. (2026) — bibliotecas harmonizadas
 
@@ -48,32 +48,13 @@ Compara modelos e representações espectrais em 85 tarefas de regressão com Li
 
 Compara TabPFN, PLSR, Cubist e CNN para carbono total, pH e fósforo extraível por Olsen. Utiliza treinamento KSSL e testes no Texas (620 amostras) e leste da Austrália (387), variando tamanho e semelhança espectral do treinamento. É especialmente relevante para D06–D07 pelo teste externo. **Limite:** MIR de amostras e propriedades do solo não demonstram transferência orbital ou mineralógica. A declaração de disponibilidade orienta solicitar acesso aos dados ao KSSL.
 
-## Síntese para o projeto
 
-Na classificação litológica, Costa fornece o precedente brasileiro e Yang, o protocolo com TabPFN e atributos Sentinel-2; ambos discutem o papel das coordenadas. Na composição química, Kutzke amplia os alvos geoquímicos a partir de espectros, Zhang leva a predição geoquímica a dados de satélite e Chen une TabPFN e Sentinel-2. Na generalização, Barkov orienta bibliotecas espectrais de diferentes escalas e instrumentos, e Huang testa o TabPFN em uma região externa. As diferenças entre entradas e tarefas impedem comparar seus resultados como um único benchmark.
+## Busca
 
-Nesta busca, não foi confirmado um estudo que reúna TabPFN, Sentinel-2, classificação litológica terrestre e previsão quantitativa de proporções minerais com teste entre regiões. Isso delimita a evidência encontrada, sem provar inexistência ou originalidade absoluta. A contribuição depende dos rótulos efetivamente disponíveis e das avaliações executadas. Essa busca foi feita quando o alvo estava redigido como proporções minerais; o alvo do TCC é a composição química (D01, esclarecido em 4 de novembro de 2026). A busca complementar de 4 de novembro de 2026, descrita abaixo, também não encontrou estudo que aplique TabPFN a teores de elementos ou óxidos a partir de dados de satélite.
+É uma revisão dirigida, não sistemática. A busca de outubro de 2026 fez consultas em 25 idiomas, mas os estudos confirmados são quase todos em inglês. A busca complementar de 4 de novembro de 2026, com Playwright e buscador web, não encontrou estudo que aplique o TabPFN a teores de elementos, terras raras, prospectividade ou litologia a partir de satélite. Isso delimita a busca; não prova que tais estudos não existam.
 
-Terras raras constituem alternativa condicionada em D09, não foco exclusivo adotado. Estes estudos não validam especificamente sua previsão orbital. Teores elementares, identidade mineral e frações mineralógicas permanecem tarefas distintas.
-
-## Revisão da seleção em 4 de novembro de 2026
-
-Decisão do autor, após reavaliação da contribuição de cada estudo sugerida pela IA. O mínimo exigido pelo orientador é de seis artigos; a seleção passou de oito para sete.
-
-- **Removido Peña-Asensio et al. (2024).** O TabPFN aparece apenas na classificação, sem divisão de teste descrita nem comparação com outros modelos; os rótulos minerais foram atribuídos a partir da própria composição medida, e os 126 registros de SEM-EDS não têm relação com dados orbitais. Sua justificativa era a identificação mineral, que deixou de ser alvo com D01.
-- **Removido Luo et al. (2025).** O foco é o aumento de dados; sem dados sintéticos, o TabPFN tem acurácia balanceada inferior à do Random Forest na litologia (0,820 contra 0,843), e as entradas são perfis de poço. A tarefa litológica permanece sustentada por Costa.
-- **Incluído Yang, Huang e Lu (2026)**, pelo uso central do TabPFN em classificação com atributos Sentinel-2, comparação com modelos convencionais, teste com poucas amostras e análise do efeito das coordenadas.
-
-As pastas removidas foram preservadas em `fontes/artigos-descartados/`. A numeração das pastas mantidas foi ajustada para `01`–`07`.
-
-Busca complementar (Playwright e buscador web, 4 de novembro de 2026): não foi encontrado estudo com TabPFN aplicado a teores de elementos, metais pesados, terras raras, anomalias geoquímicas, prospectividade ou litologia a partir de satélite. Foram verificados e não selecionados: [Schmidinger et al. (2026)](https://arxiv.org/abs/2509.09408), TabPFN com atributos de krigagem em mapeamento de solo, alternativa para discutir coordenadas; [Barkov et al. (2026)](https://arxiv.org/abs/2508.09888), TabPFN em 31 conjuntos de 30 a 460 amostras, sobreposto ao estudo 2; [Kasenov et al. (2026)](https://www.mdpi.com/1999-4893/19/4/302), previsão de Au, Cu e Li sem TabPFN; e o [mapeamento de solo no norte do Cazaquistão (2026)](https://www.mdpi.com/2077-0472/16/11/1239), que cita o TabPFN sem avaliá-lo. A ausência encontrada delimita a busca, sem provar inexistência.
-
-## Triagem e abrangência da pesquisa incorporada
-
-Foram consideradas as 21 entradas de artigos da lista anterior, os materiais brasileiros complementares e os oito candidatos novos. Permaneceram, em 9 de outubro de 2026, três entradas antigas, quatro candidatos novos e Barkov, já analisado no projeto; dois deles foram removidos na revisão de 4 de novembro de 2026. A seleção priorizou aderência e complementaridade.
-
-Bai e Zhao foram preteridos pela sobreposição com Zhang; Santos e Ma perderam prioridade diante dos precedentes diretos de TabPFN e da cobertura brasileira de Costa. Estudos de prospectividade, GNN, grafos de conhecimento e aprendizado positivo–não rotulado respondem sobretudo à favorabilidade de depósitos. Schmidinger e o outro Barkov são metodológicos; Setiawati e Jouichat abordam propriedades do solo menos próximas dos alvos centrais. A exclusão desta lista curta não invalida os trabalhos nem remove referências já utilizadas em capítulos.
-
-A pesquisa incorporada executou consultas em inglês, mandarim, hindi, espanhol, árabe padrão, francês, bengali, português, indonésio, urdu, russo, alemão, japonês, pidgin nigeriano, árabe egípcio, marata, vietnamita, telugo, suaíli, hauçá, turco, punjabi ocidental, tagalo, tâmil e cantonês/Yue, seguindo a [tabela por total de falantes baseada no Ethnologue 2026](https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers). Isso não significa encontrar artigos em 25 idiomas; os estudos confirmados foram predominantemente em inglês.
-
-Esta é uma revisão dirigida, não uma revisão sistemática exaustiva. Os sete estudos estão disponíveis em `fontes/artigos/`, conforme o índice `fontes/README.md`. Após a reabertura com intervenção do autor, o [HTML integral de Kutzke](https://www.tandfonline.com/doi/full/10.1080/08120099.2022.2094465) e seus visualizadores de tabelas e figuras foram acessados com Playwright; a leitura corrigiu a descrição do experimento entre crátons. Antes de reproduzir experimentos, conferir protocolos e suplementos.
+Foram verificados e não selecionados:
+- [Schmidinger et al. (2026)](https://arxiv.org/abs/2509.09408), sobre coordenadas no mapeamento de solo;
+- [Barkov et al. (2026)](https://arxiv.org/abs/2508.09888), que se sobrepõe ao estudo 6;
+- [Kasenov et al. (2026)](https://www.mdpi.com/1999-4893/19/4/302), que prevê Au, Cu e Li sem TabPFN;
+- o [mapeamento de solo no norte do Cazaquistão (2026)](https://www.mdpi.com/2077-0472/16/11/1239), que cita o TabPFN sem avaliá-lo.

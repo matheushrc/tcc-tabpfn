@@ -1,4 +1,4 @@
-# 3.1 Mapeamento litológico no Lineamento Cinzento, Carajás
+# [Descartado] Mapeamento litológico no Lineamento Cinzento, Carajás
 
 [Costa, Tavares e Oliveira (2019)](https://rigeo.sgb.gov.br/bitstreams/5886b568-feeb-4456-955e-bdb7852ea011/download) propõem o uso de algoritmos de aprendizado de máquina (MLAs) para a criação de novos mapas geológicos em áreas _greenfield_ e/ou a melhoria de mapas já criados, utilizando-se de dados de sensoriamento remoto e aerogeofísica, já que a criação desses mapas em áreas tropicais com florestas densas e espessas coberturas supergênicas é desafiadora, pois a exposição das rochas é limitada e o acesso aos afloramentos rochosos pode ser difícil.
 
@@ -10,4 +10,4 @@ Com os dados limpos e organizados, eles realizaram uma análise de cinco MLAs po
 
 O mapa gerado sem as coordenadas apresentou concordância de 52,7% com o mapa geológico de referência, enquanto o mapa que também utilizou as coordenadas chegou a 78,7%. A inclusão das coordenadas reduziu o ruído, mas também pode ter suprimido feições de possível interesse geológico. Por isso, os autores recomendam analisar os dois mapas em conjunto. Esses percentuais representam a concordância com o mapa existente, sem constituir uma validação independente por novas observações de campo.
 
-Assim como este trabalho, o estudo aplica MLAs à classificação litológica em uma área brasileira. Diferentemente dele, que usou _Random Forest_ com dados aerogeofísicos e elevação SRTM, este trabalho utilizará dados espectrais do Sentinel-2 para avaliar o TabPFN, incluindo também a predição da composição química.
+Assim como este trabalho, o estudo aplica MLAs ao mapeamento geológico em uma área brasileira com potencial mineral. Diferentemente dele, que classificou litologias com _Random Forest_ a partir de dados aerogeofísicos e elevação SRTM, este trabalho utilizará dados espectrais do Sentinel-2 para avaliar o TabPFN na previsão de ocorrências minerais e na predição da composição química.

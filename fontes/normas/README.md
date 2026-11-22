@@ -41,7 +41,7 @@ O PDF é a referência para conferir a transcrição e a disposição visual dos
 ## Repetir a obtenção
 
 1. Abra a versão desejada pelo MCP do Playwright, usando o acesso autorizado da UFFS e verificando o histórico da norma. Selecione a aba do visualizador.
-2. Inicie o receptor local, que atende uma exportação e encerra: `python scripts/receber-pdf-gedweb.py --output docs/abnt/<nome>.pdf`. Ele depende de PyMuPDF (`fitz`) e espera por até 60 segundos.
+2. Inicie o receptor local, que atende uma exportação e encerra: `python scripts/receber-pdf-gedweb.py --output fontes/normas/<nome>.pdf`. Ele depende de PyMuPDF (`fitz`) e espera por até 60 segundos.
 3. Execute o MCP Playwright `browser_run_code_unsafe` com `filename` apontando para o caminho absoluto de `scripts/exportar-pdf-gedweb.playwright.js`. Ele recarrega a aba para observar o carregamento autorizado do documento. O helper depende da estrutura atual do PDF.js Express do GEDWeb e deve ser revisto se o visualizador mudar.
 4. Abra o arquivo no MCP do PDFCraft com `doc_open`. Use `doc_export_office` para Markdown e `doc_export_text`/`text_extract` para conferir o texto. As ferramentas adicionais são descobertas por `tool_search` e executadas por `tool_call`.
 5. Extraia imagens com `doc_export_all_images`; confira esquema, tabelas e fórmulas no PDF, pois a exportação automática pode interpretar texto corrido como tabelas ou separar títulos e números.
