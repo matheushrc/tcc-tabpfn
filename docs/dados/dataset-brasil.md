@@ -12,21 +12,14 @@ Camadas nacionais:
   - 1:1.000.000 do Brasil, com 46.712 polígonos. Fonte: SGB, <https://geoportal.sgb.gov.br/server/rest/services/geologia/litoestratigrafia_1000000/MapServer>;
   - 24 mapas estaduais, sem BA, PB e DF. O de MG tem 8.893 polígonos e 399 unidades. Fonte: SGB, <https://geoportal.sgb.gov.br/server/rest/services/geologia/litoestratigrafia_estados/MapServer>.
 - **Estruturas geológicas:** 32.323 linhas. Fonte: SGB, <https://geoportal.sgb.gov.br/server/rest/services/geologia/Estruturas_GIS_Brasil_2004/MapServer>.
-- **Drenagem 1:1.000.000:** 27.893 linhas. Fonte: SGB, <https://geoportal.sgb.gov.br/server/rest/services/cartografia/unifilar_1000000/MapServer>.
+- **Drenagem:** 210.382 trechos da Base Cartográfica Contínua ao Milionésimo (BCIM 2016). Fonte: IBGE, <https://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bcim/versao2016/shapefile/bcim_2016_shapefiles_21-11-2018.zip>.
+- **Limites estaduais:** 27 unidades da federação, malha de 2024. Fonte: IBGE, <https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2024/Brasil/BR_UF_2024.zip>.
+- **Elevação:** SRTM de 3" (cerca de 90 m), versão 4.1 com falhas preenchidas, em 63 blocos de 5° × 5°. Fonte: CGIAR-CSI, <https://srtm.csi.cgiar.org/srtmdata/>. É atributo opcional da ablação (D22).
 
-Camadas só de Minas Gerais, do coorientador, sem metadados de origem:
-
-| Camada | Conteúdo | Limite |
-| --- | --- | --- |
-| Drenagem de MG | 13.274 linhas, mais detalhada que a nacional | Cobre só MG. |
-| Estruturas e lineamentos geofísicos de MG | 2.597 estruturas e falhamentos e 828 lineamentos | Não são grades de magnetometria ou radiometria. |
-| SRTM de MG | Uma banda, 13.430 × 10.427 células, cerca de 3 segundos de arco | 67.749.052 células com zero entre 140.034.610, sem valor de ausência declarado. |
-| Limite de MG | Um polígono | — |
-
-Esses shapefiles estão em SIRGAS 2000 (EPSG:4674); as camadas do SGB e o raster, em WGS 84 (EPSG:4326). Integrá-los exige um sistema métrico comum para distâncias, áreas e margens de exclusão.
+Os shapefiles da ANM e do IBGE estão em SIRGAS 2000 (EPSG:4674); as camadas do SGB e o SRTM, em WGS 84 (EPSG:4326). Integrá-los exige um sistema métrico comum para distâncias, áreas e margens de exclusão.
 
 Material auxiliar:
-- **Bibliotecas espectrais de laboratório:** 27 bibliotecas ENVI, com 1.783 espectros (USGS, JPL, JHU, IGCP e vegetação).
+- **Bibliotecas espectrais de laboratório:** 27 bibliotecas ENVI, com 1.783 espectros (USGS, JPL, JHU, IGCP e vegetação), recebidas do coorientador sem metadados de origem.
 - **MapBiomas SoilData:** dois estudos de solo com reflectância, sem coordenadas utilizáveis.
 
 ## O que os rótulos informam
@@ -66,10 +59,9 @@ Um modelo treinado com espectros de laboratório reamostrados não equivale a um
 | Lacuna | Situação |
 | --- | --- |
 | Reflectância Sentinel-2 (L2A, B2–B12) | Não obtida. Dado público (Copernicus Data Space ou Google Earth Engine). |
-| Modelo digital do terreno fora de MG | Não obtido; sugestão de extrair a elevação no Google Earth Engine junto com o Sentinel-2. |
-| Lineamentos geofísicos fora de MG | Sem camada nacional equivalente. A aerogeofísica do SGB está em <https://geoportal.sgb.gov.br/server/rest/services/geofisica/aerogeofisica/MapServer>, em rasters por projeto. |
+| Lineamentos geofísicos | Sem camada nacional equivalente. A aerogeofísica do SGB está em <https://geoportal.sgb.gov.br/server/rest/services/geofisica/aerogeofisica/MapServer>, em rasters por projeto. |
 | Validação de lítio e terras raras | Como substância principal, as ocorrências do SGB têm só 34 de lítio e 14 de terras raras. |
-| Metadados e licença das camadas do coorientador | A confirmar com ele, inclusive para publicar derivados no Kaggle (D08). |
+| Metadados e licença das bibliotecas espectrais do coorientador | A confirmar com ele, inclusive para publicar derivados no Kaggle (D08). |
 
 ## Qualidade
 

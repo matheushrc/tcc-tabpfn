@@ -60,13 +60,13 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
 
 ## docs/dados/dataset-brasil.md — Dataset do Brasil
 
-- `1-82` Dataset do Brasil
-  - `5-30` Conteúdo
-  - `32-37` O que os rótulos informam
-  - `39-47` Dados espectrais de satélite em tabela
-  - `49-62` Bibliotecas espectrais
-  - `64-72` Lacunas
-  - `74-82` Qualidade
+- `1-74` Dataset do Brasil
+  - `5-23` Conteúdo
+  - `25-30` O que os rótulos informam
+  - `32-40` Dados espectrais de satélite em tabela
+  - `42-55` Bibliotecas espectrais
+  - `57-64` Lacunas
+  - `66-74` Qualidade
 
 ## docs/dados/fontes-brasil.md — Datasets brasileiros de áreas de exploração mineral
 
@@ -89,7 +89,7 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
 
 ## docs/decisoes-projeto.md — Registro de decisões, ideias e pendências do TCC
 
-- `1-213` Registro de decisões, ideias e pendências do TCC
+- `1-214` Registro de decisões, ideias e pendências do TCC
   - `5-9` Finalidade e uso
   - `11-42` Escopo registrado
   - `44-54` Distinções que devem ser preservadas no texto
@@ -98,7 +98,7 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
   - `71-77` Abrangência mineral e alternativa de terras raras
   - `79-87` Organização dos trabalhos e extensão multimodal opcional
   - `89-95` Organização editorial e obtenção das fontes
-  - `97-213` Conferência final e histórico
+  - `97-214` Conferência final e histórico
 
 ## docs/proposta-sinonimos-subs.md — Proposta de agrupamento das substâncias (D24)
 
