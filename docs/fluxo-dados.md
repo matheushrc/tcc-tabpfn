@@ -66,7 +66,7 @@ flowchart LR
 | ANM SIGMINE | Rótulo da classificação (`SUBS`) | `FASE` vira a coluna de confirmação (D26) |
 | SGB ocorrências | Validação independente | Observações de campo, independentes dos processos |
 | SGB geoquímica | Atributo de entrada e alvo da regressão condicionada | O teor de cada amostra vem do ponto mais próximo ou de interpolação; o método muda entre lotes (pendência 2 do registro) |
-| SGB geologia 1:1.000.000 | Atributo (unidade geológica) | Escala uniforme no país (pendência 2 do registro) |
+| SGB geologia 1:1.000.000 | Atributo (unidade geológica) | Escolhido por ter escala uniforme no país (D03); campos na pendência 2 do registro |
 | Sentinel-2 L2A | Atributo principal (reflectância) | Ainda a obter (D04) |
 | NASADEM | Atributo opcional da ablação (elevação e declividade) | Pode virar atalho de localização (D22) |
 | IBGE limites | Recorte do Brasil e blocos espaciais | — |

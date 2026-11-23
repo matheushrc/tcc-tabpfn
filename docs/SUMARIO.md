@@ -90,7 +90,7 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
 
 ## docs/decisoes-historico.md — Histórico das decisões do TCC
 
-- `1-88` Histórico das decisões do TCC
+- `1-89` Histórico das decisões do TCC
 
 ## docs/decisoes-projeto.md — Registro de decisões, ideias e pendências do TCC
 
