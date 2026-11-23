@@ -90,7 +90,7 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
 
 ## docs/decisoes-historico.md — Histórico das decisões do TCC
 
-- `1-82` Histórico das decisões do TCC
+- `1-83` Histórico das decisões do TCC
 
 ## docs/decisoes-projeto.md — Registro de decisões, ideias e pendências do TCC
 
@@ -125,16 +125,6 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
     - `58-68` Conferência das fontes antes pendentes
     - `70-72` Redução das referências
 
-## fontes/metodologia/metodologia.md — 4 METODOLOGIA
-
-- `1-54` 4 METODOLOGIA
-  - `15-17` 4.1 IDENTIFICAÇÃO DOS CONJUNTOS DE DADOS E DOS RÓTULOS
-  - `19-23` 4.2 CONSTRUÇÃO DO CONJUNTO DE DADOS BRASILEIRO
-  - `25-29` 4.3 MODELOS
-  - `31-37` 4.4 AVALIAÇÃO
-  - `39-41` 4.5 DISPONIBILIZAÇÃO DOS DADOS
-  - `43-54` Anotações do autor
-
 ## scripts/README.md — Scripts
 
 - `1-45` Scripts
@@ -166,6 +156,7 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
 - `tcc/markdown/01-introducao.md` — 1 INTRODUÇÃO
 - `tcc/markdown/02-revisao-bibliografica.md` — 2 REVISÃO BIBLIOGRÁFICA
 - `tcc/markdown/03-trabalhos-relacionados.md` — 3 TRABALHOS RELACIONADOS
+- `tcc/markdown/04-metodologia.md` — 4 METODOLOGIA
 - `tcc/markdown/05-cronograma.md` — 5 CRONOGRAMA
 
 ## Pastas locais (fora do git)

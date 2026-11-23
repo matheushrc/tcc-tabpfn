@@ -1,0 +1,42 @@
+% Fonte principal: tcc/markdown/04-metodologia.md.
+\chapter{METODOLOGIA}
+\label{chap:metodologia}
+
+Este trabalho parte da revisão bibliográfica e da análise dos trabalhos relacionados, que orientaram a escolha dos dados, dos rótulos, dos modelos de comparação e das métricas de avaliação. A previsão de ocorrências minerais consistirá em prever a substância mineral registrada nos processos minerários ativos da ANM em todo o Brasil, considerando as substâncias metálicas, inclusive os metais de transição, e o silício, e priorizando os elementos de terras raras. A predição da composição química e o recorte final serão definidos conforme a disponibilidade de referências adequadas e os resultados das avaliações preliminares. As etapas previstas são:
+
+\begin{enumerate}
+    \renewcommand{\labelenumi}{\alph{enumi})}
+    \item identificação dos conjuntos de dados e dos rótulos utilizados nos trabalhos relacionados;
+    \item construção do conjunto de dados brasileiro;
+    \item aplicação do TabPFN e dos modelos de comparação;
+    \item avaliação dos resultados com métricas de classificação e de regressão;
+    \item disponibilização dos conjuntos derivados no Kaggle.
+\end{enumerate}
+
+\section{IDENTIFICAÇÃO DOS CONJUNTOS DE DADOS E DOS RÓTULOS}
+
+Serão identificados os conjuntos de dados utilizados pelos autores dos trabalhos relacionados, com seus atributos (cabeçalhos) e rótulos: a classe de minério ou substância, no caso da classificação, e teores de elementos ou óxidos medidos em laboratório, no caso da regressão. Também serão registradas a procedência dos rótulos, o material amostrado e o método analítico, para distinguir referências de campo ou de laboratório de rótulos administrativos, como os processos minerários da ANM, em que um requerimento não comprova a ocorrência do minério. No conjunto brasileiro, o rótulo será a substância declarada nos processos da ANM, e a forma de agrupar os nomes sinônimos e os minerais-minério, assim como as fases dos processos aceitas como rótulo, ainda será definida. As ocorrências minerais registradas pelo SGB, por serem observações de campo independentes dos processos, serão usadas na validação. Essa estrutura servirá de modelo para organizar os dados brasileiros.
+
+\section{CONSTRUÇÃO DO CONJUNTO DE DADOS BRASILEIRO}
+
+O conjunto de dados que servirá de entrada para o TabPFN e para o treinamento dos demais modelos será construído a partir de bases nacionais públicas, como as áreas dos processos minerários da ANM e as ocorrências minerais, a geoquímica e os mapas geológicos do SGB, seguindo a estrutura de atributos e rótulos identificada na etapa anterior. Cada amostra será associada aos valores de reflectância de imagens Sentinel-2 da mesma área. Serão utilizadas imagens de nível 2A, que fornecem a reflectância de superfície \cite{esa2026b}. As datas, as bandas e os limiares de nuvens e de vegetação serão definidos conforme a cobertura das áreas selecionadas, priorizando a superfície exposta, já que a cobertura vegetal pode mascarar a resposta espectral das rochas \cite{grebby2011}. Os conjuntos de outras regiões do mundo serão harmonizados com a mesma estrutura e associados a imagens Sentinel-2 pelo mesmo procedimento.
+
+Com o conjunto montado, será realizado um estudo de ablação de atributos (\textit{feature ablation}), que consiste em retirar grupos de atributos, como bandas ou índices espectrais, teores geoquímicos do SGB, unidade geológica e, opcionalmente, elevação e declividade, e medir o efeito dessa retirada no desempenho dos modelos, sem alterar o TabPFN pré-treinado. Procedimento semelhante foi adotado por Yang, Huang e Lu \cite{yang2026}, que retiraram as coordenadas geográficas do conjunto de atributos para verificar se o desempenho do TabPFN dependia delas. Esse estudo permitirá identificar quais atributos contribuem para as previsões. Atributos de localização, como coordenadas e relevo, serão tratados com cautela, pois podem permitir ao modelo reconhecer a região em vez da resposta espectral. Os teores geoquímicos associados a cada amostra virão do ponto de coleta mais próximo ou de interpolação, e não de uma medida no próprio pixel.
+
+\section{MODELOS}
+
+O TabPFN, na versão 3.5, será aplicado à previsão de ocorrências minerais e à predição da composição química, recebendo os exemplos de treinamento como contexto, sem que seus parâmetros sejam treinados novamente. Como o modelo de regressão prevê uma variável por vez, será ajustado um modelo para cada elemento ou óxido.
+
+Para comparação, serão treinados nos mesmos dados modelos utilizados nos trabalhos relacionados, como \textit{Random Forest} \cite{breiman2001}, XGBoost, SVM, kNN e PLSR, que representam diferentes famílias de algoritmos. A seleção final dependerá da compatibilidade de cada modelo com os dados construídos.
+
+\section{AVALIAÇÃO}
+
+Para avaliar a capacidade de generalização, os dados serão divididos considerando sua distribuição espacial: amostras próximas tendem a ser semelhantes, e uma divisão aleatória pode superestimar o desempenho \cite{roberts2017}. Por isso, será adotada a validação cruzada por blocos espaciais em todo o Brasil, em que cada bloco reservado para teste não participa do ajuste dos modelos; o tamanho dos blocos será definido antes de qualquer treinamento.
+
+Para avaliar se a integração de dados de diferentes regiões melhora a generalização, os modelos serão treinados com dados de uma única região e com dados de múltiplas regiões, e testados na mesma região externa. Os resultados serão registrados mesmo que não haja ganho de desempenho.
+
+Na previsão de ocorrências minerais, serão utilizadas a acurácia global e o F1 macro, apresentados na seção~\ref{sec:avaliacao-modelos}. O F1 macro será calculado como a média aritmética dos F1 de cada classe, conforme Opitz e Burst \cite{opitz2021}, atribuindo o mesmo peso a classes com diferentes quantidades de amostras \cite{sokolova2009}. Na predição da composição química, serão utilizados o RMSE \cite{chai2014}, o MAE \cite{willmott2005} e o $R^2$ \cite{chicco2021}.
+
+\section{DISPONIBILIZAÇÃO DOS DADOS}
+
+Os conjuntos derivados da integração e da harmonização serão disponibilizados no Kaggle, acompanhados de documentação sobre a procedência, as transformações e as limitações dos dados. Serão publicados apenas os conjuntos cuja redistribuição seja permitida pelas licenças das fontes originais; para os demais, serão documentados os procedimentos de obtenção e preparação.

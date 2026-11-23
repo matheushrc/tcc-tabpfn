@@ -10,7 +10,7 @@ Pesquisa e escrita do TCC sobre o TabPFN com dados espectrais de satélite. O es
 | `tcc/latex/` | Projeto LaTeX: `principal.tex`, `capitulos/` com os mesmos nomes-base do Markdown, `bibliografia.bib` e a classe `UFFStex.cls`. |
 | `Template_UFFSTex/` | Template original da faculdade; deve ser preservado. |
 | `templates/` | Exemplos de escrita, como o TCC de referência em `templates/natanael/`; não integram os capítulos. |
-| `fontes/` | Material de apoio à escrita: artigos convertidos (`artigos/`, um por pasta, e `artigos-descartados/`), metodologia, normas ABNT (`normas/`), notícias e PDFs da revisão bibliográfica (locais). Índice em `fontes/README.md`. |
+| `fontes/` | Material de apoio à escrita: artigos convertidos (`artigos/`, um por pasta, e `artigos-descartados/`), normas ABNT (`normas/`), notícias e PDFs da revisão bibliográfica (locais). Índice em `fontes/README.md`. |
 | `docs/` | Documentação do projeto. Índice gerado em `docs/SUMARIO.md`; regras de escrita em `docs/PADRAO-DOCS.md`. |
 | `datasets/` | Dados locais, fora do git; cada pasta tem seu `README.md`. |
 | `scripts/` | Scripts auxiliares (`scripts/README.md`). |

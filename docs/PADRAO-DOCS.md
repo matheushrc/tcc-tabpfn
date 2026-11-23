@@ -21,7 +21,7 @@ Cada fato mora em um único doc dono; os outros só apontam para ele.
 | Estudos do capítulo 3: motivo da seleção e limites | `docs/artigos.md` |
 | Estudos do capítulo 3: pasta, estado da análise e autoria | `fontes/README.md` |
 | Traduções e termos técnicos | `docs/terminologia.md` |
-| Proposta de metodologia | `fontes/metodologia/metodologia.md` |
+| Metodologia | `tcc/markdown/04-metodologia.md` |
 | Scripts | `scripts/README.md` |
 | Fontes, hashes e contagens dos arquivos de dados | `README.md` de cada pasta em `datasets/` (fora do git) |
 
