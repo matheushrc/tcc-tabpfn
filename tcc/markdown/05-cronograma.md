@@ -12,7 +12,7 @@ A Tabela 1 apresenta o cronograma previsto para as atividades deste trabalho, de
 | Aquisição e pré-processamento das imagens Sentinel-2        |     |     |     |     |  x  |  x  |  x  |     |     |     |     |
 | Integração espacial e construção dos conjuntos tabulares    |     |     |     |     |     |     |  x  |  x  |     |     |     |
 | Experimentos com o TabPFN e os modelos de comparação        |     |     |     |     |     |     |     |  x  |  x  |     |     |
-| Validação espacial e entre regiões                          |     |     |     |     |     |     |     |     |  x  |  x  |     |
+| Validação espacial por blocos                               |     |     |     |     |     |     |     |     |  x  |  x  |     |
 | Disponibilização dos conjuntos derivados no Kaggle          |     |     |     |     |     |     |     |     |     |  x  |     |
 | Escrita e defesa do TCC II                                  |     |     |     |     |     |     |     |     |     |  x  |  x  |
 

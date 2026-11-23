@@ -1,6 +1,6 @@
 # Datasets para o datalake geoquímico e mineral
 
-Dono do catálogo de bases de outros países e do suporte espacial de cada uma. As bases foram reunidas para a predição da composição química (D01, D02); se essa tarefa continua é pendência de D24. Os dados brasileiros usados no TCC estão em `docs/dados/dataset-brasil.md`.
+Dono do catálogo de bases de outros países e do suporte espacial de cada uma. As bases foram reunidas para a predição da composição química (D01), mas o TCC usa só dados brasileiros desde a decisão do autor de 22 de novembro de 2026 (D07, D24); o catálogo fica como referência, sem uso experimental previsto. Os dados brasileiros estão em `docs/dados/dataset-brasil.md`.
 
 Snapshot verificado em **21 de agosto de 2026**. Foram reunidos cerca de **541 MB** de novas distribuições em `datasets/`, organizadas por país ou região, além dos **656 MB** do SACM já existente. Há dados da América do Norte, América do Sul, Europa, África, Ásia e Oceania. Nenhum arquivo individual novo excede 500 MB.
 
@@ -160,7 +160,7 @@ Verificação da IA em 4 de novembro de 2026 sobre os datasets de `datasets/` de
 2. **Para prever áreas sem rio, os candidatos são os de amostra pontual de superfície:** GEMAS, o subconjunto de solo e till do SIGÉOM, GEOROC filtrado e o afloramento do SACM. No Brasil, a tabela de solo do SGB (química elementar; contagens nacionais em `docs/dados/dataset-brasil.md`) também é pontual.
 3. **Não misturar suportes no mesmo treino.** Dados de bacia e dados pontuais medem coisas diferentes; se ambos forem usados, devem formar experimentos separados, com o tipo de amostra registrado (`sample_medium` no schema canônico de a seção inicial deste documento).
 4. **Superfície observada.** Em áreas vegetadas, o pixel mostra principalmente a vegetação, não o solo ou a rocha. Para amostras pontuais, a extração deve usar composições de solo exposto ou máscaras de vegetação, como fizeram Chen et al. (2026) com compósitos de solo exposto.
-5. **Generalização entre regiões (D06, D07):** os conjuntos pontuais compatíveis entre si são poucos e de meios diferentes (solo agrícola europeu, solo e till canadense, rocha de crátons). Uma comparação justa entre regiões exige o mesmo tipo de amostra, a mesma digestão e o mesmo painel de elementos.
+5. **Generalização entre regiões (sem uso no TCC; D07 usa blocos espaciais no Brasil):** os conjuntos pontuais compatíveis entre si são poucos e de meios diferentes (solo agrícola europeu, solo e till canadense, rocha de crátons). Uma comparação justa entre regiões exige o mesmo tipo de amostra, a mesma digestão e o mesmo painel de elementos.
 
 ### Pendências
 

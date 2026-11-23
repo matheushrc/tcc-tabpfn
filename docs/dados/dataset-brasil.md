@@ -14,12 +14,13 @@ Camadas nacionais:
 - **Estruturas geológicas:** 32.323 linhas. Fonte: SGB, <https://geoportal.sgb.gov.br/server/rest/services/geologia/Estruturas_GIS_Brasil_2004/MapServer>.
 - **Drenagem:** 210.382 trechos da Base Cartográfica Contínua ao Milionésimo (BCIM 2016). Fonte: IBGE, <https://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bcim/versao2016/shapefile/bcim_2016_shapefiles_21-11-2018.zip>.
 - **Limites estaduais:** 27 unidades da federação, malha de 2024. Fonte: IBGE, <https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2024/Brasil/BR_UF_2024.zip>.
-- **Elevação:** SRTM de 3" (cerca de 90 m), versão 4.1 com falhas preenchidas, em 63 blocos de 5° × 5°. Fonte: CGIAR-CSI, <https://srtm.csi.cgiar.org/srtmdata/>. É atributo opcional da ablação (D22).
+- **Elevação:** NASADEM de 1" (cerca de 30 m), em 819 blocos de 1° × 1° que tocam o território brasileiro, com `.hgt` (elevação), `.num` (origem de cada pixel) e `.swb` (máscara de água), cerca de 6,7 GB. Fonte: NASA, <https://www.earthdata.nasa.gov/data/catalog/lpcloud-nasadem-hgt-001> (DOI 10.5067/MEASURES/NASADEM/NASADEM_HGT.001); o download exige conta no NASA Earthdata. É atributo opcional da ablação (D22). Substitui o SRTM do CGIAR-CSI, cuja licença proíbe a redistribuição (D03, D08).
 
-Os shapefiles da ANM e do IBGE estão em SIRGAS 2000 (EPSG:4674); as camadas do SGB e o SRTM, em WGS 84 (EPSG:4326). Integrá-los exige um sistema métrico comum para distâncias, áreas e margens de exclusão.
+Os shapefiles da ANM e do IBGE estão em SIRGAS 2000 (EPSG:4674); as camadas do SGB e o NASADEM, em WGS 84 (EPSG:4326). Integrá-los exige um sistema métrico comum para distâncias, áreas e margens de exclusão.
 
 Material auxiliar:
-- **Bibliotecas espectrais de laboratório:** 27 bibliotecas ENVI, com 1.783 espectros (USGS, JPL, JHU, IGCP e vegetação), recebidas do coorientador sem metadados de origem.
+- **USGS Spectral Library 7, reamostrada para o Sentinel-2:** 3.152 arquivos em `Assinaturas_Espectrais/usgs_splib07/`, extraídos de `usgs_splib07.zip` ([Kokaly et al., 2017](https://doi.org/10.5066/F7RR1WDJ)). Apoio fora do modelo (D03).
+- **Bibliotecas do coorientador:** 27 bibliotecas ENVI, com 1.783 espectros (USGS, JPL, JHU, IGCP e vegetação), copiadas do software ENVI. Não são usadas (D03); conferência na seção Bibliotecas espectrais.
 - **MapBiomas SoilData:** dois estudos de solo com reflectância, sem coordenadas utilizáveis.
 
 ## O que os rótulos informam
@@ -41,16 +42,17 @@ Valores ilustrativos. A elevação, a unidade geológica e os teores geoquímico
 
 ## Bibliotecas espectrais
 
-- **USGS (`usgs_min.hdr`):** 481 espectros de laboratório da biblioteca de 1993, em 420 comprimentos de onda de cerca de 0,395 a 2,56 µm.
-- **JPL:** 430 espectros em três granulometrias.
-- **IGCP:** 139 espectros em cinco instrumentos, de 30 amostras distintas.
-- **JHU de minerais:** começa em cerca de 2,079 µm, então não reconstrói as bandas visíveis do Sentinel-2.
+Em uso (D03): a USGS Spectral Library 7 já reamostrada pelo USGS para as 13 bandas do Sentinel-2 (`s07SNTL2`), com as funções de resposta espectral de cada banda. Serve para:
+- escolher bandas e índices espectrais (seção 4.2);
+- interpretar a ablação (D22);
+- discutir os limites do sensor, comparando a curva de laboratório com a versão em 13 bandas.
 
-Nenhuma dessas contagens é de localidades brasileiras.
+As bibliotecas do coorientador não são usadas. São cópias das que acompanham o ENVI, e a IA as conferiu com as fontes oficiais em 22 de novembro de 2026:
+- **USGS (`usgs_min`, `usgs_veg`, `igcp_4`):** iguais à versão 7 em 98% a 100% dos espectros pareados.
+- **JPL e JHU:** iguais ao [ECOSTRESS](https://speclib.jpl.nasa.gov/), exceto 35% da JHU de minerais, que divergem por motivo não verificado.
+- **Sem fonte conferida:** `veg_1dry`, `veg_2grn` e IGCP medidas fora do USGS.
 
-As bibliotecas servem para:
-- comparar assinaturas;
-- simular as bandas do sensor com as [funções de resposta espectral do Sentinel-2](https://sentinels.copernicus.eu/-/sentinel-2-spectral-response-functions-update).
+Nenhuma biblioteca tem localidades brasileiras.
 
 Um modelo treinado com espectros de laboratório reamostrados não equivale a um treinado com observações de satélite. Medições do mesmo espécime em instrumentos ou granulometrias diferentes devem ficar no mesmo grupo na avaliação.
 
@@ -61,7 +63,6 @@ Um modelo treinado com espectros de laboratório reamostrados não equivale a um
 | Reflectância Sentinel-2 (L2A, B2–B12) | Não obtida. Dado público (Copernicus Data Space ou Google Earth Engine). |
 | Lineamentos geofísicos | Sem camada nacional equivalente. A aerogeofísica do SGB está em <https://geoportal.sgb.gov.br/server/rest/services/geofisica/aerogeofisica/MapServer>, em rasters por projeto. |
 | Validação de lítio e terras raras | Como substância principal, as ocorrências do SGB têm só 34 de lítio e 14 de terras raras. |
-| Metadados e licença das bibliotecas espectrais do coorientador | A confirmar com ele, inclusive para publicar derivados no Kaggle (D08). |
 
 ## Qualidade
 

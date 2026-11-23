@@ -19,13 +19,13 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
 
 ## docs/PADRAO-DOCS.md — Padrão dos docs
 
-- `1-84` Padrão dos docs
-  - `5-28` Dono de cada assunto
-  - `30-35` Antes de documentar
-  - `37-45` Decisões
-  - `47-60` Drift
-  - `62-67` Estrutura de um arquivo
-  - `69-84` Sumário
+- `1-85` Padrão dos docs
+  - `5-29` Dono de cada assunto
+  - `31-36` Antes de documentar
+  - `38-46` Decisões
+  - `48-61` Drift
+  - `63-68` Estrutura de um arquivo
+  - `70-85` Sumário
 
 ## docs/artigos.md — Estudos do capítulo 3
 
@@ -61,13 +61,13 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
 
 ## docs/dados/dataset-brasil.md — Dataset do Brasil
 
-- `1-74` Dataset do Brasil
-  - `5-23` Conteúdo
-  - `25-30` O que os rótulos informam
-  - `32-40` Dados espectrais de satélite em tabela
-  - `42-55` Bibliotecas espectrais
-  - `57-64` Lacunas
-  - `66-74` Qualidade
+- `1-75` Dataset do Brasil
+  - `5-24` Conteúdo
+  - `26-31` O que os rótulos informam
+  - `33-41` Dados espectrais de satélite em tabela
+  - `43-57` Bibliotecas espectrais
+  - `59-65` Lacunas
+  - `67-75` Qualidade
 
 ## docs/dados/fontes-brasil.md — Datasets brasileiros de áreas de exploração mineral
 
@@ -90,7 +90,7 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
 
 ## docs/decisoes-historico.md — Histórico das decisões do TCC
 
-- `1-83` Histórico das decisões do TCC
+- `1-88` Histórico das decisões do TCC
 
 ## docs/decisoes-projeto.md — Registro de decisões, ideias e pendências do TCC
 
@@ -104,6 +104,18 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
   - `76-84` Organização dos trabalhos e extensão multimodal opcional
   - `86-92` Organização editorial e obtenção das fontes
   - `94-96` Conferência final
+
+## docs/fluxo-dados.md — Fluxo dos dados
+
+- `1-136` Fluxo dos dados
+  - `5-60` Diagrama
+  - `62-73` O que cada base faz
+  - `75-123` Exemplo: classificação com mais de um minério
+    - `77-88` Dados de treino
+    - `90-102` Saída do modelo para locais novos
+    - `104-113` Avaliação
+    - `115-123` Classes com poucos exemplos
+  - `125-136` Exemplo: predição química
 
 ## docs/proposta-sinonimos-subs.md — Proposta de agrupamento das substâncias (D24)
 

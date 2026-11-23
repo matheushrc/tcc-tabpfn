@@ -17,6 +17,7 @@ Cada fato mora em um único doc dono; os outros só apontam para ele.
 | Dados do TCC: inventário, contagens, rótulos e lacunas | `docs/dados/dataset-brasil.md` |
 | Bases públicas brasileiras (ANM, SGB): o que oferecem e seus limites | `docs/dados/fontes-brasil.md` |
 | Bases de outros países e suporte espacial | `docs/dados/catalogo-global.md` |
+| Papel de cada base no fluxo dos dados e exemplos de tabelas | `docs/fluxo-dados.md` |
 | Agrupamento das substâncias da `SUBS` em classes | `docs/proposta-sinonimos-subs.md` |
 | Estudos do capítulo 3: motivo da seleção e limites | `docs/artigos.md` |
 | Estudos do capítulo 3: pasta, estado da análise e autoria | `fontes/README.md` |
