@@ -170,6 +170,7 @@ Gerado por `scripts/docs_sumario.py`; não edite à mão. Leia o trecho com Read
 - `tcc/markdown/03-trabalhos-relacionados.md` — 3 TRABALHOS RELACIONADOS
 - `tcc/markdown/04-metodologia.md` — 4 METODOLOGIA
 - `tcc/markdown/05-cronograma.md` — 5 CRONOGRAMA
+- `tcc/markdown/06-consideracoes-finais.md` — 6 CONSIDERAÇÕES FINAIS
 
 ## Pastas locais (fora do git)
 

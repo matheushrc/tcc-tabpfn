@@ -1283,9 +1283,8 @@
       \ifnum #2>\c@secnumdepth \else
         \protect\numberline{\csname the#1\endcsname}%
       \fi
-%      #7}%
-      % Aqui
-      \MakeTextUppercase{#7}}{}}%
+      % Título no sumário com a mesma grafia do texto (NBR 6027:2012, seção 4).
+      #7}{}}%
   \else
     \def\@svsechd{%
       #6{\hskip #3\relax
@@ -1295,9 +1294,8 @@
         \ifnum #2>\c@secnumdepth \else
           \protect\numberline{\csname the#1\endcsname}%
         \fi
-%        #7}}%
-        % Aqui
-        \MakeTextUppercase{#7}}}{}}%
+        % Título no sumário com a mesma grafia do texto (NBR 6027:2012, seção 4).
+        #7}}{}}%
   \fi
   \@xsect{#5}}
 

@@ -28,12 +28,19 @@ Avaliar o desempenho e a generalização do TabPFN na previsão de ocorrências 
 
 ### 1.4.2 Objetivos específicos
 
-- Selecionar e preparar bases geológicas e geoquímicas nacionais, verificando procedência, materiais, métodos, unidades, coordenadas e referências disponíveis para cada tarefa;
-- Construir conjuntos tabulares pela integração espacial das referências selecionadas com valores de reflectância de imagens Sentinel-2, considerando compatibilidade temporal, resolução espacial e condições da superfície;
-- Aplicar o TabPFN à previsão de ocorrências minerais e à predição da composição química nos conjuntos que possuam referências adequadas, documentando as limitações dos alvos disponíveis;
-- Avaliar as previsões com métricas apropriadas e validação cruzada por blocos espaciais em todo o Brasil;
-- Disponibilizar no Kaggle os conjuntos derivados cuja redistribuição seja autorizada pelas fontes, acompanhados de documentação sobre procedência, transformações e limitações;
-- Analisar o potencial e as limitações das previsões para apoiar a priorização de áreas para investigação física.
+Os objetivos específicos são:
+
+a) selecionar e preparar bases geológicas e geoquímicas nacionais, verificando procedência, materiais, métodos, unidades, coordenadas e referências disponíveis para cada tarefa;
+
+b) construir conjuntos tabulares pela integração espacial das referências selecionadas com valores de reflectância de imagens Sentinel-2, considerando compatibilidade temporal, resolução espacial e condições da superfície;
+
+c) aplicar o TabPFN à previsão de ocorrências minerais e à predição da composição química nos conjuntos que possuam referências adequadas, documentando as limitações dos alvos disponíveis;
+
+d) avaliar as previsões com métricas apropriadas e validação cruzada por blocos espaciais em todo o Brasil;
+
+e) disponibilizar no Kaggle os conjuntos derivados cuja redistribuição seja autorizada pelas fontes, acompanhados de documentação sobre procedência, transformações e limitações;
+
+f) analisar o potencial e as limitações das previsões para apoiar a priorização de áreas para investigação física.
 
 ## 1.5 JUSTIFICATIVA
 

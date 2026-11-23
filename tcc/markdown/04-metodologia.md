@@ -1,6 +1,6 @@
 # 4 METODOLOGIA
 
-Este trabalho parte da revisão bibliográfica e da análise dos trabalhos relacionados, que orientaram a escolha dos dados, dos rótulos, dos modelos de comparação e das métricas de avaliação. A previsão de ocorrências minerais consistirá em prever a substância mineral registrada nos processos minerários ativos da ANM em todo o Brasil, considerando as substâncias metálicas, inclusive os metais de transição, e o silício, e priorizando os elementos de terras raras. A predição da composição química e o recorte final serão definidos conforme a disponibilidade de referências adequadas e os resultados das avaliações preliminares. As etapas previstas são:
+Este trabalho parte da revisão bibliográfica e da análise dos trabalhos relacionados, que orientaram a escolha dos dados, dos rótulos, dos modelos de comparação e das métricas de avaliação. A previsão de ocorrências minerais consistirá em prever a substância mineral registrada nos processos minerários ativos da ANM em todo o Brasil, considerando as substâncias metálicas, inclusive os metais de transição, e o silício. A predição da composição química e o recorte final serão definidos conforme a disponibilidade de referências adequadas e os resultados das avaliações preliminares. As etapas previstas são:
 
 a) identificação dos conjuntos de dados e dos rótulos utilizados nos trabalhos relacionados;
 

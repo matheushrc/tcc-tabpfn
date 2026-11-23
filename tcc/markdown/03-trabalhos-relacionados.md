@@ -1,6 +1,6 @@
 # 3 TRABALHOS RELACIONADOS
 
-## 3.1 Prospectividade mineral de ferro com Sentinel-2 na Bahia
+## 3.1 PROSPECTIVIDADE MINERAL DE FERRO COM SENTINEL-2 NA BAHIA
 
 [Franca-Rocha et al. (2025)](https://www.mdpi.com/2075-163X/15/11/1119) elaboraram um mapa de prospectividade mineral para ferro em todo o estado da Bahia, com o objetivo de apoiar as etapas iniciais da exploração mineral em uma região extensa e com poucos dados, utilizando apenas dados públicos de sensoriamento remoto.
 
@@ -12,7 +12,7 @@ Na avaliação, 30% das amostras (175 pontos) foram reservados para teste, sem s
 
 Assim como este trabalho, o estudo prevê ocorrências minerais a partir da reflectância do Sentinel-2 por pixel e confronta o resultado com os processos da ANM. Diferentemente dele, que mapeia apenas o ferro a partir de amostras próximas a duas minas e avalia o modelo com amostras sorteadas na mesma área, este trabalho utilizará os processos minerários como rótulos de diferentes substâncias e avaliará o TabPFN em regiões não utilizadas no ajuste.
 
-## 3.2 TabPFN na classificação de culturas com Sentinel-2
+## 3.2 TABPFN NA CLASSIFICAÇÃO DE CULTURAS COM SENTINEL-2
 
 [Yang, Huang e Lu (2026)](https://www.mdpi.com/2072-4292/18/11/1857) avaliaram o TabPFN no mapeamento de culturas agrícolas em Yuxi, na China, uma região montanhosa com campos fragmentados, cobertura frequente de nuvens e dificuldade de obter amostras de treinamento.
 
@@ -24,7 +24,7 @@ Os autores também testaram a influência da proximidade espacial e das coordena
 
 Assim como este trabalho, o estudo aplica o TabPFN a dados espectrais do Sentinel-2 organizados por pixel e o compara com modelos convencionais. Diferentemente dele, que classifica culturas agrícolas e testa o modelo na mesma área, este trabalho preverá ocorrências minerais, predirá a composição química e testará o modelo em regiões não usadas no ajuste.
 
-## 3.3 Predição geoquímica a partir de testemunhos de sondagem
+## 3.3 PREDIÇÃO GEOQUÍMICA A PARTIR DE TESTEMUNHOS DE SONDAGEM
 
 [Kutzke, Eichstaedt e Kahnt (2022)](https://doi.org/10.1080/08120099.2022.2094465) avaliaram o uso de uma rede neural convolucional (CNN) para prever teores de elementos químicos em testemunhos de sondagem a partir de espectros hiperespectrais medidos nesses testemunhos. A motivação é que as análises geoquímicas são caras e cobrem apenas trechos escolhidos pelos geólogos, enquanto o escaneamento hiperespectral cobre o testemunho inteiro.
 
@@ -36,7 +36,7 @@ Os autores também treinaram o modelo com dados do Cráton Gawler e o aplicaram 
 
 Assim como este trabalho, o estudo prevê a composição química a partir de dados espectrais e discute a transferência entre regiões. Diferentemente dele, que usou espectros de testemunhos de subsuperfície, este trabalho utilizará dados de satélite, que registram a superfície, e avaliará o TabPFN.
 
-## 3.4 Integração de dados orbitais e geoquímicos em rejeitos de mineração
+## 3.4 INTEGRAÇÃO DE DADOS ORBITAIS E GEOQUÍMICOS EM REJEITOS DE MINERAÇÃO
 
 [Zhang et al. (2023)](https://www.sciencedirect.com/science/article/pii/S2666544123000059) desenvolveram um método para estimar a concentração de ouro ainda presente no depósito de rejeitos de uma mina de ouro em Witwatersrand, na África do Sul.
 
@@ -46,7 +46,7 @@ Entre os algoritmos avaliados, AdaBoost apresentou os melhores resultados, com R
 
 Assim como este trabalho, o estudo associa dados espectrais de satélite a análises geoquímicas para predizer teores. Diferentemente dele, que comparou algoritmos para estimar ouro em uma única instalação de rejeitos, este trabalho avaliará o TabPFN na previsão de ocorrências minerais e na predição de diversos elementos e óxidos em diferentes regiões.
 
-## 3.5 TabPFN e composições de solo exposto do Sentinel-2
+## 3.5 TABPFN E COMPOSIÇÕES DE SOLO EXPOSTO DO SENTINEL-2
 
 [Chen et al. (2026)](https://www.nature.com/articles/s41598-025-33682-4) avaliaram o TabPFN no mapeamento do carbono orgânico do solo em áreas agrícolas da região de solos negros do nordeste da China. Os autores apontam duas dificuldades: separar a reflectância do solo exposto dos efeitos da vegetação, dos resíduos de culturas e da umidade, e depender de modelos que exigem muitos dados, enquanto os levantamentos de solo costumam ter poucas amostras.
 
@@ -58,7 +58,7 @@ Os autores reconhecem que a extensão da área e o número de amostras limitam a
 
 Assim como este trabalho, o estudo aplica o TabPFN a dados do Sentinel-2 e controla a cobertura vegetal da superfície observada. Diferentemente dele, que prevê carbono orgânico do solo com apoio de variáveis climáticas e topográficas, este trabalho predirá teores de elementos e óxidos e ocorrências minerais a partir dos dados espectrais, com o relevo apenas como atributo opcional.
 
-## 3.6 TabPFN em bibliotecas espectrais de solo
+## 3.6 TABPFN EM BIBLIOTECAS ESPECTRAIS DE SOLO
 
 [Barkov et al. (2026)](https://arxiv.org/html/2608.00608v1) avaliaram o TabPFN na predição de propriedades do solo a partir de espectros no visível e infravermelho próximo (vis-NIR) e no infravermelho médio (MIR). Foram utilizadas duas coleções: LimeSoDa, com 13 conjuntos com 32 a 460 amostras cada e 39 tarefas de regressão, e _Open Soil Spectral Library_ (OSSL), com 46 tarefas e conjuntos de 14.166 a 82.573 amostras. Os alvos incluíram carbono, pH, argila e carbonatos, determinados por análises laboratoriais.
 
@@ -68,7 +68,7 @@ As principais limitações foram o custo de inferência e a avaliação com part
 
 Assim como este trabalho, o estudo avalia o TabPFN na predição de propriedades a partir de dados espectrais e compara-o com outros MLAs. Diferentemente dele, que usa espectros de laboratório com partições aleatórias, este trabalho utilizará dados de satélite e avaliará a generalização em regiões reservadas para teste.
 
-## 3.7 TabPFN em espectros MIR de solo com validação externa
+## 3.7 TABPFN EM ESPECTROS MIR DE SOLO COM VALIDAÇÃO EXTERNA
 
 [Huang et al. (2026)](https://www.sciencedirect.com/science/article/pii/S0016706126002089) investigaram se o TabPFN pode ser utilizado como ferramenta genérica de predição em bibliotecas espectrais de solo de diferentes tamanhos. Os autores utilizaram espectros MIR de 11.564 amostras dos Estados Unidos para prever carbono total, pH e fósforo extraível pelo método Olsen, propriedades de previsibilidade alta, média e baixa a partir desses espectros. As 620 amostras do Texas formaram o teste interno, e 387 amostras do leste da Austrália, medidas em outro laboratório, foram utilizadas como teste externo, apenas para o carbono total.
 

@@ -10,24 +10,65 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[num]{abntex2cite}
 
+% Tabelas numeradas em sequência no documento, como no Markdown (Tabela 1).
+\counterwithout{table}{chapter}
+% Título das referências conforme a NBR 14724:2024 (4.2.3.1 e 5.2.3).
+\AtBeginDocument{\renewcommand{\bibname}{Referências}}
+% Rótulo "Palavras-chave:" conforme a NBR 6028:2021 (4.1); a classe usa "Palavras-Chave".
+\makeatletter
+% Palavras-chave em parágrafo corrido, sem o recuo da lista description da classe,
+% como no TCC de referência de Natanael; o resumo começa sem espaço sobrando.
+\renewenvironment{PP@abstract}[4]
+    {%
+      \def\PP@kwname{#2}%
+      \def\PP@kwtext{#4}%
+      \cleardoublepage
+      \thispagestyle{empty}%
+      {%
+      \null
+       \parindent\z@
+       \centering
+       \normalfont
+       \interlinepenalty\@M
+       \bfseries\texorpdfstring{\MakeUppercase{#1}}{}\par\nointerlineskip\nobreak
+       \normalfont\normalsize
+       \vskip 2cm
+      }%
+      \@afterheading
+      \noindent\ignorespaces
+   }%
+   {\par\vskip\baselineskip
+   \noindent\textbf{\PP@kwname{}:} \PP@kwtext{}.\par
+   \let\PP@kwname\@empty
+   \let\PP@kwtext\@empty
+   \newpage}
+\renewenvironment{resumo}%
+    {\begin{hyphenrules}{brazilian}%
+     \begin{PP@abstract}{Resumo}{Palavras-chave}{\@titlept}{\PP@palavraschave}}%
+    {\global\let\@titlept\@empty
+     \end{PP@abstract}%
+     \end{hyphenrules}}
+\makeatother
+
 \author{Matheus Henrique Rodrigues da Costa}
-% Título em inglês pendente para o final do TCC I.
-\title{Avaliação do TabPFN para previsão de ocorrências minerais e predição da composição química a partir de dados espectrais de satélite}{}
+\title{Avaliação do TabPFN para previsão de ocorrências minerais e predição da composição química a partir de dados espectrais de satélite}
+      {Evaluation of TabPFN for mineral occurrence prediction and chemical composition prediction from satellite spectral data}
 \tipotrabalho{\tci}
 \curso{\cc}
 \orientador{Samuel da Silva Feitosa}
 \coorientador{Jean Marcel de Almeida Espinoza}
-% Palavras-chave em português e inglês pendentes para o final do TCC I.
-\palavraschave{}{}
-% A classe define UFFS, Campus Chapecó e Chapecó e usa o ano da compilação.
-% O ano de entrega ainda precisa ser confirmado em tcc.conf.
+\palavraschave{TabPFN; sensoriamento remoto; Sentinel-2; ocorrências minerais; composição química}
+              {TabPFN; remote sensing; Sentinel-2; mineral occurrences; chemical composition}
+% A classe define UFFS, Campus Chapecó e Chapecó.
+% Ano de entrega do TCC I, conforme tcc.conf.
+\year=2026
 
 \begin{document}
 
-% Resumo e abstract serão inseridos aqui quando escritos e revisados.
-% Os ambientes obrigatórios do template são resumo e abstract.
 % Ficha catalográfica e folha de aprovação são exigidas para TCC II.
-% Versão parcial com introdução, revisão bibliográfica e trabalhos relacionados.
+\input{pretextuais/resumo}
+\input{pretextuais/abstract}
+% Lista de tabelas omitida: é opcional (NBR 14724:2024, 4.2.1.10) e haveria uma só tabela.
 \tableofcontents
 
 \include{capitulos/01-introducao}
@@ -35,6 +76,7 @@
 \include{capitulos/03-trabalhos-relacionados}
 \include{capitulos/04-metodologia}
 \include{capitulos/05-cronograma}
+\include{capitulos/06-consideracoes-finais}
 
 \bibliography{bibliografia}
 \end{document}
